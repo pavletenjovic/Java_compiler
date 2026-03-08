@@ -86,10 +86,17 @@ nonterminal DeclList, MethodDecList, Decl, FormPars, ConstDecl, VarDecl, EnumDec
 nonterminal VarList, Brackets, VarListNext, EnumDecList, EnumListNext, EnumValue, Const ;
 nonterminal FormValue, FormParsNext ;
 nonterminal StatementList, ElseOptional, ExprOptional, PrintOptional ;
-nonterminal CaseList, Case, DesignatorStatementOptional, DesignatorSignature, ActPars, ActParsOptional, Assignop ;
+nonterminal CaseList, Case, DesignatorStatementOptional, ActPars, ActParsOptional, Assignop ;
 nonterminal ExprNext, Relop ;
-nonterminal Addop, Mulop, FuncCall, ExprFactorOptional ;
+nonterminal Addop, Mulop ;
 nonterminal UnaryMinus, EnumName, Else ;
+
+// Marker non-terminals za for petlju
+nonterminal ForInit, ForCondStart, ForBodyStart, ForUpdateStart ;
+// Marker non-terminals za switch
+nonterminal SwitchStart, CaseLabel ;
+// Marker non-terminals za ternarni operator
+nonterminal TernaryCondEnd, TernaryTrueEnd ;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Program, ProgramName, Designator, MethodDec, TypeOption, DesignatorArrayName ;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Term, Expr, Factor, VarDeclList, FactorOption, AddopTerm, AddopTermList, MulopFactorList, DesignatorStatement, CondExpr, CondFact ;
@@ -200,9 +207,9 @@ Statement ::= (StatementDesignator) DesignatorStatement SEMI
 			|
 			(StatementPrint) PRINT LPAREN CondExpr PrintOptional RPAREN SEMI
 			|
-			(StatementSwitch) SWITCH LPAREN CondExpr RPAREN LBRACE CaseList RBRACE
+			(StatementSwitch) SWITCH LPAREN SwitchStart CondExpr RPAREN LBRACE CaseList RBRACE
 			|
-			(StatementFor) FOR LPAREN DesignatorStatementOptional SEMI ConditionOptional SEMI DesignatorStatementOptional RPAREN Statement
+			(StatementFor) FOR LPAREN ForInit DesignatorStatementOptional SEMI ForCondStart ConditionOptional SEMI ForUpdateStart DesignatorStatementOptional ForBodyStart RPAREN Statement
 			|
 			(StatementRecursion) LBRACE StatementList RBRACE ;
 
@@ -291,7 +298,7 @@ DesignatorArrayName ::= (DesignatorArrayName) IDENT ;
 
 CondExpr ::= (CondExprSimple) CondFact
 		| 
-		(CondExprTri) CondFact QUESTIONMARK Expr COLON Expr ;
+		(CondExprTri) CondFact TernaryCondEnd QUESTIONMARK Expr TernaryTrueEnd COLON Expr ;
 
 Expr ::= (Expr) AddopTermList ;
 
@@ -348,7 +355,17 @@ CaseList ::= (CaseListMulti) CaseList Case
 			|
 			(CaseListSingle) Case ;
 
-Case ::= (Case) CASE NUMBER COLON StatementList ;
+Case ::= (Case) CASE NUMBER:caseValue CaseLabel COLON StatementList ;
+
+// ---- Epsilon marker produkcije ----
+ForInit      ::= (ForInit)      /* epsilon */ ;
+ForCondStart ::= (ForCondStart) /* epsilon */ ;
+ForUpdateStart ::= (ForUpdateStart) /* epsilon */ ;
+ForBodyStart ::= (ForBodyStart) /* epsilon */ ;
+SwitchStart  ::= (SwitchStart)  /* epsilon */ ;
+CaseLabel    ::= (CaseLabel)    /* epsilon */ ;
+TernaryCondEnd ::= (TernaryCondEnd) /* epsilon */ ;
+TernaryTrueEnd ::= (TernaryTrueEnd) /* epsilon */ ;
 
 
 

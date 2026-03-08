@@ -46,7 +46,7 @@ public class Compiler {
             Program prog = (Program)(s.value); 
 
             // ispis AST
-            log.info(prog.toString(""));
+//            log.info(prog.toString(""));
 
             /* Inicijalizacija tabele simbola */
             Tab.init();

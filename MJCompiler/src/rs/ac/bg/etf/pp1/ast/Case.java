@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 8/2/2026 15:22:43
+// 8/2/2026 17:3:52
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -9,21 +9,32 @@ public class Case implements SyntaxNode {
 
     private SyntaxNode parent;
     private int line;
-    private Integer N1;
+    private Integer caseValue;
+    private CaseLabel CaseLabel;
     private StatementList StatementList;
 
-    public Case (Integer N1, StatementList StatementList) {
-        this.N1=N1;
+    public Case (Integer caseValue, CaseLabel CaseLabel, StatementList StatementList) {
+        this.caseValue=caseValue;
+        this.CaseLabel=CaseLabel;
+        if(CaseLabel!=null) CaseLabel.setParent(this);
         this.StatementList=StatementList;
         if(StatementList!=null) StatementList.setParent(this);
     }
 
-    public Integer getN1() {
-        return N1;
+    public Integer getCaseValue() {
+        return caseValue;
     }
 
-    public void setN1(Integer N1) {
-        this.N1=N1;
+    public void setCaseValue(Integer caseValue) {
+        this.caseValue=caseValue;
+    }
+
+    public CaseLabel getCaseLabel() {
+        return CaseLabel;
+    }
+
+    public void setCaseLabel(CaseLabel CaseLabel) {
+        this.CaseLabel=CaseLabel;
     }
 
     public StatementList getStatementList() {
@@ -55,15 +66,18 @@ public class Case implements SyntaxNode {
     }
 
     public void childrenAccept(Visitor visitor) {
+        if(CaseLabel!=null) CaseLabel.accept(visitor);
         if(StatementList!=null) StatementList.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
+        if(CaseLabel!=null) CaseLabel.traverseTopDown(visitor);
         if(StatementList!=null) StatementList.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
+        if(CaseLabel!=null) CaseLabel.traverseBottomUp(visitor);
         if(StatementList!=null) StatementList.traverseBottomUp(visitor);
         accept(visitor);
     }
@@ -73,7 +87,13 @@ public class Case implements SyntaxNode {
         buffer.append(tab);
         buffer.append("Case(\n");
 
-        buffer.append(" "+tab+N1);
+        buffer.append(" "+tab+caseValue);
+        buffer.append("\n");
+
+        if(CaseLabel!=null)
+            buffer.append(CaseLabel.toString("  "+tab));
+        else
+            buffer.append(tab+"  null");
         buffer.append("\n");
 
         if(StatementList!=null)

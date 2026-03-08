@@ -1,0 +1,83 @@
+INFO  16:57:19,824 - Compiling source file: C:\Users\Win 11\Documents\pp1lab.templateAST (1)\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  16:57:20,106 - #2 program
+INFO  16:57:20,106 - #46 test302
+INFO  16:57:20,106 - #17 {
+INFO  16:57:20,112 - #5 void
+INFO  16:57:20,116 - #46 main
+INFO  16:57:20,116 - #19 (
+INFO  16:57:20,116 - #20 )
+INFO  16:57:20,117 - #17 {
+INFO  16:57:20,118 - #12 print
+INFO  16:57:20,119 - #19 (
+INFO  16:57:20,119 - #45 5
+INFO  16:57:20,120 - #37 >
+INFO  16:57:20,131 - #45 3
+INFO  16:57:20,134 - #20 )
+INFO  16:57:20,140 - #23 ;
+INFO  16:57:20,140 - #18 }
+INFO  16:57:20,140 - #18 }
+INFO  16:57:20,146 - Program(
+  ProgramName(
+   test302
+  ) [ProgramName]
+  DeclListN(
+  ) [DeclListN]
+  MethodDecListY(
+    MethodDecListN(
+    ) [MethodDecListN]
+    MethodDec(
+      TypeOptionN(
+       main
+      ) [TypeOptionN]
+      FormParsN(
+      ) [FormParsN]
+      VarDeclListN(
+      ) [VarDeclListN]
+      StatementListY(
+        StatementListN(
+        ) [StatementListN]
+        StatementPrint(
+          CondExprSimple(
+            CondFactRel(
+              Expr(
+                AddopTermListTerm(
+                  Term(
+                    MulopFactorListFactor(
+                      Factor(
+                        UnaryMinusN(
+                        ) [UnaryMinusN]
+                        FactorOptionNumber(
+                         5
+                        ) [FactorOptionNumber]
+                      ) [Factor]
+                    ) [MulopFactorListFactor]
+                  ) [Term]
+                ) [AddopTermListTerm]
+              ) [Expr]
+              RelopGt(
+              ) [RelopGt]
+              Expr(
+                AddopTermListTerm(
+                  Term(
+                    MulopFactorListFactor(
+                      Factor(
+                        UnaryMinusN(
+                        ) [UnaryMinusN]
+                        FactorOptionNumber(
+                         3
+                        ) [FactorOptionNumber]
+                      ) [Factor]
+                    ) [MulopFactorListFactor]
+                  ) [Term]
+                ) [AddopTermListTerm]
+              ) [Expr]
+            ) [CondFactRel]
+          ) [CondExprSimple]
+          PrintOptionalN(
+          ) [PrintOptionalN]
+        ) [StatementPrint]
+      ) [StatementListY]
+    ) [MethodDec]
+  ) [MethodDecListY]
+) [Program]
+INFO  16:57:20,188 - Generisanje uspesno zavrseno!

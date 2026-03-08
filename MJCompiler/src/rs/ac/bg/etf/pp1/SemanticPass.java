@@ -805,17 +805,17 @@ public class SemanticPass extends VisitorAdaptor {
 		returnHappend = true;
 	}
 	
-	@Override
-	public void visit(StatementBreak statementBreak) {
-		if(loopCnt == 0 && switchCnt == 0)
-			report_error("Break naredba se ne nalazi unutar tela petlje.", statementBreak);
-	}
-	
-	@Override
-	public void visit(StatementContinue statementContinue) {
-		if(loopCnt == 0)
-			report_error("Continue naredba se ne nalazi unutar tela petlje.", statementContinue);
-	}
+//	@Override
+//	public void visit(StatementBreak statementBreak) {
+//		if(loopCnt == 0 && switchCnt == 0)
+//			report_error("Break naredba se ne nalazi unutar tela petlje.", statementBreak);
+//	}
+//	
+//	@Override
+//	public void visit(StatementContinue statementContinue) {
+//		if(loopCnt == 0)
+//			report_error("Continue naredba se ne nalazi unutar tela petlje.", statementContinue);
+//	}
 	
 	@Override
 	public void visit(StatementRead statementRead) {
@@ -837,7 +837,7 @@ public class SemanticPass extends VisitorAdaptor {
 	@Override
 	public void visit(Case caseNode) {
 
-	    int value = caseNode.getN1();
+	    int value = caseNode.getCaseValue();
 
 	    if (switchCaseValues.contains(value)) {
 	        report_error("Duplirana case vrednost: " + value, caseNode);
@@ -849,7 +849,6 @@ public class SemanticPass extends VisitorAdaptor {
 	@Override
 	public void visit(StatementSwitch statementSwitch) {
 	    switchCaseValues.clear();
-	    switchCnt--;
 	}
 	
 	@Override
@@ -864,20 +863,44 @@ public class SemanticPass extends VisitorAdaptor {
 	
 	@Override
 	public void visit(StatementFor statementFor) {
-	    loopCnt++;
+	    // nothing needed - loop tracking is done via parent-chain in break/continue
 	}
 
 	@Override
-	public void visit(Statement statement) {
-	    if(statement.getParent() instanceof StatementFor) {
-	        loopCnt--;
-	    }
+	public void visit(StatementBreak statementBreak) {
+		if(!isInsideLoop(statementBreak) && !isInsideSwitch(statementBreak))
+			report_error("Break naredba se ne nalazi unutar tela petlje ili switch-a.", statementBreak);
+	}
+
+	@Override
+	public void visit(StatementContinue statementContinue) {
+		if(!isInsideLoop(statementContinue))
+			report_error("Continue naredba se ne nalazi unutar tela petlje.", statementContinue);
+	}
+
+	private boolean isInsideLoop(SyntaxNode node) {
+		SyntaxNode current = node.getParent();
+		while (current != null) {
+			if (current instanceof StatementFor) return true;
+			if (current instanceof MethodDec) break;
+			current = current.getParent();
+		}
+		return false;
+	}
+
+	private boolean isInsideSwitch(SyntaxNode node) {
+		SyntaxNode current = node.getParent();
+		while (current != null) {
+			if (current instanceof StatementSwitch) return true;
+			if (current instanceof MethodDec) break;
+			current = current.getParent();
+		}
+		return false;
 	}
 	
 	@Override
 	public void visit(CaseListSingle caseListSingle) {
-	    switchCnt++;
+	    // nothing needed here
 	}
 
 }
-	

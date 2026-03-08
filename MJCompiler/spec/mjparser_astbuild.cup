@@ -108,19 +108,28 @@ nonterminal PrintOptional PrintOptional ;
 nonterminal CaseList CaseList;
 nonterminal Case Case;
 nonterminal DesignatorStatementOptional DesignatorStatementOptional;
-nonterminal DesignatorSignature DesignatorSignature;
 nonterminal ActPars ActPars;
 nonterminal ActParsOptional ActParsOptional;
 nonterminal Assignop Assignop ;
 nonterminal ExprNext ExprNext;
 nonterminal Relop Relop ;
 nonterminal Addop Addop;
-nonterminal Mulop Mulop;
-nonterminal FuncCall FuncCall;
-nonterminal ExprFactorOptional ExprFactorOptional ;
+nonterminal Mulop Mulop ;
 nonterminal UnaryMinus UnaryMinus;
 nonterminal EnumName EnumName;
 nonterminal Else Else ;
+
+// Marker non-terminals za for petlju
+nonterminal ForInit ForInit;
+nonterminal ForCondStart ForCondStart;
+nonterminal ForBodyStart ForBodyStart;
+nonterminal ForUpdateStart ForUpdateStart ;
+// Marker non-terminals za switch
+nonterminal SwitchStart SwitchStart;
+nonterminal CaseLabel CaseLabel ;
+// Marker non-terminals za ternarni operator
+nonterminal TernaryCondEnd TernaryCondEnd;
+nonterminal TernaryTrueEnd TernaryTrueEnd ;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Program, ProgramName, Designator, MethodDec, TypeOption, DesignatorArrayName ;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Term, Expr, Factor, VarDeclList, FactorOption, AddopTerm, AddopTermList, MulopFactorList, DesignatorStatement, CondExpr, CondFact ;
@@ -231,9 +240,9 @@ Statement ::= (StatementDesignator) DesignatorStatement:D1 SEMI {: RESULT=new St
 			|
 			(StatementPrint) PRINT LPAREN CondExpr:C1 PrintOptional:P2 RPAREN SEMI {: RESULT=new StatementPrint(C1, P2); RESULT.setLine(C1left); :}
 			|
-			(StatementSwitch) SWITCH LPAREN CondExpr:C1 RPAREN LBRACE CaseList:C2 RBRACE {: RESULT=new StatementSwitch(C1, C2); RESULT.setLine(C1left); :}
+			(StatementSwitch) SWITCH LPAREN SwitchStart:S1 CondExpr:C2 RPAREN LBRACE CaseList:C3 RBRACE {: RESULT=new StatementSwitch(S1, C2, C3); RESULT.setLine(S1left); :}
 			|
-			(StatementFor) FOR LPAREN DesignatorStatementOptional:D1 SEMI ConditionOptional:C2 SEMI DesignatorStatementOptional:D3 RPAREN Statement:S4 {: RESULT=new StatementFor(D1, C2, D3, S4); RESULT.setLine(D1left); :}
+			(StatementFor) FOR LPAREN ForInit:F1 DesignatorStatementOptional:D2 SEMI ForCondStart:F3 ConditionOptional:C4 SEMI ForUpdateStart:F5 DesignatorStatementOptional:D6 ForBodyStart:F7 RPAREN Statement:S8 {: RESULT=new StatementFor(F1, D2, F3, C4, F5, D6, F7, S8); RESULT.setLine(F1left); :}
 			|
 			(StatementRecursion) LBRACE StatementList:S1 RBRACE {: RESULT=new StatementRecursion(S1); RESULT.setLine(S1left); :} ;
 
@@ -322,7 +331,7 @@ DesignatorArrayName ::= (DesignatorArrayName) IDENT:I1 {: RESULT=new DesignatorA
 
 CondExpr ::= (CondExprSimple) CondFact:C1 {: RESULT=new CondExprSimple(C1); RESULT.setLine(C1left); :}
 		| 
-		(CondExprTri) CondFact:C1 QUESTIONMARK Expr:E2 COLON Expr:E3 {: RESULT=new CondExprTri(C1, E2, E3); RESULT.setLine(C1left); :} ;
+		(CondExprTri) CondFact:C1 TernaryCondEnd:T2 QUESTIONMARK Expr:E3 TernaryTrueEnd:T4 COLON Expr:E5 {: RESULT=new CondExprTri(C1, T2, E3, T4, E5); RESULT.setLine(C1left); :} ;
 
 Expr ::= (Expr) AddopTermList:A1 {: RESULT=new Expr(A1); RESULT.setLine(A1left); :} ;
 
@@ -379,7 +388,17 @@ CaseList ::= (CaseListMulti) CaseList:C1 Case:C2 {: RESULT=new CaseListMulti(C1,
 			|
 			(CaseListSingle) Case:C1 {: RESULT=new CaseListSingle(C1); RESULT.setLine(C1left); :} ;
 
-Case ::= (Case) CASE NUMBER:N1 COLON StatementList:S2 {: RESULT=new Case(N1, S2); RESULT.setLine(N1left); :} ;
+Case ::= (Case) CASE NUMBER:caseValue CaseLabel:C1 COLON StatementList:S2 {: RESULT=new Case(caseValue, C1, S2); RESULT.setLine(caseValueleft); :} ;
+
+// ---- Epsilon marker produkcije ----
+ForInit      ::= (ForInit) {: RESULT=new ForInit(); :}      /* epsilon */ ;
+ForCondStart ::= (ForCondStart) {: RESULT=new ForCondStart(); :} /* epsilon */ ;
+ForUpdateStart ::= (ForUpdateStart) {: RESULT=new ForUpdateStart(); :} /* epsilon */ ;
+ForBodyStart ::= (ForBodyStart) {: RESULT=new ForBodyStart(); :} /* epsilon */ ;
+SwitchStart  ::= (SwitchStart) {: RESULT=new SwitchStart(); :}  /* epsilon */ ;
+CaseLabel    ::= (CaseLabel) {: RESULT=new CaseLabel(); :}    /* epsilon */ ;
+TernaryCondEnd ::= (TernaryCondEnd) {: RESULT=new TernaryCondEnd(); :} /* epsilon */ ;
+TernaryTrueEnd ::= (TernaryTrueEnd) {: RESULT=new TernaryTrueEnd(); :} /* epsilon */ ;
 
 
 

@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 8/2/2026 15:22:43
+// 8/2/2026 17:3:52
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -23,12 +23,10 @@ public interface Visitor {
     public void visit(MethodDecList MethodDecList);
     public void visit(ExprNext ExprNext);
     public void visit(Addop Addop);
-    public void visit(FuncCall FuncCall);
     public void visit(CondTermListOptional CondTermListOptional);
     public void visit(DeclList DeclList);
     public void visit(Designator Designator);
     public void visit(CondFactListOptional CondFactListOptional);
-    public void visit(ExprFactorOptional ExprFactorOptional);
     public void visit(CaseList CaseList);
     public void visit(FormValue FormValue);
     public void visit(CondExpr CondExpr);
@@ -39,7 +37,6 @@ public interface Visitor {
     public void visit(Const Const);
     public void visit(UnaryMinus UnaryMinus);
     public void visit(Decl Decl);
-    public void visit(DesignatorSignature DesignatorSignature);
     public void visit(Statement Statement);
     public void visit(VarDecl VarDecl);
     public void visit(AddopTerm AddopTerm);
@@ -49,6 +46,14 @@ public interface Visitor {
     public void visit(ElseOptional ElseOptional);
     public void visit(FormPars FormPars);
     public void visit(AddopTermList AddopTermList);
+    public void visit(TernaryTrueEnd TernaryTrueEnd);
+    public void visit(TernaryCondEnd TernaryCondEnd);
+    public void visit(CaseLabel CaseLabel);
+    public void visit(SwitchStart SwitchStart);
+    public void visit(ForBodyStart ForBodyStart);
+    public void visit(ForUpdateStart ForUpdateStart);
+    public void visit(ForCondStart ForCondStart);
+    public void visit(ForInit ForInit);
     public void visit(Case Case);
     public void visit(CaseListSingle CaseListSingle);
     public void visit(CaseListMulti CaseListMulti);
