@@ -1,518 +1,1560 @@
-Buildfile: C:\Users\Win 11\Documents\pp1lab.templateAST (1)\pp1lab.templateAST\workspace\MJCompiler\build.xml
-disasm:
-     [java] codeSize=329
-     [java] dataSize=3
-     [java] mainPC=13
-     [java] 0: enter 1 1
-     [java] 3: load_0
-     [java] 4: exit
-     [java] 5: return
-     [java] 6: enter 1 1
-     [java] 9: load_0
-     [java] 10: arraylength
-     [java] 11: exit
-     [java] 12: return
-     [java] 13: enter 0 5
-     [java] 16: const_0
-     [java] 17: const_0
-     [java] 18: store_3
-     [java] 19: const_1
-     [java] 20: const_1
-     [java] 21: store_2
-     [java] 22: const_0
-     [java] 23: store_0
-     [java] 24: load_0
-     [java] 25: const_1
-     [java] 26: add
-     [java] 27: store_0
-     [java] 28: load_0
-     [java] 29: load_2
-     [java] 30: add
-     [java] 31: store_0
-     [java] 32: load_0
-     [java] 33: const_5
-     [java] 34: mul
-     [java] 35: store_0
-     [java] 36: load_0
-     [java] 37: const_1
-     [java] 38: sub
-     [java] 39: store_0
-     [java] 40: load_0
-     [java] 41: const_0
-     [java] 42: print
-     [java] 43: const 10
-     [java] 48: const_0
-     [java] 49: bprint
-     [java] 50: const_3
-     [java] 51: newarray 1
-     [java] 53: putstatic 0
-     [java] 56: getstatic 0
-     [java] 59: load_3
-     [java] 60: const_2
-     [java] 61: astore
-     [java] 62: getstatic 0
-     [java] 65: load_2
-     [java] 66: const_3
-     [java] 67: astore
-     [java] 68: getstatic 0
-     [java] 71: getstatic 0
-     [java] 74: load_3
-     [java] 75: aload
-     [java] 76: getstatic 0
-     [java] 79: const_1
-     [java] 80: aload
-     [java] 81: const_4
-     [java] 82: mul
-     [java] 83: astore
-     [java] 84: getstatic 0
-     [java] 87: const_2
-     [java] 88: aload
-     [java] 89: getstatic 0
-     [java] 92: const_0
-     [java] 93: aload
-     [java] 94: div
-     [java] 95: store_0
-     [java] 96: load_0
-     [java] 97: const_0
-     [java] 98: print
-     [java] 99: const 10
-     [java] 104: const_0
-     [java] 105: bprint
-     [java] 106: getstatic 0
-     [java] 109: const_2
-     [java] 110: aload
-     [java] 111: const_0
-     [java] 112: print
-     [java] 113: const 10
-     [java] 118: const_0
-     [java] 119: bprint
-     [java] 120: const_3
-     [java] 121: newarray 0
-     [java] 123: putstatic 1
-     [java] 126: getstatic 1
-     [java] 129: const_0
-     [java] 130: const 97
-     [java] 135: bastore
-     [java] 136: getstatic 1
-     [java] 139: load_2
-     [java] 140: const 98
-     [java] 145: bastore
-     [java] 146: getstatic 1
-     [java] 149: const_5
-     [java] 150: const_3
-     [java] 151: sub
-     [java] 152: const 99
-     [java] 157: bastore
-     [java] 158: getstatic 1
-     [java] 161: const_1
-     [java] 162: baload
-     [java] 163: const_0
-     [java] 164: bprint
-     [java] 165: const 10
-     [java] 170: const_0
-     [java] 171: bprint
-     [java] 172: getstatic 1
-     [java] 175: load_2
-     [java] 176: const_2
-     [java] 177: mul
-     [java] 178: baload
-     [java] 179: const_0
-     [java] 180: bprint
-     [java] 181: const 10
-     [java] 186: const_0
-     [java] 187: bprint
-     [java] 188: getstatic 1
-     [java] 191: const_0
-     [java] 192: baload
-     [java] 193: call -194 (=-1)
-     [java] 196: const_0
-     [java] 197: print
-     [java] 198: load 255
-     [java] 200: arraylength
-     [java] 201: const_0
-     [java] 202: print
-     [java] 203: load 255
-     [java] 205: arraylength
-     [java] 206: const_0
-     [java] 207: print
-     [java] 208: const_1
-     [java] 209: putstatic 2
-     [java] 212: read
-     [java] 213: store_0
-     [java] 214: load_0
-     [java] 215: neg
-     [java] 216: const_5
-     [java] 217: getstatic 2
-     [java] 220: mul
-     [java] 221: const_2
-     [java] 222: div
-     [java] 223: load_3
-     [java] 224: sub
-     [java] 225: load_0
-     [java] 226: mul
-     [java] 227: add
-     [java] 228: const_3
-     [java] 229: const_2
-     [java] 230: rem
-     [java] 231: const_3
-     [java] 232: const_2
-     [java] 233: mul
-     [java] 234: add
-     [java] 235: const 7
-     [java] 240: sub
-     [java] 241: sub
-     [java] 242: store_0
-     [java] 243: load_0
-     [java] 244: const_0
-     [java] 245: print
-     [java] 246: read
-     [java] 247: store_0
-     [java] 248: const_1
-     [java] 249: store 4
-     [java] 251: load 4
-     [java] 253: const_0
-     [java] 254: jeq 7 (=261)
-     [java] 257: load_0
-     [java] 258: jmp 10 (=268)
-     [java] 261: load_0
-     [java] 262: const 10
-     [java] 267: add
-     [java] 268: const_0
-     [java] 269: print
-     [java] 270: const_0
-     [java] 271: const_0
-     [java] 272: jeq 13 (=285)
-     [java] 275: load_0
-     [java] 276: const 20
-     [java] 281: add
-     [java] 282: jmp 10 (=292)
-     [java] 285: load_0
-     [java] 286: const 30
-     [java] 291: add
-     [java] 292: const_0
-     [java] 293: print
-     [java] 294: load_0
-     [java] 295: const 10
-     [java] 300: jle 7 (=307)
-     [java] 303: const_1
-     [java] 304: jmp 4 (=308)
-     [java] 307: const_0
-     [java] 308: const_0
-     [java] 309: jeq 11 (=320)
-     [java] 312: const 43
-     [java] 317: jmp 8 (=325)
-     [java] 320: const 45
-     [java] 325: const_0
-     [java] 326: bprint
-     [java] 327: exit
-     [java] 328: return
-debugObj:
-     [java]   pos: instruction operands
-     [java]      | expressionstack
-     [java] -----------------------------
-     [java]    13: enter       0 5 
-     [java]      | 
-     [java]    16: const_0     
-     [java]      | 0 
-     [java]    17: const_0     
-     [java]      | 0 0 
-     [java]    18: store_3     
-     [java]      | 0 
-     [java]    19: const_1     
-     [java]      | 0 1 
-     [java]    20: const_1     
-     [java]      | 0 1 1 
-     [java]    21: store_2     
-     [java]      | 0 1 
-     [java]    22: const_0     
-     [java]      | 0 1 0 
-     [java]    23: store_0     
-     [java]      | 0 1 
-     [java]    24: load_0      
-     [java]      | 0 1 0 
-     [java]    25: const_1     
-     [java]      | 0 1 0 1 
-     [java]    26: add         
-     [java]      | 0 1 1 
-     [java]    27: store_0     
-     [java]      | 0 1 
-     [java]    28: load_0      
-     [java]      | 0 1 1 
-     [java]    29: load_2      
-     [java]      | 0 1 1 1 
-     [java]    30: add         
-     [java]      | 0 1 2 
-     [java]    31: store_0     
-     [java]      | 0 1 
-     [java]    32: load_0      
-     [java]      | 0 1 2 
-     [java]    33: const_5     
-     [java]      | 0 1 2 5 
-     [java]    34: mul         
-     [java]      | 0 1 10 
-     [java]    35: store_0     
-     [java]      | 0 1 
-     [java]    36: load_0      
-     [java]      | 0 1 10 
-     [java]    37: const_1     
-     [java]      | 0 1 10 1 
-     [java]    38: sub         
-     [java]      | 0 1 9 
-     [java]    39: store_0     
-     [java]      | 0 1 
-     [java]    40: load_0      
-     [java]      | 0 1 9 
-     [java]    41: const_0     
-     [java]      | 0 1 9 0 
-     [java]    42: print       9
-     [java]      | 0 1 
-     [java]    43: const       10 
-     [java]      | 0 1 10 
-     [java]    48: const_0     
-     [java]      | 0 1 10 0 
-     [java]    49: bprint      
-     [java]      | 0 1 
-     [java]    50: const_3     
-     [java]      | 0 1 3 
-     [java]    51: newarray    1 
-     [java]      | 0 1 2 
-     [java]    53: putstatic   0 
-     [java]      | 0 1 
-     [java]    56: getstatic   0 
-     [java]      | 0 1 2 
-     [java]    59: load_3      
-     [java]      | 0 1 2 0 
-     [java]    60: const_2     
-     [java]      | 0 1 2 0 2 
-     [java]    61: astore      
-     [java] Arraylength = 3
-     [java] Address = 2
-     [java] Index = 0
-     [java] Value = 2
-     [java]      | 0 1 
-     [java]    62: getstatic   0 
-     [java]      | 0 1 2 
-     [java]    65: load_2      
-     [java]      | 0 1 2 1 
-     [java]    66: const_3     
-     [java]      | 0 1 2 1 3 
-     [java]    67: astore      
-     [java] Arraylength = 3
-     [java] Address = 2
-     [java] Index = 1
-     [java] Value = 3
-     [java]      | 0 1 
-     [java]    68: getstatic   0 
-     [java]      | 0 1 2 
-     [java]    71: getstatic   0 
-     [java]      | 0 1 2 2 
-     [java]    74: load_3      
-     [java]      | 0 1 2 2 0 
-     [java]    75: aload       
-     [java]      | 0 1 2 2 
-     [java]    76: getstatic   0 
-     [java]      | 0 1 2 2 2 
-     [java]    79: const_1     
-     [java]      | 0 1 2 2 2 1 
-     [java]    80: aload       
-     [java]      | 0 1 2 2 3 
-     [java]    81: const_4     
-     [java]      | 0 1 2 2 3 4 
-     [java]    82: mul         
-     [java]      | 0 1 2 2 12 
-     [java]    83: astore      
-     [java] Arraylength = 3
-     [java] Address = 2
-     [java] Index = 2
-     [java] Value = 12
-     [java]      | 0 1 
-     [java]    84: getstatic   0 
-     [java]      | 0 1 2 
-     [java]    87: const_2     
-     [java]      | 0 1 2 2 
-     [java]    88: aload       
-     [java]      | 0 1 12 
-     [java]    89: getstatic   0 
-     [java]      | 0 1 12 2 
-     [java]    92: const_0     
-     [java]      | 0 1 12 2 0 
-     [java]    93: aload       
-     [java]      | 0 1 12 2 
-     [java]    94: div         
-     [java]      | 0 1 6 
-     [java]    95: store_0     
-     [java]      | 0 1 
-     [java]    96: load_0      
-     [java]      | 0 1 6 
-     [java]    97: const_0     
-     [java]      | 0 1 6 0 
-     [java]    98: print       6
-     [java]      | 0 1 
-     [java]    99: const       10 
-     [java]      | 0 1 10 
-     [java]   104: const_0     
-     [java]      | 0 1 10 0 
-     [java]   105: bprint      
-     [java]      | 0 1 
-     [java]   106: getstatic   0 
-     [java]      | 0 1 2 
-     [java]   109: const_2     
-     [java]      | 0 1 2 2 
-     [java]   110: aload       
-     [java]      | 0 1 12 
-     [java]   111: const_0     
-     [java]      | 0 1 12 0 
-     [java]   112: print       12
-     [java]      | 0 1 
-     [java]   113: const       10 
-     [java]      | 0 1 10 
-     [java]   118: const_0     
-     [java]      | 0 1 10 0 
-     [java]   119: bprint      
-     [java]      | 0 1 
-     [java]   120: const_3     
-     [java]      | 0 1 3 
-     [java]   121: newarray    0 
-     [java]      | 0 1 6 
-     [java]   123: putstatic   1 
-     [java]      | 0 1 
-     [java]   126: getstatic   1 
-     [java]      | 0 1 6 
-     [java]   129: const_0     
-     [java]      | 0 1 6 0 
-     [java]   130: const       97 
-     [java]      | 0 1 6 0 97 
-     [java]   135: bastore     
-     [java]      | 0 1 
-     [java]   136: getstatic   1 
-     [java]      | 0 1 6 
-     [java]   139: load_2      
-     [java]      | 0 1 6 1 
-     [java]   140: const       98 
-     [java]      | 0 1 6 1 98 
-     [java]   145: bastore     
-     [java]      | 0 1 
-     [java]   146: getstatic   1 
-     [java]      | 0 1 6 
-     [java]   149: const_5     
-     [java]      | 0 1 6 5 
-     [java]   150: const_3     
-     [java]      | 0 1 6 5 3 
-     [java]   151: sub         
-     [java]      | 0 1 6 2 
-     [java]   152: const       99 
-     [java]      | 0 1 6 2 99 
-     [java]   157: bastore     
-     [java]      | 0 1 
-     [java]   158: getstatic   1 
-     [java]      | 0 1 6 
-     [java]   161: const_1     
-     [java]      | 0 1 6 1 
-     [java]   162: baload      
-     [java]      | 0 1 98 
-     [java]   163: const_0     
-     [java]      | 0 1 98 0 
-     [java]   164: bprint      b
-     [java]      | 0 1 
-     [java]   165: const       10 
-     [java]      | 0 1 10 
-     [java]   170: const_0     
-     [java]      | 0 1 10 0 
-     [java]   171: bprint      
-     [java]      | 0 1 
-     [java]   172: getstatic   1 
-     [java]      | 0 1 6 
-     [java]   175: load_2      
-     [java]      | 0 1 6 1 
-     [java]   176: const_2     
-     [java]      | 0 1 6 1 2 
-     [java]   177: mul         
-     [java]      | 0 1 6 2 
-     [java]   178: baload      
-     [java]      | 0 1 99 
-     [java]   179: const_0     
-     [java]      | 0 1 99 0 
-     [java]   180: bprint      c
-     [java]      | 0 1 
-     [java]   181: const       10 
-     [java]      | 0 1 10 
-     [java]   186: const_0     
-     [java]      | 0 1 10 0 
-     [java]   187: bprint      
-     [java]      | 0 1 
-     [java]   188: getstatic   1 
-     [java]      | 0 1 6 
-     [java]   191: const_0     
-     [java]      | 0 1 6 0 
-     [java]   192: baload      
-     [java]      | 0 1 97 
-     [java]   193: call        -194 
-     [java]      | 0 1 97 
-     [java] java.lang.ArrayIndexOutOfBoundsException: Index -1 out of bounds for length 329
-     [java] 	at org.apache.tools.ant.taskdefs.ExecuteJava.execute(ExecuteJava.java:194)
-     [java] 	at org.apache.tools.ant.taskdefs.Java.run(Java.java:892)
-     [java] 	at org.apache.tools.ant.taskdefs.Java.executeJava(Java.java:232)
-     [java] 	at org.apache.tools.ant.taskdefs.Java.executeJava(Java.java:136)
-     [java] 	at org.apache.tools.ant.taskdefs.Java.execute(Java.java:109)
-     [java] 	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:299)
-     [java] 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-     [java] 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-     [java] 	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:99)
-     [java] 	at org.apache.tools.ant.Task.perform(Task.java:350)
-     [java] 	at org.apache.tools.ant.Target.execute(Target.java:449)
-     [java] 	at org.apache.tools.ant.Target.performTasks(Target.java:470)
-     [java] 	at org.apache.tools.ant.Project.executeSortedTargets(Project.java:1401)
-     [java] 	at org.apache.tools.ant.Project.executeTarget(Project.java:1374)
-     [java] 	at org.apache.tools.ant.helper.DefaultExecutor.executeTargets(DefaultExecutor.java:41)
-     [java] 	at org.eclipse.ant.internal.launching.remote.EclipseDefaultExecutor.executeTargets(EclipseDefaultExecutor.java:33)
-     [java] 	at org.apache.tools.ant.Project.executeTargets(Project.java:1264)
-     [java] 	at org.eclipse.ant.internal.launching.remote.InternalAntRunner.run(InternalAntRunner.java:474)
-     [java] 	at org.eclipse.ant.internal.launching.remote.InternalAntRunner.main(InternalAntRunner.java:153)
-     [java] Caused by: java.lang.ArrayIndexOutOfBoundsException: Index -1 out of bounds for length 329
-     [java] 	at rs.etf.pp1.mj.runtime.Run.next(Run.java:138)
-     [java] 	at rs.etf.pp1.mj.runtime.Run.interpret(Run.java:249)
-     [java] 	at rs.etf.pp1.mj.runtime.Run.main(Run.java:553)
-     [java] 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-     [java] 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-     [java] 	at org.apache.tools.ant.taskdefs.ExecuteJava.run(ExecuteJava.java:220)
-     [java] 	at org.apache.tools.ant.taskdefs.ExecuteJava.execute(ExecuteJava.java:155)
-     [java] 	... 18 more
-     [java] Java Result: -1
-runObj:
-     [java] 9
-     [java] 6
-     [java] 12
-     [java] b
-     [java] c
-     [java] java.lang.ArrayIndexOutOfBoundsException: Index -1 out of bounds for length 329
-     [java] 	at org.apache.tools.ant.taskdefs.ExecuteJava.execute(ExecuteJava.java:194)
-     [java] 	at org.apache.tools.ant.taskdefs.Java.run(Java.java:892)
-     [java] 	at org.apache.tools.ant.taskdefs.Java.executeJava(Java.java:232)
-     [java] 	at org.apache.tools.ant.taskdefs.Java.executeJava(Java.java:136)
-     [java] 	at org.apache.tools.ant.taskdefs.Java.execute(Java.java:109)
-     [java] 	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:299)
-     [java] 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-     [java] 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-     [java] 	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:99)
-     [java] 	at org.apache.tools.ant.Task.perform(Task.java:350)
-     [java] 	at org.apache.tools.ant.Target.execute(Target.java:449)
-     [java] 	at org.apache.tools.ant.Target.performTasks(Target.java:470)
-     [java] 	at org.apache.tools.ant.Project.executeSortedTargets(Project.java:1401)
-     [java] 	at org.apache.tools.ant.Project.executeTarget(Project.java:1374)
-     [java] 	at org.apache.tools.ant.helper.DefaultExecutor.executeTargets(DefaultExecutor.java:41)
-     [java] 	at org.eclipse.ant.internal.launching.remote.EclipseDefaultExecutor.executeTargets(EclipseDefaultExecutor.java:33)
-     [java] 	at org.apache.tools.ant.Project.executeTargets(Project.java:1264)
-     [java] 	at org.eclipse.ant.internal.launching.remote.InternalAntRunner.run(InternalAntRunner.java:474)
-     [java] 	at org.eclipse.ant.internal.launching.remote.InternalAntRunner.main(InternalAntRunner.java:153)
-     [java] Caused by: java.lang.ArrayIndexOutOfBoundsException: Index -1 out of bounds for length 329
-     [java] 	at rs.etf.pp1.mj.runtime.Run.next(Run.java:138)
-     [java] 	at rs.etf.pp1.mj.runtime.Run.interpret(Run.java:249)
-     [java] 	at rs.etf.pp1.mj.runtime.Run.main(Run.java:553)
-     [java] 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-     [java] 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-     [java] 	at org.apache.tools.ant.taskdefs.ExecuteJava.run(ExecuteJava.java:220)
-     [java] 	at org.apache.tools.ant.taskdefs.ExecuteJava.execute(ExecuteJava.java:155)
-     [java] 	... 18 more
-     [java] Java Result: -1
-BUILD SUCCESSFUL
-Total time: 208 milliseconds
+codeSize=688
+dataSize=3
+mainPC=79
+0: enter 1 1
+3: load_0
+4: exit
+5: return
+6: enter 1 1
+9: load_0
+10: arraylength
+11: exit
+12: return
+13: enter 2 2
+16: load_0
+17: load_1
+18: add
+19: exit
+20: return
+21: exit
+22: return
+23: enter 2 3
+26: load_1
+27: const_1
+28: jne 6 (=34)
+31: jmp 6 (=37)
+34: jmp 8 (=42)
+37: const_1
+38: store_2
+39: jmp 16 (=55)
+42: load_1
+43: const_2
+44: jne 6 (=50)
+47: jmp 6 (=53)
+50: jmp 5 (=55)
+53: load_0
+54: store_2
+55: load_0
+56: load_2
+57: call -44 (=13)
+60: exit
+61: return
+62: exit
+63: return
+64: enter 0 0
+67: const 118
+72: const_0
+73: bprint
+74: const_0
+75: exit
+76: return
+77: exit
+78: return
+79: enter 0 0
+82: const_1
+83: const_1
+84: jeq 6 (=90)
+87: jmp 6 (=93)
+90: jmp 14 (=104)
+93: const 6
+98: neg
+99: const_0
+100: print
+101: jmp 6 (=107)
+104: const_0
+105: const_0
+106: print
+107: const_0
+108: putstatic 1
+111: const_0
+112: putstatic 0
+115: const_0
+116: putstatic 0
+119: getstatic 0
+122: const_5
+123: jge 6 (=129)
+126: jmp 6 (=132)
+129: jmp 37 (=166)
+132: jmp 14 (=146)
+135: getstatic 0
+138: const_1
+139: add
+140: putstatic 0
+143: jmp -24 (=119)
+146: getstatic 0
+149: const_2
+150: jne 6 (=156)
+153: jmp 6 (=159)
+156: jmp 7 (=163)
+159: const_1
+160: putstatic 1
+163: jmp -28 (=135)
+166: getstatic 1
+169: const_0
+170: jeq 6 (=176)
+173: jmp 6 (=179)
+176: jmp 26 (=202)
+179: getstatic 0
+182: const_5
+183: jne 6 (=189)
+186: jmp 6 (=192)
+189: jmp 9 (=198)
+192: const_1
+193: const_0
+194: print
+195: jmp 7 (=202)
+198: const_1
+199: neg
+200: const_0
+201: print
+202: const_3
+203: newarray 1
+205: putstatic 2
+208: getstatic 2
+211: const_0
+212: const_1
+213: astore
+214: getstatic 2
+217: const_1
+218: const_2
+219: astore
+220: getstatic 2
+223: const_2
+224: getstatic 2
+227: const_1
+228: aload
+229: getstatic 2
+232: const_0
+233: aload
+234: call -221 (=13)
+237: const_1
+238: add
+239: astore
+240: getstatic 2
+243: const_2
+244: aload
+245: const_4
+246: jne 6 (=252)
+249: jmp 16 (=265)
+252: call -188 (=64)
+255: const_0
+256: jeq 6 (=262)
+259: jmp 6 (=265)
+262: jmp 16 (=278)
+265: const 65
+270: call -270 (=0)
+273: const_0
+274: print
+275: jmp 13 (=288)
+278: const 97
+283: call -283 (=0)
+286: const_0
+287: print
+288: const 10
+293: const_0
+294: bprint
+295: const_0
+296: putstatic 0
+299: getstatic 0
+302: const 10
+307: jge 6 (=313)
+310: jmp 6 (=316)
+313: jmp 62 (=375)
+316: jmp 6 (=322)
+319: jmp -20 (=299)
+322: getstatic 0
+325: const_3
+326: jne 6 (=332)
+329: jmp 6 (=335)
+332: jmp 14 (=346)
+335: getstatic 0
+338: const_1
+339: add
+340: putstatic 0
+343: jmp 32 (=375)
+346: getstatic 0
+349: const_4
+350: jne 6 (=356)
+353: jmp 6 (=359)
+356: jmp 6 (=362)
+359: jmp 16 (=375)
+362: getstatic 0
+365: const_1
+366: call -343 (=23)
+369: putstatic 0
+372: jmp -53 (=319)
+375: getstatic 0
+378: const_3
+379: jne 13 (=392)
+382: call -318 (=64)
+385: const_0
+386: jeq 6 (=392)
+389: jmp 6 (=395)
+392: jmp 9 (=401)
+395: const_4
+396: const_0
+397: print
+398: jmp 7 (=405)
+401: const_4
+402: neg
+403: const_0
+404: print
+405: getstatic 2
+408: const_0
+409: read
+410: astore
+411: getstatic 2
+414: const_1
+415: read
+416: astore
+417: getstatic 2
+420: const_2
+421: read
+422: astore
+423: const 10
+428: const_0
+429: bprint
+430: getstatic 2
+433: const_0
+434: aload
+435: getstatic 2
+438: const_1
+439: aload
+440: call -427 (=13)
+443: getstatic 2
+446: const_2
+447: aload
+448: call -435 (=13)
+451: const_0
+452: print
+453: const_0
+454: putstatic 0
+457: getstatic 0
+460: getstatic 2
+463: arraylength
+464: jge 6 (=470)
+467: jmp 6 (=473)
+470: jmp 25 (=495)
+473: jmp 14 (=487)
+476: getstatic 0
+479: const_1
+480: add
+481: putstatic 0
+484: jmp -27 (=457)
+487: getstatic 0
+490: const_0
+491: print
+492: jmp -16 (=476)
+495: const 10
+500: const_0
+501: bprint
+502: getstatic 2
+505: const_2
+506: aload
+507: const_2
+508: call -485 (=23)
+511: const_0
+512: print
+513: call -449 (=64)
+516: const_0
+517: jeq 11 (=528)
+520: const 116
+525: jmp 8 (=533)
+528: const 102
+533: const_0
+534: bprint
+535: const_0
+536: putstatic 0
+539: getstatic 0
+542: const 10
+547: jge 6 (=553)
+550: jmp 6 (=556)
+553: jmp 133 (=686)
+556: jmp 14 (=570)
+559: getstatic 0
+562: const_1
+563: add
+564: putstatic 0
+567: jmp -28 (=539)
+570: getstatic 0
+573: const_1
+574: add
+575: dup
+576: const_1
+577: jne 12 (=589)
+580: const_1
+581: const_0
+582: print
+583: jmp 92 (=675)
+586: jmp 8 (=594)
+589: dup
+590: const_3
+591: jne 9 (=600)
+594: const_3
+595: const_0
+596: print
+597: jmp 8 (=605)
+600: dup
+601: const_2
+602: jne 12 (=614)
+605: const_2
+606: const_0
+607: print
+608: jmp 67 (=675)
+611: jmp 8 (=619)
+614: dup
+615: const_5
+616: jne 21 (=637)
+619: const_5
+620: const_0
+621: print
+622: getstatic 0
+625: const_2
+626: add
+627: putstatic 0
+630: pop
+631: jmp 55 (=686)
+634: jmp 12 (=646)
+637: dup
+638: const 6
+643: jne 13 (=656)
+646: const 6
+651: const_0
+652: print
+653: jmp 12 (=665)
+656: dup
+657: const 9
+662: jne 13 (=675)
+665: const 9
+670: const_0
+671: print
+672: jmp 3 (=675)
+675: pop
+676: const 10
+681: const_0
+682: bprint
+683: jmp -124 (=559)
+686: exit
+687: return
+
+  pos: instruction operands
+     | expressionstack
+-----------------------------
+   79: enter       0 0 
+     | 
+   82: const_1     
+     | 1 
+   83: const_1     
+     | 1 1 
+   84: jeq         6 
+     | 
+   90: jmp         14 
+     | 
+  104: const_0     
+     | 0 
+  105: const_0     
+     | 0 0 
+  106: print       0
+     | 
+  107: const_0     
+     | 0 
+  108: putstatic   1 
+     | 
+  111: const_0     
+     | 0 
+  112: putstatic   0 
+     | 
+  115: const_0     
+     | 0 
+  116: putstatic   0 
+     | 
+  119: getstatic   0 
+     | 0 
+  122: const_5     
+     | 0 5 
+  123: jge         6 
+     | 
+  126: jmp         6 
+     | 
+  132: jmp         14 
+     | 
+  146: getstatic   0 
+     | 0 
+  149: const_2     
+     | 0 2 
+  150: jne         6 
+     | 
+  156: jmp         7 
+     | 
+  163: jmp         -28 
+     | 
+  135: getstatic   0 
+     | 0 
+  138: const_1     
+     | 0 1 
+  139: add         
+     | 1 
+  140: putstatic   0 
+     | 
+  143: jmp         -24 
+     | 
+  119: getstatic   0 
+     | 1 
+  122: const_5     
+     | 1 5 
+  123: jge         6 
+     | 
+  126: jmp         6 
+     | 
+  132: jmp         14 
+     | 
+  146: getstatic   0 
+     | 1 
+  149: const_2     
+     | 1 2 
+  150: jne         6 
+     | 
+  156: jmp         7 
+     | 
+  163: jmp         -28 
+     | 
+  135: getstatic   0 
+     | 1 
+  138: const_1     
+     | 1 1 
+  139: add         
+     | 2 
+  140: putstatic   0 
+     | 
+  143: jmp         -24 
+     | 
+  119: getstatic   0 
+     | 2 
+  122: const_5     
+     | 2 5 
+  123: jge         6 
+     | 
+  126: jmp         6 
+     | 
+  132: jmp         14 
+     | 
+  146: getstatic   0 
+     | 2 
+  149: const_2     
+     | 2 2 
+  150: jne         6 
+     | 
+  153: jmp         6 
+     | 
+  159: const_1     
+     | 1 
+  160: putstatic   1 
+     | 
+  163: jmp         -28 
+     | 
+  135: getstatic   0 
+     | 2 
+  138: const_1     
+     | 2 1 
+  139: add         
+     | 3 
+  140: putstatic   0 
+     | 
+  143: jmp         -24 
+     | 
+  119: getstatic   0 
+     | 3 
+  122: const_5     
+     | 3 5 
+  123: jge         6 
+     | 
+  126: jmp         6 
+     | 
+  132: jmp         14 
+     | 
+  146: getstatic   0 
+     | 3 
+  149: const_2     
+     | 3 2 
+  150: jne         6 
+     | 
+  156: jmp         7 
+     | 
+  163: jmp         -28 
+     | 
+  135: getstatic   0 
+     | 3 
+  138: const_1     
+     | 3 1 
+  139: add         
+     | 4 
+  140: putstatic   0 
+     | 
+  143: jmp         -24 
+     | 
+  119: getstatic   0 
+     | 4 
+  122: const_5     
+     | 4 5 
+  123: jge         6 
+     | 
+  126: jmp         6 
+     | 
+  132: jmp         14 
+     | 
+  146: getstatic   0 
+     | 4 
+  149: const_2     
+     | 4 2 
+  150: jne         6 
+     | 
+  156: jmp         7 
+     | 
+  163: jmp         -28 
+     | 
+  135: getstatic   0 
+     | 4 
+  138: const_1     
+     | 4 1 
+  139: add         
+     | 5 
+  140: putstatic   0 
+     | 
+  143: jmp         -24 
+     | 
+  119: getstatic   0 
+     | 5 
+  122: const_5     
+     | 5 5 
+  123: jge         6 
+     | 
+  129: jmp         37 
+     | 
+  166: getstatic   1 
+     | 1 
+  169: const_0     
+     | 1 0 
+  170: jeq         6 
+     | 
+  173: jmp         6 
+     | 
+  179: getstatic   0 
+     | 5 
+  182: const_5     
+     | 5 5 
+  183: jne         6 
+     | 
+  186: jmp         6 
+     | 
+  192: const_1     
+     | 1 
+  193: const_0     
+     | 1 0 
+  194: print       1
+     | 
+  195: jmp         7 
+     | 
+  202: const_3     
+     | 3 
+  203: newarray    1 
+     | 2 
+  205: putstatic   2 
+     | 
+  208: getstatic   2 
+     | 2 
+  211: const_0     
+     | 2 0 
+  212: const_1     
+     | 2 0 1 
+  213: astore      
+Arraylength = 3
+Address = 2
+Index = 0
+Value = 1
+
+     | 
+  214: getstatic   2 
+     | 2 
+  217: const_1     
+     | 2 1 
+  218: const_2     
+     | 2 1 2 
+  219: astore      
+Arraylength = 3
+Address = 2
+Index = 1
+Value = 2
+
+     | 
+  220: getstatic   2 
+     | 2 
+  223: const_2     
+     | 2 2 
+  224: getstatic   2 
+     | 2 2 2 
+  227: const_1     
+     | 2 2 2 1 
+  228: aload       
+     | 2 2 2 
+  229: getstatic   2 
+     | 2 2 2 2 
+  232: const_0     
+     | 2 2 2 2 0 
+  233: aload       
+     | 2 2 2 1 
+  234: call        -221 
+     | 2 2 2 1 
+   13: enter       2 2 
+     | 2 2 
+   16: load_0      
+     | 2 2 2 
+   17: load_1      
+     | 2 2 2 1 
+   18: add         
+     | 2 2 3 
+   19: exit        
+     | 2 2 3 
+   20: return      
+     | 2 2 3 
+  237: const_1     
+     | 2 2 3 1 
+  238: add         
+     | 2 2 4 
+  239: astore      
+Arraylength = 3
+Address = 2
+Index = 2
+Value = 4
+
+     | 
+  240: getstatic   2 
+     | 2 
+  243: const_2     
+     | 2 2 
+  244: aload       
+     | 4 
+  245: const_4     
+     | 4 4 
+  246: jne         6 
+     | 
+  249: jmp         16 
+     | 
+  265: const       65 
+     | 65 
+  270: call        -270 
+     | 65 
+    0: enter       1 1 
+     | 
+    3: load_0      
+     | 65 
+    4: exit        
+     | 65 
+    5: return      
+     | 65 
+  273: const_0     
+     | 65 0 
+  274: print       65
+     | 
+  275: jmp         13 
+     | 
+  288: const       10 
+     | 10 
+  293: const_0     
+     | 10 0 
+  294: bprint      
+
+     | 
+  295: const_0     
+     | 0 
+  296: putstatic   0 
+     | 
+  299: getstatic   0 
+     | 0 
+  302: const       10 
+     | 0 10 
+  307: jge         6 
+     | 
+  310: jmp         6 
+     | 
+  316: jmp         6 
+     | 
+  322: getstatic   0 
+     | 0 
+  325: const_3     
+     | 0 3 
+  326: jne         6 
+     | 
+  332: jmp         14 
+     | 
+  346: getstatic   0 
+     | 0 
+  349: const_4     
+     | 0 4 
+  350: jne         6 
+     | 
+  356: jmp         6 
+     | 
+  362: getstatic   0 
+     | 0 
+  365: const_1     
+     | 0 1 
+  366: call        -343 
+     | 0 1 
+   23: enter       2 3 
+     | 
+   26: load_1      
+     | 1 
+   27: const_1     
+     | 1 1 
+   28: jne         6 
+     | 
+   31: jmp         6 
+     | 
+   37: const_1     
+     | 1 
+   38: store_2     
+     | 
+   39: jmp         16 
+     | 
+   55: load_0      
+     | 0 
+   56: load_2      
+     | 0 1 
+   57: call        -44 
+     | 0 1 
+   13: enter       2 2 
+     | 
+   16: load_0      
+     | 0 
+   17: load_1      
+     | 0 1 
+   18: add         
+     | 1 
+   19: exit        
+     | 1 
+   20: return      
+     | 1 
+   60: exit        
+     | 1 
+   61: return      
+     | 1 
+  369: putstatic   0 
+     | 
+  372: jmp         -53 
+     | 
+  319: jmp         -20 
+     | 
+  299: getstatic   0 
+     | 1 
+  302: const       10 
+     | 1 10 
+  307: jge         6 
+     | 
+  310: jmp         6 
+     | 
+  316: jmp         6 
+     | 
+  322: getstatic   0 
+     | 1 
+  325: const_3     
+     | 1 3 
+  326: jne         6 
+     | 
+  332: jmp         14 
+     | 
+  346: getstatic   0 
+     | 1 
+  349: const_4     
+     | 1 4 
+  350: jne         6 
+     | 
+  356: jmp         6 
+     | 
+  362: getstatic   0 
+     | 1 
+  365: const_1     
+     | 1 1 
+  366: call        -343 
+     | 1 1 
+   23: enter       2 3 
+     | 
+   26: load_1      
+     | 1 
+   27: const_1     
+     | 1 1 
+   28: jne         6 
+     | 
+   31: jmp         6 
+     | 
+   37: const_1     
+     | 1 
+   38: store_2     
+     | 
+   39: jmp         16 
+     | 
+   55: load_0      
+     | 1 
+   56: load_2      
+     | 1 1 
+   57: call        -44 
+     | 1 1 
+   13: enter       2 2 
+     | 
+   16: load_0      
+     | 1 
+   17: load_1      
+     | 1 1 
+   18: add         
+     | 2 
+   19: exit        
+     | 2 
+   20: return      
+     | 2 
+   60: exit        
+     | 2 
+   61: return      
+     | 2 
+  369: putstatic   0 
+     | 
+  372: jmp         -53 
+     | 
+  319: jmp         -20 
+     | 
+  299: getstatic   0 
+     | 2 
+  302: const       10 
+     | 2 10 
+  307: jge         6 
+     | 
+  310: jmp         6 
+     | 
+  316: jmp         6 
+     | 
+  322: getstatic   0 
+     | 2 
+  325: const_3     
+     | 2 3 
+  326: jne         6 
+     | 
+  332: jmp         14 
+     | 
+  346: getstatic   0 
+     | 2 
+  349: const_4     
+     | 2 4 
+  350: jne         6 
+     | 
+  356: jmp         6 
+     | 
+  362: getstatic   0 
+     | 2 
+  365: const_1     
+     | 2 1 
+  366: call        -343 
+     | 2 1 
+   23: enter       2 3 
+     | 
+   26: load_1      
+     | 1 
+   27: const_1     
+     | 1 1 
+   28: jne         6 
+     | 
+   31: jmp         6 
+     | 
+   37: const_1     
+     | 1 
+   38: store_2     
+     | 
+   39: jmp         16 
+     | 
+   55: load_0      
+     | 2 
+   56: load_2      
+     | 2 1 
+   57: call        -44 
+     | 2 1 
+   13: enter       2 2 
+     | 
+   16: load_0      
+     | 2 
+   17: load_1      
+     | 2 1 
+   18: add         
+     | 3 
+   19: exit        
+     | 3 
+   20: return      
+     | 3 
+   60: exit        
+     | 3 
+   61: return      
+     | 3 
+  369: putstatic   0 
+     | 
+  372: jmp         -53 
+     | 
+  319: jmp         -20 
+     | 
+  299: getstatic   0 
+     | 3 
+  302: const       10 
+     | 3 10 
+  307: jge         6 
+     | 
+  310: jmp         6 
+     | 
+  316: jmp         6 
+     | 
+  322: getstatic   0 
+     | 3 
+  325: const_3     
+     | 3 3 
+  326: jne         6 
+     | 
+  329: jmp         6 
+     | 
+  335: getstatic   0 
+     | 3 
+  338: const_1     
+     | 3 1 
+  339: add         
+     | 4 
+  340: putstatic   0 
+     | 
+  343: jmp         32 
+     | 
+  375: getstatic   0 
+     | 4 
+  378: const_3     
+     | 4 3 
+  379: jne         13 
+     | 
+  392: jmp         9 
+     | 
+  401: const_4     
+     | 4 
+  402: neg         
+     | -4 
+  403: const_0     
+     | -4 0 
+  404: print       -4
+     | 
+  405: getstatic   2 
+     | 2 
+  408: const_0     
+     | 2 0 
+  409: read        
+     | 2 0 7 
+  410: astore      
+Arraylength = 3
+Address = 2
+Index = 0
+Value = 7
+
+     | 
+  411: getstatic   2 
+     | 2 
+  414: const_1     
+     | 2 1 
+  415: read        
+     | 2 1 13 
+  416: astore      
+Arraylength = 3
+Address = 2
+Index = 1
+Value = 13
+
+     | 
+  417: getstatic   2 
+     | 2 
+  420: const_2     
+     | 2 2 
+  421: read        
+     | 2 2 15 
+  422: astore      
+Arraylength = 3
+Address = 2
+Index = 2
+Value = 15
+
+     | 
+  423: const       10 
+     | 10 
+  428: const_0     
+     | 10 0 
+  429: bprint      
+
+     | 
+  430: getstatic   2 
+     | 2 
+  433: const_0     
+     | 2 0 
+  434: aload       
+     | 7 
+  435: getstatic   2 
+     | 7 2 
+  438: const_1     
+     | 7 2 1 
+  439: aload       
+     | 7 13 
+  440: call        -427 
+     | 7 13 
+   13: enter       2 2 
+     | 
+   16: load_0      
+     | 7 
+   17: load_1      
+     | 7 13 
+   18: add         
+     | 20 
+   19: exit        
+     | 20 
+   20: return      
+     | 20 
+  443: getstatic   2 
+     | 20 2 
+  446: const_2     
+     | 20 2 2 
+  447: aload       
+     | 20 15 
+  448: call        -435 
+     | 20 15 
+   13: enter       2 2 
+     | 
+   16: load_0      
+     | 20 
+   17: load_1      
+     | 20 15 
+   18: add         
+     | 35 
+   19: exit        
+     | 35 
+   20: return      
+     | 35 
+  451: const_0     
+     | 35 0 
+  452: print       35
+     | 
+  453: const_0     
+     | 0 
+  454: putstatic   0 
+     | 
+  457: getstatic   0 
+     | 0 
+  460: getstatic   2 
+     | 0 2 
+  463: arraylength 
+     | 0 3 
+  464: jge         6 
+     | 
+  467: jmp         6 
+     | 
+  473: jmp         14 
+     | 
+  487: getstatic   0 
+     | 0 
+  490: const_0     
+     | 0 0 
+  491: print       0
+     | 
+  492: jmp         -16 
+     | 
+  476: getstatic   0 
+     | 0 
+  479: const_1     
+     | 0 1 
+  480: add         
+     | 1 
+  481: putstatic   0 
+     | 
+  484: jmp         -27 
+     | 
+  457: getstatic   0 
+     | 1 
+  460: getstatic   2 
+     | 1 2 
+  463: arraylength 
+     | 1 3 
+  464: jge         6 
+     | 
+  467: jmp         6 
+     | 
+  473: jmp         14 
+     | 
+  487: getstatic   0 
+     | 1 
+  490: const_0     
+     | 1 0 
+  491: print       1
+     | 
+  492: jmp         -16 
+     | 
+  476: getstatic   0 
+     | 1 
+  479: const_1     
+     | 1 1 
+  480: add         
+     | 2 
+  481: putstatic   0 
+     | 
+  484: jmp         -27 
+     | 
+  457: getstatic   0 
+     | 2 
+  460: getstatic   2 
+     | 2 2 
+  463: arraylength 
+     | 2 3 
+  464: jge         6 
+     | 
+  467: jmp         6 
+     | 
+  473: jmp         14 
+     | 
+  487: getstatic   0 
+     | 2 
+  490: const_0     
+     | 2 0 
+  491: print       2
+     | 
+  492: jmp         -16 
+     | 
+  476: getstatic   0 
+     | 2 
+  479: const_1     
+     | 2 1 
+  480: add         
+     | 3 
+  481: putstatic   0 
+     | 
+  484: jmp         -27 
+     | 
+  457: getstatic   0 
+     | 3 
+  460: getstatic   2 
+     | 3 2 
+  463: arraylength 
+     | 3 3 
+  464: jge         6 
+     | 
+  470: jmp         25 
+     | 
+  495: const       10 
+     | 10 
+  500: const_0     
+     | 10 0 
+  501: bprint      
+
+     | 
+  502: getstatic   2 
+     | 2 
+  505: const_2     
+     | 2 2 
+  506: aload       
+     | 15 
+  507: const_2     
+     | 15 2 
+  508: call        -485 
+     | 15 2 
+   23: enter       2 3 
+     | 
+   26: load_1      
+     | 2 
+   27: const_1     
+     | 2 1 
+   28: jne         6 
+     | 
+   34: jmp         8 
+     | 
+   42: load_1      
+     | 2 
+   43: const_2     
+     | 2 2 
+   44: jne         6 
+     | 
+   47: jmp         6 
+     | 
+   53: load_0      
+     | 15 
+   54: store_2     
+     | 
+   55: load_0      
+     | 15 
+   56: load_2      
+     | 15 15 
+   57: call        -44 
+     | 15 15 
+   13: enter       2 2 
+     | 
+   16: load_0      
+     | 15 
+   17: load_1      
+     | 15 15 
+   18: add         
+     | 30 
+   19: exit        
+     | 30 
+   20: return      
+     | 30 
+   60: exit        
+     | 30 
+   61: return      
+     | 30 
+  511: const_0     
+     | 30 0 
+  512: print       30
+     | 
+  513: call        -449 
+     | 
+   64: enter       0 0 
+     | 
+   67: const       118 
+     | 118 
+   72: const_0     
+     | 118 0 
+   73: bprint      v
+     | 
+   74: const_0     
+     | 0 
+   75: exit        
+     | 0 
+   76: return      
+     | 0 
+  516: const_0     
+     | 0 0 
+  517: jeq         11 
+     | 
+  528: const       102 
+     | 102 
+  533: const_0     
+     | 102 0 
+  534: bprint      f
+     | 
+  535: const_0     
+     | 0 
+  536: putstatic   0 
+     | 
+  539: getstatic   0 
+     | 0 
+  542: const       10 
+     | 0 10 
+  547: jge         6 
+     | 
+  550: jmp         6 
+     | 
+  556: jmp         14 
+     | 
+  570: getstatic   0 
+     | 0 
+  573: const_1     
+     | 0 1 
+  574: add         
+     | 1 
+  575: dup         
+     | 1 1 
+  576: const_1     
+     | 1 1 1 
+  577: jne         12 
+     | 1 
+  580: const_1     
+     | 1 1 
+  581: const_0     
+     | 1 1 0 
+  582: print       1
+     | 1 
+  583: jmp         92 
+     | 1 
+  675: pop         
+     | 
+  676: const       10 
+     | 10 
+  681: const_0     
+     | 10 0 
+  682: bprint      
+
+     | 
+  683: jmp         -124 
+     | 
+  559: getstatic   0 
+     | 0 
+  562: const_1     
+     | 0 1 
+  563: add         
+     | 1 
+  564: putstatic   0 
+     | 
+  567: jmp         -28 
+     | 
+  539: getstatic   0 
+     | 1 
+  542: const       10 
+     | 1 10 
+  547: jge         6 
+     | 
+  550: jmp         6 
+     | 
+  556: jmp         14 
+     | 
+  570: getstatic   0 
+     | 1 
+  573: const_1     
+     | 1 1 
+  574: add         
+     | 2 
+  575: dup         
+     | 2 2 
+  576: const_1     
+     | 2 2 1 
+  577: jne         12 
+     | 2 
+  589: dup         
+     | 2 2 
+  590: const_3     
+     | 2 2 3 
+  591: jne         9 
+     | 2 
+  600: dup         
+     | 2 2 
+  601: const_2     
+     | 2 2 2 
+  602: jne         12 
+     | 2 
+  605: const_2     
+     | 2 2 
+  606: const_0     
+     | 2 2 0 
+  607: print       2
+     | 2 
+  608: jmp         67 
+     | 2 
+  675: pop         
+     | 
+  676: const       10 
+     | 10 
+  681: const_0     
+     | 10 0 
+  682: bprint      
+
+     | 
+  683: jmp         -124 
+     | 
+  559: getstatic   0 
+     | 1 
+  562: const_1     
+     | 1 1 
+  563: add         
+     | 2 
+  564: putstatic   0 
+     | 
+  567: jmp         -28 
+     | 
+  539: getstatic   0 
+     | 2 
+  542: const       10 
+     | 2 10 
+  547: jge         6 
+     | 
+  550: jmp         6 
+     | 
+  556: jmp         14 
+     | 
+  570: getstatic   0 
+     | 2 
+  573: const_1     
+     | 2 1 
+  574: add         
+     | 3 
+  575: dup         
+     | 3 3 
+  576: const_1     
+     | 3 3 1 
+  577: jne         12 
+     | 3 
+  589: dup         
+     | 3 3 
+  590: const_3     
+     | 3 3 3 
+  591: jne         9 
+     | 3 
+  594: const_3     
+     | 3 3 
+  595: const_0     
+     | 3 3 0 
+  596: print       3
+     | 3 
+  597: jmp         8 
+     | 3 
+  605: const_2     
+     | 3 2 
+  606: const_0     
+     | 3 2 0 
+  607: print       2
+     | 3 
+  608: jmp         67 
+     | 3 
+  675: pop         
+     | 
+  676: const       10 
+     | 10 
+  681: const_0     
+     | 10 0 
+  682: bprint      
+
+     | 
+  683: jmp         -124 
+     | 
+  559: getstatic   0 
+     | 2 
+  562: const_1     
+     | 2 1 
+  563: add         
+     | 3 
+  564: putstatic   0 
+     | 
+  567: jmp         -28 
+     | 
+  539: getstatic   0 
+     | 3 
+  542: const       10 
+     | 3 10 
+  547: jge         6 
+     | 
+  550: jmp         6 
+     | 
+  556: jmp         14 
+     | 
+  570: getstatic   0 
+     | 3 
+  573: const_1     
+     | 3 1 
+  574: add         
+     | 4 
+  575: dup         
+     | 4 4 
+  576: const_1     
+     | 4 4 1 
+  577: jne         12 
+     | 4 
+  589: dup         
+     | 4 4 
+  590: const_3     
+     | 4 4 3 
+  591: jne         9 
+     | 4 
+  600: dup         
+     | 4 4 
+  601: const_2     
+     | 4 4 2 
+  602: jne         12 
+     | 4 
+  614: dup         
+     | 4 4 
+  615: const_5     
+     | 4 4 5 
+  616: jne         21 
+     | 4 
+  637: dup         
+     | 4 4 
+  638: const       6 
+     | 4 4 6 
+  643: jne         13 
+     | 4 
+  656: dup         
+     | 4 4 
+  657: const       9 
+     | 4 4 9 
+  662: jne         13 
+     | 4 
+  675: pop         
+     | 
+  676: const       10 
+     | 10 
+  681: const_0     
+     | 10 0 
+  682: bprint      
+
+     | 
+  683: jmp         -124 
+     | 
+  559: getstatic   0 
+     | 3 
+  562: const_1     
+     | 3 1 
+  563: add         
+     | 4 
+  564: putstatic   0 
+     | 
+  567: jmp         -28 
+     | 
+  539: getstatic   0 
+     | 4 
+  542: const       10 
+     | 4 10 
+  547: jge         6 
+     | 
+  550: jmp         6 
+     | 
+  556: jmp         14 
+     | 
+  570: getstatic   0 
+     | 4 
+  573: const_1     
+     | 4 1 
+  574: add         
+     | 5 
+  575: dup         
+     | 5 5 
+  576: const_1     
+     | 5 5 1 
+  577: jne         12 
+     | 5 
+  589: dup         
+     | 5 5 
+  590: const_3     
+     | 5 5 3 
+  591: jne         9 
+     | 5 
+  600: dup         
+     | 5 5 
+  601: const_2     
+     | 5 5 2 
+  602: jne         12 
+     | 5 
+  614: dup         
+     | 5 5 
+  615: const_5     
+     | 5 5 5 
+  616: jne         21 
+     | 5 
+  619: const_5     
+     | 5 5 
+  620: const_0     
+     | 5 5 0 
+  621: print       5
+     | 5 
+  622: getstatic   0 
+     | 5 4 
+  625: const_2     
+     | 5 4 2 
+  626: add         
+     | 5 6 
+  627: putstatic   0 
+     | 5 
+  630: pop         
+     | 
+  631: jmp         55 
+     | 
+  686: exit        
+     | 
+  687: return      
+Completion took 22 ms
+0165
+-4
+35012
+30vf1
+2
+32
+
+5
+Completion took 1 ms
