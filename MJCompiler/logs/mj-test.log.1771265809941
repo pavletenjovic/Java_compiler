@@ -1,0 +1,108 @@
+INFO  19:16:34,263 - Compiling source file: C:\Users\Win 11\Documents\pp1lab.templateAST (1)\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  19:16:34,294 - #2 program
+INFO  19:16:34,294 - #46 test301
+INFO  19:16:34,294 - #46 int
+INFO  19:16:34,294 - #46 niz
+INFO  19:16:34,294 - #21 [
+INFO  19:16:34,295 - #22 ]
+INFO  19:16:34,295 - #23 ;
+INFO  19:16:34,296 - #17 {
+INFO  19:16:34,296 - #5 void
+INFO  19:16:34,296 - #46 main
+INFO  19:16:34,296 - #19 (
+INFO  19:16:34,296 - #20 )
+INFO  19:16:34,296 - #17 {
+INFO  19:16:34,297 - #46 niz
+INFO  19:16:34,297 - #43 =
+INFO  19:16:34,297 - #16 new
+INFO  19:16:34,297 - #46 int
+INFO  19:16:34,298 - #21 [
+INFO  19:16:34,298 - #45 3
+INFO  19:16:34,298 - #22 ]
+INFO  19:16:34,299 - #23 ;
+INFO  19:16:34,299 - #18 }
+INFO  19:16:34,299 - #18 }
+INFO  19:16:34,300 - Program(
+  ProgramName(
+   test301
+  ) [ProgramName]
+  DeclListY(
+    DeclListN(
+    ) [DeclListN]
+    DeclV(
+      VarDeclY(
+        Type(
+         int
+        ) [Type]
+        VarList(
+         niz
+          BracketsY(
+          ) [BracketsY]
+          VarListNextN(
+          ) [VarListNextN]
+        ) [VarList]
+      ) [VarDeclY]
+    ) [DeclV]
+  ) [DeclListY]
+  MethodDecListY(
+    MethodDecListN(
+    ) [MethodDecListN]
+    MethodDec(
+      TypeOptionN(
+       main
+      ) [TypeOptionN]
+      FormParsN(
+      ) [FormParsN]
+      VarDeclListN(
+      ) [VarDeclListN]
+      StatementListY(
+        StatementListN(
+        ) [StatementListN]
+        StatementDesignator(
+          DesignatorSignatureAssign(
+            DesignatorVar(
+             niz
+            ) [DesignatorVar]
+            Assignop(
+            ) [Assignop]
+            CondExprSimple(
+              Expr(
+                AddopTermListTerm(
+                  Term(
+                    MulopFactorListFactor(
+                      Factor(
+                        UnaryMinusN(
+                        ) [UnaryMinusN]
+                        FactorOptionNewY(
+                          Type(
+                           int
+                          ) [Type]
+                          Expr(
+                            AddopTermListTerm(
+                              Term(
+                                MulopFactorListFactor(
+                                  Factor(
+                                    UnaryMinusN(
+                                    ) [UnaryMinusN]
+                                    FactorOptionNumber(
+                                     3
+                                    ) [FactorOptionNumber]
+                                  ) [Factor]
+                                ) [MulopFactorListFactor]
+                              ) [Term]
+                            ) [AddopTermListTerm]
+                          ) [Expr]
+                        ) [FactorOptionNewY]
+                      ) [Factor]
+                    ) [MulopFactorListFactor]
+                  ) [Term]
+                ) [AddopTermListTerm]
+              ) [Expr]
+            ) [CondExprSimple]
+          ) [DesignatorSignatureAssign]
+        ) [StatementDesignator]
+      ) [StatementListY]
+    ) [MethodDec]
+  ) [MethodDecListY]
+) [Program]
+INFO  19:16:34,304 - Parsiranje uspesno zavrseno!

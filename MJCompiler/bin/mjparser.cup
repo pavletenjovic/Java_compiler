@@ -1,0 +1,357 @@
+package rs.ac.bg.etf.pp1;
+
+import java_cup.runtime.*;
+import org.apache.log4j.*;
+
+// import java.io.*;
+import rs.ac.bg.etf.pp1.ast.*;
+
+
+parser code {:
+    
+    boolean errorDetected = false;
+    
+    Logger log = Logger.getLogger(getClass());
+   
+   
+    // slede redefinisani metodi za prijavu gresaka radi izmene teksta poruke
+     
+    public void report_fatal_error(String message, Object info) throws java.lang.Exception {
+      done_parsing();
+      report_error(message, info);
+    }
+  
+    public void syntax_error(Symbol cur_token) {
+        report_error("\nSintaksna greska", cur_token);
+    }
+  
+    public void unrecovered_syntax_error(Symbol cur_token) throws java.lang.Exception {
+        report_fatal_error("Fatalna greska, parsiranje se ne moze nastaviti", cur_token);
+    }
+
+    public void report_error(String message, Object info) {
+        errorDetected = true;
+        StringBuilder msg = new StringBuilder(message); 
+        if (info instanceof Symbol)
+            msg.append (" na liniji ").append(((Symbol)info).left);
+        log.error(msg.toString());
+    }
+    
+    public void report_info(String message, Object info) {
+        StringBuilder msg = new StringBuilder(message); 
+        if (info instanceof Symbol)
+            msg.append (" na liniji ").append(((Symbol)info).left);
+        log.info(msg.toString());
+    }
+    
+:}
+
+scan with {:
+    Symbol s = this.getScanner().next_token();
+    if (s != null && s.value != null) 
+        log.info(s.toString() + " " + s.value.toString());
+    return s;
+:}
+
+
+terminal PROG, CONST, ENUM, VOID;
+terminal IF, ELSE;
+terminal BREAK, CONTINUE, RETURN;
+terminal READ, PRINT;
+terminal SWITCH, CASE, FOR;
+terminal NEW;
+
+terminal LBRACE, RBRACE;
+terminal LPAREN, RPAREN;
+terminal LBRACKET, RBRACKET;
+terminal SEMI, COMMA, COLON, DOT;
+terminal QUESTIONMARK;
+
+terminal PLUS, MINUS, MUL, DIV, MOD;
+terminal INC, DEC;
+
+terminal EQ, NEQ, GT, GTE, LT, LTE;
+terminal OR, AND;
+terminal EQUAL; 
+terminal LEN;
+
+terminal Integer NUMBER;
+terminal String IDENT;
+terminal Character CHAR;
+terminal Integer BOOL;
+
+
+
+nonterminal DeclList, MethodDecList, Decl, FormPars, ConstDecl, VarDecl, EnumDecl, Statement, ConstList, ConstListNext ;
+nonterminal VarList, Brackets, VarListNext, EnumDecList, EnumListNext, EnumValue, Const ;
+nonterminal FormValue, FormParsNext ;
+nonterminal StatementList, ElseOptional, ExprOptional, PrintOptional ;
+nonterminal CaseList, Case, DesignatorStatementOptional, DesignatorSignature, ActPars, ActParsOptional, Assignop ;
+nonterminal ExprNext, Relop ;
+nonterminal Addop, Mulop, FuncCall, ExprFactorOptional ;
+nonterminal UnaryMinus, EnumName, Else ;
+
+nonterminal rs.etf.pp1.symboltable.concepts.Obj Program, ProgramName, Designator, MethodDec, TypeOption, DesignatorArrayName ;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Term, Expr, Factor, VarDeclList, FactorOption, AddopTerm, AddopTermList, MulopFactorList, DesignatorStatement, CondExpr, CondFact ;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct CondFactListOptional, CondTerm, ConditionOptional, CondTermListOptional, Condition ;
+
+precedence left ELSE ;
+
+Program ::= (Program) PROG ProgramName DeclList LBRACE MethodDecList RBRACE ;
+
+ProgramName ::= (ProgramName) IDENT:programName ;
+
+DeclList ::= (DeclListY) DeclList Decl
+			|
+			(DeclListN)/*epsilon*/ ;
+
+MethodDecList ::= (MethodDecListY) MethodDecList MethodDec
+				|
+				(MethodDecListN) /*epsilon*/;
+
+Decl ::= (DeclC) ConstDecl
+		|
+		(DeclV) VarDecl
+		|
+		(DeclE) EnumDecl ;
+
+MethodDec ::= (MethodDec) TypeOption LPAREN FormPars RPAREN VarDeclList LBRACE StatementList RBRACE;
+
+VarDeclList ::= (VarDeclListY) VarDeclList VarDecl
+			| 
+			(VarDeclListN) /*epsilon*/ ;
+
+TypeOption ::= (TypeOptionY) Type IDENT:methodName
+		|
+		(TypeOptionN) VOID IDENT:methodName;
+
+Type ::= (Type) IDENT:typeName ;
+
+ConstDecl ::= (ConstDecl) CONST Type ConstList SEMI ;
+
+ConstList ::= (ConstList) IDENT:constName EQUAL Const ConstListNext ;
+
+ConstListNext ::= (ConstListNextY) ConstListNext COMMA IDENT:constName EQUAL Const
+				|
+				(ConstListNextN) /*epsilon*/ ;
+
+VarDecl ::= (VarDeclY) Type VarList SEMI 
+			|
+			(VarDeclError) error:e SEMI
+            {: parser.report_error("Oporavak greske u VarDecl. Vracanje na liniju: " + eleft, null); :};
+
+VarList ::= (VarList) IDENT:varName Brackets VarListNext ;
+
+Brackets ::= (BracketsY) LBRACKET RBRACKET
+			|
+			(BracketsN) /*epsilon*/ ;
+
+VarListNext ::= (VarListNextY) VarListNext COMMA IDENT:varName Brackets
+			|
+			(VarListNextN) /*epsilon*/ ;
+
+EnumDecl ::= (EnumDecl) ENUM EnumName LBRACE EnumDecList RBRACE ;
+
+EnumName ::= (EnumName) IDENT:enumName ;
+
+EnumDecList ::= (EnumDecList) IDENT:enumElementName EnumValue EnumListNext ;
+
+EnumValue ::= (EnumValueY) EQUAL NUMBER:enumValueName
+			|
+			(EnumValueN) /*epsilon*/ ;
+
+EnumListNext ::= (EnumListNextY) EnumListNext COMMA IDENT:enumElementName EnumValue
+				|
+				(EnumListNextN) /*epsilon*/ ;
+				
+Const ::= (ConstN) NUMBER:numberValue
+		|
+		(ConstB) BOOL:boolValue
+		|
+		(ConstC) CHAR:charValue ;
+
+FormPars ::= (FormParsY) FormValue FormParsNext 
+			|
+			(FormParsN) /*epsilon*/ ;
+
+FormParsNext ::= (FormParsNextY) COMMA FormValue FormParsNext
+				|
+				(FormParsNextN) /*epsilon*/ ;
+
+FormValue ::= (FormValueArray) Type IDENT LBRACKET RBRACKET
+			|
+			(FormValueVar) Type IDENT ;
+
+StatementList ::= (StatementListY) StatementList Statement
+				|
+				(StatementListN) /*epsilon*/ ;
+
+Statement ::= (StatementDesignator) DesignatorStatement SEMI
+			|
+			(StatementIf) IF LPAREN Condition RPAREN Statement ElseOptional
+			|
+			(StatementBreak) BREAK SEMI
+			|
+			(StatementContinue) CONTINUE SEMI
+			|
+			(StatementReturn) RETURN ExprOptional SEMI
+			|
+			(StatementRead) READ LPAREN Designator RPAREN SEMI
+			|
+			(StatementPrint) PRINT LPAREN CondExpr PrintOptional RPAREN SEMI
+			|
+			(StatementSwitch) SWITCH LPAREN CondExpr RPAREN LBRACE CaseList RBRACE
+			|
+			(StatementFor) FOR LPAREN DesignatorStatementOptional SEMI ConditionOptional SEMI DesignatorStatementOptional RPAREN Statement
+			|
+			(StatementRecursion) LBRACE StatementList RBRACE ;
+
+
+PrintOptional ::= (PrintOptionalY) COMMA NUMBER
+				|
+				(PrintOptionalN) /*epsilon*/ ;
+
+ConditionOptional ::= (ConditionOptionalY) Condition
+					|
+					(ConditionOptionalN) /*epsilon*/ ;
+
+DesignatorStatementOptional ::= (DesignatorStatementOptionalY) DesignatorStatement
+							|
+							(DesignatorStatementOptionalN) /*epsilon*/ ;
+
+DesignatorStatement ::= (DesignatorSignatureAssign) Designator Assignop CondExpr
+					|
+					(DesignatorSignatureAct) Designator LPAREN ActParsOptional RPAREN
+					|
+					(DesignatorSignatureInc) Designator INC
+					|
+					(DesignatorSignatureDec) Designator DEC 
+					;
+
+ActParsOptional ::= (ActParsOptionalY) ActPars
+				|
+				(ActParsOptionalN) /*epsilon*/ ;
+
+ActPars ::= (ActPars) CondExpr ExprNext ;
+
+ExprNext ::= (ExprNextY) ExprNext COMMA CondExpr
+			|
+			(ExprNextN) /*epsilon*/ ;
+
+Assignop ::= (Assignop) EQUAL ;
+
+ElseOptional ::= (ElseOptionalY) Else Statement
+				|
+				(ElseOptionalN) /*epsilon*/ ;
+
+Else ::= (Else) ELSE ;
+
+ExprOptional ::= (ExprOptionalY) CondExpr
+				|
+				(ExprOptionalN) /*epsilon*/ ;
+
+Condition ::= (Condition) CondTermListOptional ;
+
+CondTermListOptional ::= (CondTermListOptionalY) CondTermListOptional OR CondTerm
+						|
+						(CondTermListOptionalN) CondTerm ;
+
+CondTerm ::= (CondTerm) CondFactListOptional ;
+
+CondFactListOptional ::= (CondFactListOptionalY) CondFactListOptional AND CondFact
+						|
+						(CondFactListOptionalN) CondFact ;
+
+CondFact ::= (CondFactRel) Expr Relop Expr
+			|
+			(CondFactExpr) Expr ;
+
+Relop ::= (RelopEq) EQ
+		|
+		(RelopNeq) NEQ
+		|
+		(RelopGt) GT
+		|
+		(RelopGte) GTE
+		|
+		(RelopLt) LT
+		|
+		(RelopLte) LTE ;
+
+Designator ::= (DesignatorVar) IDENT
+			|
+			(DesignatorLen) IDENT DOT LEN
+			|
+			(DesignatorEnum) IDENT DOT IDENT
+			|
+			(DesignatorArray) DesignatorArrayName LBRACKET Expr RBRACKET 
+			;
+
+DesignatorArrayName ::= (DesignatorArrayName) IDENT ;
+
+CondExpr ::= (CondExprSimple) CondFact
+		| 
+		(CondExprTri) CondFact QUESTIONMARK Expr COLON Expr ;
+
+Expr ::= (Expr) AddopTermList ;
+
+AddopTermList ::= (AddopTermListAdd) AddopTermList Addop Term
+				|
+				(AddopTermListTerm) Term ;
+
+Addop ::= (AddopPlus) PLUS
+		|
+		(AddopMinus) MINUS ;
+
+Term ::= (Term) MulopFactorList
+;
+
+MulopFactorList ::= (MulopFactorListMul) MulopFactorList Mulop Factor
+			|
+			(MulopFactorListFactor) Factor
+			;
+	
+
+Mulop ::= (MulopMul) MUL
+		|
+		(MulopDiv) DIV
+		|
+		(MulopMod) MOD ;
+
+Factor ::= (Factor) UnaryMinus FactorOption ;
+
+UnaryMinus ::= (UnaryMinusY) MINUS
+			|
+			(UnaryMinusN) /*epsilon*/ ;
+
+FactorOption ::= (FactorOptionDesignator) Designator
+		|
+		(FactorOptionFuncall) Designator LPAREN ActParsOptional RPAREN
+		|
+		(FactorOptionNumber) NUMBER
+		|
+		(FactorOptionChar) CHAR
+		|
+		(FactorOptionBoll) BOOL
+		|
+		(FactorOptionNewY) NEW Type LBRACKET CondExpr RBRACKET
+		|
+		(FactorOptionCond) LPAREN CondExpr RPAREN ;
+
+//FuncCall ::= (FuncCall)  ;
+
+//ExprFactorOptional ::= (ExprFactorOptionalY) 
+//					|
+//					(ExprFactorOptionalN) /*epsilon*/ ;
+
+CaseList ::= (CaseListMulti) CaseList Case
+			|
+			(CaseListSingle) Case ;
+
+Case ::= (Case) CASE NUMBER COLON StatementList ;
+
+
+
+
+
+

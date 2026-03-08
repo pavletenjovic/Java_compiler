@@ -1,0 +1,231 @@
+INFO  15:10:41,540 - Compiling source file: C:\Users\Win 11\Documents\pp1lab.templateAST (1)\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  15:10:41,562 - #2 program
+INFO  15:10:41,562 - #46 test301
+INFO  15:10:41,562 - #4 enum
+INFO  15:10:41,563 - #46 Broj
+INFO  15:10:41,563 - #17 {
+INFO  15:10:41,563 - #46 NULA
+INFO  15:10:41,563 - #24 ,
+INFO  15:10:41,563 - #46 JEDAN
+INFO  15:10:41,563 - #24 ,
+INFO  15:10:41,564 - #46 PET
+INFO  15:10:41,564 - #43 =
+INFO  15:10:41,564 - #45 5
+INFO  15:10:41,564 - #24 ,
+INFO  15:10:41,564 - #46 DESET
+INFO  15:10:41,564 - #43 =
+INFO  15:10:41,564 - #45 10
+INFO  15:10:41,564 - #18 }
+INFO  15:10:41,564 - #46 int
+INFO  15:10:41,564 - #46 niz
+INFO  15:10:41,565 - #21 [
+INFO  15:10:41,565 - #22 ]
+INFO  15:10:41,565 - #23 ;
+INFO  15:10:41,566 - #17 {
+INFO  15:10:41,566 - #5 void
+INFO  15:10:41,566 - #46 main
+INFO  15:10:41,566 - #19 (
+INFO  15:10:41,566 - #20 )
+INFO  15:10:41,566 - #46 int
+INFO  15:10:41,567 - #46 a
+INFO  15:10:41,567 - #23 ;
+INFO  15:10:41,567 - #17 {
+INFO  15:10:41,567 - #46 a
+INFO  15:10:41,567 - #43 =
+INFO  15:10:41,567 - #46 niz
+INFO  15:10:41,568 - #21 [
+INFO  15:10:41,568 - #45 2
+INFO  15:10:41,568 - #32 %
+INFO  15:10:41,568 - #45 2
+INFO  15:10:41,568 - #22 ]
+INFO  15:10:41,569 - #23 ;
+INFO  15:10:41,570 - #18 }
+INFO  15:10:41,570 - #18 }
+INFO  15:10:41,571 - Program(
+  ProgramName(
+   test301
+  ) [ProgramName]
+  DeclListY(
+    DeclListY(
+      DeclListN(
+      ) [DeclListN]
+      DeclE(
+        EnumDecl(
+          EnumName(
+           Broj
+          ) [EnumName]
+          EnumDecList(
+           NULA
+            EnumValueN(
+            ) [EnumValueN]
+            EnumListNextY(
+              EnumListNextY(
+                EnumListNextY(
+                  EnumListNextN(
+                  ) [EnumListNextN]
+                 JEDAN
+                  EnumValueN(
+                  ) [EnumValueN]
+                ) [EnumListNextY]
+               PET
+                EnumValueY(
+                 5
+                ) [EnumValueY]
+              ) [EnumListNextY]
+             DESET
+              EnumValueY(
+               10
+              ) [EnumValueY]
+            ) [EnumListNextY]
+          ) [EnumDecList]
+        ) [EnumDecl]
+      ) [DeclE]
+    ) [DeclListY]
+    DeclV(
+      VarDeclY(
+        Type(
+         int
+        ) [Type]
+        VarList(
+         niz
+          BracketsY(
+          ) [BracketsY]
+          VarListNextN(
+          ) [VarListNextN]
+        ) [VarList]
+      ) [VarDeclY]
+    ) [DeclV]
+  ) [DeclListY]
+  MethodDecListY(
+    MethodDecListN(
+    ) [MethodDecListN]
+    MethodDec(
+      TypeOptionN(
+       main
+      ) [TypeOptionN]
+      FormParsN(
+      ) [FormParsN]
+      VarDeclListY(
+        VarDeclListN(
+        ) [VarDeclListN]
+        VarDeclY(
+          Type(
+           int
+          ) [Type]
+          VarList(
+           a
+            BracketsN(
+            ) [BracketsN]
+            VarListNextN(
+            ) [VarListNextN]
+          ) [VarList]
+        ) [VarDeclY]
+      ) [VarDeclListY]
+      StatementListY(
+        StatementListN(
+        ) [StatementListN]
+        StatementDesignator(
+          DesignatorSignatureAssign(
+            DesignatorVar(
+             a
+            ) [DesignatorVar]
+            Assignop(
+            ) [Assignop]
+            CondExprSimple(
+              Expr(
+                AddopTermListTerm(
+                  Term(
+                    MulopFactorListFactor(
+                      Factor(
+                        UnaryMinusN(
+                        ) [UnaryMinusN]
+                        FactorOptionDesignator(
+                          DesignatorArray(
+                           niz
+                            Expr(
+                              AddopTermListTerm(
+                                Term(
+                                  MulopFactorListMul(
+                                    MulopFactorListFactor(
+                                      Factor(
+                                        UnaryMinusN(
+                                        ) [UnaryMinusN]
+                                        FactorOptionNumber(
+                                         2
+                                        ) [FactorOptionNumber]
+                                      ) [Factor]
+                                    ) [MulopFactorListFactor]
+                                    MulopMod(
+                                    ) [MulopMod]
+                                    Factor(
+                                      UnaryMinusN(
+                                      ) [UnaryMinusN]
+                                      FactorOptionNumber(
+                                       2
+                                      ) [FactorOptionNumber]
+                                    ) [Factor]
+                                  ) [MulopFactorListMul]
+                                ) [Term]
+                              ) [AddopTermListTerm]
+                            ) [Expr]
+                          ) [DesignatorArray]
+                        ) [FactorOptionDesignator]
+                      ) [Factor]
+                    ) [MulopFactorListFactor]
+                  ) [Term]
+                ) [AddopTermListTerm]
+              ) [Expr]
+            ) [CondExprSimple]
+          ) [DesignatorSignatureAssign]
+        ) [StatementDesignator]
+      ) [StatementListY]
+    ) [MethodDec]
+  ) [MethodDecListY]
+) [Program]
+ERROR 15:10:41,587 - Prvi:CondExprSimple(
+  Expr(
+    AddopTermListTerm(
+      Term(
+        MulopFactorListFactor(
+          Factor(
+            UnaryMinusN(
+            ) [UnaryMinusN]
+            FactorOptionDesignator(
+              DesignatorArray(
+               niz
+                Expr(
+                  AddopTermListTerm(
+                    Term(
+                      MulopFactorListMul(
+                        MulopFactorListFactor(
+                          Factor(
+                            UnaryMinusN(
+                            ) [UnaryMinusN]
+                            FactorOptionNumber(
+                             2
+                            ) [FactorOptionNumber]
+                          ) [Factor]
+                        ) [MulopFactorListFactor]
+                        MulopMod(
+                        ) [MulopMod]
+                        Factor(
+                          UnaryMinusN(
+                          ) [UnaryMinusN]
+                          FactorOptionNumber(
+                           2
+                          ) [FactorOptionNumber]
+                        ) [Factor]
+                      ) [MulopFactorListMul]
+                    ) [Term]
+                  ) [AddopTermListTerm]
+                ) [Expr]
+              ) [DesignatorArray]
+            ) [FactorOptionDesignator]
+          ) [Factor]
+        ) [MulopFactorListFactor]
+      ) [Term]
+    ) [AddopTermListTerm]
+  ) [Expr]
+) [CondExprSimple] Drugi: rs.etf.pp1.symboltable.concepts.Struct@32d992b2 na liniji 10
+ERROR 15:10:41,587 - Neadekvatna dodela vrednosti u promenljivu: a na liniji 10
+ERROR 15:10:41,587 - Parsiranje NIJE uspesno zavrseno!

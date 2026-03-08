@@ -1,0 +1,188 @@
+INFO  01:08:42,421 - Compiling source file: C:\Users\Win 11\Documents\pp1lab.templateAST (1)\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  01:08:42,451 - #2 program
+INFO  01:08:42,451 - #46 test302
+INFO  01:08:42,451 - #17 {
+INFO  01:08:42,452 - #5 void
+INFO  01:08:42,452 - #46 method
+INFO  01:08:42,452 - #19 (
+INFO  01:08:42,452 - #20 )
+INFO  01:08:42,452 - #17 {
+INFO  01:08:42,452 - #18 }
+INFO  01:08:42,453 - #5 void
+INFO  01:08:42,453 - #46 main
+INFO  01:08:42,453 - #19 (
+INFO  01:08:42,453 - #20 )
+INFO  01:08:42,453 - #46 int
+INFO  01:08:42,453 - #46 i
+INFO  01:08:42,453 - #23 ;
+INFO  01:08:42,454 - #46 char
+INFO  01:08:42,454 - #46 c
+INFO  01:08:42,454 - #23 ;
+INFO  01:08:42,454 - #17 {
+INFO  01:08:42,455 - #46 i
+INFO  01:08:42,455 - #43 =
+INFO  01:08:42,455 - #45 5
+INFO  01:08:42,455 - #23 ;
+INFO  01:08:42,456 - #46 c
+INFO  01:08:42,456 - #43 =
+INFO  01:08:42,456 - #47 c
+INFO  01:08:42,456 - #23 ;
+INFO  01:08:42,456 - #11 read
+INFO  01:08:42,456 - #19 (
+INFO  01:08:42,456 - #46 i
+INFO  01:08:42,456 - #20 )
+INFO  01:08:42,456 - #23 ;
+INFO  01:08:42,456 - #11 read
+INFO  01:08:42,456 - #19 (
+INFO  01:08:42,456 - #46 c
+INFO  01:08:42,456 - #20 )
+INFO  01:08:42,456 - #23 ;
+INFO  01:08:42,456 - #11 read
+INFO  01:08:42,457 - #19 (
+INFO  01:08:42,457 - #46 method
+INFO  01:08:42,457 - #20 )
+INFO  01:08:42,457 - #23 ;
+INFO  01:08:42,457 - #18 }
+INFO  01:08:42,457 - #18 }
+INFO  01:08:42,458 - Program(
+  ProgramName(
+   test302
+  ) [ProgramName]
+  DeclListN(
+  ) [DeclListN]
+  MethodDecListY(
+    MethodDecListY(
+      MethodDecListN(
+      ) [MethodDecListN]
+      MethodDec(
+        TypeOptionN(
+         method
+        ) [TypeOptionN]
+        FormParsN(
+        ) [FormParsN]
+        VarDeclListN(
+        ) [VarDeclListN]
+        StatementListN(
+        ) [StatementListN]
+      ) [MethodDec]
+    ) [MethodDecListY]
+    MethodDec(
+      TypeOptionN(
+       main
+      ) [TypeOptionN]
+      FormParsN(
+      ) [FormParsN]
+      VarDeclListY(
+        VarDeclListY(
+          VarDeclListN(
+          ) [VarDeclListN]
+          VarDeclY(
+            Type(
+             int
+            ) [Type]
+            VarList(
+             i
+              BracketsN(
+              ) [BracketsN]
+              VarListNextN(
+              ) [VarListNextN]
+            ) [VarList]
+          ) [VarDeclY]
+        ) [VarDeclListY]
+        VarDeclY(
+          Type(
+           char
+          ) [Type]
+          VarList(
+           c
+            BracketsN(
+            ) [BracketsN]
+            VarListNextN(
+            ) [VarListNextN]
+          ) [VarList]
+        ) [VarDeclY]
+      ) [VarDeclListY]
+      StatementListY(
+        StatementListY(
+          StatementListY(
+            StatementListY(
+              StatementListY(
+                StatementListN(
+                ) [StatementListN]
+                StatementDesignator(
+                  DesignatorSignatureAssign(
+                    DesignatorVar(
+                     i
+                    ) [DesignatorVar]
+                    Assignop(
+                    ) [Assignop]
+                    CondExprSimple(
+                      Expr(
+                        AddopTermListTerm(
+                          Term(
+                            MulopFactorListFactor(
+                              Factor(
+                                UnaryMinusN(
+                                ) [UnaryMinusN]
+                                FactorOptionNumber(
+                                 5
+                                ) [FactorOptionNumber]
+                              ) [Factor]
+                            ) [MulopFactorListFactor]
+                          ) [Term]
+                        ) [AddopTermListTerm]
+                      ) [Expr]
+                    ) [CondExprSimple]
+                  ) [DesignatorSignatureAssign]
+                ) [StatementDesignator]
+              ) [StatementListY]
+              StatementDesignator(
+                DesignatorSignatureAssign(
+                  DesignatorVar(
+                   c
+                  ) [DesignatorVar]
+                  Assignop(
+                  ) [Assignop]
+                  CondExprSimple(
+                    Expr(
+                      AddopTermListTerm(
+                        Term(
+                          MulopFactorListFactor(
+                            Factor(
+                              UnaryMinusN(
+                              ) [UnaryMinusN]
+                              FactorOptionChar(
+                               c
+                              ) [FactorOptionChar]
+                            ) [Factor]
+                          ) [MulopFactorListFactor]
+                        ) [Term]
+                      ) [AddopTermListTerm]
+                    ) [Expr]
+                  ) [CondExprSimple]
+                ) [DesignatorSignatureAssign]
+              ) [StatementDesignator]
+            ) [StatementListY]
+            StatementRead(
+              DesignatorVar(
+               i
+              ) [DesignatorVar]
+            ) [StatementRead]
+          ) [StatementListY]
+          StatementRead(
+            DesignatorVar(
+             c
+            ) [DesignatorVar]
+          ) [StatementRead]
+        ) [StatementListY]
+        StatementRead(
+          DesignatorVar(
+           method
+          ) [DesignatorVar]
+        ) [StatementRead]
+      ) [StatementListY]
+    ) [MethodDec]
+  ) [MethodDecListY]
+) [Program]
+ERROR 01:08:42,474 - Read operacija neadekvatne promenljive: method na liniji 16
+ERROR 01:08:42,474 - Parsiranje NIJE uspesno zavrseno!

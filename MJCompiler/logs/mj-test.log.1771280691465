@@ -1,0 +1,143 @@
+INFO  23:19:28,026 - Compiling source file: C:\Users\Win 11\Documents\pp1lab.templateAST (1)\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  23:19:28,057 - #2 program
+INFO  23:19:28,057 - #46 test302
+INFO  23:19:28,057 - #4 enum
+INFO  23:19:28,058 - #46 Broj
+INFO  23:19:28,058 - #17 {
+INFO  23:19:28,058 - #46 JEDAN
+INFO  23:19:28,058 - #24 ,
+INFO  23:19:28,058 - #46 DVA
+INFO  23:19:28,059 - #24 ,
+INFO  23:19:28,059 - #46 TRI
+INFO  23:19:28,059 - #18 }
+INFO  23:19:28,059 - #17 {
+INFO  23:19:28,060 - #5 void
+INFO  23:19:28,060 - #46 main
+INFO  23:19:28,060 - #19 (
+INFO  23:19:28,060 - #20 )
+INFO  23:19:28,060 - #46 char
+INFO  23:19:28,060 - #46 i
+INFO  23:19:28,060 - #21 [
+INFO  23:19:28,060 - #22 ]
+INFO  23:19:28,062 - #23 ;
+INFO  23:19:28,063 - #17 {
+INFO  23:19:28,063 - #46 i
+INFO  23:19:28,063 - #43 =
+INFO  23:19:28,063 - #16 new
+INFO  23:19:28,064 - #46 char
+INFO  23:19:28,064 - #21 [
+INFO  23:19:28,064 - #45 3
+INFO  23:19:28,064 - #22 ]
+INFO  23:19:28,065 - #23 ;
+INFO  23:19:28,065 - #18 }
+INFO  23:19:28,065 - #18 }
+INFO  23:19:28,066 - Program(
+  ProgramName(
+   test302
+  ) [ProgramName]
+  DeclListY(
+    DeclListN(
+    ) [DeclListN]
+    DeclE(
+      EnumDecl(
+        EnumName(
+         Broj
+        ) [EnumName]
+        EnumDecList(
+         JEDAN
+          EnumValueN(
+          ) [EnumValueN]
+          EnumListNextY(
+            EnumListNextY(
+              EnumListNextN(
+              ) [EnumListNextN]
+             DVA
+              EnumValueN(
+              ) [EnumValueN]
+            ) [EnumListNextY]
+           TRI
+            EnumValueN(
+            ) [EnumValueN]
+          ) [EnumListNextY]
+        ) [EnumDecList]
+      ) [EnumDecl]
+    ) [DeclE]
+  ) [DeclListY]
+  MethodDecListY(
+    MethodDecListN(
+    ) [MethodDecListN]
+    MethodDec(
+      TypeOptionN(
+       main
+      ) [TypeOptionN]
+      FormParsN(
+      ) [FormParsN]
+      VarDeclListY(
+        VarDeclListN(
+        ) [VarDeclListN]
+        VarDeclY(
+          Type(
+           char
+          ) [Type]
+          VarList(
+           i
+            BracketsY(
+            ) [BracketsY]
+            VarListNextN(
+            ) [VarListNextN]
+          ) [VarList]
+        ) [VarDeclY]
+      ) [VarDeclListY]
+      StatementListY(
+        StatementListN(
+        ) [StatementListN]
+        StatementDesignator(
+          DesignatorSignatureAssign(
+            DesignatorVar(
+             i
+            ) [DesignatorVar]
+            Assignop(
+            ) [Assignop]
+            CondExprSimple(
+              Expr(
+                AddopTermListTerm(
+                  Term(
+                    MulopFactorListFactor(
+                      Factor(
+                        UnaryMinusN(
+                        ) [UnaryMinusN]
+                        FactorOptionNewY(
+                          Type(
+                           char
+                          ) [Type]
+                          CondExprSimple(
+                            Expr(
+                              AddopTermListTerm(
+                                Term(
+                                  MulopFactorListFactor(
+                                    Factor(
+                                      UnaryMinusN(
+                                      ) [UnaryMinusN]
+                                      FactorOptionNumber(
+                                       3
+                                      ) [FactorOptionNumber]
+                                    ) [Factor]
+                                  ) [MulopFactorListFactor]
+                                ) [Term]
+                              ) [AddopTermListTerm]
+                            ) [Expr]
+                          ) [CondExprSimple]
+                        ) [FactorOptionNewY]
+                      ) [Factor]
+                    ) [MulopFactorListFactor]
+                  ) [Term]
+                ) [AddopTermListTerm]
+              ) [Expr]
+            ) [CondExprSimple]
+          ) [DesignatorSignatureAssign]
+        ) [StatementDesignator]
+      ) [StatementListY]
+    ) [MethodDec]
+  ) [MethodDecListY]
+) [Program]
+INFO  23:19:28,084 - Parsiranje uspesno zavrseno!

@@ -1,0 +1,174 @@
+INFO  18:46:37,284 - Compiling source file: C:\Users\Win 11\Documents\pp1lab.templateAST (1)\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  18:46:37,507 - #2 program
+INFO  18:46:37,507 - #46 test302
+INFO  18:46:37,507 - #3 const
+INFO  18:46:37,508 - #46 int
+INFO  18:46:37,508 - #46 a
+INFO  18:46:37,509 - #43 =
+INFO  18:46:37,509 - #45 3
+INFO  18:46:37,509 - #23 ;
+INFO  18:46:37,521 - #3 const
+INFO  18:46:37,528 - #46 int
+INFO  18:46:37,528 - #46 b
+INFO  18:46:37,528 - #43 =
+INFO  18:46:37,528 - #45 2
+INFO  18:46:37,528 - #24 ,
+INFO  18:46:37,528 - #46 c
+INFO  18:46:37,528 - #43 =
+INFO  18:46:37,528 - #45 4
+INFO  18:46:37,528 - #24 ,
+INFO  18:46:37,528 - #46 d
+INFO  18:46:37,528 - #43 =
+INFO  18:46:37,529 - #45 0
+INFO  18:46:37,529 - #23 ;
+INFO  18:46:37,529 - #3 const
+INFO  18:46:37,529 - #46 asdas
+INFO  18:46:37,529 - #46 d
+INFO  18:46:37,529 - #43 =
+INFO  18:46:37,529 - #46 e
+ERROR 18:46:37,529 - 
+Sintaksna greska na liniji 7
+INFO  18:46:37,529 - #23 ;
+INFO  18:46:37,529 - #46 int
+INFO  18:46:37,529 - #46 i
+INFO  18:46:37,529 - #23 ;
+ERROR 18:46:37,529 - Oporavak greske u VarDecl. Vracanje na liniju: 8
+INFO  18:46:37,552 - #46 bool
+INFO  18:46:37,552 - #46 ibool
+INFO  18:46:37,552 - #23 ;
+INFO  18:46:37,552 - #46 int
+INFO  18:46:37,552 - #46 niz
+INFO  18:46:37,552 - #21 [
+INFO  18:46:37,552 - #22 ]
+INFO  18:46:37,552 - #23 ;
+INFO  18:46:37,552 - #17 {
+INFO  18:46:37,552 - #5 void
+INFO  18:46:37,554 - #46 main
+INFO  18:46:37,555 - #19 (
+INFO  18:46:37,555 - #20 )
+INFO  18:46:37,556 - #17 {
+INFO  18:46:37,556 - #18 }
+INFO  18:46:37,557 - #18 }
+INFO  18:46:37,564 - Program(
+  ProgramName(
+   test302
+  ) [ProgramName]
+  DeclListY(
+    DeclListY(
+      DeclListY(
+        DeclListY(
+          DeclListY(
+            DeclListY(
+              DeclListN(
+              ) [DeclListN]
+              DeclC(
+                ConstDecl(
+                  Type(
+                   int
+                  ) [Type]
+                  ConstList(
+                   a
+                    ConstN(
+                     3
+                    ) [ConstN]
+                    ConstListNextN(
+                    ) [ConstListNextN]
+                  ) [ConstList]
+                ) [ConstDecl]
+              ) [DeclC]
+            ) [DeclListY]
+            DeclC(
+              ConstDecl(
+                Type(
+                 int
+                ) [Type]
+                ConstList(
+                 b
+                  ConstN(
+                   2
+                  ) [ConstN]
+                  ConstListNextY(
+                    ConstListNextY(
+                      ConstListNextN(
+                      ) [ConstListNextN]
+                     c
+                      ConstN(
+                       4
+                      ) [ConstN]
+                    ) [ConstListNextY]
+                   d
+                    ConstN(
+                     0
+                    ) [ConstN]
+                  ) [ConstListNextY]
+                ) [ConstList]
+              ) [ConstDecl]
+            ) [DeclC]
+          ) [DeclListY]
+          DeclV(
+            VarDeclError(
+            ) [VarDeclError]
+          ) [DeclV]
+        ) [DeclListY]
+        DeclV(
+          VarDeclY(
+            Type(
+             int
+            ) [Type]
+            VarList(
+             i
+              BracketsN(
+              ) [BracketsN]
+              VarListNextN(
+              ) [VarListNextN]
+            ) [VarList]
+          ) [VarDeclY]
+        ) [DeclV]
+      ) [DeclListY]
+      DeclV(
+        VarDeclY(
+          Type(
+           bool
+          ) [Type]
+          VarList(
+           ibool
+            BracketsN(
+            ) [BracketsN]
+            VarListNextN(
+            ) [VarListNextN]
+          ) [VarList]
+        ) [VarDeclY]
+      ) [DeclV]
+    ) [DeclListY]
+    DeclV(
+      VarDeclY(
+        Type(
+         int
+        ) [Type]
+        VarList(
+         niz
+          BracketsY(
+          ) [BracketsY]
+          VarListNextN(
+          ) [VarListNextN]
+        ) [VarList]
+      ) [VarDeclY]
+    ) [DeclV]
+  ) [DeclListY]
+  MethodDecListY(
+    MethodDecListN(
+    ) [MethodDecListN]
+    MethodDec(
+      TypeOptionN(
+      ) [TypeOptionN]
+     main
+      FormParsN(
+      ) [FormParsN]
+      VarDeclListN(
+      ) [VarDeclListN]
+      StatementListN(
+      ) [StatementListN]
+    ) [MethodDec]
+  ) [MethodDecListY]
+) [Program]
+ERROR 18:46:37,577 - Parsiranje NIJE uspesno zavrseno!

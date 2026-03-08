@@ -1,0 +1,144 @@
+INFO  12:49:20,798 - Compiling source file: C:\Users\Win 11\Documents\pp1lab.templateAST (1)\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  12:49:21,040 - #2 program
+INFO  12:49:21,040 - #46 test301
+INFO  12:49:21,040 - #17 {
+INFO  12:49:21,047 - #5 void
+INFO  12:49:21,051 - #46 main
+INFO  12:49:21,051 - #19 (
+INFO  12:49:21,051 - #20 )
+INFO  12:49:21,052 - #46 int
+INFO  12:49:21,052 - #46 a
+INFO  12:49:21,057 - #21 [
+INFO  12:49:21,057 - #22 ]
+INFO  12:49:21,057 - #23 ;
+INFO  12:49:21,064 - #46 char
+INFO  12:49:21,064 - #46 c
+INFO  12:49:21,064 - #23 ;
+INFO  12:49:21,069 - #46 int
+INFO  12:49:21,069 - #46 b
+INFO  12:49:21,069 - #23 ;
+INFO  12:49:21,069 - #17 {
+INFO  12:49:21,069 - #46 b
+INFO  12:49:21,073 - #43 =
+INFO  12:49:21,073 - #46 a
+INFO  12:49:21,075 - #21 [
+INFO  12:49:21,075 - #46 c
+INFO  12:49:21,075 - #22 ]
+INFO  12:49:21,101 - #23 ;
+INFO  12:49:21,101 - #18 }
+INFO  12:49:21,102 - #18 }
+INFO  12:49:21,109 - Program(
+  ProgramName(
+   test301
+  ) [ProgramName]
+  DeclListN(
+  ) [DeclListN]
+  MethodDecListY(
+    MethodDecListN(
+    ) [MethodDecListN]
+    MethodDec(
+      TypeOptionN(
+       main
+      ) [TypeOptionN]
+      FormParsN(
+      ) [FormParsN]
+      VarDeclListY(
+        VarDeclListY(
+          VarDeclListY(
+            VarDeclListN(
+            ) [VarDeclListN]
+            VarDeclY(
+              Type(
+               int
+              ) [Type]
+              VarList(
+               a
+                BracketsY(
+                ) [BracketsY]
+                VarListNextN(
+                ) [VarListNextN]
+              ) [VarList]
+            ) [VarDeclY]
+          ) [VarDeclListY]
+          VarDeclY(
+            Type(
+             char
+            ) [Type]
+            VarList(
+             c
+              BracketsN(
+              ) [BracketsN]
+              VarListNextN(
+              ) [VarListNextN]
+            ) [VarList]
+          ) [VarDeclY]
+        ) [VarDeclListY]
+        VarDeclY(
+          Type(
+           int
+          ) [Type]
+          VarList(
+           b
+            BracketsN(
+            ) [BracketsN]
+            VarListNextN(
+            ) [VarListNextN]
+          ) [VarList]
+        ) [VarDeclY]
+      ) [VarDeclListY]
+      StatementListY(
+        StatementListN(
+        ) [StatementListN]
+        StatementDesignator(
+          DesignatorStatement(
+            DesignatorVar(
+             b
+            ) [DesignatorVar]
+            DesignatorSignatureAssign(
+              Assignop(
+              ) [Assignop]
+              CondExprSimple(
+                Expr(
+                  Term(
+                    Factor(
+                      UnaryMinusN(
+                      ) [UnaryMinusN]
+                      FactorOptionDesignator(
+                        DesignatorArray(
+                         a
+                          Expr(
+                            Term(
+                              Factor(
+                                UnaryMinusN(
+                                ) [UnaryMinusN]
+                                FactorOptionDesignator(
+                                  DesignatorVar(
+                                   c
+                                  ) [DesignatorVar]
+                                ) [FactorOptionDesignator]
+                              ) [Factor]
+                              MulopFactorListOptionalN(
+                              ) [MulopFactorListOptionalN]
+                            ) [Term]
+                            AddopTermListN(
+                            ) [AddopTermListN]
+                          ) [Expr]
+                        ) [DesignatorArray]
+                      ) [FactorOptionDesignator]
+                    ) [Factor]
+                    MulopFactorListOptionalN(
+                    ) [MulopFactorListOptionalN]
+                  ) [Term]
+                  AddopTermListN(
+                  ) [AddopTermListN]
+                ) [Expr]
+              ) [CondExprSimple]
+            ) [DesignatorSignatureAssign]
+          ) [DesignatorStatement]
+        ) [StatementDesignator]
+      ) [StatementListY]
+    ) [MethodDec]
+  ) [MethodDecListY]
+) [Program]
+ERROR 12:49:21,124 - Indeks niza mora biti int. na liniji 7
+ERROR 12:49:21,125 - Parsiranje NIJE uspesno zavrseno!

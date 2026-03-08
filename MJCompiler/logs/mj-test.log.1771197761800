@@ -1,0 +1,92 @@
+INFO  22:26:27,909 - Compiling source file: C:\Users\Win 11\Documents\pp1lab.templateAST (1)\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  22:26:27,937 - #2 program
+INFO  22:26:27,937 - #46 test301
+INFO  22:26:27,937 - #46 int
+INFO  22:26:27,938 - #46 i
+INFO  22:26:27,938 - #23 ;
+INFO  22:26:27,939 - #17 {
+INFO  22:26:27,939 - #5 void
+INFO  22:26:27,940 - #46 main
+INFO  22:26:27,940 - #19 (
+INFO  22:26:27,940 - #20 )
+INFO  22:26:27,940 - #46 int
+INFO  22:26:27,940 - #46 j
+INFO  22:26:27,940 - #23 ;
+INFO  22:26:27,940 - #17 {
+INFO  22:26:27,940 - #18 }
+INFO  22:26:27,941 - #46 int
+INFO  22:26:27,941 - #46 plus
+INFO  22:26:27,941 - #19 (
+INFO  22:26:27,941 - #20 )
+INFO  22:26:27,941 - #17 {
+INFO  22:26:27,941 - #18 }
+INFO  22:26:27,941 - #18 }
+INFO  22:26:27,942 - Program(
+  ProgramName(
+   test301
+  ) [ProgramName]
+  DeclListY(
+    DeclListN(
+    ) [DeclListN]
+    DeclV(
+      VarDeclY(
+        Type(
+         int
+        ) [Type]
+        VarList(
+         i
+          BracketsN(
+          ) [BracketsN]
+          VarListNextN(
+          ) [VarListNextN]
+        ) [VarList]
+      ) [VarDeclY]
+    ) [DeclV]
+  ) [DeclListY]
+  MethodDecListY(
+    MethodDecListY(
+      MethodDecListN(
+      ) [MethodDecListN]
+      MethodDec(
+        TypeOptionN(
+         main
+        ) [TypeOptionN]
+        FormParsN(
+        ) [FormParsN]
+        VarDeclListY(
+          VarDeclListN(
+          ) [VarDeclListN]
+          VarDeclY(
+            Type(
+             int
+            ) [Type]
+            VarList(
+             j
+              BracketsN(
+              ) [BracketsN]
+              VarListNextN(
+              ) [VarListNextN]
+            ) [VarList]
+          ) [VarDeclY]
+        ) [VarDeclListY]
+        StatementListN(
+        ) [StatementListN]
+      ) [MethodDec]
+    ) [MethodDecListY]
+    MethodDec(
+      TypeOptionY(
+        Type(
+         int
+        ) [Type]
+       plus
+      ) [TypeOptionY]
+      FormParsN(
+      ) [FormParsN]
+      VarDeclListN(
+      ) [VarDeclListN]
+      StatementListN(
+      ) [StatementListN]
+    ) [MethodDec]
+  ) [MethodDecListY]
+) [Program]
+INFO  22:26:27,945 - Parsiranje uspesno zavrseno!

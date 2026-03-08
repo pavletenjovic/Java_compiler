@@ -1,0 +1,112 @@
+INFO  04:40:06,441 - Compiling source file: C:\Users\Win 11\Documents\pp1lab.templateAST (1)\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  04:40:06,471 - #2 program
+INFO  04:40:06,471 - #46 MJ
+INFO  04:40:06,472 - #3 const
+INFO  04:40:06,472 - #46 int
+INFO  04:40:06,472 - #46 pi
+INFO  04:40:06,472 - #43 =
+INFO  04:40:06,472 - #45 3
+INFO  04:40:06,472 - #23 ;
+INFO  04:40:06,473 - #46 int
+INFO  04:40:06,473 - #46 x
+INFO  04:40:06,473 - #24 ,
+INFO  04:40:06,473 - #46 y
+INFO  04:40:06,474 - #21 [
+INFO  04:40:06,474 - #22 ]
+INFO  04:40:06,474 - #23 ;
+INFO  04:40:06,474 - #17 {
+INFO  04:40:06,474 - #5 void
+INFO  04:40:06,475 - #46 main
+INFO  04:40:06,475 - #19 (
+INFO  04:40:06,475 - #20 )
+INFO  04:40:06,475 - #17 {
+INFO  04:40:06,476 - #12 print
+INFO  04:40:06,476 - #19 (
+INFO  04:40:06,476 - #45 1
+INFO  04:40:06,476 - #20 )
+INFO  04:40:06,478 - #23 ;
+INFO  04:40:06,478 - #18 }
+INFO  04:40:06,478 - #18 }
+INFO  04:40:06,479 - Program(
+  ProgramName(
+   MJ
+  ) [ProgramName]
+  DeclListY(
+    DeclListY(
+      DeclListN(
+      ) [DeclListN]
+      DeclC(
+        ConstDecl(
+          Type(
+           int
+          ) [Type]
+          ConstList(
+           pi
+            ConstN(
+             3
+            ) [ConstN]
+            ConstListNextN(
+            ) [ConstListNextN]
+          ) [ConstList]
+        ) [ConstDecl]
+      ) [DeclC]
+    ) [DeclListY]
+    DeclV(
+      VarDeclY(
+        Type(
+         int
+        ) [Type]
+        VarList(
+         x
+          BracketsN(
+          ) [BracketsN]
+          VarListNextY(
+            VarListNextN(
+            ) [VarListNextN]
+           y
+            BracketsY(
+            ) [BracketsY]
+          ) [VarListNextY]
+        ) [VarList]
+      ) [VarDeclY]
+    ) [DeclV]
+  ) [DeclListY]
+  MethodDecListY(
+    MethodDecListN(
+    ) [MethodDecListN]
+    MethodDec(
+      TypeOptionN(
+       main
+      ) [TypeOptionN]
+      FormParsN(
+      ) [FormParsN]
+      VarDeclListN(
+      ) [VarDeclListN]
+      StatementListY(
+        StatementListN(
+        ) [StatementListN]
+        StatementPrint(
+          CondExprSimple(
+            Expr(
+              AddopTermListTerm(
+                Term(
+                  MulopFactorListFactor(
+                    Factor(
+                      UnaryMinusN(
+                      ) [UnaryMinusN]
+                      FactorOptionNumber(
+                       1
+                      ) [FactorOptionNumber]
+                    ) [Factor]
+                  ) [MulopFactorListFactor]
+                ) [Term]
+              ) [AddopTermListTerm]
+            ) [Expr]
+          ) [CondExprSimple]
+          PrintOptionalN(
+          ) [PrintOptionalN]
+        ) [StatementPrint]
+      ) [StatementListY]
+    ) [MethodDec]
+  ) [MethodDecListY]
+) [Program]

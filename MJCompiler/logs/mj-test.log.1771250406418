@@ -1,0 +1,138 @@
+INFO  14:59:10,456 - Compiling source file: C:\Users\Win 11\Documents\pp1lab.templateAST (1)\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  14:59:10,482 - #2 program
+INFO  14:59:10,482 - #46 test302
+INFO  14:59:10,482 - #46 int
+INFO  14:59:10,482 - #46 niz
+INFO  14:59:10,484 - #21 [
+INFO  14:59:10,484 - #22 ]
+INFO  14:59:10,484 - #23 ;
+INFO  14:59:10,484 - #17 {
+INFO  14:59:10,484 - #5 void
+INFO  14:59:10,484 - #46 main
+INFO  14:59:10,484 - #19 (
+INFO  14:59:10,484 - #20 )
+INFO  14:59:10,485 - #46 int
+INFO  14:59:10,485 - #46 a
+INFO  14:59:10,485 - #23 ;
+INFO  14:59:10,485 - #17 {
+INFO  14:59:10,485 - #46 a
+INFO  14:59:10,486 - #43 =
+INFO  14:59:10,486 - #46 niz
+INFO  14:59:10,486 - #21 [
+INFO  14:59:10,486 - #45 5
+INFO  14:59:10,486 - #30 *
+INFO  14:59:10,487 - #45 5
+INFO  14:59:10,487 - #22 ]
+INFO  14:59:10,488 - #23 ;
+INFO  14:59:10,488 - #18 }
+INFO  14:59:10,488 - #18 }
+INFO  14:59:10,489 - Program(
+  ProgramName(
+   test302
+  ) [ProgramName]
+  DeclListY(
+    DeclListN(
+    ) [DeclListN]
+    DeclV(
+      VarDeclY(
+        Type(
+         int
+        ) [Type]
+        VarList(
+         niz
+          BracketsY(
+          ) [BracketsY]
+          VarListNextN(
+          ) [VarListNextN]
+        ) [VarList]
+      ) [VarDeclY]
+    ) [DeclV]
+  ) [DeclListY]
+  MethodDecListY(
+    MethodDecListN(
+    ) [MethodDecListN]
+    MethodDec(
+      TypeOptionN(
+       main
+      ) [TypeOptionN]
+      FormParsN(
+      ) [FormParsN]
+      VarDeclListY(
+        VarDeclListN(
+        ) [VarDeclListN]
+        VarDeclY(
+          Type(
+           int
+          ) [Type]
+          VarList(
+           a
+            BracketsN(
+            ) [BracketsN]
+            VarListNextN(
+            ) [VarListNextN]
+          ) [VarList]
+        ) [VarDeclY]
+      ) [VarDeclListY]
+      StatementListY(
+        StatementListN(
+        ) [StatementListN]
+        StatementDesignator(
+          DesignatorSignatureAssign(
+            DesignatorVar(
+             a
+            ) [DesignatorVar]
+            Assignop(
+            ) [Assignop]
+            CondExprSimple(
+              Expr(
+                AddopTermListTerm(
+                  Term(
+                    MulopFactorListFactor(
+                      Factor(
+                        UnaryMinusN(
+                        ) [UnaryMinusN]
+                        FactorOptionDesignator(
+                          DesignatorArray(
+                           niz
+                            Expr(
+                              AddopTermListTerm(
+                                Term(
+                                  MulopFactorListMul(
+                                    MulopFactorListFactor(
+                                      Factor(
+                                        UnaryMinusN(
+                                        ) [UnaryMinusN]
+                                        FactorOptionNumber(
+                                         5
+                                        ) [FactorOptionNumber]
+                                      ) [Factor]
+                                    ) [MulopFactorListFactor]
+                                    MulopMul(
+                                    ) [MulopMul]
+                                    Factor(
+                                      UnaryMinusN(
+                                      ) [UnaryMinusN]
+                                      FactorOptionNumber(
+                                       5
+                                      ) [FactorOptionNumber]
+                                    ) [Factor]
+                                  ) [MulopFactorListMul]
+                                ) [Term]
+                              ) [AddopTermListTerm]
+                            ) [Expr]
+                          ) [DesignatorArray]
+                        ) [FactorOptionDesignator]
+                      ) [Factor]
+                    ) [MulopFactorListFactor]
+                  ) [Term]
+                ) [AddopTermListTerm]
+              ) [Expr]
+            ) [CondExprSimple]
+          ) [DesignatorSignatureAssign]
+        ) [StatementDesignator]
+      ) [StatementListY]
+    ) [MethodDec]
+  ) [MethodDecListY]
+) [Program]
+ERROR 14:59:10,504 - Neadekvatna dodela vrednosti u promenljivu: a na liniji 8
+ERROR 14:59:10,504 - Parsiranje NIJE uspesno zavrseno!

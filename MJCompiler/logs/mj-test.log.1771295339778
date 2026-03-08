@@ -1,0 +1,668 @@
+INFO  03:28:27,461 - Compiling source file: C:\Users\Win 11\Documents\pp1lab.templateAST (1)\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  03:28:27,484 - #2 program
+INFO  03:28:27,484 - #46 test302
+INFO  03:28:27,484 - #3 const
+INFO  03:28:27,485 - #46 int
+INFO  03:28:27,485 - #46 jedan
+INFO  03:28:27,485 - #43 =
+INFO  03:28:27,485 - #45 1
+INFO  03:28:27,485 - #23 ;
+INFO  03:28:27,486 - #46 int
+INFO  03:28:27,486 - #46 i
+INFO  03:28:27,486 - #23 ;
+INFO  03:28:27,487 - #46 bool
+INFO  03:28:27,487 - #46 ibool
+INFO  03:28:27,487 - #23 ;
+INFO  03:28:27,487 - #46 int
+INFO  03:28:27,487 - #46 niz
+INFO  03:28:27,487 - #21 [
+INFO  03:28:27,487 - #22 ]
+INFO  03:28:27,487 - #23 ;
+INFO  03:28:27,487 - #17 {
+INFO  03:28:27,487 - #46 int
+INFO  03:28:27,488 - #46 sum
+INFO  03:28:27,488 - #19 (
+INFO  03:28:27,488 - #46 int
+INFO  03:28:27,488 - #46 z
+INFO  03:28:27,488 - #24 ,
+INFO  03:28:27,488 - #46 int
+INFO  03:28:27,488 - #46 d
+INFO  03:28:27,488 - #20 )
+INFO  03:28:27,488 - #17 {
+INFO  03:28:27,488 - #10 return
+INFO  03:28:27,489 - #46 z
+INFO  03:28:27,489 - #28 +
+INFO  03:28:27,490 - #46 d
+INFO  03:28:27,490 - #23 ;
+INFO  03:28:27,490 - #18 }
+INFO  03:28:27,490 - #46 int
+INFO  03:28:27,491 - #46 inkrement
+INFO  03:28:27,491 - #19 (
+INFO  03:28:27,491 - #46 int
+INFO  03:28:27,491 - #46 a
+INFO  03:28:27,491 - #24 ,
+INFO  03:28:27,491 - #46 int
+INFO  03:28:27,491 - #46 inc
+INFO  03:28:27,491 - #20 )
+INFO  03:28:27,491 - #46 int
+INFO  03:28:27,491 - #46 pom
+INFO  03:28:27,491 - #23 ;
+INFO  03:28:27,491 - #17 {
+INFO  03:28:27,491 - #6 if
+INFO  03:28:27,491 - #19 (
+INFO  03:28:27,491 - #46 inc
+INFO  03:28:27,491 - #35 ==
+INFO  03:28:27,491 - #46 jedan
+INFO  03:28:27,492 - #20 )
+INFO  03:28:27,492 - #46 pom
+INFO  03:28:27,492 - #43 =
+INFO  03:28:27,492 - #45 1
+INFO  03:28:27,493 - #23 ;
+INFO  03:28:27,493 - #7 else
+INFO  03:28:27,493 - #6 if
+INFO  03:28:27,493 - #19 (
+INFO  03:28:27,493 - #46 inc
+INFO  03:28:27,493 - #35 ==
+INFO  03:28:27,493 - #45 2
+INFO  03:28:27,493 - #20 )
+INFO  03:28:27,493 - #46 pom
+INFO  03:28:27,493 - #43 =
+INFO  03:28:27,493 - #46 a
+INFO  03:28:27,493 - #23 ;
+INFO  03:28:27,493 - #10 return
+INFO  03:28:27,494 - #46 sum
+INFO  03:28:27,494 - #19 (
+INFO  03:28:27,494 - #46 a
+INFO  03:28:27,494 - #24 ,
+INFO  03:28:27,494 - #46 pom
+INFO  03:28:27,494 - #20 )
+INFO  03:28:27,495 - #23 ;
+INFO  03:28:27,495 - #18 }
+INFO  03:28:27,495 - #46 bool
+INFO  03:28:27,495 - #46 verify
+INFO  03:28:27,495 - #19 (
+INFO  03:28:27,495 - #20 )
+INFO  03:28:27,495 - #17 {
+INFO  03:28:27,495 - #12 print
+INFO  03:28:27,495 - #19 (
+INFO  03:28:27,495 - #47 v
+INFO  03:28:27,496 - #20 )
+INFO  03:28:27,496 - #23 ;
+INFO  03:28:27,496 - #10 return
+INFO  03:28:27,496 - #48 0
+INFO  03:28:27,496 - #23 ;
+INFO  03:28:27,496 - #18 }
+INFO  03:28:27,496 - #5 void
+INFO  03:28:27,496 - #46 main
+INFO  03:28:27,496 - #19 (
+INFO  03:28:27,496 - #20 )
+INFO  03:28:27,496 - #46 int
+INFO  03:28:27,496 - #46 x
+INFO  03:28:27,496 - #23 ;
+INFO  03:28:27,496 - #17 {
+INFO  03:28:27,497 - #46 x
+INFO  03:28:27,497 - #43 =
+INFO  03:28:27,497 - #46 inkrement
+INFO  03:28:27,497 - #19 (
+INFO  03:28:27,497 - #20 )
+INFO  03:28:27,497 - #23 ;
+INFO  03:28:27,497 - #46 inkrement
+INFO  03:28:27,497 - #19 (
+INFO  03:28:27,497 - #20 )
+INFO  03:28:27,497 - #23 ;
+INFO  03:28:27,497 - #18 }
+INFO  03:28:27,497 - #18 }
+INFO  03:28:27,499 - Program(
+  ProgramName(
+   test302
+  ) [ProgramName]
+  DeclListY(
+    DeclListY(
+      DeclListY(
+        DeclListY(
+          DeclListN(
+          ) [DeclListN]
+          DeclC(
+            ConstDecl(
+              Type(
+               int
+              ) [Type]
+              ConstList(
+               jedan
+                ConstN(
+                 1
+                ) [ConstN]
+                ConstListNextN(
+                ) [ConstListNextN]
+              ) [ConstList]
+            ) [ConstDecl]
+          ) [DeclC]
+        ) [DeclListY]
+        DeclV(
+          VarDeclY(
+            Type(
+             int
+            ) [Type]
+            VarList(
+             i
+              BracketsN(
+              ) [BracketsN]
+              VarListNextN(
+              ) [VarListNextN]
+            ) [VarList]
+          ) [VarDeclY]
+        ) [DeclV]
+      ) [DeclListY]
+      DeclV(
+        VarDeclY(
+          Type(
+           bool
+          ) [Type]
+          VarList(
+           ibool
+            BracketsN(
+            ) [BracketsN]
+            VarListNextN(
+            ) [VarListNextN]
+          ) [VarList]
+        ) [VarDeclY]
+      ) [DeclV]
+    ) [DeclListY]
+    DeclV(
+      VarDeclY(
+        Type(
+         int
+        ) [Type]
+        VarList(
+         niz
+          BracketsY(
+          ) [BracketsY]
+          VarListNextN(
+          ) [VarListNextN]
+        ) [VarList]
+      ) [VarDeclY]
+    ) [DeclV]
+  ) [DeclListY]
+  MethodDecListY(
+    MethodDecListY(
+      MethodDecListY(
+        MethodDecListY(
+          MethodDecListN(
+          ) [MethodDecListN]
+          MethodDec(
+            TypeOptionY(
+              Type(
+               int
+              ) [Type]
+             sum
+            ) [TypeOptionY]
+            FormParsY(
+              FormValueVar(
+                Type(
+                 int
+                ) [Type]
+               z
+              ) [FormValueVar]
+              FormParsNextY(
+                FormValueVar(
+                  Type(
+                   int
+                  ) [Type]
+                 d
+                ) [FormValueVar]
+                FormParsNextN(
+                ) [FormParsNextN]
+              ) [FormParsNextY]
+            ) [FormParsY]
+            VarDeclListN(
+            ) [VarDeclListN]
+            StatementListY(
+              StatementListN(
+              ) [StatementListN]
+              StatementReturn(
+                ExprOptionalY(
+                  CondExprSimple(
+                    Expr(
+                      AddopTermListAdd(
+                        AddopTermListTerm(
+                          Term(
+                            MulopFactorListFactor(
+                              Factor(
+                                UnaryMinusN(
+                                ) [UnaryMinusN]
+                                FactorOptionDesignator(
+                                  DesignatorVar(
+                                   z
+                                  ) [DesignatorVar]
+                                ) [FactorOptionDesignator]
+                              ) [Factor]
+                            ) [MulopFactorListFactor]
+                          ) [Term]
+                        ) [AddopTermListTerm]
+                        AddopPlus(
+                        ) [AddopPlus]
+                        Term(
+                          MulopFactorListFactor(
+                            Factor(
+                              UnaryMinusN(
+                              ) [UnaryMinusN]
+                              FactorOptionDesignator(
+                                DesignatorVar(
+                                 d
+                                ) [DesignatorVar]
+                              ) [FactorOptionDesignator]
+                            ) [Factor]
+                          ) [MulopFactorListFactor]
+                        ) [Term]
+                      ) [AddopTermListAdd]
+                    ) [Expr]
+                  ) [CondExprSimple]
+                ) [ExprOptionalY]
+              ) [StatementReturn]
+            ) [StatementListY]
+          ) [MethodDec]
+        ) [MethodDecListY]
+        MethodDec(
+          TypeOptionY(
+            Type(
+             int
+            ) [Type]
+           inkrement
+          ) [TypeOptionY]
+          FormParsY(
+            FormValueVar(
+              Type(
+               int
+              ) [Type]
+             a
+            ) [FormValueVar]
+            FormParsNextY(
+              FormValueVar(
+                Type(
+                 int
+                ) [Type]
+               inc
+              ) [FormValueVar]
+              FormParsNextN(
+              ) [FormParsNextN]
+            ) [FormParsNextY]
+          ) [FormParsY]
+          VarDeclListY(
+            VarDeclListN(
+            ) [VarDeclListN]
+            VarDeclY(
+              Type(
+               int
+              ) [Type]
+              VarList(
+               pom
+                BracketsN(
+                ) [BracketsN]
+                VarListNextN(
+                ) [VarListNextN]
+              ) [VarList]
+            ) [VarDeclY]
+          ) [VarDeclListY]
+          StatementListY(
+            StatementListY(
+              StatementListN(
+              ) [StatementListN]
+              StatementIf(
+                Condition(
+                  CondTermListOptionalN(
+                    CondTerm(
+                      CondFactListOptionalN(
+                        CondFactRel(
+                          Expr(
+                            AddopTermListTerm(
+                              Term(
+                                MulopFactorListFactor(
+                                  Factor(
+                                    UnaryMinusN(
+                                    ) [UnaryMinusN]
+                                    FactorOptionDesignator(
+                                      DesignatorVar(
+                                       inc
+                                      ) [DesignatorVar]
+                                    ) [FactorOptionDesignator]
+                                  ) [Factor]
+                                ) [MulopFactorListFactor]
+                              ) [Term]
+                            ) [AddopTermListTerm]
+                          ) [Expr]
+                          RelopEq(
+                          ) [RelopEq]
+                          Expr(
+                            AddopTermListTerm(
+                              Term(
+                                MulopFactorListFactor(
+                                  Factor(
+                                    UnaryMinusN(
+                                    ) [UnaryMinusN]
+                                    FactorOptionDesignator(
+                                      DesignatorVar(
+                                       jedan
+                                      ) [DesignatorVar]
+                                    ) [FactorOptionDesignator]
+                                  ) [Factor]
+                                ) [MulopFactorListFactor]
+                              ) [Term]
+                            ) [AddopTermListTerm]
+                          ) [Expr]
+                        ) [CondFactRel]
+                      ) [CondFactListOptionalN]
+                    ) [CondTerm]
+                  ) [CondTermListOptionalN]
+                ) [Condition]
+                StatementDesignator(
+                  DesignatorSignatureAssign(
+                    DesignatorVar(
+                     pom
+                    ) [DesignatorVar]
+                    Assignop(
+                    ) [Assignop]
+                    CondExprSimple(
+                      Expr(
+                        AddopTermListTerm(
+                          Term(
+                            MulopFactorListFactor(
+                              Factor(
+                                UnaryMinusN(
+                                ) [UnaryMinusN]
+                                FactorOptionNumber(
+                                 1
+                                ) [FactorOptionNumber]
+                              ) [Factor]
+                            ) [MulopFactorListFactor]
+                          ) [Term]
+                        ) [AddopTermListTerm]
+                      ) [Expr]
+                    ) [CondExprSimple]
+                  ) [DesignatorSignatureAssign]
+                ) [StatementDesignator]
+                ElseOptionalY(
+                  StatementIf(
+                    Condition(
+                      CondTermListOptionalN(
+                        CondTerm(
+                          CondFactListOptionalN(
+                            CondFactRel(
+                              Expr(
+                                AddopTermListTerm(
+                                  Term(
+                                    MulopFactorListFactor(
+                                      Factor(
+                                        UnaryMinusN(
+                                        ) [UnaryMinusN]
+                                        FactorOptionDesignator(
+                                          DesignatorVar(
+                                           inc
+                                          ) [DesignatorVar]
+                                        ) [FactorOptionDesignator]
+                                      ) [Factor]
+                                    ) [MulopFactorListFactor]
+                                  ) [Term]
+                                ) [AddopTermListTerm]
+                              ) [Expr]
+                              RelopEq(
+                              ) [RelopEq]
+                              Expr(
+                                AddopTermListTerm(
+                                  Term(
+                                    MulopFactorListFactor(
+                                      Factor(
+                                        UnaryMinusN(
+                                        ) [UnaryMinusN]
+                                        FactorOptionNumber(
+                                         2
+                                        ) [FactorOptionNumber]
+                                      ) [Factor]
+                                    ) [MulopFactorListFactor]
+                                  ) [Term]
+                                ) [AddopTermListTerm]
+                              ) [Expr]
+                            ) [CondFactRel]
+                          ) [CondFactListOptionalN]
+                        ) [CondTerm]
+                      ) [CondTermListOptionalN]
+                    ) [Condition]
+                    StatementDesignator(
+                      DesignatorSignatureAssign(
+                        DesignatorVar(
+                         pom
+                        ) [DesignatorVar]
+                        Assignop(
+                        ) [Assignop]
+                        CondExprSimple(
+                          Expr(
+                            AddopTermListTerm(
+                              Term(
+                                MulopFactorListFactor(
+                                  Factor(
+                                    UnaryMinusN(
+                                    ) [UnaryMinusN]
+                                    FactorOptionDesignator(
+                                      DesignatorVar(
+                                       a
+                                      ) [DesignatorVar]
+                                    ) [FactorOptionDesignator]
+                                  ) [Factor]
+                                ) [MulopFactorListFactor]
+                              ) [Term]
+                            ) [AddopTermListTerm]
+                          ) [Expr]
+                        ) [CondExprSimple]
+                      ) [DesignatorSignatureAssign]
+                    ) [StatementDesignator]
+                    ElseOptionalN(
+                    ) [ElseOptionalN]
+                  ) [StatementIf]
+                ) [ElseOptionalY]
+              ) [StatementIf]
+            ) [StatementListY]
+            StatementReturn(
+              ExprOptionalY(
+                CondExprSimple(
+                  Expr(
+                    AddopTermListTerm(
+                      Term(
+                        MulopFactorListFactor(
+                          Factor(
+                            UnaryMinusN(
+                            ) [UnaryMinusN]
+                            FactorOptionFuncall(
+                              DesignatorVar(
+                               sum
+                              ) [DesignatorVar]
+                              ActParsOptionalY(
+                                ActPars(
+                                  CondExprSimple(
+                                    Expr(
+                                      AddopTermListTerm(
+                                        Term(
+                                          MulopFactorListFactor(
+                                            Factor(
+                                              UnaryMinusN(
+                                              ) [UnaryMinusN]
+                                              FactorOptionDesignator(
+                                                DesignatorVar(
+                                                 a
+                                                ) [DesignatorVar]
+                                              ) [FactorOptionDesignator]
+                                            ) [Factor]
+                                          ) [MulopFactorListFactor]
+                                        ) [Term]
+                                      ) [AddopTermListTerm]
+                                    ) [Expr]
+                                  ) [CondExprSimple]
+                                  ExprNextY(
+                                    ExprNextN(
+                                    ) [ExprNextN]
+                                    CondExprSimple(
+                                      Expr(
+                                        AddopTermListTerm(
+                                          Term(
+                                            MulopFactorListFactor(
+                                              Factor(
+                                                UnaryMinusN(
+                                                ) [UnaryMinusN]
+                                                FactorOptionDesignator(
+                                                  DesignatorVar(
+                                                   pom
+                                                  ) [DesignatorVar]
+                                                ) [FactorOptionDesignator]
+                                              ) [Factor]
+                                            ) [MulopFactorListFactor]
+                                          ) [Term]
+                                        ) [AddopTermListTerm]
+                                      ) [Expr]
+                                    ) [CondExprSimple]
+                                  ) [ExprNextY]
+                                ) [ActPars]
+                              ) [ActParsOptionalY]
+                            ) [FactorOptionFuncall]
+                          ) [Factor]
+                        ) [MulopFactorListFactor]
+                      ) [Term]
+                    ) [AddopTermListTerm]
+                  ) [Expr]
+                ) [CondExprSimple]
+              ) [ExprOptionalY]
+            ) [StatementReturn]
+          ) [StatementListY]
+        ) [MethodDec]
+      ) [MethodDecListY]
+      MethodDec(
+        TypeOptionY(
+          Type(
+           bool
+          ) [Type]
+         verify
+        ) [TypeOptionY]
+        FormParsN(
+        ) [FormParsN]
+        VarDeclListN(
+        ) [VarDeclListN]
+        StatementListY(
+          StatementListY(
+            StatementListN(
+            ) [StatementListN]
+            StatementPrint(
+              CondExprSimple(
+                Expr(
+                  AddopTermListTerm(
+                    Term(
+                      MulopFactorListFactor(
+                        Factor(
+                          UnaryMinusN(
+                          ) [UnaryMinusN]
+                          FactorOptionChar(
+                           v
+                          ) [FactorOptionChar]
+                        ) [Factor]
+                      ) [MulopFactorListFactor]
+                    ) [Term]
+                  ) [AddopTermListTerm]
+                ) [Expr]
+              ) [CondExprSimple]
+              PrintOptionalN(
+              ) [PrintOptionalN]
+            ) [StatementPrint]
+          ) [StatementListY]
+          StatementReturn(
+            ExprOptionalY(
+              CondExprSimple(
+                Expr(
+                  AddopTermListTerm(
+                    Term(
+                      MulopFactorListFactor(
+                        Factor(
+                          UnaryMinusN(
+                          ) [UnaryMinusN]
+                          FactorOptionBoll(
+                           0
+                          ) [FactorOptionBoll]
+                        ) [Factor]
+                      ) [MulopFactorListFactor]
+                    ) [Term]
+                  ) [AddopTermListTerm]
+                ) [Expr]
+              ) [CondExprSimple]
+            ) [ExprOptionalY]
+          ) [StatementReturn]
+        ) [StatementListY]
+      ) [MethodDec]
+    ) [MethodDecListY]
+    MethodDec(
+      TypeOptionN(
+       main
+      ) [TypeOptionN]
+      FormParsN(
+      ) [FormParsN]
+      VarDeclListY(
+        VarDeclListN(
+        ) [VarDeclListN]
+        VarDeclY(
+          Type(
+           int
+          ) [Type]
+          VarList(
+           x
+            BracketsN(
+            ) [BracketsN]
+            VarListNextN(
+            ) [VarListNextN]
+          ) [VarList]
+        ) [VarDeclY]
+      ) [VarDeclListY]
+      StatementListY(
+        StatementListY(
+          StatementListN(
+          ) [StatementListN]
+          StatementDesignator(
+            DesignatorSignatureAssign(
+              DesignatorVar(
+               x
+              ) [DesignatorVar]
+              Assignop(
+              ) [Assignop]
+              CondExprSimple(
+                Expr(
+                  AddopTermListTerm(
+                    Term(
+                      MulopFactorListFactor(
+                        Factor(
+                          UnaryMinusN(
+                          ) [UnaryMinusN]
+                          FactorOptionFuncall(
+                            DesignatorVar(
+                             inkrement
+                            ) [DesignatorVar]
+                            ActParsOptionalN(
+                            ) [ActParsOptionalN]
+                          ) [FactorOptionFuncall]
+                        ) [Factor]
+                      ) [MulopFactorListFactor]
+                    ) [Term]
+                  ) [AddopTermListTerm]
+                ) [Expr]
+              ) [CondExprSimple]
+            ) [DesignatorSignatureAssign]
+          ) [StatementDesignator]
+        ) [StatementListY]
+        StatementDesignator(
+          DesignatorSignatureAct(
+            DesignatorVar(
+             inkrement
+            ) [DesignatorVar]
+            ActParsOptionalN(
+            ) [ActParsOptionalN]
+          ) [DesignatorSignatureAct]
+        ) [StatementDesignator]
+      ) [StatementListY]
+    ) [MethodDec]
+  ) [MethodDecListY]
+) [Program]
+ERROR 03:28:27,517 - Broj formalnih i stvarnih parametara nije isti. na liniji 32
+ERROR 03:28:27,517 - Broj formalnih i stvarnih parametara nije isti. na liniji 33
+ERROR 03:28:27,517 - Parsiranje NIJE uspesno zavrseno!

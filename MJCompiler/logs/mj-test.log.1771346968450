@@ -1,0 +1,130 @@
+INFO  17:47:58,259 - Compiling source file: C:\Users\Win 11\Documents\pp1lab.templateAST (1)\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  17:47:58,287 - #2 program
+INFO  17:47:58,287 - #46 MJ
+INFO  17:47:58,287 - #17 {
+INFO  17:47:58,287 - #5 void
+INFO  17:47:58,287 - #46 ispis
+INFO  17:47:58,288 - #19 (
+INFO  17:47:58,288 - #46 int
+INFO  17:47:58,288 - #46 a
+INFO  17:47:58,288 - #20 )
+INFO  17:47:58,294 - #17 {
+INFO  17:47:58,294 - #12 print
+INFO  17:47:58,294 - #19 (
+INFO  17:47:58,294 - #46 a
+INFO  17:47:58,294 - #20 )
+INFO  17:47:58,295 - #23 ;
+INFO  17:47:58,296 - #18 }
+INFO  17:47:58,296 - #5 void
+INFO  17:47:58,296 - #46 main
+INFO  17:47:58,296 - #19 (
+INFO  17:47:58,296 - #20 )
+INFO  17:47:58,298 - #17 {
+INFO  17:47:58,298 - #46 ispis
+INFO  17:47:58,298 - #19 (
+INFO  17:47:58,298 - #45 1
+INFO  17:47:58,298 - #20 )
+INFO  17:47:58,299 - #23 ;
+INFO  17:47:58,299 - #18 }
+INFO  17:47:58,299 - #18 }
+INFO  17:47:58,299 - Program(
+  ProgramName(
+   MJ
+  ) [ProgramName]
+  DeclListN(
+  ) [DeclListN]
+  MethodDecListY(
+    MethodDecListY(
+      MethodDecListN(
+      ) [MethodDecListN]
+      MethodDec(
+        TypeOptionN(
+         ispis
+        ) [TypeOptionN]
+        FormParsY(
+          FormValueVar(
+            Type(
+             int
+            ) [Type]
+           a
+          ) [FormValueVar]
+          FormParsNextN(
+          ) [FormParsNextN]
+        ) [FormParsY]
+        VarDeclListN(
+        ) [VarDeclListN]
+        StatementListY(
+          StatementListN(
+          ) [StatementListN]
+          StatementPrint(
+            CondExprSimple(
+              Expr(
+                AddopTermListTerm(
+                  Term(
+                    MulopFactorListFactor(
+                      Factor(
+                        UnaryMinusN(
+                        ) [UnaryMinusN]
+                        FactorOptionDesignator(
+                          DesignatorVar(
+                           a
+                          ) [DesignatorVar]
+                        ) [FactorOptionDesignator]
+                      ) [Factor]
+                    ) [MulopFactorListFactor]
+                  ) [Term]
+                ) [AddopTermListTerm]
+              ) [Expr]
+            ) [CondExprSimple]
+            PrintOptionalN(
+            ) [PrintOptionalN]
+          ) [StatementPrint]
+        ) [StatementListY]
+      ) [MethodDec]
+    ) [MethodDecListY]
+    MethodDec(
+      TypeOptionN(
+       main
+      ) [TypeOptionN]
+      FormParsN(
+      ) [FormParsN]
+      VarDeclListN(
+      ) [VarDeclListN]
+      StatementListY(
+        StatementListN(
+        ) [StatementListN]
+        StatementDesignator(
+          DesignatorSignatureAct(
+            DesignatorVar(
+             ispis
+            ) [DesignatorVar]
+            ActParsOptionalY(
+              ActPars(
+                CondExprSimple(
+                  Expr(
+                    AddopTermListTerm(
+                      Term(
+                        MulopFactorListFactor(
+                          Factor(
+                            UnaryMinusN(
+                            ) [UnaryMinusN]
+                            FactorOptionNumber(
+                             1
+                            ) [FactorOptionNumber]
+                          ) [Factor]
+                        ) [MulopFactorListFactor]
+                      ) [Term]
+                    ) [AddopTermListTerm]
+                  ) [Expr]
+                ) [CondExprSimple]
+                ExprNextN(
+                ) [ExprNextN]
+              ) [ActPars]
+            ) [ActParsOptionalY]
+          ) [DesignatorSignatureAct]
+        ) [StatementDesignator]
+      ) [StatementListY]
+    ) [MethodDec]
+  ) [MethodDecListY]
+) [Program]
+INFO  17:47:58,304 - Generisanje uspesno zavrseno!

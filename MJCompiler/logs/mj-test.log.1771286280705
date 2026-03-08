@@ -1,0 +1,68 @@
+INFO  23:34:06,865 - Compiling source file: C:\Users\Win 11\Documents\pp1lab.templateAST (1)\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  23:34:06,895 - #2 program
+INFO  23:34:06,895 - #46 test302
+INFO  23:34:06,895 - #17 {
+INFO  23:34:06,895 - #5 void
+INFO  23:34:06,896 - #46 main
+INFO  23:34:06,896 - #19 (
+INFO  23:34:06,896 - #20 )
+INFO  23:34:06,896 - #17 {
+INFO  23:34:06,896 - #46 int
+INFO  23:34:06,897 - #19 (
+INFO  23:34:06,897 - #20 )
+INFO  23:34:06,897 - #23 ;
+INFO  23:34:06,897 - #46 test302
+INFO  23:34:06,897 - #19 (
+INFO  23:34:06,897 - #20 )
+INFO  23:34:06,897 - #23 ;
+INFO  23:34:06,898 - #18 }
+INFO  23:34:06,898 - #18 }
+INFO  23:34:06,898 - Program(
+  ProgramName(
+   test302
+  ) [ProgramName]
+  DeclListN(
+  ) [DeclListN]
+  MethodDecListY(
+    MethodDecListN(
+    ) [MethodDecListN]
+    MethodDec(
+      TypeOptionN(
+       main
+      ) [TypeOptionN]
+      FormParsN(
+      ) [FormParsN]
+      VarDeclListN(
+      ) [VarDeclListN]
+      StatementListY(
+        StatementListY(
+          StatementListN(
+          ) [StatementListN]
+          StatementDesignator(
+            DesignatorSignatureAct(
+              DesignatorVar(
+               int
+              ) [DesignatorVar]
+              ActParsOptionalN(
+              ) [ActParsOptionalN]
+            ) [DesignatorSignatureAct]
+          ) [StatementDesignator]
+        ) [StatementListY]
+        StatementDesignator(
+          DesignatorSignatureAct(
+            DesignatorVar(
+             test302
+            ) [DesignatorVar]
+            ActParsOptionalN(
+            ) [ActParsOptionalN]
+          ) [DesignatorSignatureAct]
+        ) [StatementDesignator]
+      ) [StatementListY]
+    ) [MethodDec]
+  ) [MethodDecListY]
+) [Program]
+ERROR 23:34:06,914 - Neadekvatna promenljiva: int na liniji 8
+ERROR 23:34:06,914 - Poziv neadekvatne metode: noObj na liniji 8
+ERROR 23:34:06,914 - Neadekvatna promenljiva: test302 na liniji 9
+ERROR 23:34:06,914 - Poziv neadekvatne metode: noObj na liniji 9
+ERROR 23:34:06,914 - Parsiranje NIJE uspesno zavrseno!

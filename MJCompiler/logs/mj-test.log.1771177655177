@@ -1,0 +1,184 @@
+INFO  18:46:55,609 - Compiling source file: C:\Users\Win 11\Documents\pp1lab.templateAST (1)\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  18:46:55,637 - #2 program
+INFO  18:46:55,637 - #46 test302
+INFO  18:46:55,637 - #3 const
+INFO  18:46:55,638 - #46 int
+INFO  18:46:55,638 - #46 a
+INFO  18:46:55,638 - #43 =
+INFO  18:46:55,638 - #45 3
+INFO  18:46:55,638 - #23 ;
+INFO  18:46:55,639 - #3 const
+INFO  18:46:55,639 - #46 int
+INFO  18:46:55,639 - #46 b
+INFO  18:46:55,639 - #43 =
+INFO  18:46:55,639 - #45 2
+INFO  18:46:55,639 - #24 ,
+INFO  18:46:55,639 - #46 c
+INFO  18:46:55,639 - #43 =
+INFO  18:46:55,639 - #45 4
+INFO  18:46:55,639 - #24 ,
+INFO  18:46:55,639 - #46 d
+INFO  18:46:55,639 - #43 =
+INFO  18:46:55,640 - #45 0
+INFO  18:46:55,640 - #23 ;
+INFO  18:46:55,640 - #3 const
+INFO  18:46:55,640 - #46 asdas
+INFO  18:46:55,640 - #46 d
+INFO  18:46:55,640 - #43 =
+INFO  18:46:55,640 - #45 1
+INFO  18:46:55,640 - #23 ;
+INFO  18:46:55,640 - #46 int
+INFO  18:46:55,640 - #46 i
+INFO  18:46:55,640 - #23 ;
+INFO  18:46:55,641 - #46 bool
+INFO  18:46:55,641 - #46 ibool
+INFO  18:46:55,641 - #23 ;
+INFO  18:46:55,641 - #46 int
+INFO  18:46:55,641 - #46 niz
+INFO  18:46:55,641 - #21 [
+INFO  18:46:55,641 - #22 ]
+INFO  18:46:55,641 - #23 ;
+INFO  18:46:55,641 - #17 {
+INFO  18:46:55,641 - #5 void
+INFO  18:46:55,641 - #46 main
+INFO  18:46:55,642 - #19 (
+INFO  18:46:55,642 - #20 )
+INFO  18:46:55,642 - #17 {
+INFO  18:46:55,643 - #18 }
+INFO  18:46:55,643 - #18 }
+INFO  18:46:55,644 - Program(
+  ProgramName(
+   test302
+  ) [ProgramName]
+  DeclListY(
+    DeclListY(
+      DeclListY(
+        DeclListY(
+          DeclListY(
+            DeclListY(
+              DeclListN(
+              ) [DeclListN]
+              DeclC(
+                ConstDecl(
+                  Type(
+                   int
+                  ) [Type]
+                  ConstList(
+                   a
+                    ConstN(
+                     3
+                    ) [ConstN]
+                    ConstListNextN(
+                    ) [ConstListNextN]
+                  ) [ConstList]
+                ) [ConstDecl]
+              ) [DeclC]
+            ) [DeclListY]
+            DeclC(
+              ConstDecl(
+                Type(
+                 int
+                ) [Type]
+                ConstList(
+                 b
+                  ConstN(
+                   2
+                  ) [ConstN]
+                  ConstListNextY(
+                    ConstListNextY(
+                      ConstListNextN(
+                      ) [ConstListNextN]
+                     c
+                      ConstN(
+                       4
+                      ) [ConstN]
+                    ) [ConstListNextY]
+                   d
+                    ConstN(
+                     0
+                    ) [ConstN]
+                  ) [ConstListNextY]
+                ) [ConstList]
+              ) [ConstDecl]
+            ) [DeclC]
+          ) [DeclListY]
+          DeclC(
+            ConstDecl(
+              Type(
+               asdas
+              ) [Type]
+              ConstList(
+               d
+                ConstN(
+                 1
+                ) [ConstN]
+                ConstListNextN(
+                ) [ConstListNextN]
+              ) [ConstList]
+            ) [ConstDecl]
+          ) [DeclC]
+        ) [DeclListY]
+        DeclV(
+          VarDeclY(
+            Type(
+             int
+            ) [Type]
+            VarList(
+             i
+              BracketsN(
+              ) [BracketsN]
+              VarListNextN(
+              ) [VarListNextN]
+            ) [VarList]
+          ) [VarDeclY]
+        ) [DeclV]
+      ) [DeclListY]
+      DeclV(
+        VarDeclY(
+          Type(
+           bool
+          ) [Type]
+          VarList(
+           ibool
+            BracketsN(
+            ) [BracketsN]
+            VarListNextN(
+            ) [VarListNextN]
+          ) [VarList]
+        ) [VarDeclY]
+      ) [DeclV]
+    ) [DeclListY]
+    DeclV(
+      VarDeclY(
+        Type(
+         int
+        ) [Type]
+        VarList(
+         niz
+          BracketsY(
+          ) [BracketsY]
+          VarListNextN(
+          ) [VarListNextN]
+        ) [VarList]
+      ) [VarDeclY]
+    ) [DeclV]
+  ) [DeclListY]
+  MethodDecListY(
+    MethodDecListN(
+    ) [MethodDecListN]
+    MethodDec(
+      TypeOptionN(
+      ) [TypeOptionN]
+     main
+      FormParsN(
+      ) [FormParsN]
+      VarDeclListN(
+      ) [VarDeclListN]
+      StatementListN(
+      ) [StatementListN]
+    ) [MethodDec]
+  ) [MethodDecListY]
+) [Program]
+ERROR 18:46:55,647 - Tip nije pronadjen: asdas na liniji 7
+ERROR 18:46:55,647 - Konstanta vec deklarisana: d na liniji 7
+ERROR 18:46:55,648 - Parsiranje NIJE uspesno zavrseno!

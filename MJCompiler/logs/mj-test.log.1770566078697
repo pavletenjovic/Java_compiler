@@ -1,0 +1,187 @@
+INFO  02:21:17,097 - Compiling source file: C:\Users\Win 11\Documents\pp1lab.templateAST (1)\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  02:21:17,130 - #2 program
+INFO  02:21:17,130 - #46 test302
+INFO  02:21:17,130 - #3 const
+INFO  02:21:17,131 - #46 int
+INFO  02:21:17,131 - #46 jedan
+INFO  02:21:17,131 - #43 =
+INFO  02:21:17,131 - #45 1
+INFO  02:21:17,131 - #23 ;
+INFO  02:21:17,132 - #46 int
+INFO  02:21:17,132 - #46 i
+INFO  02:21:17,132 - #23 ;
+INFO  02:21:17,133 - #46 bool
+INFO  02:21:17,133 - #46 ibool
+INFO  02:21:17,133 - #23 ;
+INFO  02:21:17,133 - #46 int
+INFO  02:21:17,133 - #46 niz
+INFO  02:21:17,133 - #21 [
+INFO  02:21:17,133 - #22 ]
+INFO  02:21:17,133 - #23 ;
+INFO  02:21:17,133 - #17 {
+INFO  02:21:17,135 - #46 int
+INFO  02:21:17,135 - #46 sum
+INFO  02:21:17,135 - #19 (
+INFO  02:21:17,135 - #46 int
+INFO  02:21:17,135 - #46 z
+INFO  02:21:17,135 - #24 ,
+INFO  02:21:17,136 - #46 int
+INFO  02:21:17,136 - #46 d
+INFO  02:21:17,136 - #20 )
+INFO  02:21:17,136 - #46 int
+INFO  02:21:17,136 - #46 x
+INFO  02:21:17,136 - #43 =
+ERROR 02:21:17,136 - 
+Sintaksna greska na liniji 14
+INFO  02:21:17,136 - #23 ;
+INFO  02:21:17,136 - #17 {
+INFO  02:21:17,136 - #10 return
+INFO  02:21:17,136 - #46 z
+ERROR 02:21:17,137 - Oporavak greske u VarDecl. Vracanje na liniju: 21
+INFO  02:21:17,138 - #28 +
+INFO  02:21:17,139 - #46 d
+INFO  02:21:17,139 - #23 ;
+INFO  02:21:17,140 - #18 }
+INFO  02:21:17,140 - #18 }
+INFO  02:21:17,141 - Program(
+  ProgramName(
+  ) [ProgramName]
+  DeclListExists(
+    DeclListExists(
+      DeclListExists(
+        DeclListExists(
+          DeclListEmpty(
+          ) [DeclListEmpty]
+          DeclDerived1(
+            ConstDeclDerived1(
+              TypeDerived1(
+              ) [TypeDerived1]
+              ConstListDerived1(
+                ConstDerived1(
+                ) [ConstDerived1]
+                ConstListNextDerived2(
+                ) [ConstListNextDerived2]
+              ) [ConstListDerived1]
+            ) [ConstDeclDerived1]
+          ) [DeclDerived1]
+        ) [DeclListExists]
+        DeclDerived2(
+          VarDeclDerived1(
+            TypeDerived1(
+            ) [TypeDerived1]
+            VarListDerived1(
+              BracketsDerived2(
+              ) [BracketsDerived2]
+              VarListNextDerived2(
+              ) [VarListNextDerived2]
+            ) [VarListDerived1]
+          ) [VarDeclDerived1]
+        ) [DeclDerived2]
+      ) [DeclListExists]
+      DeclDerived2(
+        VarDeclDerived1(
+          TypeDerived1(
+          ) [TypeDerived1]
+          VarListDerived1(
+            BracketsDerived2(
+            ) [BracketsDerived2]
+            VarListNextDerived2(
+            ) [VarListNextDerived2]
+          ) [VarListDerived1]
+        ) [VarDeclDerived1]
+      ) [DeclDerived2]
+    ) [DeclListExists]
+    DeclDerived2(
+      VarDeclDerived1(
+        TypeDerived1(
+        ) [TypeDerived1]
+        VarListDerived1(
+          BracketsDerived1(
+          ) [BracketsDerived1]
+          VarListNextDerived2(
+          ) [VarListNextDerived2]
+        ) [VarListDerived1]
+      ) [VarDeclDerived1]
+    ) [DeclDerived2]
+  ) [DeclListExists]
+  MethodDecListDerived1(
+    MethodDecListDerived2(
+    ) [MethodDecListDerived2]
+    MethodDecDerived1(
+      TypeOptionDerived1(
+        TypeDerived1(
+        ) [TypeDerived1]
+      ) [TypeOptionDerived1]
+      FormParsDerived1(
+        TypeDerived1(
+        ) [TypeDerived1]
+        FormValueDerived2(
+        ) [FormValueDerived2]
+        FormParsNextDerived1(
+          FormParsNextDerived2(
+          ) [FormParsNextDerived2]
+          TypeDerived1(
+          ) [TypeDerived1]
+          FormValueDerived2(
+          ) [FormValueDerived2]
+        ) [FormParsNextDerived1]
+      ) [FormParsDerived1]
+      VarDeclListDerived1(
+        VarDeclListDerived2(
+        ) [VarDeclListDerived2]
+        VarDeclError(
+        ) [VarDeclError]
+      ) [VarDeclListDerived1]
+      StatementListDerived1(
+        StatementListDerived2(
+        ) [StatementListDerived2]
+        StatementDerived5(
+          ExprOptionalDerived1(
+            CondExprDerived1(
+              ExprDerived1(
+                TermDerived1(
+                  FactorDerived1(
+                    UnaryMinusDerived2(
+                    ) [UnaryMinusDerived2]
+                    FactorOptionDerived1(
+                      DesignatorDerived1(
+                        SufixOptionalListDerived2(
+                        ) [SufixOptionalListDerived2]
+                      ) [DesignatorDerived1]
+                    ) [FactorOptionDerived1]
+                  ) [FactorDerived1]
+                  MulopFactorListOptionalDerived2(
+                  ) [MulopFactorListOptionalDerived2]
+                ) [TermDerived1]
+                AddopTermListDerived1(
+                  AddopTermListDerived2(
+                  ) [AddopTermListDerived2]
+                  AddopTermDerived1(
+                    AddopDerived1(
+                    ) [AddopDerived1]
+                    TermDerived1(
+                      FactorDerived1(
+                        UnaryMinusDerived2(
+                        ) [UnaryMinusDerived2]
+                        FactorOptionDerived1(
+                          DesignatorDerived1(
+                            SufixOptionalListDerived2(
+                            ) [SufixOptionalListDerived2]
+                          ) [DesignatorDerived1]
+                        ) [FactorOptionDerived1]
+                      ) [FactorDerived1]
+                      MulopFactorListOptionalDerived2(
+                      ) [MulopFactorListOptionalDerived2]
+                    ) [TermDerived1]
+                  ) [AddopTermDerived1]
+                ) [AddopTermListDerived1]
+              ) [ExprDerived1]
+            ) [CondExprDerived1]
+          ) [ExprOptionalDerived1]
+        ) [StatementDerived5]
+      ) [StatementListDerived1]
+    ) [MethodDecDerived1]
+  ) [MethodDecListDerived1]
+) [Program]
+INFO  02:21:17,141 - =====================================================================
+ERROR 02:21:17,141 - Parsiranje NIJE uspesno zavrseno!

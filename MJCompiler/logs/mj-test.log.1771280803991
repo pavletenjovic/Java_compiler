@@ -1,0 +1,115 @@
+INFO  23:24:51,466 - Compiling source file: C:\Users\Win 11\Documents\pp1lab.templateAST (1)\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  23:24:51,497 - #2 program
+INFO  23:24:51,497 - #46 test302
+INFO  23:24:51,497 - #4 enum
+INFO  23:24:51,498 - #46 Broj
+INFO  23:24:51,498 - #17 {
+INFO  23:24:51,498 - #46 JEDAN
+INFO  23:24:51,498 - #24 ,
+INFO  23:24:51,498 - #46 DVA
+INFO  23:24:51,498 - #24 ,
+INFO  23:24:51,499 - #46 TRI
+INFO  23:24:51,499 - #18 }
+INFO  23:24:51,499 - #17 {
+INFO  23:24:51,499 - #5 void
+INFO  23:24:51,499 - #46 main
+INFO  23:24:51,499 - #19 (
+INFO  23:24:51,499 - #20 )
+INFO  23:24:51,499 - #46 char
+INFO  23:24:51,501 - #46 i
+INFO  23:24:51,501 - #21 [
+INFO  23:24:51,501 - #22 ]
+INFO  23:24:51,501 - #23 ;
+INFO  23:24:51,502 - #17 {
+INFO  23:24:51,502 - #10 return
+INFO  23:24:51,502 - #45 5
+INFO  23:24:51,502 - #23 ;
+INFO  23:24:51,503 - #18 }
+INFO  23:24:51,503 - #18 }
+INFO  23:24:51,504 - Program(
+  ProgramName(
+   test302
+  ) [ProgramName]
+  DeclListY(
+    DeclListN(
+    ) [DeclListN]
+    DeclE(
+      EnumDecl(
+        EnumName(
+         Broj
+        ) [EnumName]
+        EnumDecList(
+         JEDAN
+          EnumValueN(
+          ) [EnumValueN]
+          EnumListNextY(
+            EnumListNextY(
+              EnumListNextN(
+              ) [EnumListNextN]
+             DVA
+              EnumValueN(
+              ) [EnumValueN]
+            ) [EnumListNextY]
+           TRI
+            EnumValueN(
+            ) [EnumValueN]
+          ) [EnumListNextY]
+        ) [EnumDecList]
+      ) [EnumDecl]
+    ) [DeclE]
+  ) [DeclListY]
+  MethodDecListY(
+    MethodDecListN(
+    ) [MethodDecListN]
+    MethodDec(
+      TypeOptionN(
+       main
+      ) [TypeOptionN]
+      FormParsN(
+      ) [FormParsN]
+      VarDeclListY(
+        VarDeclListN(
+        ) [VarDeclListN]
+        VarDeclY(
+          Type(
+           char
+          ) [Type]
+          VarList(
+           i
+            BracketsY(
+            ) [BracketsY]
+            VarListNextN(
+            ) [VarListNextN]
+          ) [VarList]
+        ) [VarDeclY]
+      ) [VarDeclListY]
+      StatementListY(
+        StatementListN(
+        ) [StatementListN]
+        StatementReturn(
+          ExprOptionalY(
+            CondExprSimple(
+              Expr(
+                AddopTermListTerm(
+                  Term(
+                    MulopFactorListFactor(
+                      Factor(
+                        UnaryMinusN(
+                        ) [UnaryMinusN]
+                        FactorOptionNumber(
+                         5
+                        ) [FactorOptionNumber]
+                      ) [Factor]
+                    ) [MulopFactorListFactor]
+                  ) [Term]
+                ) [AddopTermListTerm]
+              ) [Expr]
+            ) [CondExprSimple]
+          ) [ExprOptionalY]
+        ) [StatementReturn]
+      ) [StatementListY]
+    ) [MethodDec]
+  ) [MethodDecListY]
+) [Program]
+ERROR 23:24:51,520 - Vrednost koja se vraca se ne poklapa sa povratnom vrednoscu metode na liniji 2
+ERROR 23:24:51,520 - Parsiranje NIJE uspesno zavrseno!

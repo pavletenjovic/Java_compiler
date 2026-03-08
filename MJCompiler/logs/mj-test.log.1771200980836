@@ -1,0 +1,137 @@
+INFO  01:13:11,210 - Compiling source file: C:\Users\Win 11\Documents\pp1lab.templateAST (1)\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  01:13:11,238 - #2 program
+INFO  01:13:11,239 - #46 test301
+INFO  01:13:11,239 - #4 enum
+INFO  01:13:11,239 - #46 Broj
+INFO  01:13:11,239 - #17 {
+INFO  01:13:11,240 - #46 NULA
+INFO  01:13:11,240 - #24 ,
+INFO  01:13:11,240 - #46 JEDAN
+INFO  01:13:11,240 - #24 ,
+INFO  01:13:11,240 - #46 PET
+INFO  01:13:11,240 - #43 =
+INFO  01:13:11,240 - #45 5
+INFO  01:13:11,240 - #24 ,
+INFO  01:13:11,240 - #46 DESET
+INFO  01:13:11,240 - #43 =
+INFO  01:13:11,241 - #45 10
+INFO  01:13:11,241 - #18 }
+INFO  01:13:11,241 - #46 int
+INFO  01:13:11,241 - #46 a
+INFO  01:13:11,241 - #23 ;
+INFO  01:13:11,242 - #17 {
+INFO  01:13:11,243 - #5 void
+INFO  01:13:11,243 - #46 main
+INFO  01:13:11,243 - #19 (
+INFO  01:13:11,243 - #20 )
+INFO  01:13:11,243 - #46 int
+INFO  01:13:11,243 - #46 b
+INFO  01:13:11,243 - #21 [
+INFO  01:13:11,243 - #22 ]
+INFO  01:13:11,243 - #23 ;
+INFO  01:13:11,244 - #46 int
+INFO  01:13:11,244 - #46 c
+INFO  01:13:11,244 - #23 ;
+INFO  01:13:11,244 - #17 {
+INFO  01:13:11,244 - #18 }
+INFO  01:13:11,244 - #18 }
+INFO  01:13:11,245 - Program(
+  ProgramName(
+   test301
+  ) [ProgramName]
+  DeclListY(
+    DeclListY(
+      DeclListN(
+      ) [DeclListN]
+      DeclE(
+        EnumDecl(
+          EnumName(
+           Broj
+          ) [EnumName]
+          EnumDecList(
+           NULA
+            EnumValueN(
+            ) [EnumValueN]
+            EnumListNextY(
+              EnumListNextY(
+                EnumListNextY(
+                  EnumListNextN(
+                  ) [EnumListNextN]
+                 JEDAN
+                  EnumValueN(
+                  ) [EnumValueN]
+                ) [EnumListNextY]
+               PET
+                EnumValueY(
+                 5
+                ) [EnumValueY]
+              ) [EnumListNextY]
+             DESET
+              EnumValueY(
+               10
+              ) [EnumValueY]
+            ) [EnumListNextY]
+          ) [EnumDecList]
+        ) [EnumDecl]
+      ) [DeclE]
+    ) [DeclListY]
+    DeclV(
+      VarDeclY(
+        Type(
+         int
+        ) [Type]
+        VarList(
+         a
+          BracketsN(
+          ) [BracketsN]
+          VarListNextN(
+          ) [VarListNextN]
+        ) [VarList]
+      ) [VarDeclY]
+    ) [DeclV]
+  ) [DeclListY]
+  MethodDecListY(
+    MethodDecListN(
+    ) [MethodDecListN]
+    MethodDec(
+      TypeOptionN(
+       main
+      ) [TypeOptionN]
+      FormParsN(
+      ) [FormParsN]
+      VarDeclListY(
+        VarDeclListY(
+          VarDeclListN(
+          ) [VarDeclListN]
+          VarDeclY(
+            Type(
+             int
+            ) [Type]
+            VarList(
+             b
+              BracketsY(
+              ) [BracketsY]
+              VarListNextN(
+              ) [VarListNextN]
+            ) [VarList]
+          ) [VarDeclY]
+        ) [VarDeclListY]
+        VarDeclY(
+          Type(
+           int
+          ) [Type]
+          VarList(
+           c
+            BracketsN(
+            ) [BracketsN]
+            VarListNextN(
+            ) [VarListNextN]
+          ) [VarList]
+        ) [VarDeclY]
+      ) [VarDeclListY]
+      StatementListN(
+      ) [StatementListN]
+    ) [MethodDec]
+  ) [MethodDecListY]
+) [Program]
+INFO  01:13:11,249 - Parsiranje uspesno zavrseno!

@@ -1,0 +1,361 @@
+INFO  16:59:19,524 - Compiling source file: C:\Users\Win 11\Documents\pp1lab.templateAST (1)\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  16:59:19,557 - #2 program
+INFO  16:59:19,557 - #46 test301
+INFO  16:59:19,557 - #4 enum
+INFO  16:59:19,557 - #46 Broj
+INFO  16:59:19,557 - #17 {
+INFO  16:59:19,558 - #46 NULA
+INFO  16:59:19,558 - #24 ,
+INFO  16:59:19,558 - #46 JEDAN
+INFO  16:59:19,558 - #24 ,
+INFO  16:59:19,558 - #46 PET
+INFO  16:59:19,558 - #43 =
+INFO  16:59:19,558 - #45 5
+INFO  16:59:19,558 - #24 ,
+INFO  16:59:19,558 - #46 DESET
+INFO  16:59:19,558 - #43 =
+INFO  16:59:19,558 - #45 10
+INFO  16:59:19,558 - #18 }
+INFO  16:59:19,559 - #3 const
+INFO  16:59:19,559 - #46 int
+INFO  16:59:19,559 - #46 nula
+INFO  16:59:19,559 - #43 =
+INFO  16:59:19,560 - #45 0
+INFO  16:59:19,560 - #23 ;
+INFO  16:59:19,560 - #3 const
+INFO  16:59:19,560 - #46 int
+INFO  16:59:19,560 - #46 jedan
+INFO  16:59:19,560 - #43 =
+INFO  16:59:19,560 - #45 1
+INFO  16:59:19,560 - #23 ;
+INFO  16:59:19,560 - #3 const
+INFO  16:59:19,560 - #46 int
+INFO  16:59:19,560 - #46 pet
+INFO  16:59:19,560 - #43 =
+INFO  16:59:19,560 - #45 5
+INFO  16:59:19,560 - #23 ;
+INFO  16:59:19,560 - #46 int
+INFO  16:59:19,560 - #46 niz
+INFO  16:59:19,560 - #21 [
+INFO  16:59:19,560 - #22 ]
+INFO  16:59:19,560 - #23 ;
+INFO  16:59:19,561 - #46 char
+INFO  16:59:19,561 - #46 nizch
+INFO  16:59:19,561 - #21 [
+INFO  16:59:19,561 - #22 ]
+INFO  16:59:19,561 - #23 ;
+INFO  16:59:19,561 - #46 int
+INFO  16:59:19,561 - #46 a
+INFO  16:59:19,561 - #23 ;
+INFO  16:59:19,562 - #17 {
+INFO  16:59:19,562 - #5 void
+INFO  16:59:19,562 - #46 main
+INFO  16:59:19,562 - #19 (
+INFO  16:59:19,562 - #20 )
+INFO  16:59:19,562 - #46 int
+INFO  16:59:19,563 - #46 bodovi
+INFO  16:59:19,563 - #23 ;
+INFO  16:59:19,563 - #46 int
+INFO  16:59:19,563 - #46 temp
+INFO  16:59:19,563 - #23 ;
+INFO  16:59:19,563 - #46 Broj
+INFO  16:59:19,563 - #46 nula
+INFO  16:59:19,563 - #24 ,
+INFO  16:59:19,563 - #46 jedan
+INFO  16:59:19,563 - #23 ;
+INFO  16:59:19,563 - #46 bool
+INFO  16:59:19,563 - #46 bt
+INFO  16:59:19,563 - #23 ;
+INFO  16:59:19,563 - #17 {
+INFO  16:59:19,563 - #46 nula
+INFO  16:59:19,564 - #43 =
+INFO  16:59:19,564 - #46 Broj
+INFO  16:59:19,564 - #26 .
+INFO  16:59:19,564 - #46 NULA
+INFO  16:59:19,564 - #23 ;
+INFO  16:59:19,566 - #46 jedan
+INFO  16:59:19,566 - #43 =
+INFO  16:59:19,566 - #46 Broj
+INFO  16:59:19,566 - #26 .
+INFO  16:59:19,566 - #46 JEDAN
+INFO  16:59:19,566 - #23 ;
+INFO  16:59:19,566 - #18 }
+INFO  16:59:19,566 - #18 }
+INFO  16:59:19,567 - Program(
+  ProgramName(
+   test301
+  ) [ProgramName]
+  DeclListY(
+    DeclListY(
+      DeclListY(
+        DeclListY(
+          DeclListY(
+            DeclListY(
+              DeclListY(
+                DeclListN(
+                ) [DeclListN]
+                DeclE(
+                  EnumDecl(
+                    EnumName(
+                     Broj
+                    ) [EnumName]
+                    EnumDecList(
+                     NULA
+                      EnumValueN(
+                      ) [EnumValueN]
+                      EnumListNextY(
+                        EnumListNextY(
+                          EnumListNextY(
+                            EnumListNextN(
+                            ) [EnumListNextN]
+                           JEDAN
+                            EnumValueN(
+                            ) [EnumValueN]
+                          ) [EnumListNextY]
+                         PET
+                          EnumValueY(
+                           5
+                          ) [EnumValueY]
+                        ) [EnumListNextY]
+                       DESET
+                        EnumValueY(
+                         10
+                        ) [EnumValueY]
+                      ) [EnumListNextY]
+                    ) [EnumDecList]
+                  ) [EnumDecl]
+                ) [DeclE]
+              ) [DeclListY]
+              DeclC(
+                ConstDecl(
+                  Type(
+                   int
+                  ) [Type]
+                  ConstList(
+                   nula
+                    ConstN(
+                     0
+                    ) [ConstN]
+                    ConstListNextN(
+                    ) [ConstListNextN]
+                  ) [ConstList]
+                ) [ConstDecl]
+              ) [DeclC]
+            ) [DeclListY]
+            DeclC(
+              ConstDecl(
+                Type(
+                 int
+                ) [Type]
+                ConstList(
+                 jedan
+                  ConstN(
+                   1
+                  ) [ConstN]
+                  ConstListNextN(
+                  ) [ConstListNextN]
+                ) [ConstList]
+              ) [ConstDecl]
+            ) [DeclC]
+          ) [DeclListY]
+          DeclC(
+            ConstDecl(
+              Type(
+               int
+              ) [Type]
+              ConstList(
+               pet
+                ConstN(
+                 5
+                ) [ConstN]
+                ConstListNextN(
+                ) [ConstListNextN]
+              ) [ConstList]
+            ) [ConstDecl]
+          ) [DeclC]
+        ) [DeclListY]
+        DeclV(
+          VarDeclY(
+            Type(
+             int
+            ) [Type]
+            VarList(
+             niz
+              BracketsY(
+              ) [BracketsY]
+              VarListNextN(
+              ) [VarListNextN]
+            ) [VarList]
+          ) [VarDeclY]
+        ) [DeclV]
+      ) [DeclListY]
+      DeclV(
+        VarDeclY(
+          Type(
+           char
+          ) [Type]
+          VarList(
+           nizch
+            BracketsY(
+            ) [BracketsY]
+            VarListNextN(
+            ) [VarListNextN]
+          ) [VarList]
+        ) [VarDeclY]
+      ) [DeclV]
+    ) [DeclListY]
+    DeclV(
+      VarDeclY(
+        Type(
+         int
+        ) [Type]
+        VarList(
+         a
+          BracketsN(
+          ) [BracketsN]
+          VarListNextN(
+          ) [VarListNextN]
+        ) [VarList]
+      ) [VarDeclY]
+    ) [DeclV]
+  ) [DeclListY]
+  MethodDecListY(
+    MethodDecListN(
+    ) [MethodDecListN]
+    MethodDec(
+      TypeOptionN(
+       main
+      ) [TypeOptionN]
+      FormParsN(
+      ) [FormParsN]
+      VarDeclListY(
+        VarDeclListY(
+          VarDeclListY(
+            VarDeclListY(
+              VarDeclListN(
+              ) [VarDeclListN]
+              VarDeclY(
+                Type(
+                 int
+                ) [Type]
+                VarList(
+                 bodovi
+                  BracketsN(
+                  ) [BracketsN]
+                  VarListNextN(
+                  ) [VarListNextN]
+                ) [VarList]
+              ) [VarDeclY]
+            ) [VarDeclListY]
+            VarDeclY(
+              Type(
+               int
+              ) [Type]
+              VarList(
+               temp
+                BracketsN(
+                ) [BracketsN]
+                VarListNextN(
+                ) [VarListNextN]
+              ) [VarList]
+            ) [VarDeclY]
+          ) [VarDeclListY]
+          VarDeclY(
+            Type(
+             Broj
+            ) [Type]
+            VarList(
+             nula
+              BracketsN(
+              ) [BracketsN]
+              VarListNextY(
+                VarListNextN(
+                ) [VarListNextN]
+               jedan
+                BracketsN(
+                ) [BracketsN]
+              ) [VarListNextY]
+            ) [VarList]
+          ) [VarDeclY]
+        ) [VarDeclListY]
+        VarDeclY(
+          Type(
+           bool
+          ) [Type]
+          VarList(
+           bt
+            BracketsN(
+            ) [BracketsN]
+            VarListNextN(
+            ) [VarListNextN]
+          ) [VarList]
+        ) [VarDeclY]
+      ) [VarDeclListY]
+      StatementListY(
+        StatementListY(
+          StatementListN(
+          ) [StatementListN]
+          StatementDesignator(
+            DesignatorSignatureAssign(
+              DesignatorVar(
+               nula
+              ) [DesignatorVar]
+              Assignop(
+              ) [Assignop]
+              CondExprSimple(
+                Expr(
+                  AddopTermListTerm(
+                    Term(
+                      MulopFactorListFactor(
+                        Factor(
+                          UnaryMinusN(
+                          ) [UnaryMinusN]
+                          FactorOptionDesignator(
+                            DesignatorEnum(
+                             Broj
+                             NULA
+                            ) [DesignatorEnum]
+                          ) [FactorOptionDesignator]
+                        ) [Factor]
+                      ) [MulopFactorListFactor]
+                    ) [Term]
+                  ) [AddopTermListTerm]
+                ) [Expr]
+              ) [CondExprSimple]
+            ) [DesignatorSignatureAssign]
+          ) [StatementDesignator]
+        ) [StatementListY]
+        StatementDesignator(
+          DesignatorSignatureAssign(
+            DesignatorVar(
+             jedan
+            ) [DesignatorVar]
+            Assignop(
+            ) [Assignop]
+            CondExprSimple(
+              Expr(
+                AddopTermListTerm(
+                  Term(
+                    MulopFactorListFactor(
+                      Factor(
+                        UnaryMinusN(
+                        ) [UnaryMinusN]
+                        FactorOptionDesignator(
+                          DesignatorEnum(
+                           Broj
+                           JEDAN
+                          ) [DesignatorEnum]
+                        ) [FactorOptionDesignator]
+                      ) [Factor]
+                    ) [MulopFactorListFactor]
+                  ) [Term]
+                ) [AddopTermListTerm]
+              ) [Expr]
+            ) [CondExprSimple]
+          ) [DesignatorSignatureAssign]
+        ) [StatementDesignator]
+      ) [StatementListY]
+    ) [MethodDec]
+  ) [MethodDecListY]
+) [Program]
+INFO  16:59:19,572 - Generisanje uspesno zavrseno!

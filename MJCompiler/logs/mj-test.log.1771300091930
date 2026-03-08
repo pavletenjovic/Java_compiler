@@ -1,0 +1,113 @@
+INFO  04:40:25,723 - Compiling source file: C:\Users\Win 11\Documents\pp1lab.templateAST (1)\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  04:40:25,747 - #2 program
+INFO  04:40:25,747 - #46 MJ
+INFO  04:40:25,747 - #3 const
+INFO  04:40:25,747 - #46 int
+INFO  04:40:25,747 - #46 pi
+INFO  04:40:25,748 - #43 =
+INFO  04:40:25,748 - #45 3
+INFO  04:40:25,748 - #23 ;
+INFO  04:40:25,748 - #46 int
+INFO  04:40:25,749 - #46 x
+INFO  04:40:25,749 - #24 ,
+INFO  04:40:25,749 - #46 y
+INFO  04:40:25,749 - #21 [
+INFO  04:40:25,749 - #22 ]
+INFO  04:40:25,749 - #23 ;
+INFO  04:40:25,750 - #17 {
+INFO  04:40:25,750 - #5 void
+INFO  04:40:25,750 - #46 main
+INFO  04:40:25,750 - #19 (
+INFO  04:40:25,750 - #20 )
+INFO  04:40:25,751 - #17 {
+INFO  04:40:25,751 - #12 print
+INFO  04:40:25,751 - #19 (
+INFO  04:40:25,751 - #45 1
+INFO  04:40:25,752 - #20 )
+INFO  04:40:25,753 - #23 ;
+INFO  04:40:25,753 - #18 }
+INFO  04:40:25,754 - #18 }
+INFO  04:40:25,754 - Program(
+  ProgramName(
+   MJ
+  ) [ProgramName]
+  DeclListY(
+    DeclListY(
+      DeclListN(
+      ) [DeclListN]
+      DeclC(
+        ConstDecl(
+          Type(
+           int
+          ) [Type]
+          ConstList(
+           pi
+            ConstN(
+             3
+            ) [ConstN]
+            ConstListNextN(
+            ) [ConstListNextN]
+          ) [ConstList]
+        ) [ConstDecl]
+      ) [DeclC]
+    ) [DeclListY]
+    DeclV(
+      VarDeclY(
+        Type(
+         int
+        ) [Type]
+        VarList(
+         x
+          BracketsN(
+          ) [BracketsN]
+          VarListNextY(
+            VarListNextN(
+            ) [VarListNextN]
+           y
+            BracketsY(
+            ) [BracketsY]
+          ) [VarListNextY]
+        ) [VarList]
+      ) [VarDeclY]
+    ) [DeclV]
+  ) [DeclListY]
+  MethodDecListY(
+    MethodDecListN(
+    ) [MethodDecListN]
+    MethodDec(
+      TypeOptionN(
+       main
+      ) [TypeOptionN]
+      FormParsN(
+      ) [FormParsN]
+      VarDeclListN(
+      ) [VarDeclListN]
+      StatementListY(
+        StatementListN(
+        ) [StatementListN]
+        StatementPrint(
+          CondExprSimple(
+            Expr(
+              AddopTermListTerm(
+                Term(
+                  MulopFactorListFactor(
+                    Factor(
+                      UnaryMinusN(
+                      ) [UnaryMinusN]
+                      FactorOptionNumber(
+                       1
+                      ) [FactorOptionNumber]
+                    ) [Factor]
+                  ) [MulopFactorListFactor]
+                ) [Term]
+              ) [AddopTermListTerm]
+            ) [Expr]
+          ) [CondExprSimple]
+          PrintOptionalN(
+          ) [PrintOptionalN]
+        ) [StatementPrint]
+      ) [StatementListY]
+    ) [MethodDec]
+  ) [MethodDecListY]
+) [Program]
+INFO  04:40:25,766 - Generisanje uspesno zavrseno!

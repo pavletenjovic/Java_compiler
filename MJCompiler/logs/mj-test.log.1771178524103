@@ -1,0 +1,229 @@
+INFO  18:50:36,727 - Compiling source file: C:\Users\Win 11\Documents\pp1lab.templateAST (1)\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  18:50:36,754 - #2 program
+INFO  18:50:36,754 - #46 test302
+INFO  18:50:36,754 - #3 const
+INFO  18:50:36,754 - #46 int
+INFO  18:50:36,754 - #46 a
+INFO  18:50:36,754 - #43 =
+INFO  18:50:36,755 - #45 3
+INFO  18:50:36,755 - #23 ;
+INFO  18:50:36,756 - #3 const
+INFO  18:50:36,756 - #46 int
+INFO  18:50:36,756 - #46 b
+INFO  18:50:36,756 - #43 =
+INFO  18:50:36,756 - #45 2
+INFO  18:50:36,756 - #24 ,
+INFO  18:50:36,756 - #46 c
+INFO  18:50:36,756 - #43 =
+INFO  18:50:36,756 - #45 4
+INFO  18:50:36,756 - #24 ,
+INFO  18:50:36,756 - #46 d
+INFO  18:50:36,757 - #43 =
+INFO  18:50:36,757 - #45 0
+INFO  18:50:36,757 - #23 ;
+INFO  18:50:36,757 - #3 const
+INFO  18:50:36,757 - #46 bool
+INFO  18:50:36,757 - #46 be
+INFO  18:50:36,757 - #43 =
+INFO  18:50:36,757 - #48 1
+INFO  18:50:36,757 - #23 ;
+INFO  18:50:36,757 - #46 int
+INFO  18:50:36,757 - #46 i
+INFO  18:50:36,757 - #23 ;
+INFO  18:50:36,758 - #46 bool
+INFO  18:50:36,758 - #46 ibool
+INFO  18:50:36,758 - #23 ;
+INFO  18:50:36,758 - #3 const
+INFO  18:50:36,758 - #46 char
+INFO  18:50:36,758 - #46 ch
+INFO  18:50:36,758 - #43 =
+INFO  18:50:36,758 - #47 c
+INFO  18:50:36,758 - #23 ;
+INFO  18:50:36,758 - #3 const
+INFO  18:50:36,758 - #46 char
+INFO  18:50:36,758 - #46 dh
+INFO  18:50:36,758 - #43 =
+INFO  18:50:36,759 - #45 5
+INFO  18:50:36,759 - #23 ;
+INFO  18:50:36,759 - #46 int
+INFO  18:50:36,759 - #46 niz
+INFO  18:50:36,759 - #21 [
+INFO  18:50:36,759 - #22 ]
+INFO  18:50:36,759 - #23 ;
+INFO  18:50:36,759 - #17 {
+INFO  18:50:36,759 - #5 void
+INFO  18:50:36,759 - #46 main
+INFO  18:50:36,760 - #19 (
+INFO  18:50:36,760 - #20 )
+INFO  18:50:36,760 - #17 {
+INFO  18:50:36,760 - #18 }
+INFO  18:50:36,760 - #18 }
+INFO  18:50:36,761 - Program(
+  ProgramName(
+   test302
+  ) [ProgramName]
+  DeclListY(
+    DeclListY(
+      DeclListY(
+        DeclListY(
+          DeclListY(
+            DeclListY(
+              DeclListY(
+                DeclListY(
+                  DeclListN(
+                  ) [DeclListN]
+                  DeclC(
+                    ConstDecl(
+                      Type(
+                       int
+                      ) [Type]
+                      ConstList(
+                       a
+                        ConstN(
+                         3
+                        ) [ConstN]
+                        ConstListNextN(
+                        ) [ConstListNextN]
+                      ) [ConstList]
+                    ) [ConstDecl]
+                  ) [DeclC]
+                ) [DeclListY]
+                DeclC(
+                  ConstDecl(
+                    Type(
+                     int
+                    ) [Type]
+                    ConstList(
+                     b
+                      ConstN(
+                       2
+                      ) [ConstN]
+                      ConstListNextY(
+                        ConstListNextY(
+                          ConstListNextN(
+                          ) [ConstListNextN]
+                         c
+                          ConstN(
+                           4
+                          ) [ConstN]
+                        ) [ConstListNextY]
+                       d
+                        ConstN(
+                         0
+                        ) [ConstN]
+                      ) [ConstListNextY]
+                    ) [ConstList]
+                  ) [ConstDecl]
+                ) [DeclC]
+              ) [DeclListY]
+              DeclC(
+                ConstDecl(
+                  Type(
+                   bool
+                  ) [Type]
+                  ConstList(
+                   be
+                    ConstB(
+                     1
+                    ) [ConstB]
+                    ConstListNextN(
+                    ) [ConstListNextN]
+                  ) [ConstList]
+                ) [ConstDecl]
+              ) [DeclC]
+            ) [DeclListY]
+            DeclV(
+              VarDeclY(
+                Type(
+                 int
+                ) [Type]
+                VarList(
+                 i
+                  BracketsN(
+                  ) [BracketsN]
+                  VarListNextN(
+                  ) [VarListNextN]
+                ) [VarList]
+              ) [VarDeclY]
+            ) [DeclV]
+          ) [DeclListY]
+          DeclV(
+            VarDeclY(
+              Type(
+               bool
+              ) [Type]
+              VarList(
+               ibool
+                BracketsN(
+                ) [BracketsN]
+                VarListNextN(
+                ) [VarListNextN]
+              ) [VarList]
+            ) [VarDeclY]
+          ) [DeclV]
+        ) [DeclListY]
+        DeclC(
+          ConstDecl(
+            Type(
+             char
+            ) [Type]
+            ConstList(
+             ch
+              ConstC(
+               c
+              ) [ConstC]
+              ConstListNextN(
+              ) [ConstListNextN]
+            ) [ConstList]
+          ) [ConstDecl]
+        ) [DeclC]
+      ) [DeclListY]
+      DeclC(
+        ConstDecl(
+          Type(
+           char
+          ) [Type]
+          ConstList(
+           dh
+            ConstN(
+             5
+            ) [ConstN]
+            ConstListNextN(
+            ) [ConstListNextN]
+          ) [ConstList]
+        ) [ConstDecl]
+      ) [DeclC]
+    ) [DeclListY]
+    DeclV(
+      VarDeclY(
+        Type(
+         int
+        ) [Type]
+        VarList(
+         niz
+          BracketsY(
+          ) [BracketsY]
+          VarListNextN(
+          ) [VarListNextN]
+        ) [VarList]
+      ) [VarDeclY]
+    ) [DeclV]
+  ) [DeclListY]
+  MethodDecListY(
+    MethodDecListN(
+    ) [MethodDecListN]
+    MethodDec(
+      TypeOptionN(
+      ) [TypeOptionN]
+     main
+      FormParsN(
+      ) [FormParsN]
+      VarDeclListN(
+      ) [VarDeclListN]
+      StatementListN(
+      ) [StatementListN]
+    ) [MethodDec]
+  ) [MethodDecListY]
+) [Program]
+ERROR 18:50:36,765 - Tip se ne poklapa: dh na liniji 11
+ERROR 18:50:36,765 - Parsiranje NIJE uspesno zavrseno!

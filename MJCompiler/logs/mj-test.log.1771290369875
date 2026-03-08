@@ -1,0 +1,131 @@
+INFO  02:05:42,400 - Compiling source file: C:\Users\Win 11\Documents\pp1lab.templateAST (1)\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  02:05:42,428 - #2 program
+INFO  02:05:42,428 - #46 test302
+INFO  02:05:42,428 - #3 const
+INFO  02:05:42,429 - #46 int
+INFO  02:05:42,429 - #46 jedan
+INFO  02:05:42,429 - #43 =
+INFO  02:05:42,429 - #45 1
+INFO  02:05:42,429 - #23 ;
+INFO  02:05:42,430 - #46 int
+INFO  02:05:42,430 - #46 i
+INFO  02:05:42,430 - #23 ;
+INFO  02:05:42,431 - #46 bool
+INFO  02:05:42,431 - #46 ibool
+INFO  02:05:42,431 - #23 ;
+INFO  02:05:42,432 - #46 int
+INFO  02:05:42,432 - #46 niz
+INFO  02:05:42,432 - #21 [
+INFO  02:05:42,432 - #22 ]
+INFO  02:05:42,432 - #23 ;
+INFO  02:05:42,432 - #17 {
+INFO  02:05:42,432 - #5 void
+INFO  02:05:42,432 - #46 main
+INFO  02:05:42,432 - #19 (
+INFO  02:05:42,432 - #20 )
+INFO  02:05:42,433 - #17 {
+INFO  02:05:42,433 - #17 {
+INFO  02:05:42,433 - #8 break
+INFO  02:05:42,433 - #23 ;
+INFO  02:05:42,433 - #18 }
+INFO  02:05:42,433 - #18 }
+INFO  02:05:42,433 - #18 }
+INFO  02:05:42,434 - Program(
+  ProgramName(
+   test302
+  ) [ProgramName]
+  DeclListY(
+    DeclListY(
+      DeclListY(
+        DeclListY(
+          DeclListN(
+          ) [DeclListN]
+          DeclC(
+            ConstDecl(
+              Type(
+               int
+              ) [Type]
+              ConstList(
+               jedan
+                ConstN(
+                 1
+                ) [ConstN]
+                ConstListNextN(
+                ) [ConstListNextN]
+              ) [ConstList]
+            ) [ConstDecl]
+          ) [DeclC]
+        ) [DeclListY]
+        DeclV(
+          VarDeclY(
+            Type(
+             int
+            ) [Type]
+            VarList(
+             i
+              BracketsN(
+              ) [BracketsN]
+              VarListNextN(
+              ) [VarListNextN]
+            ) [VarList]
+          ) [VarDeclY]
+        ) [DeclV]
+      ) [DeclListY]
+      DeclV(
+        VarDeclY(
+          Type(
+           bool
+          ) [Type]
+          VarList(
+           ibool
+            BracketsN(
+            ) [BracketsN]
+            VarListNextN(
+            ) [VarListNextN]
+          ) [VarList]
+        ) [VarDeclY]
+      ) [DeclV]
+    ) [DeclListY]
+    DeclV(
+      VarDeclY(
+        Type(
+         int
+        ) [Type]
+        VarList(
+         niz
+          BracketsY(
+          ) [BracketsY]
+          VarListNextN(
+          ) [VarListNextN]
+        ) [VarList]
+      ) [VarDeclY]
+    ) [DeclV]
+  ) [DeclListY]
+  MethodDecListY(
+    MethodDecListN(
+    ) [MethodDecListN]
+    MethodDec(
+      TypeOptionN(
+       main
+      ) [TypeOptionN]
+      FormParsN(
+      ) [FormParsN]
+      VarDeclListN(
+      ) [VarDeclListN]
+      StatementListY(
+        StatementListN(
+        ) [StatementListN]
+        StatementRecursion(
+          StatementListY(
+            StatementListN(
+            ) [StatementListN]
+            StatementBreak(
+            ) [StatementBreak]
+          ) [StatementListY]
+        ) [StatementRecursion]
+      ) [StatementListY]
+    ) [MethodDec]
+  ) [MethodDecListY]
+) [Program]
+ERROR 02:05:42,438 - Break naredba se ne nalazi unutar tela petlje.
+ERROR 02:05:42,438 - Parsiranje NIJE uspesno zavrseno!

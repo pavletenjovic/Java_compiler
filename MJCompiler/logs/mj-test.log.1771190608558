@@ -1,0 +1,40 @@
+INFO  22:23:03,953 - Compiling source file: C:\Users\Win 11\Documents\pp1lab.templateAST (1)\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  22:23:03,980 - #2 program
+INFO  22:23:03,980 - #46 test301
+INFO  22:23:03,980 - #46 int
+INFO  22:23:03,981 - #46 i
+INFO  22:23:03,982 - #43 =
+ERROR 22:23:03,982 - 
+Sintaksna greska na liniji 4
+INFO  22:23:03,982 - #45 5
+INFO  22:23:03,982 - #23 ;
+INFO  22:23:03,982 - #17 {
+INFO  22:23:03,982 - #5 void
+INFO  22:23:03,982 - #46 main
+ERROR 22:23:03,983 - Oporavak greske u VarDecl. Vracanje na liniju: 8
+INFO  22:23:03,983 - #19 (
+INFO  22:23:03,983 - #20 )
+INFO  22:23:03,984 - #46 int
+INFO  22:23:03,984 - #46 j
+INFO  22:23:03,984 - #43 =
+ERROR 22:23:03,984 - 
+Sintaksna greska na liniji 7
+INFO  22:23:03,984 - #45 5
+INFO  22:23:03,984 - #23 ;
+INFO  22:23:03,984 - #17 {
+INFO  22:23:03,984 - #18 }
+INFO  22:23:03,984 - #46 int
+ERROR 22:23:03,984 - Oporavak greske u VarDecl. Vracanje na liniju: 11
+INFO  22:23:03,985 - #46 plus
+INFO  22:23:03,985 - #19 (
+INFO  22:23:03,985 - #20 )
+INFO  22:23:03,985 - #17 {
+INFO  22:23:03,985 - #10 return
+INFO  22:23:03,985 - #46 i
+INFO  22:23:03,985 - #33 ++
+ERROR 22:23:03,986 - 
+Sintaksna greska na liniji 14
+INFO  22:23:03,986 - #23 ;
+INFO  22:23:03,986 - #18 }
+INFO  22:23:03,986 - #18 }
+ERROR 22:23:03,986 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 19

@@ -1,0 +1,113 @@
+INFO  16:13:51,005 - Compiling source file: C:\Users\Win 11\Documents\pp1lab.templateAST (1)\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  16:13:51,033 - #2 program
+INFO  16:13:51,033 - #46 test301
+INFO  16:13:51,033 - #17 {
+INFO  16:13:51,033 - #5 void
+INFO  16:13:51,034 - #46 main
+INFO  16:13:51,034 - #19 (
+INFO  16:13:51,034 - #20 )
+INFO  16:13:51,035 - #46 int
+INFO  16:13:51,035 - #46 e
+INFO  16:13:51,035 - #23 ;
+INFO  16:13:51,041 - #17 {
+INFO  16:13:51,042 - #46 e
+INFO  16:13:51,042 - #43 =
+INFO  16:13:51,042 - #45 2
+INFO  16:13:51,042 - #23 ;
+INFO  16:13:51,043 - #12 print
+INFO  16:13:51,044 - #19 (
+INFO  16:13:51,044 - #46 e
+INFO  16:13:51,044 - #20 )
+INFO  16:13:51,044 - #23 ;
+INFO  16:13:51,046 - #18 }
+INFO  16:13:51,046 - #18 }
+INFO  16:13:51,047 - Program(
+  ProgramName(
+   test301
+  ) [ProgramName]
+  DeclListN(
+  ) [DeclListN]
+  MethodDecListY(
+    MethodDecListN(
+    ) [MethodDecListN]
+    MethodDec(
+      TypeOptionN(
+       main
+      ) [TypeOptionN]
+      FormParsN(
+      ) [FormParsN]
+      VarDeclListY(
+        VarDeclListN(
+        ) [VarDeclListN]
+        VarDeclY(
+          Type(
+           int
+          ) [Type]
+          VarList(
+           e
+            BracketsN(
+            ) [BracketsN]
+            VarListNextN(
+            ) [VarListNextN]
+          ) [VarList]
+        ) [VarDeclY]
+      ) [VarDeclListY]
+      StatementListY(
+        StatementListY(
+          StatementListN(
+          ) [StatementListN]
+          StatementDesignator(
+            DesignatorSignatureAssign(
+              DesignatorVar(
+               e
+              ) [DesignatorVar]
+              Assignop(
+              ) [Assignop]
+              CondExprSimple(
+                Expr(
+                  AddopTermListTerm(
+                    Term(
+                      MulopFactorListFactor(
+                        Factor(
+                          UnaryMinusN(
+                          ) [UnaryMinusN]
+                          FactorOptionNumber(
+                           2
+                          ) [FactorOptionNumber]
+                        ) [Factor]
+                      ) [MulopFactorListFactor]
+                    ) [Term]
+                  ) [AddopTermListTerm]
+                ) [Expr]
+              ) [CondExprSimple]
+            ) [DesignatorSignatureAssign]
+          ) [StatementDesignator]
+        ) [StatementListY]
+        StatementPrint(
+          CondExprSimple(
+            Expr(
+              AddopTermListTerm(
+                Term(
+                  MulopFactorListFactor(
+                    Factor(
+                      UnaryMinusN(
+                      ) [UnaryMinusN]
+                      FactorOptionDesignator(
+                        DesignatorVar(
+                         e
+                        ) [DesignatorVar]
+                      ) [FactorOptionDesignator]
+                    ) [Factor]
+                  ) [MulopFactorListFactor]
+                ) [Term]
+              ) [AddopTermListTerm]
+            ) [Expr]
+          ) [CondExprSimple]
+          PrintOptionalN(
+          ) [PrintOptionalN]
+        ) [StatementPrint]
+      ) [StatementListY]
+    ) [MethodDec]
+  ) [MethodDecListY]
+) [Program]
+INFO  16:13:51,052 - Generisanje uspesno zavrseno!

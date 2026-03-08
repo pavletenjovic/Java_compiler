@@ -1,0 +1,242 @@
+INFO  03:26:31,214 - Compiling source file: C:\Users\Win 11\Documents\pp1lab.templateAST (1)\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  03:26:31,476 - #2 program
+INFO  03:26:31,476 - #46 test301
+INFO  03:26:31,476 - #4 enum
+INFO  03:26:31,481 - #46 Broj
+INFO  03:26:31,481 - #17 {
+INFO  03:26:31,483 - #46 NULA
+INFO  03:26:31,483 - #24 ,
+INFO  03:26:31,485 - #46 JEDAN
+INFO  03:26:31,485 - #24 ,
+INFO  03:26:31,485 - #46 PET
+INFO  03:26:31,485 - #43 =
+INFO  03:26:31,485 - #45 5
+INFO  03:26:31,485 - #24 ,
+INFO  03:26:31,485 - #46 DESET
+INFO  03:26:31,485 - #43 =
+INFO  03:26:31,485 - #45 10
+INFO  03:26:31,485 - #18 }
+INFO  03:26:31,486 - #46 int
+INFO  03:26:31,487 - #46 a
+INFO  03:26:31,487 - #23 ;
+INFO  03:26:31,503 - #17 {
+INFO  03:26:31,503 - #5 void
+INFO  03:26:31,504 - #46 main
+INFO  03:26:31,504 - #19 (
+INFO  03:26:31,504 - #20 )
+INFO  03:26:31,505 - #46 int
+INFO  03:26:31,506 - #46 b
+INFO  03:26:31,506 - #21 [
+INFO  03:26:31,506 - #22 ]
+INFO  03:26:31,506 - #23 ;
+INFO  03:26:31,506 - #46 int
+INFO  03:26:31,506 - #46 c
+INFO  03:26:31,506 - #23 ;
+INFO  03:26:31,506 - #17 {
+INFO  03:26:31,506 - #46 b
+INFO  03:26:31,510 - #43 =
+INFO  03:26:31,510 - #16 new
+INFO  03:26:31,517 - #46 int
+INFO  03:26:31,517 - #21 [
+INFO  03:26:31,517 - #46 Broj
+INFO  03:26:31,517 - #26 .
+INFO  03:26:31,517 - #46 JEDAN
+INFO  03:26:31,517 - #22 ]
+INFO  03:26:31,534 - #23 ;
+INFO  03:26:31,535 - #46 c
+INFO  03:26:31,535 - #43 =
+INFO  03:26:31,535 - #46 b
+INFO  03:26:31,535 - #26 .
+INFO  03:26:31,535 - #44 length
+INFO  03:26:31,535 - #23 ;
+INFO  03:26:31,535 - #18 }
+INFO  03:26:31,535 - #18 }
+INFO  03:26:31,542 - Program(
+  ProgramName(
+   test301
+  ) [ProgramName]
+  DeclListY(
+    DeclListY(
+      DeclListN(
+      ) [DeclListN]
+      DeclE(
+        EnumDecl(
+          EnumName(
+           Broj
+          ) [EnumName]
+          EnumDecList(
+           NULA
+            EnumValueN(
+            ) [EnumValueN]
+            EnumListNextY(
+              EnumListNextY(
+                EnumListNextY(
+                  EnumListNextN(
+                  ) [EnumListNextN]
+                 JEDAN
+                  EnumValueN(
+                  ) [EnumValueN]
+                ) [EnumListNextY]
+               PET
+                EnumValueY(
+                 5
+                ) [EnumValueY]
+              ) [EnumListNextY]
+             DESET
+              EnumValueY(
+               10
+              ) [EnumValueY]
+            ) [EnumListNextY]
+          ) [EnumDecList]
+        ) [EnumDecl]
+      ) [DeclE]
+    ) [DeclListY]
+    DeclV(
+      VarDeclY(
+        Type(
+         int
+        ) [Type]
+        VarList(
+         a
+          BracketsN(
+          ) [BracketsN]
+          VarListNextN(
+          ) [VarListNextN]
+        ) [VarList]
+      ) [VarDeclY]
+    ) [DeclV]
+  ) [DeclListY]
+  MethodDecListY(
+    MethodDecListN(
+    ) [MethodDecListN]
+    MethodDec(
+      TypeOptionN(
+       main
+      ) [TypeOptionN]
+      FormParsN(
+      ) [FormParsN]
+      VarDeclListY(
+        VarDeclListY(
+          VarDeclListN(
+          ) [VarDeclListN]
+          VarDeclY(
+            Type(
+             int
+            ) [Type]
+            VarList(
+             b
+              BracketsY(
+              ) [BracketsY]
+              VarListNextN(
+              ) [VarListNextN]
+            ) [VarList]
+          ) [VarDeclY]
+        ) [VarDeclListY]
+        VarDeclY(
+          Type(
+           int
+          ) [Type]
+          VarList(
+           c
+            BracketsN(
+            ) [BracketsN]
+            VarListNextN(
+            ) [VarListNextN]
+          ) [VarList]
+        ) [VarDeclY]
+      ) [VarDeclListY]
+      StatementListY(
+        StatementListY(
+          StatementListN(
+          ) [StatementListN]
+          StatementDesignator(
+            DesignatorStatement(
+              DesignatorVar(
+               b
+              ) [DesignatorVar]
+              DesignatorSignatureAssign(
+                Assignop(
+                ) [Assignop]
+                CondExprSimple(
+                  Expr(
+                    Term(
+                      Factor(
+                        UnaryMinusN(
+                        ) [UnaryMinusN]
+                        FactorOptionNew(
+                          Type(
+                           int
+                          ) [Type]
+                          ExprFactorOptionalY(
+                            ExprOptionalY(
+                              CondExprSimple(
+                                Expr(
+                                  Term(
+                                    Factor(
+                                      UnaryMinusN(
+                                      ) [UnaryMinusN]
+                                      FactorOptionDesignator(
+                                        DesignatorEnum(
+                                         Broj
+                                         JEDAN
+                                        ) [DesignatorEnum]
+                                      ) [FactorOptionDesignator]
+                                    ) [Factor]
+                                    MulopFactorListOptionalN(
+                                    ) [MulopFactorListOptionalN]
+                                  ) [Term]
+                                  AddopTermListN(
+                                  ) [AddopTermListN]
+                                ) [Expr]
+                              ) [CondExprSimple]
+                            ) [ExprOptionalY]
+                          ) [ExprFactorOptionalY]
+                        ) [FactorOptionNew]
+                      ) [Factor]
+                      MulopFactorListOptionalN(
+                      ) [MulopFactorListOptionalN]
+                    ) [Term]
+                    AddopTermListN(
+                    ) [AddopTermListN]
+                  ) [Expr]
+                ) [CondExprSimple]
+              ) [DesignatorSignatureAssign]
+            ) [DesignatorStatement]
+          ) [StatementDesignator]
+        ) [StatementListY]
+        StatementDesignator(
+          DesignatorStatement(
+            DesignatorVar(
+             c
+            ) [DesignatorVar]
+            DesignatorSignatureAssign(
+              Assignop(
+              ) [Assignop]
+              CondExprSimple(
+                Expr(
+                  Term(
+                    Factor(
+                      UnaryMinusN(
+                      ) [UnaryMinusN]
+                      FactorOptionDesignator(
+                        DesignatorLen(
+                         b
+                        ) [DesignatorLen]
+                      ) [FactorOptionDesignator]
+                    ) [Factor]
+                    MulopFactorListOptionalN(
+                    ) [MulopFactorListOptionalN]
+                  ) [Term]
+                  AddopTermListN(
+                  ) [AddopTermListN]
+                ) [Expr]
+              ) [CondExprSimple]
+            ) [DesignatorSignatureAssign]
+          ) [DesignatorStatement]
+        ) [StatementDesignator]
+      ) [StatementListY]
+    ) [MethodDec]
+  ) [MethodDecListY]
+) [Program]
+ERROR 03:26:31,558 - Greska: clan JEDAN ne postoji u enumu Broj. na liniji 11
+ERROR 03:26:31,559 - Parsiranje NIJE uspesno zavrseno!

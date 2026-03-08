@@ -1,0 +1,105 @@
+INFO  19:44:26,771 - Compiling source file: C:\Users\Win 11\Documents\pp1lab.templateAST (1)\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  19:44:26,795 - #2 program
+INFO  19:44:26,795 - #46 test302
+INFO  19:44:26,795 - #4 enum
+INFO  19:44:26,796 - #46 Broj
+INFO  19:44:26,796 - #17 {
+INFO  19:44:26,796 - #46 NULA
+INFO  19:44:26,796 - #24 ,
+INFO  19:44:26,796 - #46 JEDAN
+INFO  19:44:26,796 - #24 ,
+INFO  19:44:26,797 - #46 PET
+INFO  19:44:26,797 - #43 =
+INFO  19:44:26,797 - #45 5
+INFO  19:44:26,797 - #24 ,
+INFO  19:44:26,797 - #46 DESET
+INFO  19:44:26,797 - #43 =
+INFO  19:44:26,797 - #45 10
+INFO  19:44:26,797 - #24 ,
+INFO  19:44:26,797 - #46 EEE
+INFO  19:44:26,797 - #24 ,
+INFO  19:44:26,797 - #46 AAAA
+INFO  19:44:26,797 - #24 ,
+INFO  19:44:26,797 - #46 EWEW
+INFO  19:44:26,797 - #43 =
+INFO  19:44:26,797 - #45 8
+INFO  19:44:26,797 - #18 }
+INFO  19:44:26,798 - #17 {
+INFO  19:44:26,798 - #5 void
+INFO  19:44:26,798 - #46 main
+INFO  19:44:26,799 - #19 (
+INFO  19:44:26,799 - #20 )
+INFO  19:44:26,799 - #17 {
+INFO  19:44:26,799 - #18 }
+INFO  19:44:26,799 - #18 }
+INFO  19:44:26,800 - Program(
+  ProgramName(
+   test302
+  ) [ProgramName]
+  DeclListY(
+    DeclListN(
+    ) [DeclListN]
+    DeclE(
+      EnumDecl(
+        EnumName(
+         Broj
+        ) [EnumName]
+        EnumDecList(
+         NULA
+          EnumValueN(
+          ) [EnumValueN]
+          EnumListNextY(
+            EnumListNextY(
+              EnumListNextY(
+                EnumListNextY(
+                  EnumListNextY(
+                    EnumListNextY(
+                      EnumListNextN(
+                      ) [EnumListNextN]
+                     JEDAN
+                      EnumValueN(
+                      ) [EnumValueN]
+                    ) [EnumListNextY]
+                   PET
+                    EnumValueY(
+                     5
+                    ) [EnumValueY]
+                  ) [EnumListNextY]
+                 DESET
+                  EnumValueY(
+                   10
+                  ) [EnumValueY]
+                ) [EnumListNextY]
+               EEE
+                EnumValueN(
+                ) [EnumValueN]
+              ) [EnumListNextY]
+             AAAA
+              EnumValueN(
+              ) [EnumValueN]
+            ) [EnumListNextY]
+           EWEW
+            EnumValueY(
+             8
+            ) [EnumValueY]
+          ) [EnumListNextY]
+        ) [EnumDecList]
+      ) [EnumDecl]
+    ) [DeclE]
+  ) [DeclListY]
+  MethodDecListY(
+    MethodDecListN(
+    ) [MethodDecListN]
+    MethodDec(
+      TypeOptionN(
+      ) [TypeOptionN]
+     main
+      FormParsN(
+      ) [FormParsN]
+      VarDeclListN(
+      ) [VarDeclListN]
+      StatementListN(
+      ) [StatementListN]
+    ) [MethodDec]
+  ) [MethodDecListY]
+) [Program]

@@ -1,0 +1,82 @@
+INFO  22:25:40,835 - Compiling source file: C:\Users\Win 11\Documents\pp1lab.templateAST (1)\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  22:25:40,855 - #2 program
+INFO  22:25:40,855 - #46 test301
+INFO  22:25:40,855 - #46 int
+INFO  22:25:40,855 - #46 i
+INFO  22:25:40,855 - #43 =
+ERROR 22:25:40,857 - 
+Sintaksna greska na liniji 4
+INFO  22:25:40,857 - #45 5
+INFO  22:25:40,857 - #23 ;
+INFO  22:25:40,857 - #17 {
+INFO  22:25:40,857 - #5 void
+INFO  22:25:40,857 - #46 main
+ERROR 22:25:40,857 - Oporavak greske u VarDecl. Vracanje na liniju: 8
+INFO  22:25:40,858 - #19 (
+INFO  22:25:40,858 - #20 )
+INFO  22:25:40,858 - #46 int
+INFO  22:25:40,858 - #46 j
+INFO  22:25:40,858 - #43 =
+ERROR 22:25:40,858 - 
+Sintaksna greska na liniji 7
+INFO  22:25:40,859 - #45 5
+INFO  22:25:40,859 - #23 ;
+INFO  22:25:40,859 - #17 {
+INFO  22:25:40,859 - #18 }
+INFO  22:25:40,859 - #46 int
+ERROR 22:25:40,859 - Oporavak greske u VarDecl. Vracanje na liniju: 11
+INFO  22:25:40,859 - #46 plus
+INFO  22:25:40,859 - #19 (
+INFO  22:25:40,859 - #20 )
+INFO  22:25:40,859 - #17 {
+INFO  22:25:40,859 - #18 }
+INFO  22:25:40,859 - #18 }
+INFO  22:25:40,860 - Program(
+  ProgramName(
+   test301
+  ) [ProgramName]
+  DeclListY(
+    DeclListN(
+    ) [DeclListN]
+    DeclV(
+      VarDeclError(
+      ) [VarDeclError]
+    ) [DeclV]
+  ) [DeclListY]
+  MethodDecListY(
+    MethodDecListY(
+      MethodDecListN(
+      ) [MethodDecListN]
+      MethodDec(
+        TypeOptionN(
+         main
+        ) [TypeOptionN]
+        FormParsN(
+        ) [FormParsN]
+        VarDeclListY(
+          VarDeclListN(
+          ) [VarDeclListN]
+          VarDeclError(
+          ) [VarDeclError]
+        ) [VarDeclListY]
+        StatementListN(
+        ) [StatementListN]
+      ) [MethodDec]
+    ) [MethodDecListY]
+    MethodDec(
+      TypeOptionY(
+        Type(
+         int
+        ) [Type]
+       plus
+      ) [TypeOptionY]
+      FormParsN(
+      ) [FormParsN]
+      VarDeclListN(
+      ) [VarDeclListN]
+      StatementListN(
+      ) [StatementListN]
+    ) [MethodDec]
+  ) [MethodDecListY]
+) [Program]
+ERROR 22:25:40,873 - Parsiranje NIJE uspesno zavrseno!

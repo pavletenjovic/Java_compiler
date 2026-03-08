@@ -1,0 +1,293 @@
+INFO  04:03:58,700 - Compiling source file: C:\Users\Win 11\Documents\pp1lab.templateAST (1)\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  04:03:58,721 - #2 program
+INFO  04:03:58,721 - #46 test301
+INFO  04:03:58,721 - #4 enum
+INFO  04:03:58,721 - #46 Broj
+INFO  04:03:58,721 - #17 {
+INFO  04:03:58,722 - #46 NULA
+INFO  04:03:58,722 - #24 ,
+INFO  04:03:58,722 - #46 JEDAN
+INFO  04:03:58,722 - #24 ,
+INFO  04:03:58,722 - #46 PET
+INFO  04:03:58,722 - #43 =
+INFO  04:03:58,722 - #45 5
+INFO  04:03:58,722 - #24 ,
+INFO  04:03:58,723 - #46 DESET
+INFO  04:03:58,723 - #43 =
+INFO  04:03:58,723 - #45 10
+INFO  04:03:58,723 - #18 }
+INFO  04:03:58,723 - #46 int
+INFO  04:03:58,723 - #46 a
+INFO  04:03:58,724 - #23 ;
+INFO  04:03:58,725 - #17 {
+INFO  04:03:58,725 - #5 void
+INFO  04:03:58,725 - #46 main
+INFO  04:03:58,725 - #19 (
+INFO  04:03:58,725 - #20 )
+INFO  04:03:58,726 - #46 int
+INFO  04:03:58,726 - #46 b
+INFO  04:03:58,726 - #21 [
+INFO  04:03:58,726 - #22 ]
+INFO  04:03:58,726 - #23 ;
+INFO  04:03:58,726 - #46 int
+INFO  04:03:58,726 - #46 c
+INFO  04:03:58,726 - #23 ;
+INFO  04:03:58,726 - #46 int
+INFO  04:03:58,726 - #46 z
+INFO  04:03:58,726 - #23 ;
+INFO  04:03:58,726 - #17 {
+INFO  04:03:58,726 - #46 z
+INFO  04:03:58,728 - #43 =
+INFO  04:03:58,728 - #46 Broj
+INFO  04:03:58,728 - #26 .
+INFO  04:03:58,728 - #46 PET
+INFO  04:03:58,728 - #23 ;
+INFO  04:03:58,730 - #46 b
+INFO  04:03:58,730 - #43 =
+INFO  04:03:58,730 - #16 new
+INFO  04:03:58,730 - #46 int
+INFO  04:03:58,730 - #21 [
+INFO  04:03:58,730 - #45 10
+INFO  04:03:58,730 - #22 ]
+INFO  04:03:58,731 - #23 ;
+INFO  04:03:58,731 - #46 c
+INFO  04:03:58,731 - #43 =
+INFO  04:03:58,731 - #46 b
+INFO  04:03:58,731 - #26 .
+INFO  04:03:58,731 - #44 length
+INFO  04:03:58,731 - #23 ;
+INFO  04:03:58,731 - #18 }
+INFO  04:03:58,731 - #18 }
+INFO  04:03:58,732 - Program(
+  ProgramName(
+   test301
+  ) [ProgramName]
+  DeclListY(
+    DeclListY(
+      DeclListN(
+      ) [DeclListN]
+      DeclE(
+        EnumDecl(
+          EnumName(
+           Broj
+          ) [EnumName]
+          EnumDecList(
+           NULA
+            EnumValueN(
+            ) [EnumValueN]
+            EnumListNextY(
+              EnumListNextY(
+                EnumListNextY(
+                  EnumListNextN(
+                  ) [EnumListNextN]
+                 JEDAN
+                  EnumValueN(
+                  ) [EnumValueN]
+                ) [EnumListNextY]
+               PET
+                EnumValueY(
+                 5
+                ) [EnumValueY]
+              ) [EnumListNextY]
+             DESET
+              EnumValueY(
+               10
+              ) [EnumValueY]
+            ) [EnumListNextY]
+          ) [EnumDecList]
+        ) [EnumDecl]
+      ) [DeclE]
+    ) [DeclListY]
+    DeclV(
+      VarDeclY(
+        Type(
+         int
+        ) [Type]
+        VarList(
+         a
+          BracketsN(
+          ) [BracketsN]
+          VarListNextN(
+          ) [VarListNextN]
+        ) [VarList]
+      ) [VarDeclY]
+    ) [DeclV]
+  ) [DeclListY]
+  MethodDecListY(
+    MethodDecListN(
+    ) [MethodDecListN]
+    MethodDec(
+      TypeOptionN(
+       main
+      ) [TypeOptionN]
+      FormParsN(
+      ) [FormParsN]
+      VarDeclListY(
+        VarDeclListY(
+          VarDeclListY(
+            VarDeclListN(
+            ) [VarDeclListN]
+            VarDeclY(
+              Type(
+               int
+              ) [Type]
+              VarList(
+               b
+                BracketsY(
+                ) [BracketsY]
+                VarListNextN(
+                ) [VarListNextN]
+              ) [VarList]
+            ) [VarDeclY]
+          ) [VarDeclListY]
+          VarDeclY(
+            Type(
+             int
+            ) [Type]
+            VarList(
+             c
+              BracketsN(
+              ) [BracketsN]
+              VarListNextN(
+              ) [VarListNextN]
+            ) [VarList]
+          ) [VarDeclY]
+        ) [VarDeclListY]
+        VarDeclY(
+          Type(
+           int
+          ) [Type]
+          VarList(
+           z
+            BracketsN(
+            ) [BracketsN]
+            VarListNextN(
+            ) [VarListNextN]
+          ) [VarList]
+        ) [VarDeclY]
+      ) [VarDeclListY]
+      StatementListY(
+        StatementListY(
+          StatementListY(
+            StatementListN(
+            ) [StatementListN]
+            StatementDesignator(
+              DesignatorStatement(
+                DesignatorVar(
+                 z
+                ) [DesignatorVar]
+                DesignatorSignatureAssign(
+                  Assignop(
+                  ) [Assignop]
+                  CondExprSimple(
+                    Expr(
+                      Term(
+                        Factor(
+                          UnaryMinusN(
+                          ) [UnaryMinusN]
+                          FactorOptionDesignator(
+                            DesignatorEnum(
+                             Broj
+                             PET
+                            ) [DesignatorEnum]
+                          ) [FactorOptionDesignator]
+                        ) [Factor]
+                        MulopFactorListOptionalN(
+                        ) [MulopFactorListOptionalN]
+                      ) [Term]
+                      AddopTermListN(
+                      ) [AddopTermListN]
+                    ) [Expr]
+                  ) [CondExprSimple]
+                ) [DesignatorSignatureAssign]
+              ) [DesignatorStatement]
+            ) [StatementDesignator]
+          ) [StatementListY]
+          StatementDesignator(
+            DesignatorStatement(
+              DesignatorVar(
+               b
+              ) [DesignatorVar]
+              DesignatorSignatureAssign(
+                Assignop(
+                ) [Assignop]
+                CondExprSimple(
+                  Expr(
+                    Term(
+                      Factor(
+                        UnaryMinusN(
+                        ) [UnaryMinusN]
+                        FactorOptionNew(
+                          Type(
+                           int
+                          ) [Type]
+                          ExprFactorOptionalY(
+                            ExprOptionalY(
+                              CondExprSimple(
+                                Expr(
+                                  Term(
+                                    Factor(
+                                      UnaryMinusN(
+                                      ) [UnaryMinusN]
+                                      FactorOptionNumber(
+                                       10
+                                      ) [FactorOptionNumber]
+                                    ) [Factor]
+                                    MulopFactorListOptionalN(
+                                    ) [MulopFactorListOptionalN]
+                                  ) [Term]
+                                  AddopTermListN(
+                                  ) [AddopTermListN]
+                                ) [Expr]
+                              ) [CondExprSimple]
+                            ) [ExprOptionalY]
+                          ) [ExprFactorOptionalY]
+                        ) [FactorOptionNew]
+                      ) [Factor]
+                      MulopFactorListOptionalN(
+                      ) [MulopFactorListOptionalN]
+                    ) [Term]
+                    AddopTermListN(
+                    ) [AddopTermListN]
+                  ) [Expr]
+                ) [CondExprSimple]
+              ) [DesignatorSignatureAssign]
+            ) [DesignatorStatement]
+          ) [StatementDesignator]
+        ) [StatementListY]
+        StatementDesignator(
+          DesignatorStatement(
+            DesignatorVar(
+             c
+            ) [DesignatorVar]
+            DesignatorSignatureAssign(
+              Assignop(
+              ) [Assignop]
+              CondExprSimple(
+                Expr(
+                  Term(
+                    Factor(
+                      UnaryMinusN(
+                      ) [UnaryMinusN]
+                      FactorOptionDesignator(
+                        DesignatorLen(
+                         b
+                        ) [DesignatorLen]
+                      ) [FactorOptionDesignator]
+                    ) [Factor]
+                    MulopFactorListOptionalN(
+                    ) [MulopFactorListOptionalN]
+                  ) [Term]
+                  AddopTermListN(
+                  ) [AddopTermListN]
+                ) [Expr]
+              ) [CondExprSimple]
+            ) [DesignatorSignatureAssign]
+          ) [DesignatorStatement]
+        ) [StatementDesignator]
+      ) [StatementListY]
+    ) [MethodDec]
+  ) [MethodDecListY]
+) [Program]
+ERROR 04:03:58,747 - Enum Broj nema clana PET[rs.etf.pp1.symboltable.concepts.Obj@23ceabc1, rs.etf.pp1.symboltable.concepts.Obj@5d5eef3d, rs.etf.pp1.symboltable.concepts.Obj@56f4468b] na liniji 11
+ERROR 04:03:58,747 - Parsiranje NIJE uspesno zavrseno!

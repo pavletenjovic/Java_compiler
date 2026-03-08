@@ -1,0 +1,124 @@
+INFO  00:00:18,114 - Compiling source file: C:\Users\Win 11\Documents\pp1lab.templateAST (1)\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  00:00:18,132 - #2 program
+INFO  00:00:18,132 - #46 test302
+INFO  00:00:18,132 - #3 const
+INFO  00:00:18,132 - #46 int
+INFO  00:00:18,132 - #46 jedan
+INFO  00:00:18,132 - #43 =
+INFO  00:00:18,133 - #45 1
+INFO  00:00:18,133 - #23 ;
+INFO  00:00:18,133 - #46 int
+INFO  00:00:18,133 - #46 i
+INFO  00:00:18,133 - #23 ;
+INFO  00:00:18,134 - #46 bool
+INFO  00:00:18,134 - #46 ibool
+INFO  00:00:18,134 - #23 ;
+INFO  00:00:18,134 - #46 int
+INFO  00:00:18,134 - #46 niz
+INFO  00:00:18,134 - #21 [
+INFO  00:00:18,135 - #22 ]
+INFO  00:00:18,135 - #23 ;
+INFO  00:00:18,135 - #17 {
+INFO  00:00:18,136 - #5 void
+INFO  00:00:18,136 - #46 main
+INFO  00:00:18,136 - #19 (
+INFO  00:00:18,136 - #20 )
+INFO  00:00:18,136 - #17 {
+INFO  00:00:18,137 - #18 }
+INFO  00:00:18,137 - #5 void
+INFO  00:00:18,137 - #46 main2
+INFO  00:00:18,137 - #19 (
+INFO  00:00:18,137 - #20 )
+INFO  00:00:18,137 - #17 {
+INFO  00:00:18,137 - #18 }
+INFO  00:00:18,137 - #18 }
+INFO  00:00:18,138 - Program(
+  ProgramName(
+  ) [ProgramName]
+  DeclListExists(
+    DeclListExists(
+      DeclListExists(
+        DeclListExists(
+          DeclListEmpty(
+          ) [DeclListEmpty]
+          DeclDerived1(
+            ConstDeclDerived1(
+              TypeDerived1(
+              ) [TypeDerived1]
+              ConstListDerived1(
+                ConstDerived1(
+                ) [ConstDerived1]
+                ConstListNextDerived2(
+                ) [ConstListNextDerived2]
+              ) [ConstListDerived1]
+            ) [ConstDeclDerived1]
+          ) [DeclDerived1]
+        ) [DeclListExists]
+        DeclDerived2(
+          VarDeclDerived1(
+            TypeDerived1(
+            ) [TypeDerived1]
+            VarListDerived1(
+              BracketsDerived2(
+              ) [BracketsDerived2]
+              VarListNextDerived2(
+              ) [VarListNextDerived2]
+            ) [VarListDerived1]
+          ) [VarDeclDerived1]
+        ) [DeclDerived2]
+      ) [DeclListExists]
+      DeclDerived2(
+        VarDeclDerived1(
+          TypeDerived1(
+          ) [TypeDerived1]
+          VarListDerived1(
+            BracketsDerived2(
+            ) [BracketsDerived2]
+            VarListNextDerived2(
+            ) [VarListNextDerived2]
+          ) [VarListDerived1]
+        ) [VarDeclDerived1]
+      ) [DeclDerived2]
+    ) [DeclListExists]
+    DeclDerived2(
+      VarDeclDerived1(
+        TypeDerived1(
+        ) [TypeDerived1]
+        VarListDerived1(
+          BracketsDerived1(
+          ) [BracketsDerived1]
+          VarListNextDerived2(
+          ) [VarListNextDerived2]
+        ) [VarListDerived1]
+      ) [VarDeclDerived1]
+    ) [DeclDerived2]
+  ) [DeclListExists]
+  MethodDecListDerived1(
+    MethodDecListDerived1(
+      MethodDecListDerived2(
+      ) [MethodDecListDerived2]
+      MethodDecDerived1(
+        TypeOptionDerived2(
+        ) [TypeOptionDerived2]
+        FormParsDerived2(
+        ) [FormParsDerived2]
+        VarDeclOptionalDerived2(
+        ) [VarDeclOptionalDerived2]
+        StatementDerived1(
+        ) [StatementDerived1]
+      ) [MethodDecDerived1]
+    ) [MethodDecListDerived1]
+    MethodDecDerived1(
+      TypeOptionDerived2(
+      ) [TypeOptionDerived2]
+      FormParsDerived2(
+      ) [FormParsDerived2]
+      VarDeclOptionalDerived2(
+      ) [VarDeclOptionalDerived2]
+      StatementDerived1(
+      ) [StatementDerived1]
+    ) [MethodDecDerived1]
+  ) [MethodDecListDerived1]
+) [Program]
+INFO  00:00:18,138 - =====================================================================
+INFO  00:00:18,138 - Parsiranje uspesno zavrseno!

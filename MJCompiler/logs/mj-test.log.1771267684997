@@ -1,0 +1,197 @@
+INFO  19:46:48,405 - Compiling source file: C:\Users\Win 11\Documents\pp1lab.templateAST (1)\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  19:46:48,435 - #2 program
+INFO  19:46:48,435 - #46 test302
+INFO  19:46:48,435 - #17 {
+INFO  19:46:48,435 - #5 void
+INFO  19:46:48,436 - #46 main
+INFO  19:46:48,436 - #19 (
+INFO  19:46:48,436 - #20 )
+INFO  19:46:48,436 - #17 {
+INFO  19:46:48,436 - #6 if
+INFO  19:46:48,436 - #19 (
+INFO  19:46:48,437 - #45 4
+INFO  19:46:48,437 - #35 ==
+INFO  19:46:48,438 - #45 4
+INFO  19:46:48,438 - #41 ||
+INFO  19:46:48,438 - #46 verify
+INFO  19:46:48,439 - #19 (
+INFO  19:46:48,439 - #20 )
+INFO  19:46:48,439 - #20 )
+INFO  19:46:48,440 - #12 print
+INFO  19:46:48,440 - #19 (
+INFO  19:46:48,440 - #45 4
+INFO  19:46:48,440 - #20 )
+INFO  19:46:48,440 - #23 ;
+INFO  19:46:48,440 - #18 }
+INFO  19:46:48,440 - #46 bool
+INFO  19:46:48,441 - #46 verify
+INFO  19:46:48,441 - #19 (
+INFO  19:46:48,441 - #20 )
+INFO  19:46:48,441 - #17 {
+INFO  19:46:48,441 - #10 return
+INFO  19:46:48,441 - #48 1
+INFO  19:46:48,441 - #23 ;
+INFO  19:46:48,441 - #18 }
+INFO  19:46:48,441 - #18 }
+INFO  19:46:48,442 - Program(
+  ProgramName(
+   test302
+  ) [ProgramName]
+  DeclListN(
+  ) [DeclListN]
+  MethodDecListY(
+    MethodDecListY(
+      MethodDecListN(
+      ) [MethodDecListN]
+      MethodDec(
+        TypeOptionN(
+         main
+        ) [TypeOptionN]
+        FormParsN(
+        ) [FormParsN]
+        VarDeclListN(
+        ) [VarDeclListN]
+        StatementListY(
+          StatementListN(
+          ) [StatementListN]
+          StatementIf(
+            Condition(
+              CondTermListOptionalY(
+                CondTermListOptionalN(
+                  CondTerm(
+                    CondFactListOptionalN(
+                      CondFactRel(
+                        Expr(
+                          AddopTermListTerm(
+                            Term(
+                              MulopFactorListFactor(
+                                Factor(
+                                  UnaryMinusN(
+                                  ) [UnaryMinusN]
+                                  FactorOptionNumber(
+                                   4
+                                  ) [FactorOptionNumber]
+                                ) [Factor]
+                              ) [MulopFactorListFactor]
+                            ) [Term]
+                          ) [AddopTermListTerm]
+                        ) [Expr]
+                        RelopEq(
+                        ) [RelopEq]
+                        Expr(
+                          AddopTermListTerm(
+                            Term(
+                              MulopFactorListFactor(
+                                Factor(
+                                  UnaryMinusN(
+                                  ) [UnaryMinusN]
+                                  FactorOptionNumber(
+                                   4
+                                  ) [FactorOptionNumber]
+                                ) [Factor]
+                              ) [MulopFactorListFactor]
+                            ) [Term]
+                          ) [AddopTermListTerm]
+                        ) [Expr]
+                      ) [CondFactRel]
+                    ) [CondFactListOptionalN]
+                  ) [CondTerm]
+                ) [CondTermListOptionalN]
+                CondTerm(
+                  CondFactListOptionalN(
+                    CondFactExpr(
+                      Expr(
+                        AddopTermListTerm(
+                          Term(
+                            MulopFactorListFactor(
+                              Factor(
+                                UnaryMinusN(
+                                ) [UnaryMinusN]
+                                FactorOptionFuncall(
+                                  DesignatorVar(
+                                   verify
+                                  ) [DesignatorVar]
+                                  ActParsOptionalN(
+                                  ) [ActParsOptionalN]
+                                ) [FactorOptionFuncall]
+                              ) [Factor]
+                            ) [MulopFactorListFactor]
+                          ) [Term]
+                        ) [AddopTermListTerm]
+                      ) [Expr]
+                    ) [CondFactExpr]
+                  ) [CondFactListOptionalN]
+                ) [CondTerm]
+              ) [CondTermListOptionalY]
+            ) [Condition]
+            StatementPrint(
+              CondExprSimple(
+                Expr(
+                  AddopTermListTerm(
+                    Term(
+                      MulopFactorListFactor(
+                        Factor(
+                          UnaryMinusN(
+                          ) [UnaryMinusN]
+                          FactorOptionNumber(
+                           4
+                          ) [FactorOptionNumber]
+                        ) [Factor]
+                      ) [MulopFactorListFactor]
+                    ) [Term]
+                  ) [AddopTermListTerm]
+                ) [Expr]
+              ) [CondExprSimple]
+              PrintOptionalN(
+              ) [PrintOptionalN]
+            ) [StatementPrint]
+            ElseOptionalN(
+            ) [ElseOptionalN]
+          ) [StatementIf]
+        ) [StatementListY]
+      ) [MethodDec]
+    ) [MethodDecListY]
+    MethodDec(
+      TypeOptionY(
+        Type(
+         bool
+        ) [Type]
+       verify
+      ) [TypeOptionY]
+      FormParsN(
+      ) [FormParsN]
+      VarDeclListN(
+      ) [VarDeclListN]
+      StatementListY(
+        StatementListN(
+        ) [StatementListN]
+        StatementReturn(
+          ExprOptionalY(
+            CondExprSimple(
+              Expr(
+                AddopTermListTerm(
+                  Term(
+                    MulopFactorListFactor(
+                      Factor(
+                        UnaryMinusN(
+                        ) [UnaryMinusN]
+                        FactorOptionBoll(
+                         1
+                        ) [FactorOptionBoll]
+                      ) [Factor]
+                    ) [MulopFactorListFactor]
+                  ) [Term]
+                ) [AddopTermListTerm]
+              ) [Expr]
+            ) [CondExprSimple]
+          ) [ExprOptionalY]
+        ) [StatementReturn]
+      ) [StatementListY]
+    ) [MethodDec]
+  ) [MethodDecListY]
+) [Program]
+ERROR 19:46:48,446 - Pristup nedefinisanoj promenljivi: verify na liniji 7
+ERROR 19:46:48,446 - Poziv neadekvatne metode: noObj na liniji 7
+ERROR 19:46:48,446 - Logicki operand nije tipa bool. na liniji 10
+ERROR 19:46:48,446 - Uslov nije tipa bool. na liniji 4
+ERROR 19:46:48,446 - Parsiranje NIJE uspesno zavrseno!

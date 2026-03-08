@@ -1,0 +1,133 @@
+INFO  18:28:56,926 - Compiling source file: C:\Users\Win 11\Documents\pp1lab.templateAST (1)\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  18:28:56,953 - #2 program
+INFO  18:28:56,953 - #46 test302
+INFO  18:28:56,953 - #46 int
+INFO  18:28:56,953 - #46 i
+INFO  18:28:56,954 - #24 ,
+INFO  18:28:56,956 - #46 j
+INFO  18:28:56,956 - #24 ,
+INFO  18:28:56,956 - #46 z
+INFO  18:28:56,956 - #24 ,
+INFO  18:28:56,956 - #46 x
+INFO  18:28:56,956 - #21 [
+INFO  18:28:56,956 - #22 ]
+INFO  18:28:56,956 - #23 ;
+INFO  18:28:56,956 - #46 bool
+INFO  18:28:56,957 - #46 ibool
+INFO  18:28:56,957 - #23 ;
+INFO  18:28:56,957 - #46 int
+INFO  18:28:56,957 - #46 niz
+INFO  18:28:56,957 - #21 [
+INFO  18:28:56,957 - #22 ]
+INFO  18:28:56,957 - #23 ;
+INFO  18:28:56,957 - #17 {
+INFO  18:28:56,957 - #5 void
+INFO  18:28:56,957 - #46 main
+INFO  18:28:56,958 - #19 (
+INFO  18:28:56,958 - #20 )
+INFO  18:28:56,958 - #46 int
+INFO  18:28:56,958 - #46 t
+INFO  18:28:56,958 - #23 ;
+INFO  18:28:56,958 - #17 {
+INFO  18:28:56,958 - #18 }
+INFO  18:28:56,959 - #18 }
+INFO  18:28:56,959 - Program(
+  ProgramName(
+   test302
+  ) [ProgramName]
+  DeclListY(
+    DeclListY(
+      DeclListY(
+        DeclListN(
+        ) [DeclListN]
+        DeclV(
+          VarDeclY(
+            Type(
+             int
+            ) [Type]
+            VarList(
+             i
+              BracketsN(
+              ) [BracketsN]
+              VarListNextY(
+                VarListNextY(
+                  VarListNextY(
+                    VarListNextN(
+                    ) [VarListNextN]
+                   j
+                    BracketsN(
+                    ) [BracketsN]
+                  ) [VarListNextY]
+                 z
+                  BracketsN(
+                  ) [BracketsN]
+                ) [VarListNextY]
+               x
+                BracketsY(
+                ) [BracketsY]
+              ) [VarListNextY]
+            ) [VarList]
+          ) [VarDeclY]
+        ) [DeclV]
+      ) [DeclListY]
+      DeclV(
+        VarDeclY(
+          Type(
+           bool
+          ) [Type]
+          VarList(
+           ibool
+            BracketsN(
+            ) [BracketsN]
+            VarListNextN(
+            ) [VarListNextN]
+          ) [VarList]
+        ) [VarDeclY]
+      ) [DeclV]
+    ) [DeclListY]
+    DeclV(
+      VarDeclY(
+        Type(
+         int
+        ) [Type]
+        VarList(
+         niz
+          BracketsY(
+          ) [BracketsY]
+          VarListNextN(
+          ) [VarListNextN]
+        ) [VarList]
+      ) [VarDeclY]
+    ) [DeclV]
+  ) [DeclListY]
+  MethodDecListY(
+    MethodDecListN(
+    ) [MethodDecListN]
+    MethodDec(
+      TypeOptionN(
+      ) [TypeOptionN]
+     main
+      FormParsN(
+      ) [FormParsN]
+      VarDeclListY(
+        VarDeclListN(
+        ) [VarDeclListN]
+        VarDeclY(
+          Type(
+           int
+          ) [Type]
+          VarList(
+           t
+            BracketsN(
+            ) [BracketsN]
+            VarListNextN(
+            ) [VarListNextN]
+          ) [VarList]
+        ) [VarDeclY]
+      ) [VarDeclListY]
+      StatementListN(
+      ) [StatementListN]
+    ) [MethodDec]
+  ) [MethodDecListY]
+) [Program]
+INFO  18:28:56,963 - Parsiranje uspesno zavrseno!

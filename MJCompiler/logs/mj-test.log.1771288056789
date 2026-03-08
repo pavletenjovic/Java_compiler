@@ -1,0 +1,225 @@
+INFO  01:25:59,829 - Compiling source file: C:\Users\Win 11\Documents\pp1lab.templateAST (1)\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  01:25:59,850 - #2 program
+INFO  01:25:59,850 - #46 test302
+INFO  01:25:59,850 - #17 {
+INFO  01:25:59,851 - #5 void
+INFO  01:25:59,851 - #46 method
+INFO  01:25:59,851 - #19 (
+INFO  01:25:59,851 - #20 )
+INFO  01:25:59,851 - #17 {
+INFO  01:25:59,852 - #18 }
+INFO  01:25:59,852 - #5 void
+INFO  01:25:59,852 - #46 main
+INFO  01:25:59,852 - #19 (
+INFO  01:25:59,852 - #20 )
+INFO  01:25:59,852 - #46 int
+INFO  01:25:59,852 - #46 i
+INFO  01:25:59,853 - #23 ;
+INFO  01:25:59,853 - #46 char
+INFO  01:25:59,854 - #46 c
+INFO  01:25:59,854 - #23 ;
+INFO  01:25:59,854 - #17 {
+INFO  01:25:59,854 - #46 i
+INFO  01:25:59,854 - #43 =
+INFO  01:25:59,854 - #45 5
+INFO  01:25:59,854 - #23 ;
+INFO  01:25:59,855 - #12 print
+INFO  01:25:59,856 - #19 (
+INFO  01:25:59,856 - #46 i
+INFO  01:25:59,856 - #20 )
+INFO  01:25:59,856 - #23 ;
+INFO  01:25:59,856 - #12 print
+INFO  01:25:59,856 - #19 (
+INFO  01:25:59,856 - #46 method
+INFO  01:25:59,856 - #20 )
+INFO  01:25:59,856 - #23 ;
+INFO  01:25:59,856 - #18 }
+INFO  01:25:59,856 - #18 }
+INFO  01:25:59,856 - Program(
+  ProgramName(
+   test302
+  ) [ProgramName]
+  DeclListN(
+  ) [DeclListN]
+  MethodDecListY(
+    MethodDecListY(
+      MethodDecListN(
+      ) [MethodDecListN]
+      MethodDec(
+        TypeOptionN(
+         method
+        ) [TypeOptionN]
+        FormParsN(
+        ) [FormParsN]
+        VarDeclListN(
+        ) [VarDeclListN]
+        StatementListN(
+        ) [StatementListN]
+      ) [MethodDec]
+    ) [MethodDecListY]
+    MethodDec(
+      TypeOptionN(
+       main
+      ) [TypeOptionN]
+      FormParsN(
+      ) [FormParsN]
+      VarDeclListY(
+        VarDeclListY(
+          VarDeclListN(
+          ) [VarDeclListN]
+          VarDeclY(
+            Type(
+             int
+            ) [Type]
+            VarList(
+             i
+              BracketsN(
+              ) [BracketsN]
+              VarListNextN(
+              ) [VarListNextN]
+            ) [VarList]
+          ) [VarDeclY]
+        ) [VarDeclListY]
+        VarDeclY(
+          Type(
+           char
+          ) [Type]
+          VarList(
+           c
+            BracketsN(
+            ) [BracketsN]
+            VarListNextN(
+            ) [VarListNextN]
+          ) [VarList]
+        ) [VarDeclY]
+      ) [VarDeclListY]
+      StatementListY(
+        StatementListY(
+          StatementListY(
+            StatementListN(
+            ) [StatementListN]
+            StatementDesignator(
+              DesignatorSignatureAssign(
+                DesignatorVar(
+                 i
+                ) [DesignatorVar]
+                Assignop(
+                ) [Assignop]
+                CondExprSimple(
+                  Expr(
+                    AddopTermListTerm(
+                      Term(
+                        MulopFactorListFactor(
+                          Factor(
+                            UnaryMinusN(
+                            ) [UnaryMinusN]
+                            FactorOptionNumber(
+                             5
+                            ) [FactorOptionNumber]
+                          ) [Factor]
+                        ) [MulopFactorListFactor]
+                      ) [Term]
+                    ) [AddopTermListTerm]
+                  ) [Expr]
+                ) [CondExprSimple]
+              ) [DesignatorSignatureAssign]
+            ) [StatementDesignator]
+          ) [StatementListY]
+          StatementPrint(
+            CondExprSimple(
+              Expr(
+                AddopTermListTerm(
+                  Term(
+                    MulopFactorListFactor(
+                      Factor(
+                        UnaryMinusN(
+                        ) [UnaryMinusN]
+                        FactorOptionDesignator(
+                          DesignatorVar(
+                           i
+                          ) [DesignatorVar]
+                        ) [FactorOptionDesignator]
+                      ) [Factor]
+                    ) [MulopFactorListFactor]
+                  ) [Term]
+                ) [AddopTermListTerm]
+              ) [Expr]
+            ) [CondExprSimple]
+            PrintOptionalN(
+            ) [PrintOptionalN]
+          ) [StatementPrint]
+        ) [StatementListY]
+        StatementPrint(
+          CondExprSimple(
+            Expr(
+              AddopTermListTerm(
+                Term(
+                  MulopFactorListFactor(
+                    Factor(
+                      UnaryMinusN(
+                      ) [UnaryMinusN]
+                      FactorOptionDesignator(
+                        DesignatorVar(
+                         method
+                        ) [DesignatorVar]
+                      ) [FactorOptionDesignator]
+                    ) [Factor]
+                  ) [MulopFactorListFactor]
+                ) [Term]
+              ) [AddopTermListTerm]
+            ) [Expr]
+          ) [CondExprSimple]
+          PrintOptionalN(
+          ) [PrintOptionalN]
+        ) [StatementPrint]
+      ) [StatementListY]
+    ) [MethodDec]
+  ) [MethodDecListY]
+) [Program]
+ERROR 01:25:59,876 - Print operacija ne int/char/bool promenljive: StatementPrint(
+  CondExprSimple(
+    Expr(
+      AddopTermListTerm(
+        Term(
+          MulopFactorListFactor(
+            Factor(
+              UnaryMinusN(
+              ) [UnaryMinusN]
+              FactorOptionDesignator(
+                DesignatorVar(
+                 i
+                ) [DesignatorVar]
+              ) [FactorOptionDesignator]
+            ) [Factor]
+          ) [MulopFactorListFactor]
+        ) [Term]
+      ) [AddopTermListTerm]
+    ) [Expr]
+  ) [CondExprSimple]
+  PrintOptionalN(
+  ) [PrintOptionalN]
+) [StatementPrint] na liniji 7
+ERROR 01:25:59,876 - Print operacija ne int/char/bool promenljive: StatementPrint(
+  CondExprSimple(
+    Expr(
+      AddopTermListTerm(
+        Term(
+          MulopFactorListFactor(
+            Factor(
+              UnaryMinusN(
+              ) [UnaryMinusN]
+              FactorOptionDesignator(
+                DesignatorVar(
+                 method
+                ) [DesignatorVar]
+              ) [FactorOptionDesignator]
+            ) [Factor]
+          ) [MulopFactorListFactor]
+        ) [Term]
+      ) [AddopTermListTerm]
+    ) [Expr]
+  ) [CondExprSimple]
+  PrintOptionalN(
+  ) [PrintOptionalN]
+) [StatementPrint] na liniji 7
+ERROR 01:25:59,876 - Parsiranje NIJE uspesno zavrseno!

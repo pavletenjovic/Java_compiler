@@ -1,0 +1,139 @@
+INFO  23:16:06,955 - Compiling source file: C:\Users\Win 11\Documents\pp1lab.templateAST (1)\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  23:16:06,983 - #2 program
+INFO  23:16:06,983 - #46 test302
+INFO  23:16:06,983 - #4 enum
+INFO  23:16:06,984 - #46 Broj
+INFO  23:16:06,984 - #17 {
+INFO  23:16:06,984 - #46 JEDAN
+INFO  23:16:06,984 - #24 ,
+INFO  23:16:06,984 - #46 DVA
+INFO  23:16:06,984 - #24 ,
+INFO  23:16:06,985 - #46 TRI
+INFO  23:16:06,985 - #18 }
+INFO  23:16:06,985 - #17 {
+INFO  23:16:06,985 - #5 void
+INFO  23:16:06,985 - #46 main
+INFO  23:16:06,985 - #19 (
+INFO  23:16:06,985 - #20 )
+INFO  23:16:06,986 - #46 char
+INFO  23:16:06,986 - #21 [
+ERROR 23:16:06,986 - 
+Sintaksna greska na liniji 8
+INFO  23:16:06,986 - #22 ]
+INFO  23:16:06,986 - #46 i
+INFO  23:16:06,986 - #23 ;
+INFO  23:16:06,987 - #17 {
+INFO  23:16:06,987 - #46 i
+INFO  23:16:06,987 - #43 =
+ERROR 23:16:06,987 - Oporavak greske u VarDecl. Vracanje na liniju: 11
+INFO  23:16:06,994 - #16 new
+INFO  23:16:06,995 - #46 char
+INFO  23:16:06,995 - #21 [
+INFO  23:16:06,995 - #45 3
+INFO  23:16:06,995 - #22 ]
+INFO  23:16:06,995 - #23 ;
+INFO  23:16:06,995 - #18 }
+INFO  23:16:06,995 - #18 }
+INFO  23:16:06,996 - Program(
+  ProgramName(
+   test302
+  ) [ProgramName]
+  DeclListY(
+    DeclListN(
+    ) [DeclListN]
+    DeclE(
+      EnumDecl(
+        EnumName(
+         Broj
+        ) [EnumName]
+        EnumDecList(
+         JEDAN
+          EnumValueN(
+          ) [EnumValueN]
+          EnumListNextY(
+            EnumListNextY(
+              EnumListNextN(
+              ) [EnumListNextN]
+             DVA
+              EnumValueN(
+              ) [EnumValueN]
+            ) [EnumListNextY]
+           TRI
+            EnumValueN(
+            ) [EnumValueN]
+          ) [EnumListNextY]
+        ) [EnumDecList]
+      ) [EnumDecl]
+    ) [DeclE]
+  ) [DeclListY]
+  MethodDecListY(
+    MethodDecListN(
+    ) [MethodDecListN]
+    MethodDec(
+      TypeOptionN(
+       main
+      ) [TypeOptionN]
+      FormParsN(
+      ) [FormParsN]
+      VarDeclListY(
+        VarDeclListN(
+        ) [VarDeclListN]
+        VarDeclError(
+        ) [VarDeclError]
+      ) [VarDeclListY]
+      StatementListY(
+        StatementListN(
+        ) [StatementListN]
+        StatementDesignator(
+          DesignatorSignatureAssign(
+            DesignatorVar(
+             i
+            ) [DesignatorVar]
+            Assignop(
+            ) [Assignop]
+            CondExprSimple(
+              Expr(
+                AddopTermListTerm(
+                  Term(
+                    MulopFactorListFactor(
+                      Factor(
+                        UnaryMinusN(
+                        ) [UnaryMinusN]
+                        FactorOptionNewY(
+                          Type(
+                           char
+                          ) [Type]
+                          CondExprSimple(
+                            Expr(
+                              AddopTermListTerm(
+                                Term(
+                                  MulopFactorListFactor(
+                                    Factor(
+                                      UnaryMinusN(
+                                      ) [UnaryMinusN]
+                                      FactorOptionNumber(
+                                       3
+                                      ) [FactorOptionNumber]
+                                    ) [Factor]
+                                  ) [MulopFactorListFactor]
+                                ) [Term]
+                              ) [AddopTermListTerm]
+                            ) [Expr]
+                          ) [CondExprSimple]
+                        ) [FactorOptionNewY]
+                      ) [Factor]
+                    ) [MulopFactorListFactor]
+                  ) [Term]
+                ) [AddopTermListTerm]
+              ) [Expr]
+            ) [CondExprSimple]
+          ) [DesignatorSignatureAssign]
+        ) [StatementDesignator]
+      ) [StatementListY]
+    ) [MethodDec]
+  ) [MethodDecListY]
+) [Program]
+ERROR 23:16:07,000 - Pristup nedefinisanoj promenljivi: i na liniji 9
+ERROR 23:16:07,001 - Prvi:3 Drugi: 0 na liniji 9
+ERROR 23:16:07,001 - Neadekvatna dodela vrednosti u promenljivu: noObj na liniji 9
+ERROR 23:16:07,001 - Parsiranje NIJE uspesno zavrseno!

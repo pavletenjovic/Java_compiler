@@ -1,0 +1,146 @@
+INFO  19:19:59,262 - Compiling source file: C:\Users\Win 11\Documents\pp1lab.templateAST (1)\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  19:19:59,428 - #2 program
+INFO  19:19:59,428 - #46 test301
+INFO  19:19:59,428 - #46 int
+INFO  19:19:59,430 - #46 niz
+INFO  19:19:59,431 - #21 [
+INFO  19:19:59,431 - #22 ]
+INFO  19:19:59,431 - #23 ;
+INFO  19:19:59,433 - #17 {
+INFO  19:19:59,433 - #5 void
+INFO  19:19:59,434 - #46 main
+INFO  19:19:59,434 - #19 (
+INFO  19:19:59,434 - #20 )
+INFO  19:19:59,435 - #17 {
+INFO  19:19:59,435 - #46 niz
+INFO  19:19:59,440 - #43 =
+INFO  19:19:59,440 - #16 new
+INFO  19:19:59,443 - #46 int
+INFO  19:19:59,443 - #21 [
+INFO  19:19:59,443 - #48 1
+INFO  19:19:59,443 - #27 ?
+INFO  19:19:59,453 - #45 3
+INFO  19:19:59,453 - #25 :
+INFO  19:19:59,453 - #45 5
+INFO  19:19:59,453 - #22 ]
+INFO  19:19:59,454 - #23 ;
+INFO  19:19:59,454 - #18 }
+INFO  19:19:59,454 - #18 }
+INFO  19:19:59,456 - Program(
+  ProgramName(
+   test301
+  ) [ProgramName]
+  DeclListY(
+    DeclListN(
+    ) [DeclListN]
+    DeclV(
+      VarDeclY(
+        Type(
+         int
+        ) [Type]
+        VarList(
+         niz
+          BracketsY(
+          ) [BracketsY]
+          VarListNextN(
+          ) [VarListNextN]
+        ) [VarList]
+      ) [VarDeclY]
+    ) [DeclV]
+  ) [DeclListY]
+  MethodDecListY(
+    MethodDecListN(
+    ) [MethodDecListN]
+    MethodDec(
+      TypeOptionN(
+       main
+      ) [TypeOptionN]
+      FormParsN(
+      ) [FormParsN]
+      VarDeclListN(
+      ) [VarDeclListN]
+      StatementListY(
+        StatementListN(
+        ) [StatementListN]
+        StatementDesignator(
+          DesignatorSignatureAssign(
+            DesignatorVar(
+             niz
+            ) [DesignatorVar]
+            Assignop(
+            ) [Assignop]
+            CondExprSimple(
+              Expr(
+                AddopTermListTerm(
+                  Term(
+                    MulopFactorListFactor(
+                      Factor(
+                        UnaryMinusN(
+                        ) [UnaryMinusN]
+                        FactorOptionNewY(
+                          Type(
+                           int
+                          ) [Type]
+                          CondExprTri(
+                            CondFactExpr(
+                              Expr(
+                                AddopTermListTerm(
+                                  Term(
+                                    MulopFactorListFactor(
+                                      Factor(
+                                        UnaryMinusN(
+                                        ) [UnaryMinusN]
+                                        FactorOptionBoll(
+                                         1
+                                        ) [FactorOptionBoll]
+                                      ) [Factor]
+                                    ) [MulopFactorListFactor]
+                                  ) [Term]
+                                ) [AddopTermListTerm]
+                              ) [Expr]
+                            ) [CondFactExpr]
+                            Expr(
+                              AddopTermListTerm(
+                                Term(
+                                  MulopFactorListFactor(
+                                    Factor(
+                                      UnaryMinusN(
+                                      ) [UnaryMinusN]
+                                      FactorOptionNumber(
+                                       3
+                                      ) [FactorOptionNumber]
+                                    ) [Factor]
+                                  ) [MulopFactorListFactor]
+                                ) [Term]
+                              ) [AddopTermListTerm]
+                            ) [Expr]
+                            Expr(
+                              AddopTermListTerm(
+                                Term(
+                                  MulopFactorListFactor(
+                                    Factor(
+                                      UnaryMinusN(
+                                      ) [UnaryMinusN]
+                                      FactorOptionNumber(
+                                       5
+                                      ) [FactorOptionNumber]
+                                    ) [Factor]
+                                  ) [MulopFactorListFactor]
+                                ) [Term]
+                              ) [AddopTermListTerm]
+                            ) [Expr]
+                          ) [CondExprTri]
+                        ) [FactorOptionNewY]
+                      ) [Factor]
+                    ) [MulopFactorListFactor]
+                  ) [Term]
+                ) [AddopTermListTerm]
+              ) [Expr]
+            ) [CondExprSimple]
+          ) [DesignatorSignatureAssign]
+        ) [StatementDesignator]
+      ) [StatementListY]
+    ) [MethodDec]
+  ) [MethodDecListY]
+) [Program]
+INFO  19:19:59,474 - Parsiranje uspesno zavrseno!

@@ -1,0 +1,207 @@
+INFO  15:11:46,976 - Compiling source file: C:\Users\Win 11\Documents\pp1lab.templateAST (1)\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  15:11:46,999 - #2 program
+INFO  15:11:46,999 - #46 test301
+INFO  15:11:46,999 - #4 enum
+INFO  15:11:47,000 - #46 Broj
+INFO  15:11:47,000 - #17 {
+INFO  15:11:47,000 - #46 NULA
+INFO  15:11:47,000 - #24 ,
+INFO  15:11:47,000 - #46 JEDAN
+INFO  15:11:47,001 - #24 ,
+INFO  15:11:47,001 - #46 PET
+INFO  15:11:47,001 - #43 =
+INFO  15:11:47,001 - #45 5
+INFO  15:11:47,001 - #24 ,
+INFO  15:11:47,001 - #46 DESET
+INFO  15:11:47,001 - #43 =
+INFO  15:11:47,001 - #45 10
+INFO  15:11:47,001 - #18 }
+INFO  15:11:47,001 - #46 int
+INFO  15:11:47,002 - #46 niz
+INFO  15:11:47,002 - #21 [
+INFO  15:11:47,002 - #22 ]
+INFO  15:11:47,002 - #23 ;
+INFO  15:11:47,003 - #17 {
+INFO  15:11:47,003 - #5 void
+INFO  15:11:47,003 - #46 main
+INFO  15:11:47,003 - #19 (
+INFO  15:11:47,003 - #20 )
+INFO  15:11:47,003 - #46 int
+INFO  15:11:47,004 - #46 a
+INFO  15:11:47,004 - #23 ;
+INFO  15:11:47,004 - #17 {
+INFO  15:11:47,004 - #46 a
+INFO  15:11:47,004 - #43 =
+INFO  15:11:47,004 - #46 niz
+INFO  15:11:47,005 - #21 [
+INFO  15:11:47,005 - #45 2
+INFO  15:11:47,005 - #22 ]
+INFO  15:11:47,006 - #23 ;
+INFO  15:11:47,006 - #18 }
+INFO  15:11:47,006 - #18 }
+INFO  15:11:47,007 - Program(
+  ProgramName(
+   test301
+  ) [ProgramName]
+  DeclListY(
+    DeclListY(
+      DeclListN(
+      ) [DeclListN]
+      DeclE(
+        EnumDecl(
+          EnumName(
+           Broj
+          ) [EnumName]
+          EnumDecList(
+           NULA
+            EnumValueN(
+            ) [EnumValueN]
+            EnumListNextY(
+              EnumListNextY(
+                EnumListNextY(
+                  EnumListNextN(
+                  ) [EnumListNextN]
+                 JEDAN
+                  EnumValueN(
+                  ) [EnumValueN]
+                ) [EnumListNextY]
+               PET
+                EnumValueY(
+                 5
+                ) [EnumValueY]
+              ) [EnumListNextY]
+             DESET
+              EnumValueY(
+               10
+              ) [EnumValueY]
+            ) [EnumListNextY]
+          ) [EnumDecList]
+        ) [EnumDecl]
+      ) [DeclE]
+    ) [DeclListY]
+    DeclV(
+      VarDeclY(
+        Type(
+         int
+        ) [Type]
+        VarList(
+         niz
+          BracketsY(
+          ) [BracketsY]
+          VarListNextN(
+          ) [VarListNextN]
+        ) [VarList]
+      ) [VarDeclY]
+    ) [DeclV]
+  ) [DeclListY]
+  MethodDecListY(
+    MethodDecListN(
+    ) [MethodDecListN]
+    MethodDec(
+      TypeOptionN(
+       main
+      ) [TypeOptionN]
+      FormParsN(
+      ) [FormParsN]
+      VarDeclListY(
+        VarDeclListN(
+        ) [VarDeclListN]
+        VarDeclY(
+          Type(
+           int
+          ) [Type]
+          VarList(
+           a
+            BracketsN(
+            ) [BracketsN]
+            VarListNextN(
+            ) [VarListNextN]
+          ) [VarList]
+        ) [VarDeclY]
+      ) [VarDeclListY]
+      StatementListY(
+        StatementListN(
+        ) [StatementListN]
+        StatementDesignator(
+          DesignatorSignatureAssign(
+            DesignatorVar(
+             a
+            ) [DesignatorVar]
+            Assignop(
+            ) [Assignop]
+            CondExprSimple(
+              Expr(
+                AddopTermListTerm(
+                  Term(
+                    MulopFactorListFactor(
+                      Factor(
+                        UnaryMinusN(
+                        ) [UnaryMinusN]
+                        FactorOptionDesignator(
+                          DesignatorArray(
+                           niz
+                            Expr(
+                              AddopTermListTerm(
+                                Term(
+                                  MulopFactorListFactor(
+                                    Factor(
+                                      UnaryMinusN(
+                                      ) [UnaryMinusN]
+                                      FactorOptionNumber(
+                                       2
+                                      ) [FactorOptionNumber]
+                                    ) [Factor]
+                                  ) [MulopFactorListFactor]
+                                ) [Term]
+                              ) [AddopTermListTerm]
+                            ) [Expr]
+                          ) [DesignatorArray]
+                        ) [FactorOptionDesignator]
+                      ) [Factor]
+                    ) [MulopFactorListFactor]
+                  ) [Term]
+                ) [AddopTermListTerm]
+              ) [Expr]
+            ) [CondExprSimple]
+          ) [DesignatorSignatureAssign]
+        ) [StatementDesignator]
+      ) [StatementListY]
+    ) [MethodDec]
+  ) [MethodDecListY]
+) [Program]
+ERROR 15:11:47,011 - Prvi:CondExprSimple(
+  Expr(
+    AddopTermListTerm(
+      Term(
+        MulopFactorListFactor(
+          Factor(
+            UnaryMinusN(
+            ) [UnaryMinusN]
+            FactorOptionDesignator(
+              DesignatorArray(
+               niz
+                Expr(
+                  AddopTermListTerm(
+                    Term(
+                      MulopFactorListFactor(
+                        Factor(
+                          UnaryMinusN(
+                          ) [UnaryMinusN]
+                          FactorOptionNumber(
+                           2
+                          ) [FactorOptionNumber]
+                        ) [Factor]
+                      ) [MulopFactorListFactor]
+                    ) [Term]
+                  ) [AddopTermListTerm]
+                ) [Expr]
+              ) [DesignatorArray]
+            ) [FactorOptionDesignator]
+          ) [Factor]
+        ) [MulopFactorListFactor]
+      ) [Term]
+    ) [AddopTermListTerm]
+  ) [Expr]
+) [CondExprSimple] Drugi: rs.etf.pp1.symboltable.concepts.Struct@50c87b21 na liniji 10
+ERROR 15:11:47,011 - Neadekvatna dodela vrednosti u promenljivu: a na liniji 10
+ERROR 15:11:47,011 - Parsiranje NIJE uspesno zavrseno!

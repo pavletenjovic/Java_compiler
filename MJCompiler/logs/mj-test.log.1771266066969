@@ -1,0 +1,143 @@
+INFO  19:20:28,753 - Compiling source file: C:\Users\Win 11\Documents\pp1lab.templateAST (1)\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  19:20:28,780 - #2 program
+INFO  19:20:28,780 - #46 test301
+INFO  19:20:28,780 - #4 enum
+INFO  19:20:28,780 - #46 Broj
+INFO  19:20:28,780 - #17 {
+INFO  19:20:28,788 - #46 NULA
+INFO  19:20:28,788 - #24 ,
+INFO  19:20:28,793 - #46 JEDAN
+INFO  19:20:28,794 - #18 }
+INFO  19:20:28,794 - #46 int
+INFO  19:20:28,795 - #46 niz
+INFO  19:20:28,795 - #21 [
+INFO  19:20:28,796 - #22 ]
+INFO  19:20:28,796 - #23 ;
+INFO  19:20:28,796 - #17 {
+INFO  19:20:28,796 - #5 void
+INFO  19:20:28,797 - #46 main
+INFO  19:20:28,797 - #19 (
+INFO  19:20:28,797 - #20 )
+INFO  19:20:28,797 - #17 {
+INFO  19:20:28,798 - #46 niz
+INFO  19:20:28,798 - #43 =
+INFO  19:20:28,798 - #16 new
+INFO  19:20:28,799 - #46 int
+INFO  19:20:28,799 - #21 [
+INFO  19:20:28,799 - #46 Broj
+INFO  19:20:28,799 - #26 .
+INFO  19:20:28,799 - #46 JEDAN
+INFO  19:20:28,799 - #22 ]
+INFO  19:20:28,800 - #23 ;
+INFO  19:20:28,800 - #18 }
+INFO  19:20:28,800 - #18 }
+INFO  19:20:28,801 - Program(
+  ProgramName(
+   test301
+  ) [ProgramName]
+  DeclListY(
+    DeclListY(
+      DeclListN(
+      ) [DeclListN]
+      DeclE(
+        EnumDecl(
+          EnumName(
+           Broj
+          ) [EnumName]
+          EnumDecList(
+           NULA
+            EnumValueN(
+            ) [EnumValueN]
+            EnumListNextY(
+              EnumListNextN(
+              ) [EnumListNextN]
+             JEDAN
+              EnumValueN(
+              ) [EnumValueN]
+            ) [EnumListNextY]
+          ) [EnumDecList]
+        ) [EnumDecl]
+      ) [DeclE]
+    ) [DeclListY]
+    DeclV(
+      VarDeclY(
+        Type(
+         int
+        ) [Type]
+        VarList(
+         niz
+          BracketsY(
+          ) [BracketsY]
+          VarListNextN(
+          ) [VarListNextN]
+        ) [VarList]
+      ) [VarDeclY]
+    ) [DeclV]
+  ) [DeclListY]
+  MethodDecListY(
+    MethodDecListN(
+    ) [MethodDecListN]
+    MethodDec(
+      TypeOptionN(
+       main
+      ) [TypeOptionN]
+      FormParsN(
+      ) [FormParsN]
+      VarDeclListN(
+      ) [VarDeclListN]
+      StatementListY(
+        StatementListN(
+        ) [StatementListN]
+        StatementDesignator(
+          DesignatorSignatureAssign(
+            DesignatorVar(
+             niz
+            ) [DesignatorVar]
+            Assignop(
+            ) [Assignop]
+            CondExprSimple(
+              Expr(
+                AddopTermListTerm(
+                  Term(
+                    MulopFactorListFactor(
+                      Factor(
+                        UnaryMinusN(
+                        ) [UnaryMinusN]
+                        FactorOptionNewY(
+                          Type(
+                           int
+                          ) [Type]
+                          CondExprSimple(
+                            Expr(
+                              AddopTermListTerm(
+                                Term(
+                                  MulopFactorListFactor(
+                                    Factor(
+                                      UnaryMinusN(
+                                      ) [UnaryMinusN]
+                                      FactorOptionDesignator(
+                                        DesignatorEnum(
+                                         Broj
+                                         JEDAN
+                                        ) [DesignatorEnum]
+                                      ) [FactorOptionDesignator]
+                                    ) [Factor]
+                                  ) [MulopFactorListFactor]
+                                ) [Term]
+                              ) [AddopTermListTerm]
+                            ) [Expr]
+                          ) [CondExprSimple]
+                        ) [FactorOptionNewY]
+                      ) [Factor]
+                    ) [MulopFactorListFactor]
+                  ) [Term]
+                ) [AddopTermListTerm]
+              ) [Expr]
+            ) [CondExprSimple]
+          ) [DesignatorSignatureAssign]
+        ) [StatementDesignator]
+      ) [StatementListY]
+    ) [MethodDec]
+  ) [MethodDecListY]
+) [Program]
+INFO  19:20:28,805 - Parsiranje uspesno zavrseno!

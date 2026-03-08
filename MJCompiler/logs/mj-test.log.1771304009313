@@ -1,0 +1,146 @@
+INFO  05:52:58,323 - Compiling source file: C:\Users\Win 11\Documents\pp1lab.templateAST (1)\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  05:52:58,472 - #2 program
+INFO  05:52:58,472 - #46 MJ
+INFO  05:52:58,472 - #3 const
+INFO  05:52:58,481 - #46 int
+INFO  05:52:58,481 - #46 pi
+INFO  05:52:58,482 - #43 =
+INFO  05:52:58,482 - #45 3
+INFO  05:52:58,482 - #23 ;
+INFO  05:52:58,490 - #46 int
+INFO  05:52:58,491 - #46 x
+INFO  05:52:58,491 - #24 ,
+INFO  05:52:58,496 - #46 y
+INFO  05:52:58,496 - #21 [
+INFO  05:52:58,497 - #22 ]
+INFO  05:52:58,497 - #23 ;
+INFO  05:52:58,498 - #17 {
+INFO  05:52:58,498 - #5 void
+INFO  05:52:58,499 - #46 main
+INFO  05:52:58,499 - #19 (
+INFO  05:52:58,499 - #20 )
+INFO  05:52:58,500 - #46 int
+INFO  05:52:58,500 - #46 a
+INFO  05:52:58,500 - #24 ,
+INFO  05:52:58,500 - #46 b
+INFO  05:52:58,500 - #24 ,
+INFO  05:52:58,500 - #46 c
+INFO  05:52:58,500 - #21 [
+INFO  05:52:58,500 - #22 ]
+INFO  05:52:58,500 - #23 ;
+INFO  05:52:58,501 - #17 {
+INFO  05:52:58,501 - #12 print
+INFO  05:52:58,501 - #19 (
+INFO  05:52:58,501 - #45 1
+INFO  05:52:58,506 - #20 )
+INFO  05:52:58,515 - #23 ;
+INFO  05:52:58,515 - #18 }
+INFO  05:52:58,515 - #18 }
+INFO  05:52:58,517 - Program(
+  ProgramName(
+   MJ
+  ) [ProgramName]
+  DeclListY(
+    DeclListY(
+      DeclListN(
+      ) [DeclListN]
+      DeclC(
+        ConstDecl(
+          Type(
+           int
+          ) [Type]
+          ConstList(
+           pi
+            ConstN(
+             3
+            ) [ConstN]
+            ConstListNextN(
+            ) [ConstListNextN]
+          ) [ConstList]
+        ) [ConstDecl]
+      ) [DeclC]
+    ) [DeclListY]
+    DeclV(
+      VarDeclY(
+        Type(
+         int
+        ) [Type]
+        VarList(
+         x
+          BracketsN(
+          ) [BracketsN]
+          VarListNextY(
+            VarListNextN(
+            ) [VarListNextN]
+           y
+            BracketsY(
+            ) [BracketsY]
+          ) [VarListNextY]
+        ) [VarList]
+      ) [VarDeclY]
+    ) [DeclV]
+  ) [DeclListY]
+  MethodDecListY(
+    MethodDecListN(
+    ) [MethodDecListN]
+    MethodDec(
+      TypeOptionN(
+       main
+      ) [TypeOptionN]
+      FormParsN(
+      ) [FormParsN]
+      VarDeclListY(
+        VarDeclListN(
+        ) [VarDeclListN]
+        VarDeclY(
+          Type(
+           int
+          ) [Type]
+          VarList(
+           a
+            BracketsN(
+            ) [BracketsN]
+            VarListNextY(
+              VarListNextY(
+                VarListNextN(
+                ) [VarListNextN]
+               b
+                BracketsN(
+                ) [BracketsN]
+              ) [VarListNextY]
+             c
+              BracketsY(
+              ) [BracketsY]
+            ) [VarListNextY]
+          ) [VarList]
+        ) [VarDeclY]
+      ) [VarDeclListY]
+      StatementListY(
+        StatementListN(
+        ) [StatementListN]
+        StatementPrint(
+          CondExprSimple(
+            Expr(
+              AddopTermListTerm(
+                Term(
+                  MulopFactorListFactor(
+                    Factor(
+                      UnaryMinusN(
+                      ) [UnaryMinusN]
+                      FactorOptionNumber(
+                       1
+                      ) [FactorOptionNumber]
+                    ) [Factor]
+                  ) [MulopFactorListFactor]
+                ) [Term]
+              ) [AddopTermListTerm]
+            ) [Expr]
+          ) [CondExprSimple]
+          PrintOptionalN(
+          ) [PrintOptionalN]
+        ) [StatementPrint]
+      ) [StatementListY]
+    ) [MethodDec]
+  ) [MethodDecListY]
+) [Program]
+INFO  05:52:58,534 - Generisanje uspesno zavrseno!

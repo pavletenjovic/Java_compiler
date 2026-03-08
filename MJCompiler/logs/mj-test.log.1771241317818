@@ -1,0 +1,286 @@
+INFO  12:27:48,032 - Compiling source file: C:\Users\Win 11\Documents\pp1lab.templateAST (1)\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  12:27:48,058 - #2 program
+INFO  12:27:48,058 - #46 test302
+INFO  12:27:48,058 - #3 const
+INFO  12:27:48,059 - #46 int
+INFO  12:27:48,059 - #46 jedan
+INFO  12:27:48,059 - #43 =
+INFO  12:27:48,059 - #45 1
+INFO  12:27:48,059 - #23 ;
+INFO  12:27:48,060 - #4 enum
+INFO  12:27:48,060 - #46 Broj
+INFO  12:27:48,060 - #17 {
+INFO  12:27:48,060 - #46 NULA
+INFO  12:27:48,060 - #24 ,
+INFO  12:27:48,062 - #46 JEDAN
+INFO  12:27:48,062 - #24 ,
+INFO  12:27:48,062 - #46 DVA
+INFO  12:27:48,062 - #43 =
+INFO  12:27:48,062 - #45 5
+INFO  12:27:48,062 - #24 ,
+INFO  12:27:48,062 - #46 TRI
+INFO  12:27:48,062 - #18 }
+INFO  12:27:48,063 - #46 int
+INFO  12:27:48,063 - #46 i
+INFO  12:27:48,063 - #23 ;
+INFO  12:27:48,064 - #46 bool
+INFO  12:27:48,064 - #46 ibool
+INFO  12:27:48,064 - #23 ;
+INFO  12:27:48,064 - #46 int
+INFO  12:27:48,064 - #46 niz
+INFO  12:27:48,064 - #21 [
+INFO  12:27:48,064 - #22 ]
+INFO  12:27:48,064 - #23 ;
+INFO  12:27:48,065 - #17 {
+INFO  12:27:48,065 - #5 void
+INFO  12:27:48,065 - #46 main
+INFO  12:27:48,065 - #19 (
+INFO  12:27:48,065 - #20 )
+INFO  12:27:48,065 - #46 int
+INFO  12:27:48,065 - #46 a
+INFO  12:27:48,065 - #21 [
+INFO  12:27:48,065 - #22 ]
+INFO  12:27:48,065 - #23 ;
+INFO  12:27:48,065 - #46 int
+INFO  12:27:48,066 - #46 c
+INFO  12:27:48,066 - #23 ;
+INFO  12:27:48,066 - #17 {
+INFO  12:27:48,066 - #46 ibool
+INFO  12:27:48,066 - #43 =
+INFO  12:27:48,066 - #48 1
+INFO  12:27:48,067 - #23 ;
+INFO  12:27:48,068 - #46 i
+INFO  12:27:48,068 - #43 =
+INFO  12:27:48,068 - #46 a
+INFO  12:27:48,068 - #21 [
+INFO  12:27:48,068 - #45 5
+INFO  12:27:48,068 - #22 ]
+INFO  12:27:48,068 - #23 ;
+INFO  12:27:48,068 - #18 }
+INFO  12:27:48,069 - #18 }
+INFO  12:27:48,070 - Program(
+  ProgramName(
+   test302
+  ) [ProgramName]
+  DeclListY(
+    DeclListY(
+      DeclListY(
+        DeclListY(
+          DeclListY(
+            DeclListN(
+            ) [DeclListN]
+            DeclC(
+              ConstDecl(
+                Type(
+                 int
+                ) [Type]
+                ConstList(
+                 jedan
+                  ConstN(
+                   1
+                  ) [ConstN]
+                  ConstListNextN(
+                  ) [ConstListNextN]
+                ) [ConstList]
+              ) [ConstDecl]
+            ) [DeclC]
+          ) [DeclListY]
+          DeclE(
+            EnumDecl(
+              EnumName(
+               Broj
+              ) [EnumName]
+              EnumDecList(
+               NULA
+                EnumValueN(
+                ) [EnumValueN]
+                EnumListNextY(
+                  EnumListNextY(
+                    EnumListNextY(
+                      EnumListNextN(
+                      ) [EnumListNextN]
+                     JEDAN
+                      EnumValueN(
+                      ) [EnumValueN]
+                    ) [EnumListNextY]
+                   DVA
+                    EnumValueY(
+                     5
+                    ) [EnumValueY]
+                  ) [EnumListNextY]
+                 TRI
+                  EnumValueN(
+                  ) [EnumValueN]
+                ) [EnumListNextY]
+              ) [EnumDecList]
+            ) [EnumDecl]
+          ) [DeclE]
+        ) [DeclListY]
+        DeclV(
+          VarDeclY(
+            Type(
+             int
+            ) [Type]
+            VarList(
+             i
+              BracketsN(
+              ) [BracketsN]
+              VarListNextN(
+              ) [VarListNextN]
+            ) [VarList]
+          ) [VarDeclY]
+        ) [DeclV]
+      ) [DeclListY]
+      DeclV(
+        VarDeclY(
+          Type(
+           bool
+          ) [Type]
+          VarList(
+           ibool
+            BracketsN(
+            ) [BracketsN]
+            VarListNextN(
+            ) [VarListNextN]
+          ) [VarList]
+        ) [VarDeclY]
+      ) [DeclV]
+    ) [DeclListY]
+    DeclV(
+      VarDeclY(
+        Type(
+         int
+        ) [Type]
+        VarList(
+         niz
+          BracketsY(
+          ) [BracketsY]
+          VarListNextN(
+          ) [VarListNextN]
+        ) [VarList]
+      ) [VarDeclY]
+    ) [DeclV]
+  ) [DeclListY]
+  MethodDecListY(
+    MethodDecListN(
+    ) [MethodDecListN]
+    MethodDec(
+      TypeOptionN(
+       main
+      ) [TypeOptionN]
+      FormParsN(
+      ) [FormParsN]
+      VarDeclListY(
+        VarDeclListY(
+          VarDeclListN(
+          ) [VarDeclListN]
+          VarDeclY(
+            Type(
+             int
+            ) [Type]
+            VarList(
+             a
+              BracketsY(
+              ) [BracketsY]
+              VarListNextN(
+              ) [VarListNextN]
+            ) [VarList]
+          ) [VarDeclY]
+        ) [VarDeclListY]
+        VarDeclY(
+          Type(
+           int
+          ) [Type]
+          VarList(
+           c
+            BracketsN(
+            ) [BracketsN]
+            VarListNextN(
+            ) [VarListNextN]
+          ) [VarList]
+        ) [VarDeclY]
+      ) [VarDeclListY]
+      StatementListY(
+        StatementListY(
+          StatementListN(
+          ) [StatementListN]
+          StatementDesignator(
+            DesignatorStatement(
+              DesignatorVar(
+               ibool
+              ) [DesignatorVar]
+              DesignatorSignatureAssign(
+                Assignop(
+                ) [Assignop]
+                CondExprSimple(
+                  Expr(
+                    Term(
+                      Factor(
+                        UnaryMinusN(
+                        ) [UnaryMinusN]
+                        FactorOptionBoll(
+                         1
+                        ) [FactorOptionBoll]
+                      ) [Factor]
+                      MulopFactorListOptionalN(
+                      ) [MulopFactorListOptionalN]
+                    ) [Term]
+                    AddopTermListN(
+                    ) [AddopTermListN]
+                  ) [Expr]
+                ) [CondExprSimple]
+              ) [DesignatorSignatureAssign]
+            ) [DesignatorStatement]
+          ) [StatementDesignator]
+        ) [StatementListY]
+        StatementDesignator(
+          DesignatorStatement(
+            DesignatorVar(
+             i
+            ) [DesignatorVar]
+            DesignatorSignatureAssign(
+              Assignop(
+              ) [Assignop]
+              CondExprSimple(
+                Expr(
+                  Term(
+                    Factor(
+                      UnaryMinusN(
+                      ) [UnaryMinusN]
+                      FactorOptionDesignator(
+                        DesignatorArray(
+                         a
+                          Expr(
+                            Term(
+                              Factor(
+                                UnaryMinusN(
+                                ) [UnaryMinusN]
+                                FactorOptionNumber(
+                                 5
+                                ) [FactorOptionNumber]
+                              ) [Factor]
+                              MulopFactorListOptionalN(
+                              ) [MulopFactorListOptionalN]
+                            ) [Term]
+                            AddopTermListN(
+                            ) [AddopTermListN]
+                          ) [Expr]
+                        ) [DesignatorArray]
+                      ) [FactorOptionDesignator]
+                    ) [Factor]
+                    MulopFactorListOptionalN(
+                    ) [MulopFactorListOptionalN]
+                  ) [Term]
+                  AddopTermListN(
+                  ) [AddopTermListN]
+                ) [Expr]
+              ) [CondExprSimple]
+            ) [DesignatorSignatureAssign]
+          ) [DesignatorStatement]
+        ) [StatementDesignator]
+      ) [StatementListY]
+    ) [MethodDec]
+  ) [MethodDecListY]
+) [Program]
+ERROR 12:27:48,074 - Indeks niza mora biti int. na liniji 7
+ERROR 12:27:48,075 - Parsiranje NIJE uspesno zavrseno!
