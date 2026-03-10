@@ -1,850 +1,207 @@
-codeSize=676
-dataSize=3
-mainPC=79
-0: enter 1 1
-3: load_0
-4: exit
-5: return
-6: enter 1 1
-9: load_0
-10: arraylength
-11: exit
-12: return
-13: enter 2 2
-16: load_0
-17: load_1
-18: add
-19: exit
-20: return
-21: exit
-22: return
-23: enter 2 3
-26: load_1
-27: const_1
-28: jne 6 (=34)
-31: jmp 6 (=37)
-34: jmp 8 (=42)
-37: const_1
-38: store_2
-39: jmp 16 (=55)
-42: load_1
-43: const_2
-44: jne 6 (=50)
-47: jmp 6 (=53)
-50: jmp 5 (=55)
-53: load_0
-54: store_2
-55: load_0
-56: load_2
-57: call -44 (=13)
-60: exit
-61: return
-62: exit
-63: return
-64: enter 0 0
-67: const 118
-72: const_0
-73: bprint
-74: const_0
-75: exit
-76: return
-77: exit
-78: return
-79: enter 0 0
-82: const_1
-83: const_1
-84: jeq 6 (=90)
-87: jmp 6 (=93)
-90: jmp 14 (=104)
-93: const 6
-98: neg
-99: const_0
-100: print
-101: jmp 6 (=107)
-104: const_0
-105: const_0
-106: print
-107: const_0
-108: putstatic 1
-111: const_0
-112: putstatic 0
-115: const_0
-116: putstatic 0
-119: getstatic 0
-122: const_5
-123: jge 6 (=129)
-126: jmp 6 (=132)
-129: jmp -129 (=0)
-132: jmp 14 (=146)
-135: getstatic 0
-138: const_1
-139: add
-140: putstatic 0
-143: jmp -24 (=119)
-146: getstatic 0
-149: const_2
-150: jne 6 (=156)
-153: jmp 6 (=159)
-156: jmp 7 (=163)
-159: const_1
-160: putstatic 1
-163: getstatic 1
-166: const_0
-167: jeq 6 (=173)
-170: jmp 6 (=176)
-173: jmp 26 (=199)
-176: getstatic 0
-179: const_5
-180: jne 6 (=186)
-183: jmp 6 (=189)
-186: jmp 9 (=195)
-189: const_1
-190: const_0
-191: print
-192: jmp 7 (=199)
-195: const_1
-196: neg
-197: const_0
-198: print
-199: const_3
-200: newarray 1
-202: putstatic 2
-205: getstatic 2
-208: const_0
-209: const_1
-210: astore
-211: getstatic 2
-214: const_1
-215: const_2
-216: astore
-217: getstatic 2
-220: const_2
-221: getstatic 2
-224: const_1
-225: aload
-226: getstatic 2
-229: const_0
-230: aload
-231: call -218 (=13)
-234: const_1
-235: add
-236: astore
-237: getstatic 2
-240: const_2
-241: aload
-242: const_4
-243: jne 6 (=249)
-246: jmp 16 (=262)
-249: call -185 (=64)
-252: const_0
-253: jeq 6 (=259)
-256: jmp 6 (=262)
-259: jmp 16 (=275)
-262: const 65
-267: call -267 (=0)
-270: const_0
-271: print
-272: jmp 13 (=285)
-275: const 97
-280: call -280 (=0)
-283: const_0
-284: print
-285: const 10
-290: const_0
-291: bprint
-292: const_0
-293: putstatic 0
-296: getstatic 0
-299: const 10
-304: jge 6 (=310)
-307: jmp 6 (=313)
-310: jmp -310 (=0)
-313: jmp 6 (=319)
-316: jmp -20 (=296)
-319: getstatic 0
-322: const_3
-323: jne 6 (=329)
-326: jmp 6 (=332)
-329: jmp 14 (=343)
-332: getstatic 0
-335: const_1
-336: add
-337: putstatic 0
-340: jmp -340 (=0)
-343: getstatic 0
-346: const_4
-347: jne 6 (=353)
-350: jmp 6 (=356)
-353: jmp 6 (=359)
-356: jmp -356 (=0)
-359: getstatic 0
-362: const_1
-363: call -340 (=23)
-366: putstatic 0
-369: getstatic 0
-372: const_3
-373: jne 13 (=386)
-376: call -312 (=64)
-379: const_0
-380: jeq 6 (=386)
-383: jmp 6 (=389)
-386: jmp 9 (=395)
-389: const_4
-390: const_0
-391: print
-392: jmp 7 (=399)
-395: const_4
-396: neg
-397: const_0
-398: print
-399: getstatic 2
-402: const_0
-403: read
-404: astore
-405: getstatic 2
-408: const_1
-409: read
-410: astore
-411: getstatic 2
-414: const_2
-415: read
-416: astore
-417: const 10
-422: const_0
-423: bprint
-424: getstatic 2
-427: const_0
-428: aload
-429: getstatic 2
-432: const_1
-433: aload
-434: call -421 (=13)
-437: getstatic 2
-440: const_2
-441: aload
-442: call -429 (=13)
-445: const_0
-446: print
-447: const_0
-448: putstatic 0
-451: getstatic 0
-454: getstatic 2
-457: arraylength
-458: jge 6 (=464)
-461: jmp 6 (=467)
-464: jmp -464 (=0)
-467: jmp 14 (=481)
-470: getstatic 0
-473: const_1
-474: add
-475: putstatic 0
-478: jmp -27 (=451)
-481: getstatic 0
-484: const_0
-485: print
-486: const 10
-491: const_0
-492: bprint
-493: getstatic 2
-496: const_2
-497: aload
-498: const_2
-499: call -476 (=23)
-502: const_0
-503: print
-504: call -440 (=64)
-507: const_0
-508: jeq 11 (=519)
-511: const 116
-516: jmp 8 (=524)
-519: const 102
-524: const_0
-525: bprint
-526: const_0
-527: putstatic 0
-530: getstatic 0
-533: const 10
-538: jge 6 (=544)
-541: jmp 6 (=547)
-544: jmp -544 (=0)
-547: jmp 14 (=561)
-550: getstatic 0
-553: const_1
-554: add
-555: putstatic 0
-558: jmp -28 (=530)
-561: getstatic 0
-564: const_1
-565: add
-566: dup
-567: const_1
-568: jne 12 (=580)
-571: const_1
-572: const_0
-573: print
-574: jmp 92 (=666)
-577: jmp 8 (=585)
-580: dup
-581: const_3
-582: jne 9 (=591)
-585: const_3
-586: const_0
-587: print
-588: jmp 8 (=596)
-591: dup
-592: const_2
-593: jne 12 (=605)
-596: const_2
-597: const_0
-598: print
-599: jmp 67 (=666)
-602: jmp 8 (=610)
-605: dup
-606: const_5
-607: jne 21 (=628)
-610: const_5
-611: const_0
-612: print
-613: getstatic 0
-616: const_2
-617: add
-618: putstatic 0
-621: pop
-622: jmp -622 (=0)
-625: jmp 12 (=637)
-628: dup
-629: const 6
-634: jne 13 (=647)
-637: const 6
-642: const_0
-643: print
-644: jmp 12 (=656)
-647: dup
-648: const 9
-653: jne 13 (=666)
-656: const 9
-661: const_0
-662: print
-663: jmp 3 (=666)
-666: pop
-667: const 10
-672: const_0
-673: bprint
-674: exit
-675: return
+package rs.etf.pp1.mj.runtime;
 
-  pos: instruction operands
-     | expressionstack
------------------------------
-   79: enter       0 0 
-     | 
-   82: const_1     
-     | 1 
-   83: const_1     
-     | 1 1 
-   84: jeq         6 
-     | 
-   90: jmp         14 
-     | 
-  104: const_0     
-     | 0 
-  105: const_0     
-     | 0 0 
-  106: print       0
-     | 
-  107: const_0     
-     | 0 
-  108: putstatic   1 
-     | 
-  111: const_0     
-     | 0 
-  112: putstatic   0 
-     | 
-  115: const_0     
-     | 0 
-  116: putstatic   0 
-     | 
-  119: getstatic   0 
-     | 0 
-  122: const_5     
-     | 0 5 
-  123: jge         6 
-     | 
-  126: jmp         6 
-     | 
-  132: jmp         14 
-     | 
-  146: getstatic   0 
-     | 0 
-  149: const_2     
-     | 0 2 
-  150: jne         6 
-     | 
-  156: jmp         7 
-     | 
-  163: getstatic   1 
-     | 0 
-  166: const_0     
-     | 0 0 
-  167: jeq         6 
-     | 
-  173: jmp         26 
-     | 
-  199: const_3     
-     | 3 
-  200: newarray    1 
-     | 2 
-  202: putstatic   2 
-     | 
-  205: getstatic   2 
-     | 2 
-  208: const_0     
-     | 2 0 
-  209: const_1     
-     | 2 0 1 
-  210: astore      
-Arraylength = 3
-Address = 2
-Index = 0
-Value = 1
+import java.io.*;
 
-     | 
-  211: getstatic   2 
-     | 2 
-  214: const_1     
-     | 2 1 
-  215: const_2     
-     | 2 1 2 
-  216: astore      
-Arraylength = 3
-Address = 2
-Index = 1
-Value = 2
+import rs.etf.pp1.symboltable.Tab;
+import rs.etf.pp1.symboltable.concepts.Obj;
+import rs.etf.pp1.symboltable.concepts.Struct;
+/****************************************************
+*  Generator koda za mikrojavu
+****************************************************/
+public class Code {
+  public static byte[] buf = new byte[8192]; // prostor za smestanje prevedenog programskog koda
+  private static final int bufSize = 8192;  
+  public static int pc = 0,      // tekuca adresa za smestanje prevedene instrukcije 
+                    mainPc=-1,   // adresa main rutine
+                    dataSize=0;  // velicina oblasti globalnih podataka
+  public static boolean greska=false; // flag da li je prijavljena neka  greske  
+  public static final int		// instruction codes
+	load        =  1,
+	load_n      =  2,
+	load_1      =  3,
+	load_2      =  4,
+	load_3      =  5,
+	store       =  6,
+	store_n     =  7,
+	store_1     =  8,
+	store_2     =  9,
+	store_3     = 10,
+	getstatic   = 11,
+	putstatic   = 12,
+	getfield    = 13,
+	putfield    = 14,
+	const_n     = 15,
+	const_1     = 16,
+	const_2     = 17,
+	const_3     = 18,
+	const_4     = 19,
+	const_5     = 20,
+	const_m1    = 21,
+	const_      = 22,
+	add         = 23,
+	sub         = 24,
+	mul         = 25,
+	div         = 26,
+	rem         = 27,
+	neg         = 28,
+	shl         = 29,
+	shr         = 30,
+	inc         = 31,
+	new_        = 32,
+	newarray    = 33,
+	aload       = 34,
+	astore      = 35,
+	baload      = 36,
+	bastore     = 37,
+	arraylength = 38,
+	pop         = 39,
+	dup         = 40,
+	dup2        = 41,
+	jmp         = 42,
+	jcc         = 43,		//  ... 48
+	call        = 49,
+	return_     = 50,
+	enter       = 51,
+	exit        = 52,
+	read        = 53,
+	print       = 54,
+	bread       = 55,
+	bprint      = 56,
+	trap        = 57,
+	invokevirtual = 58;
+  public static int eq=0, ne=1, lt=2, le=3, gt=4, ge=5;
+  public static int inverse[]={ne, eq, ge, gt, le, lt}; //  maps op to the inverse of top
+  
+	public static void error (String err) {
+        System.err.println(err);
+        Code.greska=true;
+	}
+  
+  public static void put (int x)  {
+		if (pc >= bufSize) {
+			if (pc == bufSize) error("Greska: Prevelik objektni kod");
+			pc++;
+		} else
+			buf[pc++] = (byte)x;
+	}
+  public static void put2 (int x) { put(x>>8); put(x);  }
+  public static void put4 (int x) { put2(x>>16); put2(x); }
 
-     | 
-  217: getstatic   2 
-     | 2 
-  220: const_2     
-     | 2 2 
-  221: getstatic   2 
-     | 2 2 2 
-  224: const_1     
-     | 2 2 2 1 
-  225: aload       
-     | 2 2 2 
-  226: getstatic   2 
-     | 2 2 2 2 
-  229: const_0     
-     | 2 2 2 2 0 
-  230: aload       
-     | 2 2 2 1 
-  231: call        -218 
-     | 2 2 2 1 
-   13: enter       2 2 
-     | 2 2 
-   16: load_0      
-     | 2 2 2 
-   17: load_1      
-     | 2 2 2 1 
-   18: add         
-     | 2 2 3 
-   19: exit        
-     | 2 2 3 
-   20: return      
-     | 2 2 3 
-  234: const_1     
-     | 2 2 3 1 
-  235: add         
-     | 2 2 4 
-  236: astore      
-Arraylength = 3
-Address = 2
-Index = 2
-Value = 4
+  public static void put2 (int pos, int x)
+  {
+    int stari=pc;
+    pc=pos;
+    put2(x);
+    pc=stari;
+  }
+  public static int get (int pos) { return buf[pos];  }
+  public static int get2 (int pos)  { return (get(pos)<<8)+(get(pos+1)&0xFF);  }
 
-     | 
-  237: getstatic   2 
-     | 2 
-  240: const_2     
-     | 2 2 
-  241: aload       
-     | 4 
-  242: const_4     
-     | 4 4 
-  243: jne         6 
-     | 
-  246: jmp         16 
-     | 
-  262: const       65 
-     | 65 
-  267: call        -267 
-     | 65 
-    0: enter       1 1 
-     | 
-    3: load_0      
-     | 65 
-    4: exit        
-     | 65 
-    5: return      
-     | 65 
-  270: const_0     
-     | 65 0 
-  271: print       65
-     | 
-  272: jmp         13 
-     | 
-  285: const       10 
-     | 10 
-  290: const_0     
-     | 10 0 
-  291: bprint      
+  public static void load (Obj o) {
+    switch (o.getKind()) {
+    	
+      case Obj.Con:
+        if (o.getType() == Tab.nullType) 
+            put(const_n + 0);
+        else 
+            loadConst(o.getAdr()); 
+        break;
+        
+      case Obj.Var:
+        if (o.getLevel()==0) { // global variable 
+        	  put(getstatic); put2(o.getAdr()); 
+        	  break; 
+        }
+        // local variable
+        if (0 <= o.getAdr() && o.getAdr() <= 3) 
+            put(load_n + o.getAdr());
+        else { 
+        	 put(load); put(o.getAdr()); 
+        } 
+        break;
+        
+      case Obj.Fld:
+        put(getfield); put2(o.getAdr()); 
+        break;
 
-     | 
-  292: const_0     
-     | 0 
-  293: putstatic   0 
-     | 
-  296: getstatic   0 
-     | 0 
-  299: const       10 
-     | 0 10 
-  304: jge         6 
-     | 
-  307: jmp         6 
-     | 
-  313: jmp         6 
-     | 
-  319: getstatic   0 
-     | 0 
-  322: const_3     
-     | 0 3 
-  323: jne         6 
-     | 
-  329: jmp         14 
-     | 
-  343: getstatic   0 
-     | 0 
-  346: const_4     
-     | 0 4 
-  347: jne         6 
-     | 
-  353: jmp         6 
-     | 
-  359: getstatic   0 
-     | 0 
-  362: const_1     
-     | 0 1 
-  363: call        -340 
-     | 0 1 
-   23: enter       2 3 
-     | 
-   26: load_1      
-     | 1 
-   27: const_1     
-     | 1 1 
-   28: jne         6 
-     | 
-   31: jmp         6 
-     | 
-   37: const_1     
-     | 1 
-   38: store_2     
-     | 
-   39: jmp         16 
-     | 
-   55: load_0      
-     | 0 
-   56: load_2      
-     | 0 1 
-   57: call        -44 
-     | 0 1 
-   13: enter       2 2 
-     | 
-   16: load_0      
-     | 0 
-   17: load_1      
-     | 0 1 
-   18: add         
-     | 1 
-   19: exit        
-     | 1 
-   20: return      
-     | 1 
-   60: exit        
-     | 1 
-   61: return      
-     | 1 
-  366: putstatic   0 
-     | 
-  369: getstatic   0 
-     | 1 
-  372: const_3     
-     | 1 3 
-  373: jne         13 
-     | 
-  386: jmp         9 
-     | 
-  395: const_4     
-     | 4 
-  396: neg         
-     | -4 
-  397: const_0     
-     | -4 0 
-  398: print       -4
-     | 
-  399: getstatic   2 
-     | 2 
-  402: const_0     
-     | 2 0 
-  403: read        
-     | 2 0 7 
-  404: astore      
-Arraylength = 3
-Address = 2
-Index = 0
-Value = 7
+      case Obj.Elem:
+        if (o.getType().getKind() == Struct.Char) put(baload);
+        else put(aload); 
+        break;
 
-     | 
-  405: getstatic   2 
-     | 2 
-  408: const_1     
-     | 2 1 
-  409: read        
-     | 2 1 13 
-  410: astore      
-Arraylength = 3
-Address = 2
-Index = 1
-Value = 13
+      default:  
+         error("Greska: nelegalan operand u Code.load");
+    }
+  }
+  
+  public static void loadConst (int n) {
+    if (0<=n&&n<=5) put (const_n+n);
+    else if (n==-1) put (const_m1);
+    else  { put (const_); put4 (n); }
+  }
+  
+  
+  /**
+   * @param x
+   */
+  public static void store(Obj o) {
+  	switch (o.getKind()) {
 
-     | 
-  411: getstatic   2 
-     | 2 
-  414: const_2     
-     | 2 2 
-  415: read        
-     | 2 2 15 
-  416: astore      
-Arraylength = 3
-Address = 2
-Index = 2
-Value = 15
+      case Obj.Var:
+        if (o.getLevel()==0) { // global variable 
+            put(putstatic); put2(o.getAdr()); 
+            break;
+        }
+        // local variable 
+        if (0 <= o.getAdr() && o.getAdr() <= 3) 
+            put(store_n + o.getAdr());
+        else { 
+        	  put(store); put(o.getAdr()); 
+        } 
+        break;
 
-     | 
-  417: const       10 
-     | 10 
-  422: const_0     
-     | 10 0 
-  423: bprint      
-
-     | 
-  424: getstatic   2 
-     | 2 
-  427: const_0     
-     | 2 0 
-  428: aload       
-     | 7 
-  429: getstatic   2 
-     | 7 2 
-  432: const_1     
-     | 7 2 1 
-  433: aload       
-     | 7 13 
-  434: call        -421 
-     | 7 13 
-   13: enter       2 2 
-     | 
-   16: load_0      
-     | 7 
-   17: load_1      
-     | 7 13 
-   18: add         
-     | 20 
-   19: exit        
-     | 20 
-   20: return      
-     | 20 
-  437: getstatic   2 
-     | 20 2 
-  440: const_2     
-     | 20 2 2 
-  441: aload       
-     | 20 15 
-  442: call        -429 
-     | 20 15 
-   13: enter       2 2 
-     | 
-   16: load_0      
-     | 20 
-   17: load_1      
-     | 20 15 
-   18: add         
-     | 35 
-   19: exit        
-     | 35 
-   20: return      
-     | 35 
-  445: const_0     
-     | 35 0 
-  446: print       35
-     | 
-  447: const_0     
-     | 0 
-  448: putstatic   0 
-     | 
-  451: getstatic   0 
-     | 0 
-  454: getstatic   2 
-     | 0 2 
-  457: arraylength 
-     | 0 3 
-  458: jge         6 
-     | 
-  461: jmp         6 
-     | 
-  467: jmp         14 
-     | 
-  481: getstatic   0 
-     | 0 
-  484: const_0     
-     | 0 0 
-  485: print       0
-     | 
-  486: const       10 
-     | 10 
-  491: const_0     
-     | 10 0 
-  492: bprint      
-
-     | 
-  493: getstatic   2 
-     | 2 
-  496: const_2     
-     | 2 2 
-  497: aload       
-     | 15 
-  498: const_2     
-     | 15 2 
-  499: call        -476 
-     | 15 2 
-   23: enter       2 3 
-     | 
-   26: load_1      
-     | 2 
-   27: const_1     
-     | 2 1 
-   28: jne         6 
-     | 
-   34: jmp         8 
-     | 
-   42: load_1      
-     | 2 
-   43: const_2     
-     | 2 2 
-   44: jne         6 
-     | 
-   47: jmp         6 
-     | 
-   53: load_0      
-     | 15 
-   54: store_2     
-     | 
-   55: load_0      
-     | 15 
-   56: load_2      
-     | 15 15 
-   57: call        -44 
-     | 15 15 
-   13: enter       2 2 
-     | 
-   16: load_0      
-     | 15 
-   17: load_1      
-     | 15 15 
-   18: add         
-     | 30 
-   19: exit        
-     | 30 
-   20: return      
-     | 30 
-   60: exit        
-     | 30 
-   61: return      
-     | 30 
-  502: const_0     
-     | 30 0 
-  503: print       30
-     | 
-  504: call        -440 
-     | 
-   64: enter       0 0 
-     | 
-   67: const       118 
-     | 118 
-   72: const_0     
-     | 118 0 
-   73: bprint      v
-     | 
-   74: const_0     
-     | 0 
-   75: exit        
-     | 0 
-   76: return      
-     | 0 
-  507: const_0     
-     | 0 0 
-  508: jeq         11 
-     | 
-  519: const       102 
-     | 102 
-  524: const_0     
-     | 102 0 
-  525: bprint      f
-     | 
-  526: const_0     
-     | 0 
-  527: putstatic   0 
-     | 
-  530: getstatic   0 
-     | 0 
-  533: const       10 
-     | 0 10 
-  538: jge         6 
-     | 
-  541: jmp         6 
-     | 
-  547: jmp         14 
-     | 
-  561: getstatic   0 
-     | 0 
-  564: const_1     
-     | 0 1 
-  565: add         
-     | 1 
-  566: dup         
-     | 1 1 
-  567: const_1     
-     | 1 1 1 
-  568: jne         12 
-     | 1 
-  571: const_1     
-     | 1 1 
-  572: const_0     
-     | 1 1 0 
-  573: print       1
-     | 1 
-  574: jmp         92 
-     | 1 
-  666: pop         
-     | 
-  667: const       10 
-     | 10 
-  672: const_0     
-     | 10 0 
-  673: bprint      
-
-     | 
-  674: exit        
-     | 
-  675: return      
-Completion took 7 ms
+      case Obj.Fld:
+        put(putfield); put2(o.getAdr()); 
+        break;
+        
+      case Obj.Elem:
+        if (o.getType().getKind() == Struct.Char) put(bastore);
+        else put(astore); 
+        break;
+      
+      default:
+        error("Greska: Na levoj strani dodele mora biti promenljiva!");
+    }
+  }
+  
+  
+  //generisanje bezuslovnog skoka na adr
+  public static void putJump (int adr) {
+	  put(jmp); put2(adr-pc+1);
+  }
+  //za uslovni skok unapred ostaviti adresu nula
+  public static void putFalseJump (int op, int adr) {
+	  put(jcc + inverse[op]); put2(adr-pc+1);
+  }
+  //zakrpiti patchAdr tako da je odrediste tekuci pc
+  public static void fixup (int patchAdr) {
+	  put2(patchAdr, (pc-patchAdr + 1));
+  }
+  
+  // Writes the code buffer to the output stream
+	public static void write(OutputStream s) {
+		int codeSize;
+		try {
+			codeSize = pc;
+			put('M'); put('J');
+			put4(codeSize);
+			put4(dataSize);
+			put4(mainPc);
+			s.write(buf, codeSize, pc - codeSize);	// header
+			s.write(buf, 0, codeSize);				// code
+			s.close();
+		} catch(IOException e) {
+			 error("Greska pri upisu u izlazni fajl");
+		}
+	}
+}
