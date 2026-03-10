@@ -177,9 +177,6 @@ public class CodeGenerator extends VisitorAdaptor {
     @Override public void visit(DesignatorArrayName d)  { Code.load(d.obj); }
 
     // ===================== CONDITIONS / IF-ELSE =====================
-    // AND-chain: each false CondFact jumps to the next OR-term (skipCondFact)
-    // OR-chain:  each true CondTerm jumps to the then-branch (skipCondition)
-    // Condition: overall false path goes to skipThen
 
     private Stack<Integer> skipCondFact  = new Stack<>();
     private Stack<Integer> skipCondition = new Stack<>();
@@ -196,8 +193,6 @@ public class CodeGenerator extends VisitorAdaptor {
         return 0;
     }
 
-    // CondFact is in "condition context" (if/for) when parent is CondFactListOptional.
-    // In CondExprSimple/CondExprTri the parent is CondExpr directly.
     private boolean isConditionContext(SyntaxNode n) {
         SyntaxNode p = n.getParent();
         return (p instanceof CondFactListOptionalY || p instanceof CondFactListOptionalN);
@@ -266,13 +261,6 @@ public class CodeGenerator extends VisitorAdaptor {
     }
 
     // ===================== TERNARY =====================
-    // Grammar: CondFact TernaryCondEnd ? Expr TernaryTrueEnd : Expr
-    // Bottom-up: CondFact → TernaryCondEnd → Expr(true) → TernaryTrueEnd → Expr(false) → CondExprTri
-    //
-    // CondFact parent = CondExprTri → isConditionContext=false
-    //   CondFactExpr: value already on stack (no jump emitted)
-    //   CondFactRel: materialised as 0/1 on stack
-
     private Stack<Integer> ternaryFalse = new Stack<>();
     private Stack<Integer> ternaryEnd   = new Stack<>();
 
@@ -300,21 +288,6 @@ public class CodeGenerator extends VisitorAdaptor {
     }
 
     // ===================== FOR LOOP =====================
-    // Grammar:
-    //   FOR ( ForInit DSOpt ; ForCondStart CondOpt ; ForUpdateStart DSOpt ForBodyStart ) Statement
-    //
-    // Bottom-up:
-    //   ForInit → init → ForCondStart → cond → ForUpdateStart → update → ForBodyStart → body → StatementFor
-    //
-    // Bytecode layout:
-    //   [init]
-    //   condStart: [cond jfalse→afterLoop]
-    //   jmpSkip → bodyStart
-    //   updateTarget: [update]
-    //   jmpBack → condStart
-    //   bodyStart: [body]
-    //   jmp → updateTarget
-    //   afterLoop:
 
     private Stack<Integer> forCondStartAddr   = new Stack<>();
     private Stack<Integer> forCondFalseAddr   = new Stack<>();
@@ -358,66 +331,32 @@ public class CodeGenerator extends VisitorAdaptor {
         Code.fixup(forSkipUpdatePatch.pop());
     }
 
-//    @Override
-//    public void visit(StatementFor s) {
-//        int updateTarget = forUpdateTargetAddr.pop();
-//        // Body just ended; jump to update
-//        Code.putJump(updateTarget);
-//
-//        // afterLoop: fixup condFalse
-//        int condFalse = forCondFalseAddr.pop();
-//        if (condFalse != -1) Code.fixup(condFalse);
-//
-//        // fixup breaks → here (afterLoop)
-//        for (int addr : forBreaks.pop()) Code.fixup(addr);
-//
-//        // fixup continues → updateTarget
-//        forContinues.pop();
-//
-//        forCondStartAddr.pop();
-//        breakTarget.pop();
-//    }
+    @Override
+    public void visit(StatementFor s) {
+        int updateTarget = forUpdateTargetAddr.pop();
+        // Body just ended; jump to update
+        Code.putJump(updateTarget);
 
-    // ===================== BREAK / CONTINUE =====================
+        // afterLoop: fixup condFalse
+        int condFalse = forCondFalseAddr.pop();
+        if (condFalse != -1) Code.fixup(condFalse);
 
-//    @Override
-//    public void visit(StatementBreak b) {
-//        Code.putJump(0);
-//        int patchAddr = Code.pc - 2;
-//        // Find innermost break target
-//        if (!breakTarget.empty() && breakTarget.peek() == 'S') {
-//            switchBreaks.peek().add(patchAddr);
-//        } else if (!breakTarget.empty() && breakTarget.peek() == 'F') {
-//            forBreaks.peek().add(patchAddr);
-//        }
-//    }
-//
-//    @Override
-//    public void visit(StatementContinue c) {
-//        // Continue always targets innermost for loop
-//        if (!forUpdateTargetAddr.empty()) {
-//            // If inside a switch, pop the switch value first
-//            if (!breakTarget.empty() && breakTarget.peek() == 'S') {
-//                Code.put(Code.pop);
-//            }
-//            Code.putJump(forUpdateTargetAddr.peek());
-//        }
-//    }
+        // fixup breaks → here (afterLoop)
+        for (int addr : forBreaks.pop()) Code.fixup(addr);
+
+        // fixup continues → updateTarget
+        for (int addr : forContinues.pop()) {
+            int saved = Code.pc;
+            Code.pc = addr;
+            Code.put2(updateTarget - addr + 1);
+            Code.pc = saved;
+        }
+
+        forCondStartAddr.pop();
+        breakTarget.pop();
+    }
 
     // ===================== SWITCH =====================
-    // Grammar: SWITCH ( SwitchStart CondExpr ) { CaseList }
-    //          Case: CASE NUMBER CaseLabel : StatementList
-    //
-    // Bottom-up per case: CaseLabel → StatementList → Case
-    //
-    // switchVal stays on the stack the entire switch. Each case:
-    //   CaseLabel: dup; loadConst(val); putFalseJump(eq, skipAddr)
-    //              if previous case fell through, fixup its fallThrough jmp to HERE
-    //   Case:      emit fallThrough jmp(0); fixup skipAddr
-    //
-    // putFalseJump(eq, skipAddr) consumes the dup'd copy and the const.
-    // Original switchVal remains on stack.
-    // At end of switch: pop switchVal.
 
     private Stack<List<Integer>> switchBreaks    = new Stack<>();
     private Stack<Integer>       defaultEndJmp   = new Stack<>();
