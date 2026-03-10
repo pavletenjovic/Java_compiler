@@ -72,7 +72,7 @@ public class CodeGenerator extends VisitorAdaptor {
     @Override
     public void visit(DesignatorSignatureAct d) {
         Obj o = d.getDesignator().obj;
-        Code.put(Code.call); Code.put2(o.getAdr() - Code.pc);
+        Code.put(Code.call); Code.put2(o.getAdr() - Code.pc + 1);
         if (o.getType() != Tab.noType) Code.put(Code.pop);
     }
 
@@ -156,12 +156,12 @@ public class CodeGenerator extends VisitorAdaptor {
 
     @Override
     public void visit(FactorOptionFuncall f) {
-        Code.put(Code.call); Code.put2(f.getDesignator().obj.getAdr() - Code.pc);
+        Code.put(Code.call); Code.put2(f.getDesignator().obj.getAdr() - Code.pc + 1);
     }
 
     // ===================== DESIGNATORS =====================
 
-    @Override public void visit(DesignatorLen d)      { Code.load(Tab.find(d.getI1())); }
+    @Override public void visit(DesignatorLen d)      { Code.load(d.obj); }
     @Override public void visit(DesignatorEnum d)      { Code.load(d.obj); }
     @Override public void visit(DesignatorArrayName d)  { Code.load(d.obj); }
 
@@ -347,52 +347,51 @@ public class CodeGenerator extends VisitorAdaptor {
         Code.fixup(forSkipUpdatePatch.pop());
     }
 
-    @Override
-    public void visit(StatementFor s) {
-        int updateTarget = forUpdateTargetAddr.pop();
-        // Body just ended; jump to update
-        Code.putJump(updateTarget);
-
-        // afterLoop: fixup condFalse
-        int condFalse = forCondFalseAddr.pop();
-        if (condFalse != -1) Code.fixup(condFalse);
-
-        // fixup breaks → here (afterLoop)
-        for (int addr : forBreaks.pop()) Code.fixup(addr);
-
-        // fixup continues → updateTarget
-        for (int addr : forContinues.pop()) Code.fixup(addr);
-
-        forCondStartAddr.pop();
-        breakTarget.pop();
-    }
+//    @Override
+//    public void visit(StatementFor s) {
+//        int updateTarget = forUpdateTargetAddr.pop();
+//        // Body just ended; jump to update
+//        Code.putJump(updateTarget);
+//
+//        // afterLoop: fixup condFalse
+//        int condFalse = forCondFalseAddr.pop();
+//        if (condFalse != -1) Code.fixup(condFalse);
+//
+//        // fixup breaks → here (afterLoop)
+//        for (int addr : forBreaks.pop()) Code.fixup(addr);
+//
+//        // fixup continues → updateTarget
+//        forContinues.pop();
+//
+//        forCondStartAddr.pop();
+//        breakTarget.pop();
+//    }
 
     // ===================== BREAK / CONTINUE =====================
 
-    @Override
-    public void visit(StatementBreak b) {
-        Code.putJump(0);
-        int patchAddr = Code.pc - 2;
-        // Find innermost break target
-        if (!breakTarget.empty() && breakTarget.peek() == 'S') {
-            switchBreaks.peek().add(patchAddr);
-        } else if (!breakTarget.empty() && breakTarget.peek() == 'F') {
-            forBreaks.peek().add(patchAddr);
-        }
-    }
-
-    @Override
-    public void visit(StatementContinue c) {
-        // Continue always targets innermost for loop
-        if (!forContinues.empty()) {
-            // If inside a switch, pop the switch value first
-            if (!breakTarget.empty() && breakTarget.peek() == 'S') {
-                Code.put(Code.pop);
-            }
-            Code.putJump(0);
-            forContinues.peek().add(Code.pc - 2);
-        }
-    }
+//    @Override
+//    public void visit(StatementBreak b) {
+//        Code.putJump(0);
+//        int patchAddr = Code.pc - 2;
+//        // Find innermost break target
+//        if (!breakTarget.empty() && breakTarget.peek() == 'S') {
+//            switchBreaks.peek().add(patchAddr);
+//        } else if (!breakTarget.empty() && breakTarget.peek() == 'F') {
+//            forBreaks.peek().add(patchAddr);
+//        }
+//    }
+//
+//    @Override
+//    public void visit(StatementContinue c) {
+//        // Continue always targets innermost for loop
+//        if (!forUpdateTargetAddr.empty()) {
+//            // If inside a switch, pop the switch value first
+//            if (!breakTarget.empty() && breakTarget.peek() == 'S') {
+//                Code.put(Code.pop);
+//            }
+//            Code.putJump(forUpdateTargetAddr.peek());
+//        }
+//    }
 
     // ===================== SWITCH =====================
     // Grammar: SWITCH ( SwitchStart CondExpr ) { CaseList }
@@ -453,4 +452,199 @@ public class CodeGenerator extends VisitorAdaptor {
         Code.put(Code.pop);
         breakTarget.pop();
     }
+    
+    private Stack<Integer> whileCond = new Stack<>();
+    private Stack<Integer> doCond = new Stack<>();
+    
+    @Override
+    public void visit(WhileStart w) {
+    	whileCond.push(Code.pc);
+    }
+    
+    @Override
+    public void visit(StatementWhile s) {
+    	Code.putJump(whileCond.pop());
+    	Code.fixup(skipThen.pop());
+    }
+    
+    @Override
+    public void visit(DoStart d) {
+    	doCond.push(Code.pc);
+    }
+    
+//    @Override
+//    public void visit(StatementDoWhile d) {
+//    	Code.putJump(doCond.pop());
+//    	Code.fixup(skipThen.pop());
+//    }
+    
+    @Override
+    public void visit(DoEnd d) {
+    	Code.putJump(doCond.pop());
+    	Code.fixup(skipThen.pop());
+    }
+    
+    @Override
+    public void visit(StatementFor s) {
+        int updateTarget = forUpdateTargetAddr.pop();
+        // Body just ended; jump to update
+        Code.putJump(updateTarget);
+
+        // afterLoop: fixup condFalse
+        int condFalse = forCondFalseAddr.pop();
+        if (condFalse != -1) Code.fixup(condFalse);
+
+        // fixup breaks → here (afterLoop)
+        for (int addr : forBreaks.pop()) Code.fixup(addr);
+
+        // fixup continues → updateTarget
+        for (int addr : forContinues.pop()) {
+            int saved = Code.pc;
+            Code.pc = addr;
+            Code.put2(updateTarget - addr + 1);
+            Code.pc = saved;
+        }
+
+        forCondStartAddr.pop();
+        breakTarget.pop();
+    }
+
+    // ===================== FOREACH LOOP =====================
+    // Grammar: FOR ( ForeachArrayStart D1 : D2 ForeachBodyStart ) Statement
+    // Bottom-up: ForeachArrayStart → D1 → D2 → ForeachBodyStart → Statement → StatementForeach
+    //
+    // Bytecode layout:
+    //   $_fe_N = 0
+    // loopStart:
+    //   if $_fe_N >= D2.length → afterLoop
+    //   D1 = D2[$_fe_N]
+    //   [Statement body]
+    // continueTarget:
+    //   $_fe_N++
+    //   jmp loopStart
+    // afterLoop:
+
+    private Stack<Obj>          foreachCounterObj  = new Stack<>();
+    private Stack<Integer>      foreachLoopStart   = new Stack<>();
+    private Stack<Integer>      foreachAfterPatch  = new Stack<>();
+    private Stack<List<Integer>> foreachBreaks     = new Stack<>();
+    private Stack<List<Integer>> foreachContinues  = new Stack<>();
+
+    @Override
+    public void visit(ForeachArrayStart f) {
+        // Get counter Obj stored by SemanticPass
+        Obj counterObj = f.obj;
+        foreachCounterObj.push(counterObj);
+
+        // Initialize counter to 0 and store
+        Code.loadConst(0);
+        Code.store(counterObj);
+
+        foreachBreaks.push(new ArrayList<>());
+        foreachContinues.push(new ArrayList<>());
+        breakTarget.push('E'); // 'E' for foreach (Each)
+
+        // Record loop start (condition check starts right here)
+        foreachLoopStart.push(Code.pc);
+    }
+
+    @Override
+    public void visit(ForeachBodyStart f) {
+        // Get D1 and D2 from parent StatementForeach
+        StatementForEach parent = (StatementForEach) f.getParent();
+        Obj d1 = parent.getDesignator().obj;
+        Obj d2 = parent.getDesignator1().obj;
+        Obj counter = foreachCounterObj.peek();
+
+        // Condition: counter < D2.length → if counter >= D2.length, jump afterLoop
+        Code.load(counter);             // stack: counter
+        Code.load(d2);                  // stack: counter, arr
+        Code.put(Code.arraylength);     // stack: counter, len
+        Code.putFalseJump(Code.lt, 0);  // jump if NOT (counter < len) → afterLoop
+        foreachAfterPatch.push(Code.pc - 2);
+
+        // Load D2[counter] and store to D1
+        Code.load(d2);                  // stack: arr
+        Code.load(counter);             // stack: arr, counter
+        // aload/baload: pops arr and index, pushes arr[index]
+        if (d2.getType().getElemType().getKind() == Struct.Char) {
+            Code.put(Code.baload);
+        } else {
+            Code.put(Code.aload);
+        }
+        Code.store(d1);                 // D1 = D2[counter]
+    }
+
+    @Override
+    public void visit(StatementForEach s) {
+        Obj counter = foreachCounterObj.pop();
+        int loopStart = foreachLoopStart.pop();
+
+        // continueTarget: increment counter and jump back
+        int contTarget = Code.pc;
+        Code.load(counter);
+        Code.loadConst(1);
+        Code.put(Code.add);
+        Code.store(counter);
+        Code.putJump(loopStart);
+
+        // afterLoop: fix condition false-jump
+        Code.fixup(foreachAfterPatch.pop());
+
+        // Fix continue jumps → continueTarget
+        for (int addr : foreachContinues.pop()) {
+            // patch to jump to contTarget
+            int saved = Code.pc;
+            Code.pc = addr;
+            Code.put2(contTarget - addr + 1);
+            Code.pc = saved;
+        }
+
+        // Fix break jumps → here (afterLoop)
+        for (int addr : foreachBreaks.pop()) Code.fixup(addr);
+
+        breakTarget.pop();
+    }
+
+    @Override
+    public void visit(StatementBreak b) {
+        Code.putJump(0);
+        int patchAddr = Code.pc - 2;
+        if (!breakTarget.empty()) {
+            char top = breakTarget.peek();
+            if (top == 'S') {
+                switchBreaks.peek().add(patchAddr);
+            } else if (top == 'F') {
+                forBreaks.peek().add(patchAddr);
+            } else if (top == 'E') {
+                foreachBreaks.peek().add(patchAddr);
+            }
+        }
+    }
+
+    @Override
+    public void visit(StatementContinue c) {
+        Code.putJump(0);
+        int patchAddr = Code.pc - 2;
+        if (!breakTarget.empty()) {
+            // Find innermost loop (skip switches)
+            for (int i = breakTarget.size() - 1; i >= 0; i--) {
+                char t = breakTarget.get(i);
+                if (t == 'F') {
+                    // Regular for: continue goes to updateTarget (already emitted)
+                    // We need to fix-up later in StatementFor... but updateTarget is already known
+                    // For regular for, the update target address is already on the stack
+                    forContinues.peek().add(patchAddr);
+                    break;
+                } else if (t == 'E') {
+                    // Foreach: continue patched later in StatementForeach
+                    foreachContinues.peek().add(patchAddr);
+                    break;
+                }
+                // 'S' = switch, skip it and look for outer loop
+            }
+        }
+    }
+    
+    
 }

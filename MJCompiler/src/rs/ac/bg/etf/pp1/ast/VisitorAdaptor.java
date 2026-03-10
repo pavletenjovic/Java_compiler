@@ -1,51 +1,56 @@
 // generated with ast extension for cup
 // version 0.8
-// 8/2/2026 17:3:52
+// 10/2/2026 2:47:2
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public abstract class VisitorAdaptor implements Visitor { 
 
-    public void visit(VarListNext VarListNext) { }
-    public void visit(ActParsOptional ActParsOptional) { }
-    public void visit(ExprOptional ExprOptional) { }
-    public void visit(Mulop Mulop) { }
-    public void visit(FormParsNext FormParsNext) { }
-    public void visit(EnumValue EnumValue) { }
-    public void visit(Relop Relop) { }
-    public void visit(MulopFactorList MulopFactorList) { }
-    public void visit(ConditionOptional ConditionOptional) { }
-    public void visit(FactorOption FactorOption) { }
-    public void visit(TypeOption TypeOption) { }
-    public void visit(StatementList StatementList) { }
-    public void visit(PrintOptional PrintOptional) { }
-    public void visit(MethodDecList MethodDecList) { }
-    public void visit(ExprNext ExprNext) { }
-    public void visit(Addop Addop) { }
-    public void visit(CondTermListOptional CondTermListOptional) { }
-    public void visit(DeclList DeclList) { }
-    public void visit(Designator Designator) { }
-    public void visit(CondFactListOptional CondFactListOptional) { }
-    public void visit(CaseList CaseList) { }
-    public void visit(FormValue FormValue) { }
+    public void visit(FormPars FormPars) { }
+    public void visit(Statement Statement) { }
     public void visit(CondExpr CondExpr) { }
     public void visit(Brackets Brackets) { }
-    public void visit(VarDeclList VarDeclList) { }
-    public void visit(EnumListNext EnumListNext) { }
-    public void visit(DesignatorStatement DesignatorStatement) { }
-    public void visit(Const Const) { }
-    public void visit(UnaryMinus UnaryMinus) { }
-    public void visit(Decl Decl) { }
-    public void visit(Statement Statement) { }
-    public void visit(VarDecl VarDecl) { }
-    public void visit(AddopTerm AddopTerm) { }
-    public void visit(DesignatorStatementOptional DesignatorStatementOptional) { }
-    public void visit(ConstListNext ConstListNext) { }
-    public void visit(CondFact CondFact) { }
-    public void visit(ElseOptional ElseOptional) { }
-    public void visit(FormPars FormPars) { }
+    public void visit(EnumValue EnumValue) { }
+    public void visit(Relop Relop) { }
+    public void visit(DeclList DeclList) { }
+    public void visit(CaseList CaseList) { }
+    public void visit(MulopFactorList MulopFactorList) { }
     public void visit(AddopTermList AddopTermList) { }
+    public void visit(VarListNext VarListNext) { }
+    public void visit(VarDecl VarDecl) { }
+    public void visit(CondFactListOptional CondFactListOptional) { }
+    public void visit(DesignatorStatementOptional DesignatorStatementOptional) { }
+    public void visit(AddopTerm AddopTerm) { }
+    public void visit(UnaryMinus UnaryMinus) { }
+    public void visit(EnumListNext EnumListNext) { }
+    public void visit(CondTermListOptional CondTermListOptional) { }
+    public void visit(ExprNext ExprNext) { }
+    public void visit(ConstListNext ConstListNext) { }
+    public void visit(Const Const) { }
+    public void visit(Mulop Mulop) { }
+    public void visit(DesignatorStatement DesignatorStatement) { }
+    public void visit(ElseOptional ElseOptional) { }
+    public void visit(FactorOption FactorOption) { }
+    public void visit(Addop Addop) { }
+    public void visit(StatementList StatementList) { }
+    public void visit(ActParsOptional ActParsOptional) { }
+    public void visit(PrintOptional PrintOptional) { }
+    public void visit(FormValue FormValue) { }
+    public void visit(TypeOption TypeOption) { }
+    public void visit(ConditionOptional ConditionOptional) { }
+    public void visit(MethodDecList MethodDecList) { }
+    public void visit(ExprOptional ExprOptional) { }
+    public void visit(FormParsNext FormParsNext) { }
+    public void visit(Designator Designator) { }
+    public void visit(VarDeclList VarDeclList) { }
+    public void visit(CondFact CondFact) { }
+    public void visit(Decl Decl) { }
+    public void visit(ForeachBodyStart ForeachBodyStart) { visit(); }
+    public void visit(ForeachArrayStart ForeachArrayStart) { visit(); }
+    public void visit(DoEnd DoEnd) { visit(); }
+    public void visit(DoStart DoStart) { visit(); }
+    public void visit(WhileStart WhileStart) { visit(); }
     public void visit(TernaryTrueEnd TernaryTrueEnd) { visit(); }
     public void visit(TernaryCondEnd TernaryCondEnd) { visit(); }
     public void visit(CaseLabel CaseLabel) { visit(); }
@@ -120,6 +125,9 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(ConditionOptionalY ConditionOptionalY) { visit(); }
     public void visit(PrintOptionalN PrintOptionalN) { visit(); }
     public void visit(PrintOptionalY PrintOptionalY) { visit(); }
+    public void visit(StatementForEach StatementForEach) { visit(); }
+    public void visit(StatementDoWhile StatementDoWhile) { visit(); }
+    public void visit(StatementWhile StatementWhile) { visit(); }
     public void visit(StatementRecursion StatementRecursion) { visit(); }
     public void visit(StatementFor StatementFor) { visit(); }
     public void visit(StatementSwitch StatementSwitch) { visit(); }

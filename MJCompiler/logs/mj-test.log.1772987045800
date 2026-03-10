@@ -1,0 +1,613 @@
+INFO  17:02:13,725 - Compiling source file: C:\Users\Win 11\Documents\pp1lab.templateAST (1)\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  17:02:13,848 - #2 program
+INFO  17:02:13,848 - #46 test302
+INFO  17:02:13,848 - #3 const
+INFO  17:02:13,850 - #46 int
+INFO  17:02:13,850 - #46 jedan
+INFO  17:02:13,851 - #43 =
+INFO  17:02:13,851 - #45 1
+INFO  17:02:13,851 - #23 ;
+INFO  17:02:13,852 - #46 int
+INFO  17:02:13,853 - #46 i
+INFO  17:02:13,853 - #23 ;
+INFO  17:02:13,855 - #46 bool
+INFO  17:02:13,855 - #46 ibool
+INFO  17:02:13,855 - #23 ;
+INFO  17:02:13,855 - #46 int
+INFO  17:02:13,855 - #46 niz
+INFO  17:02:13,855 - #21 [
+INFO  17:02:13,855 - #22 ]
+INFO  17:02:13,855 - #23 ;
+INFO  17:02:13,856 - #17 {
+INFO  17:02:13,856 - #46 int
+INFO  17:02:13,856 - #46 sum
+INFO  17:02:13,858 - #19 (
+INFO  17:02:13,858 - #46 int
+INFO  17:02:13,858 - #46 z
+INFO  17:02:13,858 - #24 ,
+INFO  17:02:13,858 - #46 int
+INFO  17:02:13,858 - #46 d
+INFO  17:02:13,858 - #20 )
+INFO  17:02:13,859 - #17 {
+INFO  17:02:13,859 - #10 return
+INFO  17:02:13,860 - #46 z
+INFO  17:02:13,861 - #28 +
+INFO  17:02:13,863 - #46 d
+INFO  17:02:13,864 - #23 ;
+INFO  17:02:13,869 - #18 }
+INFO  17:02:13,869 - #46 int
+INFO  17:02:13,870 - #46 inkrement
+INFO  17:02:13,870 - #19 (
+INFO  17:02:13,870 - #46 int
+INFO  17:02:13,870 - #46 a
+INFO  17:02:13,871 - #24 ,
+INFO  17:02:13,871 - #46 int
+INFO  17:02:13,871 - #46 inc
+INFO  17:02:13,871 - #20 )
+INFO  17:02:13,871 - #46 int
+INFO  17:02:13,871 - #46 pom
+INFO  17:02:13,871 - #23 ;
+INFO  17:02:13,871 - #17 {
+INFO  17:02:13,871 - #6 if
+INFO  17:02:13,871 - #19 (
+INFO  17:02:13,871 - #46 inc
+INFO  17:02:13,871 - #35 ==
+INFO  17:02:13,871 - #46 jedan
+INFO  17:02:13,873 - #20 )
+INFO  17:02:13,874 - #46 pom
+INFO  17:02:13,874 - #43 =
+INFO  17:02:13,874 - #45 1
+INFO  17:02:13,875 - #23 ;
+INFO  17:02:13,875 - #7 else
+INFO  17:02:13,875 - #6 if
+INFO  17:02:13,875 - #19 (
+INFO  17:02:13,876 - #46 inc
+INFO  17:02:13,876 - #35 ==
+INFO  17:02:13,876 - #45 2
+INFO  17:02:13,876 - #20 )
+INFO  17:02:13,876 - #46 pom
+INFO  17:02:13,876 - #43 =
+INFO  17:02:13,876 - #46 a
+INFO  17:02:13,876 - #23 ;
+INFO  17:02:13,876 - #10 return
+INFO  17:02:13,876 - #46 sum
+INFO  17:02:13,876 - #19 (
+INFO  17:02:13,876 - #46 a
+INFO  17:02:13,876 - #24 ,
+INFO  17:02:13,878 - #46 pom
+INFO  17:02:13,878 - #20 )
+INFO  17:02:13,879 - #23 ;
+INFO  17:02:13,879 - #18 }
+INFO  17:02:13,879 - #46 bool
+INFO  17:02:13,879 - #46 verify
+INFO  17:02:13,879 - #19 (
+INFO  17:02:13,879 - #20 )
+INFO  17:02:13,880 - #17 {
+INFO  17:02:13,880 - #12 print
+INFO  17:02:13,880 - #19 (
+INFO  17:02:13,880 - #47 v
+INFO  17:02:13,880 - #20 )
+INFO  17:02:13,881 - #23 ;
+INFO  17:02:13,881 - #10 return
+INFO  17:02:13,881 - #48 0
+INFO  17:02:13,881 - #23 ;
+INFO  17:02:13,881 - #18 }
+INFO  17:02:13,881 - #5 void
+INFO  17:02:13,881 - #46 main
+INFO  17:02:13,881 - #19 (
+INFO  17:02:13,881 - #20 )
+INFO  17:02:13,881 - #17 {
+INFO  17:02:13,881 - #6 if
+INFO  17:02:13,881 - #19 (
+INFO  17:02:13,881 - #45 1
+INFO  17:02:13,881 - #36 !=
+INFO  17:02:13,881 - #45 1
+INFO  17:02:13,882 - #20 )
+INFO  17:02:13,882 - #12 print
+INFO  17:02:13,882 - #19 (
+INFO  17:02:13,882 - #29 -
+INFO  17:02:13,882 - #45 6
+INFO  17:02:13,886 - #20 )
+INFO  17:02:13,886 - #23 ;
+INFO  17:02:13,886 - #7 else
+INFO  17:02:13,886 - #12 print
+INFO  17:02:13,886 - #19 (
+INFO  17:02:13,886 - #45 0
+INFO  17:02:13,886 - #20 )
+INFO  17:02:13,886 - #23 ;
+INFO  17:02:13,886 - #46 ibool
+INFO  17:02:13,886 - #43 =
+INFO  17:02:13,887 - #48 0
+INFO  17:02:13,887 - #23 ;
+INFO  17:02:13,887 - #46 i
+INFO  17:02:13,887 - #43 =
+INFO  17:02:13,887 - #45 0
+INFO  17:02:13,887 - #23 ;
+INFO  17:02:13,887 - #15 for
+INFO  17:02:13,887 - #19 (
+INFO  17:02:13,887 - #46 i
+INFO  17:02:13,887 - #43 =
+INFO  17:02:13,888 - #45 0
+INFO  17:02:13,888 - #23 ;
+INFO  17:02:13,888 - #46 i
+INFO  17:02:13,888 - #39 <
+INFO  17:02:13,888 - #45 5
+INFO  17:02:13,889 - #23 ;
+INFO  17:02:13,889 - #46 i
+INFO  17:02:13,889 - #33 ++
+INFO  17:02:13,889 - #20 )
+INFO  17:02:13,891 - #17 {
+INFO  17:02:13,891 - #6 if
+INFO  17:02:13,891 - #19 (
+INFO  17:02:13,891 - #46 i
+INFO  17:02:13,891 - #35 ==
+INFO  17:02:13,891 - #45 2
+INFO  17:02:13,891 - #20 )
+INFO  17:02:13,891 - #46 ibool
+INFO  17:02:13,891 - #43 =
+INFO  17:02:13,891 - #48 1
+INFO  17:02:13,891 - #23 ;
+INFO  17:02:13,891 - #18 }
+INFO  17:02:13,891 - #6 if
+INFO  17:02:13,891 - #19 (
+INFO  17:02:13,891 - #46 ibool
+INFO  17:02:13,891 - #20 )
+INFO  17:02:13,891 - #6 if
+INFO  17:02:13,891 - #19 (
+INFO  17:02:13,891 - #46 i
+INFO  17:02:13,891 - #35 ==
+INFO  17:02:13,891 - #45 5
+INFO  17:02:13,891 - #20 )
+INFO  17:02:13,891 - #12 print
+INFO  17:02:13,891 - #19 (
+INFO  17:02:13,892 - #45 1
+INFO  17:02:13,892 - #20 )
+INFO  17:02:13,892 - #23 ;
+INFO  17:02:13,892 - #7 else
+INFO  17:02:13,892 - #12 print
+INFO  17:02:13,892 - #19 (
+INFO  17:02:13,892 - #29 -
+INFO  17:02:13,892 - #45 1
+INFO  17:02:13,892 - #20 )
+INFO  17:02:13,892 - #23 ;
+INFO  17:02:13,892 - #46 niz
+INFO  17:02:13,892 - #43 =
+INFO  17:02:13,892 - #16 new
+INFO  17:02:13,892 - #46 int
+INFO  17:02:13,892 - #21 [
+INFO  17:02:13,892 - #45 3
+INFO  17:02:13,892 - #22 ]
+INFO  17:02:13,892 - #23 ;
+INFO  17:02:13,892 - #46 niz
+INFO  17:02:13,892 - #21 [
+INFO  17:02:13,892 - #45 0
+INFO  17:02:13,892 - #22 ]
+INFO  17:02:13,892 - #43 =
+INFO  17:02:13,892 - #45 1
+INFO  17:02:13,892 - #23 ;
+INFO  17:02:13,892 - #46 niz
+INFO  17:02:13,892 - #21 [
+INFO  17:02:13,892 - #45 1
+INFO  17:02:13,892 - #22 ]
+INFO  17:02:13,892 - #43 =
+INFO  17:02:13,892 - #45 2
+INFO  17:02:13,892 - #23 ;
+INFO  17:02:13,892 - #46 niz
+INFO  17:02:13,892 - #21 [
+INFO  17:02:13,892 - #45 2
+INFO  17:02:13,892 - #22 ]
+INFO  17:02:13,892 - #43 =
+INFO  17:02:13,892 - #46 sum
+INFO  17:02:13,892 - #19 (
+INFO  17:02:13,892 - #46 niz
+INFO  17:02:13,892 - #21 [
+INFO  17:02:13,892 - #45 1
+INFO  17:02:13,892 - #22 ]
+INFO  17:02:13,892 - #24 ,
+INFO  17:02:13,893 - #46 niz
+INFO  17:02:13,893 - #21 [
+INFO  17:02:13,893 - #45 0
+INFO  17:02:13,893 - #22 ]
+INFO  17:02:13,893 - #20 )
+INFO  17:02:13,893 - #28 +
+INFO  17:02:13,893 - #45 1
+INFO  17:02:13,893 - #23 ;
+INFO  17:02:13,893 - #6 if
+INFO  17:02:13,893 - #19 (
+INFO  17:02:13,893 - #46 niz
+INFO  17:02:13,893 - #21 [
+INFO  17:02:13,893 - #45 2
+INFO  17:02:13,893 - #22 ]
+INFO  17:02:13,893 - #35 ==
+INFO  17:02:13,893 - #45 4
+INFO  17:02:13,893 - #41 ||
+INFO  17:02:13,893 - #46 verify
+INFO  17:02:13,893 - #19 (
+INFO  17:02:13,893 - #20 )
+INFO  17:02:13,894 - #20 )
+INFO  17:02:13,894 - #12 print
+INFO  17:02:13,894 - #19 (
+INFO  17:02:13,894 - #46 ord
+INFO  17:02:13,894 - #19 (
+INFO  17:02:13,894 - #47 A
+INFO  17:02:13,895 - #20 )
+INFO  17:02:13,895 - #20 )
+INFO  17:02:13,895 - #23 ;
+INFO  17:02:13,895 - #7 else
+INFO  17:02:13,895 - #12 print
+INFO  17:02:13,895 - #19 (
+INFO  17:02:13,895 - #46 ord
+INFO  17:02:13,895 - #19 (
+INFO  17:02:13,895 - #47 a
+INFO  17:02:13,895 - #20 )
+INFO  17:02:13,895 - #20 )
+INFO  17:02:13,895 - #23 ;
+INFO  17:02:13,895 - #12 print
+INFO  17:02:13,895 - #19 (
+INFO  17:02:13,895 - #46 eol
+INFO  17:02:13,895 - #20 )
+INFO  17:02:13,895 - #23 ;
+INFO  17:02:13,895 - #46 i
+INFO  17:02:13,895 - #43 =
+INFO  17:02:13,895 - #45 0
+INFO  17:02:13,895 - #23 ;
+INFO  17:02:13,895 - #15 for
+INFO  17:02:13,895 - #19 (
+INFO  17:02:13,895 - #23 ;
+INFO  17:02:13,896 - #46 i
+INFO  17:02:13,896 - #39 <
+INFO  17:02:13,896 - #45 10
+INFO  17:02:13,896 - #23 ;
+INFO  17:02:13,896 - #20 )
+INFO  17:02:13,896 - #17 {
+INFO  17:02:13,896 - #6 if
+INFO  17:02:13,896 - #19 (
+INFO  17:02:13,896 - #46 i
+INFO  17:02:13,896 - #35 ==
+INFO  17:02:13,896 - #45 3
+INFO  17:02:13,896 - #20 )
+INFO  17:02:13,896 - #17 {
+INFO  17:02:13,896 - #46 i
+INFO  17:02:13,896 - #33 ++
+INFO  17:02:13,896 - #23 ;
+INFO  17:02:13,896 - #9 continue
+INFO  17:02:13,896 - #23 ;
+INFO  17:02:13,896 - #18 }
+INFO  17:02:13,897 - #6 if
+INFO  17:02:13,897 - #19 (
+INFO  17:02:13,897 - #46 i
+INFO  17:02:13,897 - #35 ==
+INFO  17:02:13,897 - #45 4
+INFO  17:02:13,897 - #20 )
+INFO  17:02:13,897 - #8 break
+INFO  17:02:13,897 - #23 ;
+INFO  17:02:13,897 - #46 i
+INFO  17:02:13,898 - #43 =
+INFO  17:02:13,898 - #46 inkrement
+INFO  17:02:13,898 - #19 (
+INFO  17:02:13,898 - #46 i
+INFO  17:02:13,898 - #24 ,
+INFO  17:02:13,898 - #45 1
+INFO  17:02:13,898 - #20 )
+INFO  17:02:13,898 - #23 ;
+INFO  17:02:13,898 - #18 }
+INFO  17:02:13,898 - #6 if
+INFO  17:02:13,898 - #19 (
+INFO  17:02:13,898 - #46 i
+INFO  17:02:13,898 - #35 ==
+INFO  17:02:13,898 - #45 3
+INFO  17:02:13,898 - #42 &&
+INFO  17:02:13,898 - #46 verify
+INFO  17:02:13,898 - #19 (
+INFO  17:02:13,898 - #20 )
+INFO  17:02:13,898 - #20 )
+INFO  17:02:13,898 - #12 print
+INFO  17:02:13,898 - #19 (
+INFO  17:02:13,898 - #45 4
+INFO  17:02:13,898 - #20 )
+INFO  17:02:13,898 - #23 ;
+INFO  17:02:13,898 - #7 else
+INFO  17:02:13,898 - #12 print
+INFO  17:02:13,898 - #19 (
+INFO  17:02:13,898 - #29 -
+INFO  17:02:13,898 - #45 4
+INFO  17:02:13,898 - #20 )
+INFO  17:02:13,898 - #23 ;
+INFO  17:02:13,898 - #11 read
+INFO  17:02:13,898 - #19 (
+INFO  17:02:13,898 - #46 niz
+INFO  17:02:13,898 - #21 [
+INFO  17:02:13,898 - #45 0
+INFO  17:02:13,898 - #22 ]
+INFO  17:02:13,898 - #20 )
+INFO  17:02:13,898 - #23 ;
+INFO  17:02:13,898 - #11 read
+INFO  17:02:13,898 - #19 (
+INFO  17:02:13,898 - #46 niz
+INFO  17:02:13,898 - #21 [
+INFO  17:02:13,898 - #45 1
+INFO  17:02:13,898 - #22 ]
+INFO  17:02:13,898 - #20 )
+INFO  17:02:13,898 - #23 ;
+INFO  17:02:13,898 - #11 read
+INFO  17:02:13,898 - #19 (
+INFO  17:02:13,898 - #46 niz
+INFO  17:02:13,898 - #21 [
+INFO  17:02:13,898 - #45 2
+INFO  17:02:13,898 - #22 ]
+INFO  17:02:13,898 - #20 )
+INFO  17:02:13,898 - #23 ;
+INFO  17:02:13,898 - #12 print
+INFO  17:02:13,898 - #19 (
+INFO  17:02:13,899 - #46 eol
+INFO  17:02:13,899 - #20 )
+INFO  17:02:13,899 - #23 ;
+INFO  17:02:13,899 - #12 print
+INFO  17:02:13,899 - #19 (
+INFO  17:02:13,899 - #46 sum
+INFO  17:02:13,899 - #19 (
+INFO  17:02:13,899 - #46 sum
+INFO  17:02:13,899 - #19 (
+INFO  17:02:13,899 - #46 niz
+INFO  17:02:13,899 - #21 [
+INFO  17:02:13,899 - #45 0
+INFO  17:02:13,899 - #22 ]
+INFO  17:02:13,899 - #24 ,
+INFO  17:02:13,899 - #46 niz
+INFO  17:02:13,899 - #21 [
+INFO  17:02:13,899 - #45 1
+INFO  17:02:13,899 - #22 ]
+INFO  17:02:13,899 - #20 )
+INFO  17:02:13,899 - #24 ,
+INFO  17:02:13,899 - #46 niz
+INFO  17:02:13,899 - #21 [
+INFO  17:02:13,899 - #45 2
+INFO  17:02:13,899 - #22 ]
+INFO  17:02:13,899 - #20 )
+INFO  17:02:13,899 - #20 )
+INFO  17:02:13,899 - #23 ;
+INFO  17:02:13,899 - #15 for
+INFO  17:02:13,899 - #19 (
+INFO  17:02:13,899 - #46 i
+INFO  17:02:13,899 - #43 =
+INFO  17:02:13,899 - #45 0
+INFO  17:02:13,899 - #23 ;
+INFO  17:02:13,899 - #46 i
+INFO  17:02:13,899 - #39 <
+INFO  17:02:13,899 - #46 niz
+INFO  17:02:13,899 - #26 .
+INFO  17:02:13,899 - #44 length
+INFO  17:02:13,899 - #23 ;
+INFO  17:02:13,899 - #46 i
+INFO  17:02:13,899 - #33 ++
+INFO  17:02:13,899 - #20 )
+INFO  17:02:13,899 - #17 {
+INFO  17:02:13,899 - #12 print
+INFO  17:02:13,899 - #19 (
+INFO  17:02:13,899 - #46 i
+INFO  17:02:13,899 - #20 )
+INFO  17:02:13,899 - #23 ;
+INFO  17:02:13,899 - #18 }
+INFO  17:02:13,899 - #12 print
+INFO  17:02:13,899 - #19 (
+INFO  17:02:13,899 - #46 eol
+INFO  17:02:13,899 - #20 )
+INFO  17:02:13,899 - #23 ;
+INFO  17:02:13,899 - #12 print
+INFO  17:02:13,899 - #19 (
+INFO  17:02:13,899 - #46 inkrement
+INFO  17:02:13,899 - #19 (
+INFO  17:02:13,899 - #46 niz
+INFO  17:02:13,899 - #21 [
+INFO  17:02:13,899 - #45 2
+INFO  17:02:13,899 - #22 ]
+INFO  17:02:13,899 - #24 ,
+INFO  17:02:13,899 - #45 2
+INFO  17:02:13,899 - #20 )
+INFO  17:02:13,899 - #20 )
+INFO  17:02:13,899 - #23 ;
+INFO  17:02:13,899 - #12 print
+INFO  17:02:13,899 - #19 (
+INFO  17:02:13,899 - #46 verify
+INFO  17:02:13,899 - #19 (
+INFO  17:02:13,899 - #20 )
+INFO  17:02:13,900 - #27 ?
+INFO  17:02:13,901 - #47 t
+INFO  17:02:13,901 - #25 :
+INFO  17:02:13,901 - #47 f
+INFO  17:02:13,901 - #20 )
+INFO  17:02:13,902 - #23 ;
+INFO  17:02:13,902 - #15 for
+INFO  17:02:13,902 - #19 (
+INFO  17:02:13,902 - #46 i
+INFO  17:02:13,902 - #43 =
+INFO  17:02:13,902 - #45 0
+INFO  17:02:13,902 - #23 ;
+INFO  17:02:13,902 - #46 i
+INFO  17:02:13,902 - #39 <
+INFO  17:02:13,902 - #45 10
+INFO  17:02:13,902 - #23 ;
+INFO  17:02:13,902 - #46 i
+INFO  17:02:13,902 - #33 ++
+INFO  17:02:13,902 - #20 )
+INFO  17:02:13,902 - #17 {
+INFO  17:02:13,902 - #13 switch
+INFO  17:02:13,902 - #19 (
+INFO  17:02:13,902 - #46 i
+INFO  17:02:13,902 - #28 +
+INFO  17:02:13,902 - #45 1
+INFO  17:02:13,902 - #20 )
+INFO  17:02:13,902 - #17 {
+INFO  17:02:13,902 - #14 case
+INFO  17:02:13,902 - #45 1
+INFO  17:02:13,902 - #25 :
+INFO  17:02:13,903 - #12 print
+INFO  17:02:13,903 - #19 (
+INFO  17:02:13,903 - #45 1
+INFO  17:02:13,903 - #20 )
+INFO  17:02:13,903 - #23 ;
+INFO  17:02:13,903 - #8 break
+INFO  17:02:13,903 - #23 ;
+INFO  17:02:13,903 - #14 case
+INFO  17:02:13,904 - #45 3
+INFO  17:02:13,904 - #25 :
+INFO  17:02:13,904 - #12 print
+INFO  17:02:13,904 - #19 (
+INFO  17:02:13,904 - #45 3
+INFO  17:02:13,904 - #20 )
+INFO  17:02:13,904 - #23 ;
+INFO  17:02:13,904 - #14 case
+INFO  17:02:13,904 - #45 2
+INFO  17:02:13,904 - #25 :
+INFO  17:02:13,904 - #12 print
+INFO  17:02:13,904 - #19 (
+INFO  17:02:13,904 - #45 2
+INFO  17:02:13,904 - #20 )
+INFO  17:02:13,904 - #23 ;
+INFO  17:02:13,904 - #8 break
+INFO  17:02:13,904 - #23 ;
+INFO  17:02:13,904 - #14 case
+INFO  17:02:13,904 - #45 5
+INFO  17:02:13,904 - #25 :
+INFO  17:02:13,904 - #12 print
+INFO  17:02:13,904 - #19 (
+INFO  17:02:13,904 - #45 5
+INFO  17:02:13,904 - #20 )
+INFO  17:02:13,904 - #23 ;
+INFO  17:02:13,904 - #46 i
+INFO  17:02:13,904 - #43 =
+INFO  17:02:13,904 - #46 i
+INFO  17:02:13,904 - #28 +
+INFO  17:02:13,904 - #45 2
+INFO  17:02:13,904 - #23 ;
+INFO  17:02:13,904 - #9 continue
+INFO  17:02:13,904 - #23 ;
+INFO  17:02:13,904 - #14 case
+INFO  17:02:13,904 - #45 6
+INFO  17:02:13,904 - #25 :
+INFO  17:02:13,904 - #12 print
+INFO  17:02:13,904 - #19 (
+INFO  17:02:13,904 - #45 6
+INFO  17:02:13,904 - #20 )
+INFO  17:02:13,904 - #23 ;
+INFO  17:02:13,904 - #14 case
+INFO  17:02:13,904 - #45 9
+INFO  17:02:13,904 - #25 :
+INFO  17:02:13,904 - #12 print
+INFO  17:02:13,904 - #19 (
+INFO  17:02:13,904 - #45 9
+INFO  17:02:13,904 - #20 )
+INFO  17:02:13,904 - #23 ;
+INFO  17:02:13,904 - #18 }
+INFO  17:02:13,904 - #12 print
+INFO  17:02:13,904 - #19 (
+INFO  17:02:13,904 - #46 eol
+INFO  17:02:13,904 - #20 )
+INFO  17:02:13,904 - #23 ;
+INFO  17:02:13,904 - #18 }
+INFO  17:02:13,904 - #18 }
+INFO  17:02:13,904 - #18 }
+ERROR 17:02:13,913 - Logicki operand nije tipa bool. na liniji 2
+ERROR 17:02:13,913 - Vrednost koja se vraca se ne poklapa sa povratnom vrednoscu metode na liniji 2
+ERROR 17:02:13,913 - Logicki operand nije tipa bool. na liniji 23
+ERROR 17:02:13,913 - Neadekvatna dodela vrednosti u promenljivu: pom na liniji 20
+ERROR 17:02:13,913 - Logicki operand nije tipa bool. na liniji 24
+ERROR 17:02:13,913 - Neadekvatna dodela vrednosti u promenljivu: pom na liniji 21
+ERROR 17:02:13,913 - Logicki operand nije tipa bool. na liniji 12
+ERROR 17:02:13,913 - Logicki operand nije tipa bool. na liniji 14
+ERROR 17:02:13,913 - Tip stvarnog parametra na poziciji 1 nije kompatibilan. na liniji 23
+ERROR 17:02:13,913 - Tip stvarnog parametra na poziciji 2 nije kompatibilan. na liniji 23
+ERROR 17:02:13,913 - Logicki operand nije tipa bool. na liniji 2
+ERROR 17:02:13,913 - Vrednost koja se vraca se ne poklapa sa povratnom vrednoscu metode na liniji 2
+ERROR 17:02:13,913 - Logicki operand nije tipa bool. na liniji 7
+ERROR 17:02:13,913 - Print operacija ne int/char/bool izraza na liniji 7
+ERROR 17:02:13,913 - Logicki operand nije tipa bool. na liniji 33
+ERROR 17:02:13,913 - Print operacija ne int/char/bool izraza na liniji 33
+ERROR 17:02:13,913 - Logicki operand nije tipa bool. na liniji 12
+ERROR 17:02:13,913 - Print operacija ne int/char/bool izraza na liniji 12
+ERROR 17:02:13,913 - Logicki operand nije tipa bool. na liniji 4
+ERROR 17:02:13,913 - Neadekvatna dodela vrednosti u promenljivu: i na liniji 37
+ERROR 17:02:13,913 - Logicki operand nije tipa bool. na liniji 7
+ERROR 17:02:13,913 - Neadekvatna dodela vrednosti u promenljivu: i na liniji 38
+ERROR 17:02:13,913 - Logicki operand nije tipa bool. na liniji 19
+ERROR 17:02:13,914 - Print operacija ne int/char/bool izraza na liniji 19
+ERROR 17:02:13,914 - Logicki operand nije tipa bool. na liniji 45
+ERROR 17:02:13,914 - Print operacija ne int/char/bool izraza na liniji 45
+ERROR 17:02:13,914 - Logicki operand nije tipa bool. na liniji 15
+ERROR 17:02:13,914 - Velicina niza nije int tipa. na liniji 47
+ERROR 17:02:13,914 - Logicki operand nije tipa bool. na liniji 6
+ERROR 17:02:13,914 - Neadekvatna dodela vrednosti u promenljivu: niz na liniji 47
+ERROR 17:02:13,914 - Logicki operand nije tipa bool. na liniji 9
+ERROR 17:02:13,914 - Neadekvatna dodela vrednosti u promenljivu: niz[$] na liniji 48
+ERROR 17:02:13,914 - Logicki operand nije tipa bool. na liniji 9
+ERROR 17:02:13,914 - Neadekvatna dodela vrednosti u promenljivu: niz[$] na liniji 49
+ERROR 17:02:13,914 - Logicki operand nije tipa bool. na liniji 14
+ERROR 17:02:13,914 - Logicki operand nije tipa bool. na liniji 21
+ERROR 17:02:13,914 - Tip stvarnog parametra na poziciji 1 nije kompatibilan. na liniji 50
+ERROR 17:02:13,914 - Tip stvarnog parametra na poziciji 2 nije kompatibilan. na liniji 50
+ERROR 17:02:13,914 - Logicki operand nije tipa bool. na liniji 9
+ERROR 17:02:13,914 - Neadekvatna dodela vrednosti u promenljivu: niz[$] na liniji 50
+ERROR 17:02:13,914 - Logicki operand nije tipa bool. na liniji 39
+ERROR 17:02:13,914 - Logicki operand nije tipa bool. na liniji 35
+ERROR 17:02:13,914 - Print operacija ne int/char/bool izraza na liniji 35
+ERROR 17:02:13,914 - Logicki operand nije tipa bool. na liniji 16
+ERROR 17:02:13,914 - Logicki operand nije tipa bool. na liniji 12
+ERROR 17:02:13,914 - Print operacija ne int/char/bool izraza na liniji 12
+ERROR 17:02:13,914 - Logicki operand nije tipa bool. na liniji 7
+ERROR 17:02:13,914 - Print operacija ne int/char/bool izraza na liniji 7
+ERROR 17:02:13,914 - Logicki operand nije tipa bool. na liniji 4
+ERROR 17:02:13,914 - Neadekvatna dodela vrednosti u promenljivu: i na liniji 55
+ERROR 17:02:13,914 - Logicki operand nije tipa bool. na liniji 16
+ERROR 17:02:13,914 - Logicki operand nije tipa bool. na liniji 18
+ERROR 17:02:13,914 - Tip stvarnog parametra na poziciji 1 nije kompatibilan. na liniji 64
+ERROR 17:02:13,914 - Tip stvarnog parametra na poziciji 2 nije kompatibilan. na liniji 64
+ERROR 17:02:13,914 - Logicki operand nije tipa bool. na liniji 5
+ERROR 17:02:13,914 - Neadekvatna dodela vrednosti u promenljivu: i na liniji 64
+ERROR 17:02:13,914 - Logicki operand nije tipa bool. na liniji 30
+ERROR 17:02:13,914 - Print operacija ne int/char/bool izraza na liniji 30
+ERROR 17:02:13,914 - Logicki operand nije tipa bool. na liniji 68
+ERROR 17:02:13,914 - Print operacija ne int/char/bool izraza na liniji 68
+ERROR 17:02:13,914 - Logicki operand nije tipa bool. na liniji 7
+ERROR 17:02:13,914 - Print operacija ne int/char/bool izraza na liniji 7
+ERROR 17:02:13,914 - Logicki operand nije tipa bool. na liniji 16
+ERROR 17:02:13,914 - Logicki operand nije tipa bool. na liniji 23
+ERROR 17:02:13,914 - Tip stvarnog parametra na poziciji 1 nije kompatibilan. na liniji 75
+ERROR 17:02:13,914 - Tip stvarnog parametra na poziciji 2 nije kompatibilan. na liniji 75
+ERROR 17:02:13,914 - Logicki operand nije tipa bool. na liniji 12
+ERROR 17:02:13,914 - Logicki operand nije tipa bool. na liniji 32
+ERROR 17:02:13,914 - Tip stvarnog parametra na poziciji 1 nije kompatibilan. na liniji 75
+ERROR 17:02:13,914 - Tip stvarnog parametra na poziciji 2 nije kompatibilan. na liniji 75
+ERROR 17:02:13,914 - Logicki operand nije tipa bool. na liniji 7
+ERROR 17:02:13,914 - Print operacija ne int/char/bool izraza na liniji 7
+ERROR 17:02:13,914 - Logicki operand nije tipa bool. na liniji 8
+ERROR 17:02:13,914 - Neadekvatna dodela vrednosti u promenljivu: i na liniji 77
+ERROR 17:02:13,914 - Logicki operand nije tipa bool. na liniji 8
+ERROR 17:02:13,914 - Print operacija ne int/char/bool izraza na liniji 8
+ERROR 17:02:13,914 - Logicki operand nije tipa bool. na liniji 7
+ERROR 17:02:13,914 - Print operacija ne int/char/bool izraza na liniji 7
+ERROR 17:02:13,914 - Logicki operand nije tipa bool. na liniji 17
+ERROR 17:02:13,914 - Logicki operand nije tipa bool. na liniji 24
+ERROR 17:02:13,914 - Tip stvarnog parametra na poziciji 1 nije kompatibilan. na liniji 82
+ERROR 17:02:13,914 - Tip stvarnog parametra na poziciji 2 nije kompatibilan. na liniji 82
+ERROR 17:02:13,914 - Logicki operand nije tipa bool. na liniji 7
+ERROR 17:02:13,914 - Print operacija ne int/char/bool izraza na liniji 7
+ERROR 17:02:13,914 - Logicki operand nije tipa bool. na liniji 9
+ERROR 17:02:13,914 - Neadekvatna dodela vrednosti u promenljivu: i na liniji 85
+ERROR 17:02:13,914 - Logicki operand nije tipa bool. na liniji 9
+ERROR 17:02:13,914 - Logicki operand nije tipa bool. na liniji 10
+ERROR 17:02:13,914 - Print operacija ne int/char/bool izraza na liniji 10
+ERROR 17:02:13,914 - Logicki operand nije tipa bool. na liniji 10
+ERROR 17:02:13,914 - Print operacija ne int/char/bool izraza na liniji 10
+ERROR 17:02:13,914 - Logicki operand nije tipa bool. na liniji 10
+ERROR 17:02:13,914 - Print operacija ne int/char/bool izraza na liniji 10
+ERROR 17:02:13,914 - Logicki operand nije tipa bool. na liniji 10
+ERROR 17:02:13,914 - Print operacija ne int/char/bool izraza na liniji 10
+ERROR 17:02:13,914 - Logicki operand nije tipa bool. na liniji 7
+ERROR 17:02:13,914 - Neadekvatna dodela vrednosti u promenljivu: i na liniji 97
+ERROR 17:02:13,914 - Logicki operand nije tipa bool. na liniji 10
+ERROR 17:02:13,914 - Print operacija ne int/char/bool izraza na liniji 10
+ERROR 17:02:13,914 - Logicki operand nije tipa bool. na liniji 10
+ERROR 17:02:13,914 - Print operacija ne int/char/bool izraza na liniji 10
+ERROR 17:02:13,914 - Logicki operand nije tipa bool. na liniji 8
+ERROR 17:02:13,914 - Print operacija ne int/char/bool izraza na liniji 8
+ERROR 17:02:13,915 - Parsiranje NIJE uspesno zavrseno!

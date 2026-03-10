@@ -60,6 +60,9 @@ terminal BREAK, CONTINUE, RETURN;
 terminal READ, PRINT;
 terminal SWITCH, CASE, FOR;
 terminal NEW;
+terminal WHILE;
+terminal DO;
+terminal FOREACH;
 
 terminal LBRACE, RBRACE;
 terminal LPAREN, RPAREN;
@@ -130,8 +133,12 @@ nonterminal CaseLabel CaseLabel ;
 // Marker non-terminals za ternarni operator
 nonterminal TernaryCondEnd TernaryCondEnd;
 nonterminal TernaryTrueEnd TernaryTrueEnd ;
+nonterminal WhileStart WhileStart;
+nonterminal DoStart DoStart;
+nonterminal DoEnd DoEnd ;
+nonterminal ForeachBodyStart ForeachBodyStart ;
 
-nonterminal rs.etf.pp1.symboltable.concepts.Obj Program, ProgramName, Designator, MethodDec, TypeOption, DesignatorArrayName ;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj Program, ProgramName, Designator, MethodDec, TypeOption, DesignatorArrayName, ForeachArrayStart ;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Term, Expr, Factor, VarDeclList, FactorOption, AddopTerm, AddopTermList, MulopFactorList, DesignatorStatement, CondExpr, CondFact ;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct CondFactListOptional, CondTerm, ConditionOptional, CondTermListOptional, Condition ;
 
@@ -244,7 +251,13 @@ Statement ::= (StatementDesignator) DesignatorStatement:D1 SEMI {: RESULT=new St
 			|
 			(StatementFor) FOR LPAREN ForInit:F1 DesignatorStatementOptional:D2 SEMI ForCondStart:F3 ConditionOptional:C4 SEMI ForUpdateStart:F5 DesignatorStatementOptional:D6 ForBodyStart:F7 RPAREN Statement:S8 {: RESULT=new StatementFor(F1, D2, F3, C4, F5, D6, F7, S8); RESULT.setLine(F1left); :}
 			|
-			(StatementRecursion) LBRACE StatementList:S1 RBRACE {: RESULT=new StatementRecursion(S1); RESULT.setLine(S1left); :} ;
+			(StatementRecursion) LBRACE StatementList:S1 RBRACE {: RESULT=new StatementRecursion(S1); RESULT.setLine(S1left); :}
+			|
+			(StatementWhile) WHILE WhileStart:W1 LPAREN Condition:C2 RPAREN Statement:S3 {: RESULT=new StatementWhile(W1, C2, S3); RESULT.setLine(W1left); :} 
+			|
+			(StatementDoWhile) DO DoStart:D1 Statement:S2 WHILE LPAREN Condition:C3 RPAREN DoEnd:D4 {: RESULT=new StatementDoWhile(D1, S2, C3, D4); RESULT.setLine(D1left); :} 
+			|
+			(StatementForEach) FOREACH LPAREN ForeachArrayStart:F1 Designator:D2 COLON Designator:D3 ForeachBodyStart:F4 RPAREN Statement:S5 {: RESULT=new StatementForEach(F1, D2, D3, F4, S5); RESULT.setLine(F1left); :} ;
 
 
 PrintOptional ::= (PrintOptionalY) COMMA NUMBER:N1 {: RESULT=new PrintOptionalY(N1); RESULT.setLine(N1left); :}
@@ -331,7 +344,7 @@ DesignatorArrayName ::= (DesignatorArrayName) IDENT:I1 {: RESULT=new DesignatorA
 
 CondExpr ::= (CondExprSimple) CondFact:C1 {: RESULT=new CondExprSimple(C1); RESULT.setLine(C1left); :}
 		| 
-		(CondExprTri) CondFact:C1 TernaryCondEnd:T2 QUESTIONMARK Expr:E3 TernaryTrueEnd:T4 COLON Expr:E5 {: RESULT=new CondExprTri(C1, T2, E3, T4, E5); RESULT.setLine(C1left); :} ;
+		(CondExprTri) CondFact:C1 TernaryCondEnd:T2 QUESTIONMARK CondExpr:C3 TernaryTrueEnd:T4 COLON CondExpr:C5 {: RESULT=new CondExprTri(C1, T2, C3, T4, C5); RESULT.setLine(C1left); :} ;
 
 Expr ::= (Expr) AddopTermList:A1 {: RESULT=new Expr(A1); RESULT.setLine(A1left); :} ;
 
@@ -399,9 +412,11 @@ SwitchStart  ::= (SwitchStart) {: RESULT=new SwitchStart(); :}  /* epsilon */ ;
 CaseLabel    ::= (CaseLabel) {: RESULT=new CaseLabel(); :}    /* epsilon */ ;
 TernaryCondEnd ::= (TernaryCondEnd) {: RESULT=new TernaryCondEnd(); :} /* epsilon */ ;
 TernaryTrueEnd ::= (TernaryTrueEnd) {: RESULT=new TernaryTrueEnd(); :} /* epsilon */ ;
-
-
-
+WhileStart ::= (WhileStart) {: RESULT=new WhileStart(); :} /* epsilon */ ;
+DoStart ::= (DoStart) {: RESULT=new DoStart(); :}  /* epsilon */ ;
+DoEnd ::= (DoEnd) {: RESULT=new DoEnd(); :} /* epsilon */ ;
+ForeachArrayStart ::= (ForeachArrayStart) {: RESULT=new ForeachArrayStart(); :} /* epsilon */ ;
+ForeachBodyStart  ::= (ForeachBodyStart) {: RESULT=new ForeachBodyStart(); :}  /* epsilon */ ;
 
 
 

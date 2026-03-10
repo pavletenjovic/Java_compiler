@@ -32,6 +32,7 @@ public class SemanticPass extends VisitorAdaptor {
     private List<Struct> actParsTypes = new ArrayList<>();
     int nVars;
     private Struct boolType = new Struct(Struct.Bool);
+    private int foreachCounter = 0;
 
     Logger log = Logger.getLogger(getClass());
 
@@ -380,11 +381,7 @@ public class SemanticPass extends VisitorAdaptor {
             return;
         }
 
-        designator.obj = new Obj(
-                Obj.Var,
-                "length",
-                Tab.intType
-        );
+        designator.obj = arrayObj;
     }
 
     @Override
@@ -674,8 +671,8 @@ public class SemanticPass extends VisitorAdaptor {
 	public void visit(CondExprTri condExprTri) {
 
 	    Struct condType = condExprTri.getCondFact().struct;
-	    Struct trueType = condExprTri.getExpr().struct;
-	    Struct falseType = condExprTri.getExpr1().struct;
+	    Struct trueType = condExprTri.getCondExpr().struct;
+	    Struct falseType = condExprTri.getCondExpr1().struct;
 
 	    if(!condType.equals(boolType)) {
 	        report_error("Uslov ternarnog operatora mora biti bool.", condExprTri);
@@ -693,15 +690,24 @@ public class SemanticPass extends VisitorAdaptor {
 	}
 	
 	@Override
-	public void visit(CondFactExpr condFactExpr) {
-		if(!condFactExpr.getExpr().struct.equals(boolType)) {
-			report_error("Logicki operand nije tipa bool.", condFactExpr);
-			condFactExpr.struct = Tab.noType;
-		}
-		else {
-			condFactExpr.struct = boolType;
-		}
-	}
+    public void visit(CondFactExpr condFactExpr) {
+        // Check if in condition context (if/for) or expression context (assign, print, etc.)
+        SyntaxNode parent = condFactExpr.getParent();
+        boolean inCondition = (parent instanceof CondFactListOptionalY || parent instanceof CondFactListOptionalN);
+
+        if (inCondition) {
+            // In condition context: must be bool
+            if(!condFactExpr.getExpr().struct.equals(boolType)) {
+                report_error("Logicki operand nije tipa bool.", condFactExpr);
+                condFactExpr.struct = Tab.noType;
+            } else {
+                condFactExpr.struct = boolType;
+            }
+        } else {
+            // In expression context: pass through the expression type
+            condFactExpr.struct = condFactExpr.getExpr().struct;
+        }
+    }
 	
 	@Override
 	public void visit(CondFactRel condFactRel) {
@@ -879,14 +885,15 @@ public class SemanticPass extends VisitorAdaptor {
 	}
 
 	private boolean isInsideLoop(SyntaxNode node) {
-		SyntaxNode current = node.getParent();
-		while (current != null) {
-			if (current instanceof StatementFor) return true;
-			if (current instanceof MethodDec) break;
-			current = current.getParent();
-		}
-		return false;
-	}
+        SyntaxNode current = node.getParent();
+        while (current != null) {
+            if (current instanceof StatementFor) return true;
+            if (current instanceof StatementForEach) return true;
+            if (current instanceof MethodDec) break;
+            current = current.getParent();
+        }
+        return false;
+    }
 
 	private boolean isInsideSwitch(SyntaxNode node) {
 		SyntaxNode current = node.getParent();
@@ -902,5 +909,43 @@ public class SemanticPass extends VisitorAdaptor {
 	public void visit(CaseListSingle caseListSingle) {
 	    // nothing needed here
 	}
+	
+	@Override
+    public void visit(ForeachArrayStart foreachArrayStart) {
+        // Allocate a hidden counter variable for this foreach loop
+        String counterName = "$_fe_" + foreachCounter++;
+        Obj counterObj = Tab.insert(Obj.Var, counterName, Tab.intType);
+        // Store it in the shared context so CodeGenerator can retrieve it by index
+        ForEachContext.add(counterObj);
+        foreachArrayStart.obj = counterObj;
+    }
+
+    @Override
+    public void visit(StatementForEach statementForeach) {
+        // D1: loop variable (first Designator - the target)
+        Obj d1Obj = statementForeach.getDesignator().obj;
+        // D2: array (second Designator - the source)
+        Obj d2Obj = statementForeach.getDesignator1().obj;
+
+        if (d1Obj == Tab.noObj || d2Obj == Tab.noObj) return;
+
+        // D1 must be a variable (Var or Elem), not constant
+        if (d1Obj.getKind() != Obj.Var && d1Obj.getKind() != Obj.Elem && d1Obj.getKind() != Obj.Fld) {
+            report_error("Foreach: D1 mora biti promenljiva: " + d1Obj.getName(), statementForeach);
+            return;
+        }
+
+        // D2 must be an array
+        if (d2Obj.getType().getKind() != Struct.Array) {
+            report_error("Foreach: D2 mora biti niz: " + d2Obj.getName(), statementForeach);
+            return;
+        }
+
+        // Element type of D2 must be assignable to D1
+        Struct elemType = d2Obj.getType().getElemType();
+        if (!elemType.assignableTo(d1Obj.getType())) {
+            report_error("Foreach: tip elementa niza nije kompatibilan sa tipom promenljive: " + d1Obj.getName(), statementForeach);
+        }
+    }
 
 }

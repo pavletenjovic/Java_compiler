@@ -14,6 +14,7 @@
 				<exclude name="CounterVisitor.java"/>
 				<exclude name="MyDumpSymbolTableVisitor.java"/>
 				<exclude name="Compiler.java"/>
+				<exclude name="ForEachContext.java"/>
 			</fileset>
 		</delete>
 		<delete>
@@ -65,31 +66,31 @@
 	</target>
 	
 	<target name="disasm">
-		<java classname="rs.etf.pp1.mj.runtime.disasm">
-			<arg value="test/program.obj"/>
-			<classpath>
-				<pathelement location="lib/mj-runtime.jar"/>
-			</classpath>
-		</java>
+	    <java classname="rs.etf.pp1.mj.runtime.disasm" output="test/output.txt">
+	        <arg value="test/program.obj"/>
+	        <classpath>
+	            <pathelement location="lib/mj-runtime.jar"/>
+	        </classpath>
+	    </java>
 	</target>
 
-	<target name="runObj" depends="debugObj" >
-		<java classname="rs.etf.pp1.mj.runtime.Run" input="test/inputs.txt">
-			<arg value="test/program.obj"/>
-			<classpath>
-				<pathelement location="lib/mj-runtime.jar"/>
-			</classpath>
-		</java>
+	<target name="runObj" depends="debugObj">
+	    <java classname="rs.etf.pp1.mj.runtime.Run" input="test/inputs.txt">
+	        <arg value="test/program.obj"/>
+	        <classpath>
+	            <pathelement location="lib/mj-runtime.jar"/>
+	        </classpath>
+	    </java>
 	</target>
 	
-	<target name="debugObj" depends="disasm" >
-			<java classname="rs.etf.pp1.mj.runtime.Run" input="test/inputs.txt">
-				<arg value="test/program.obj"/>
-				<arg value="-debug"/>
-				<classpath>
-					<pathelement location="lib/mj-runtime.jar"/>
-				</classpath>
-			</java>
-		</target>
+	<target name="debugObj" depends="disasm">
+	    <java classname="rs.etf.pp1.mj.runtime.Run" input="test/inputs.txt" output="test/output.txt" append="true">
+	        <arg value="test/program.obj"/>
+	        <arg value="-debug"/>
+	        <classpath>
+	            <pathelement location="lib/mj-runtime.jar"/>
+	        </classpath>
+	    </java>
+	</target>
 
 </project>

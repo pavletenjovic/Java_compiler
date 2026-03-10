@@ -60,6 +60,9 @@ terminal BREAK, CONTINUE, RETURN;
 terminal READ, PRINT;
 terminal SWITCH, CASE, FOR;
 terminal NEW;
+terminal WHILE;
+terminal DO;
+terminal FOREACH;
 
 terminal LBRACE, RBRACE;
 terminal LPAREN, RPAREN;
@@ -97,8 +100,10 @@ nonterminal ForInit, ForCondStart, ForBodyStart, ForUpdateStart ;
 nonterminal SwitchStart, CaseLabel ;
 // Marker non-terminals za ternarni operator
 nonterminal TernaryCondEnd, TernaryTrueEnd ;
+nonterminal WhileStart, DoStart, DoEnd ;
+nonterminal ForeachBodyStart ;
 
-nonterminal rs.etf.pp1.symboltable.concepts.Obj Program, ProgramName, Designator, MethodDec, TypeOption, DesignatorArrayName ;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj Program, ProgramName, Designator, MethodDec, TypeOption, DesignatorArrayName, ForeachArrayStart ;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Term, Expr, Factor, VarDeclList, FactorOption, AddopTerm, AddopTermList, MulopFactorList, DesignatorStatement, CondExpr, CondFact ;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct CondFactListOptional, CondTerm, ConditionOptional, CondTermListOptional, Condition ;
 
@@ -211,7 +216,13 @@ Statement ::= (StatementDesignator) DesignatorStatement SEMI
 			|
 			(StatementFor) FOR LPAREN ForInit DesignatorStatementOptional SEMI ForCondStart ConditionOptional SEMI ForUpdateStart DesignatorStatementOptional ForBodyStart RPAREN Statement
 			|
-			(StatementRecursion) LBRACE StatementList RBRACE ;
+			(StatementRecursion) LBRACE StatementList RBRACE
+			|
+			(StatementWhile) WHILE WhileStart LPAREN Condition RPAREN Statement 
+			|
+			(StatementDoWhile) DO DoStart Statement WHILE LPAREN Condition RPAREN DoEnd 
+			|
+			(StatementForEach) FOREACH LPAREN ForeachArrayStart Designator COLON Designator ForeachBodyStart RPAREN Statement ;
 
 
 PrintOptional ::= (PrintOptionalY) COMMA NUMBER
@@ -298,7 +309,7 @@ DesignatorArrayName ::= (DesignatorArrayName) IDENT ;
 
 CondExpr ::= (CondExprSimple) CondFact
 		| 
-		(CondExprTri) CondFact TernaryCondEnd QUESTIONMARK Expr TernaryTrueEnd COLON Expr ;
+		(CondExprTri) CondFact TernaryCondEnd QUESTIONMARK CondExpr TernaryTrueEnd COLON CondExpr ;
 
 Expr ::= (Expr) AddopTermList ;
 
@@ -366,9 +377,11 @@ SwitchStart  ::= (SwitchStart)  /* epsilon */ ;
 CaseLabel    ::= (CaseLabel)    /* epsilon */ ;
 TernaryCondEnd ::= (TernaryCondEnd) /* epsilon */ ;
 TernaryTrueEnd ::= (TernaryTrueEnd) /* epsilon */ ;
-
-
-
+WhileStart ::= (WhileStart) /* epsilon */ ;
+DoStart ::= (DoStart)  /* epsilon */ ;
+DoEnd ::= (DoEnd) /* epsilon */ ;
+ForeachArrayStart ::= (ForeachArrayStart) /* epsilon */ ;
+ForeachBodyStart  ::= (ForeachBodyStart)  /* epsilon */ ;
 
 
 
