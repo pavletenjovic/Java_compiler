@@ -1,7 +1,9 @@
 package rs.ac.bg.etf.pp1;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Stack;
 
 import rs.ac.bg.etf.pp1.ast.*;
@@ -35,6 +37,9 @@ public class CodeGenerator extends VisitorAdaptor {
         Code.put(Code.arraylength);
         Code.put(Code.exit); Code.put(Code.return_);
     }
+    
+    private Map<String, Integer>       labelAddrs   = new HashMap<>();
+    private Map<String, List<Integer>> gotoPatches  = new HashMap<>();
 
     CodeGenerator() { initializePredeclaredMethods(); }
 
@@ -47,6 +52,8 @@ public class CodeGenerator extends VisitorAdaptor {
         Code.put(Code.enter);
         Code.put(t.obj.getLevel());
         Code.put(t.obj.getLocalSymbols().size());
+        labelAddrs.clear();
+        gotoPatches.clear();
     }
 
     @Override
@@ -56,12 +63,16 @@ public class CodeGenerator extends VisitorAdaptor {
         Code.put(Code.enter);
         Code.put(t.obj.getLevel());
         Code.put(t.obj.getLocalSymbols().size());
+        labelAddrs.clear();
+        gotoPatches.clear();
     }
 
     @Override
     public void visit(MethodDec m) {
         Code.put(Code.exit);
         Code.put(Code.return_);
+        labelAddrs.clear();
+        gotoPatches.clear();
     }
 
     // ===================== DESIGNATOR STATEMENTS =====================
@@ -408,122 +419,151 @@ public class CodeGenerator extends VisitorAdaptor {
     // Original switchVal remains on stack.
     // At end of switch: pop switchVal.
 
-    private Stack<List<Integer>> switchBreaks = new Stack<>();
-    private Stack<Integer> caseSkipAddr    = new Stack<>();
-    private Stack<Integer> caseFallThrough = new Stack<>();
+    private Stack<List<Integer>> switchBreaks    = new Stack<>();
+    private Stack<Integer>       defaultEndJmp   = new Stack<>();
+    // Per-switch stacks: each switch pushes its own working stack
+    private Stack<Stack<Integer>> caseSkipAddrStack    = new Stack<>();
+    private Stack<Stack<Integer>> caseFallThroughStack = new Stack<>();
+
+    // Convenience accessors for the current (innermost) switch
+    private Stack<Integer> caseSkipAddr()    { return caseSkipAddrStack.peek(); }
+    private Stack<Integer> caseFallThrough() { return caseFallThroughStack.peek(); }
 
     @Override
     public void visit(SwitchStart s) {
         switchBreaks.push(new ArrayList<>());
+        caseSkipAddrStack.push(new Stack<>());
+        caseFallThroughStack.push(new Stack<>());
         breakTarget.push('S');
     }
 
     @Override
     public void visit(CaseLabel c) {
         Case caseNode = (Case) c.getParent();
-        // Emit comparison: dup switchVal, load case value, compare
         Code.put(Code.dup);
         Code.loadConst(caseNode.getCaseValue());
-        // Jump if NOT equal (skip this case body)
         Code.putFalseJump(Code.eq, 0);
-        caseSkipAddr.push(Code.pc - 2);
-        // If previous case fell through, fixup that jmp to HERE (past this comparison, into body)
-        if (!caseFallThrough.empty()) {
-            Code.fixup(caseFallThrough.pop());
+        caseSkipAddr().push(Code.pc - 2);
+        if (!caseFallThrough().empty()) {
+            Code.fixup(caseFallThrough().pop());
         }
     }
 
     @Override
     public void visit(Case c) {
-        // Emit fall-through jmp: if no break, this jumps past next CaseLabel's comparison
         Code.putJump(0);
-        caseFallThrough.push(Code.pc - 2);
-        // Fixup this case's skip to HERE (next case's CaseLabel or end of switch)
-        if (!caseSkipAddr.empty()) Code.fixup(caseSkipAddr.pop());
+        caseFallThrough().push(Code.pc - 2);
+        if (!caseSkipAddr().empty()) Code.fixup(caseSkipAddr().pop());
+    }
+
+    @Override
+    public void visit(DefaultLabel d) {
+        if (!caseFallThrough().empty()) Code.fixup(caseFallThrough().pop());
+        if (!caseSkipAddr().empty())    Code.fixup(caseSkipAddr().pop());
+    }
+
+    @Override
+    public void visit(DefaultOptionalY d) {
+        Code.putJump(0);
+        defaultEndJmp.push(Code.pc - 2);
+    }
+
+    @Override
+    public void visit(DefaultOptionalN d) {
+        // Fixup ALL remaining fall-throughs and skips → afterSwitch (pop instruction)
+        Stack<Integer> ft = caseFallThrough();
+        Stack<Integer> sk = caseSkipAddr();
+        while (!ft.empty()) Code.fixup(ft.pop());
+        while (!sk.empty()) Code.fixup(sk.pop());
     }
 
     @Override
     public void visit(StatementSwitch s) {
-        // Fixup last case's fall-through (lands here)
-        if (!caseFallThrough.empty()) Code.fixup(caseFallThrough.pop());
-        // Fixup all break jumps → here (they land on the pop instruction)
+        if (!defaultEndJmp.empty()) Code.fixup(defaultEndJmp.pop());
+        // Fixup all break jumps → here (pop instruction)
         for (int addr : switchBreaks.pop()) Code.fixup(addr);
         // Pop the switchVal from the stack
         Code.put(Code.pop);
+        // Discard per-switch working stacks (should be empty now, but clean up anyway)
+        caseSkipAddrStack.pop();
+        caseFallThroughStack.pop();
         breakTarget.pop();
     }
     
     private Stack<Integer> whileCond = new Stack<>();
-    private Stack<Integer> doCond = new Stack<>();
-    
+    private Stack<Integer> doCond    = new Stack<>();
+    private Stack<Integer> doCondCheck = new Stack<>(); // start of condition bytecode for continue
+
+    private Stack<List<Integer>> whileBreaks    = new Stack<>();
+    private Stack<List<Integer>> whileContinues = new Stack<>();
+    private Stack<List<Integer>> doBreaks       = new Stack<>();
+    private Stack<List<Integer>> doContinues    = new Stack<>();
+
+    // ===================== WHILE =====================
+
     @Override
     public void visit(WhileStart w) {
-    	whileCond.push(Code.pc);
+        whileBreaks.push(new ArrayList<>());
+        whileContinues.push(new ArrayList<>());
+        breakTarget.push('W');
+        whileCond.push(Code.pc);  // condStart
     }
-    
+
     @Override
     public void visit(StatementWhile s) {
-    	Code.putJump(whileCond.pop());
-    	Code.fixup(skipThen.pop());
-    }
-    
-    @Override
-    public void visit(DoStart d) {
-    	doCond.push(Code.pc);
-    }
-    
-//    @Override
-//    public void visit(StatementDoWhile d) {
-//    	Code.putJump(doCond.pop());
-//    	Code.fixup(skipThen.pop());
-//    }
-    
-    @Override
-    public void visit(DoEnd d) {
-    	Code.putJump(doCond.pop());
-    	Code.fixup(skipThen.pop());
-    }
-    
-    @Override
-    public void visit(StatementFor s) {
-        int updateTarget = forUpdateTargetAddr.pop();
-        // Body just ended; jump to update
-        Code.putJump(updateTarget);
+        int condStart = whileCond.pop();
+        Code.putJump(condStart);          // jmp back to condition
+        Code.fixup(skipThen.pop());       // false-jump → afterLoop (here)
 
-        // afterLoop: fixup condFalse
-        int condFalse = forCondFalseAddr.pop();
-        if (condFalse != -1) Code.fixup(condFalse);
-
-        // fixup breaks → here (afterLoop)
-        for (int addr : forBreaks.pop()) Code.fixup(addr);
-
-        // fixup continues → updateTarget
-        for (int addr : forContinues.pop()) {
-            int saved = Code.pc;
-            Code.pc = addr;
-            Code.put2(updateTarget - addr + 1);
+        // continues → condStart
+        for (int addr : whileContinues.pop()) {
+            int saved = Code.pc; Code.pc = addr;
+            Code.put2(condStart - addr + 1);
             Code.pc = saved;
         }
+        // breaks → afterLoop (here)
+        for (int addr : whileBreaks.pop()) Code.fixup(addr);
 
-        forCondStartAddr.pop();
+        breakTarget.pop();
+    }
+
+    // ===================== DO-WHILE =====================
+
+    @Override
+    public void visit(DoStart d) {
+        doBreaks.push(new ArrayList<>());
+        doContinues.push(new ArrayList<>());
+        breakTarget.push('D');
+        doCond.push(Code.pc);  // bodyStart
+    }
+
+    @Override
+    public void visit(DoCondStart d) {
+        // body is done; condition bytecode starts here — this is the continue target
+        doCondCheck.push(Code.pc);
+    }
+
+    @Override
+    public void visit(DoEnd d) {
+        int bodyStart   = doCond.pop();
+        int condStart   = doCondCheck.pop();
+
+        Code.putJump(bodyStart);      // true: loop back to body start
+        Code.fixup(skipThen.pop());   // false: exit loop (afterLoop = here)
+
+        // continues → condStart (re-evaluate condition)
+        for (int addr : doContinues.pop()) {
+            int saved = Code.pc; Code.pc = addr;
+            Code.put2(condStart - addr + 1);
+            Code.pc = saved;
+        }
+        // breaks → afterLoop
+        for (int addr : doBreaks.pop()) Code.fixup(addr);
+
         breakTarget.pop();
     }
 
     // ===================== FOREACH LOOP =====================
-    // Grammar: FOR ( ForeachArrayStart D1 : D2 ForeachBodyStart ) Statement
-    // Bottom-up: ForeachArrayStart → D1 → D2 → ForeachBodyStart → Statement → StatementForeach
-    //
-    // Bytecode layout:
-    //   $_fe_N = 0
-    // loopStart:
-    //   if $_fe_N >= D2.length → afterLoop
-    //   D1 = D2[$_fe_N]
-    //   [Statement body]
-    // continueTarget:
-    //   $_fe_N++
-    //   jmp loopStart
-    // afterLoop:
-
     private Stack<Obj>          foreachCounterObj  = new Stack<>();
     private Stack<Integer>      foreachLoopStart   = new Stack<>();
     private Stack<Integer>      foreachAfterPatch  = new Stack<>();
@@ -532,47 +572,40 @@ public class CodeGenerator extends VisitorAdaptor {
 
     @Override
     public void visit(ForeachArrayStart f) {
-        // Get counter Obj stored by SemanticPass
         Obj counterObj = f.obj;
         foreachCounterObj.push(counterObj);
 
-        // Initialize counter to 0 and store
         Code.loadConst(0);
         Code.store(counterObj);
 
         foreachBreaks.push(new ArrayList<>());
         foreachContinues.push(new ArrayList<>());
-        breakTarget.push('E'); // 'E' for foreach (Each)
+        breakTarget.push('E'); 
 
-        // Record loop start (condition check starts right here)
         foreachLoopStart.push(Code.pc);
     }
 
     @Override
     public void visit(ForeachBodyStart f) {
-        // Get D1 and D2 from parent StatementForeach
         StatementForEach parent = (StatementForEach) f.getParent();
         Obj d1 = parent.getDesignator().obj;
         Obj d2 = parent.getDesignator1().obj;
         Obj counter = foreachCounterObj.peek();
 
-        // Condition: counter < D2.length → if counter >= D2.length, jump afterLoop
-        Code.load(counter);             // stack: counter
-        Code.load(d2);                  // stack: counter, arr
-        Code.put(Code.arraylength);     // stack: counter, len
-        Code.putFalseJump(Code.lt, 0);  // jump if NOT (counter < len) → afterLoop
+        Code.load(counter);             
+        Code.load(d2);                  
+        Code.put(Code.arraylength);     
+        Code.putFalseJump(Code.lt, 0);
         foreachAfterPatch.push(Code.pc - 2);
 
-        // Load D2[counter] and store to D1
-        Code.load(d2);                  // stack: arr
-        Code.load(counter);             // stack: arr, counter
-        // aload/baload: pops arr and index, pushes arr[index]
+        Code.load(d2);                 
+        Code.load(counter);            
         if (d2.getType().getElemType().getKind() == Struct.Char) {
             Code.put(Code.baload);
         } else {
             Code.put(Code.aload);
         }
-        Code.store(d1);                 // D1 = D2[counter]
+        Code.store(d1);
     }
 
     @Override
@@ -618,33 +651,71 @@ public class CodeGenerator extends VisitorAdaptor {
                 forBreaks.peek().add(patchAddr);
             } else if (top == 'E') {
                 foreachBreaks.peek().add(patchAddr);
+            } else if (top == 'W') {
+                whileBreaks.peek().add(patchAddr);
+            } else if (top == 'D') {
+                doBreaks.peek().add(patchAddr);
             }
         }
     }
 
     @Override
     public void visit(StatementContinue c) {
-        Code.putJump(0);
-        int patchAddr = Code.pc - 2;
-        if (!breakTarget.empty()) {
-            // Find innermost loop (skip switches)
-            for (int i = breakTarget.size() - 1; i >= 0; i--) {
-                char t = breakTarget.get(i);
+        // For each switch layer we cross, we must pop its switchVal off the stack
+        int switchLayers = 0;
+        for (int i = breakTarget.size() - 1; i >= 0; i--) {
+            char t = breakTarget.get(i);
+            if (t == 'S') {
+                switchLayers++;
+            } else {
+                // Found the innermost loop — emit pops for every switch layer crossed
+                for (int s = 0; s < switchLayers; s++) Code.put(Code.pop);
+                Code.putJump(0);
+                int patchAddr = Code.pc - 2;
                 if (t == 'F') {
-                    // Regular for: continue goes to updateTarget (already emitted)
-                    // We need to fix-up later in StatementFor... but updateTarget is already known
-                    // For regular for, the update target address is already on the stack
                     forContinues.peek().add(patchAddr);
-                    break;
                 } else if (t == 'E') {
-                    // Foreach: continue patched later in StatementForeach
                     foreachContinues.peek().add(patchAddr);
-                    break;
+                } else if (t == 'W') {
+                    whileContinues.peek().add(patchAddr);
+                } else if (t == 'D') {
+                    doContinues.peek().add(patchAddr);
                 }
-                // 'S' = switch, skip it and look for outer loop
+                return;
             }
         }
     }
     
+    @Override
+    public void visit(LabelDecl ld) {
+        StatementLabel parent = (StatementLabel) ld.getParent();
+        String name = parent.getLabelName();
+        int targetPc = Code.pc;
+        labelAddrs.put(name, targetPc);
+        // Fix up any forward gotos that jumped to this label
+        List<Integer> patches = gotoPatches.remove(name);
+        if (patches != null) {
+            for (int addr : patches) {
+                int saved = Code.pc;
+                Code.pc = addr;
+                Code.put2(targetPc - addr + 1);
+                Code.pc = saved;
+            }
+        }
+    }
+
+    @Override
+    public void visit(StatementGoto sg) {
+        String name = sg.getLabelName();
+        if (labelAddrs.containsKey(name)) {
+            // Backward goto: target already known
+            Code.putJump(labelAddrs.get(name));
+        } else {
+            // Forward goto: emit placeholder jmp(0), save for patching
+            Code.putJump(0);
+            int patchAddr = Code.pc - 2;
+            gotoPatches.computeIfAbsent(name, k -> new ArrayList<>()).add(patchAddr);
+        }
+    }
     
 }

@@ -51,6 +51,8 @@ import java_cup.runtime.Symbol;
 "while" 	{ return new_symbol(sym.WHILE, yytext()); }
 "do"		{ return new_symbol(sym.DO, yytext()); }
 "foreach"	{ return new_symbol(sym.FOREACH, yytext()); }
+"default"   { return new_symbol(sym.DEFAULT, yytext()); }
+"goto"        { return new_symbol(sym.GOTO, yytext()); }
 
 "case"		{ return new_symbol(sym.CASE, yytext()); }
 "for"		{ return new_symbol(sym.FOR, yytext()); }

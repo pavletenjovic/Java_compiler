@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 10/2/2026 2:47:2
+// 10/2/2026 20:33:19
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -15,6 +15,7 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(Relop Relop) { }
     public void visit(DeclList DeclList) { }
     public void visit(CaseList CaseList) { }
+    public void visit(DefaultOptional DefaultOptional) { }
     public void visit(MulopFactorList MulopFactorList) { }
     public void visit(AddopTermList AddopTermList) { }
     public void visit(VarListNext VarListNext) { }
@@ -46,6 +47,9 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(VarDeclList VarDeclList) { }
     public void visit(CondFact CondFact) { }
     public void visit(Decl Decl) { }
+    public void visit(LabelDecl LabelDecl) { visit(); }
+    public void visit(DoCondStart DoCondStart) { visit(); }
+    public void visit(DefaultLabel DefaultLabel) { visit(); }
     public void visit(ForeachBodyStart ForeachBodyStart) { visit(); }
     public void visit(ForeachArrayStart ForeachArrayStart) { visit(); }
     public void visit(DoEnd DoEnd) { visit(); }
@@ -59,6 +63,8 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(ForUpdateStart ForUpdateStart) { visit(); }
     public void visit(ForCondStart ForCondStart) { visit(); }
     public void visit(ForInit ForInit) { visit(); }
+    public void visit(DefaultOptionalN DefaultOptionalN) { visit(); }
+    public void visit(DefaultOptionalY DefaultOptionalY) { visit(); }
     public void visit(Case Case) { visit(); }
     public void visit(CaseListSingle CaseListSingle) { visit(); }
     public void visit(CaseListMulti CaseListMulti) { visit(); }
@@ -125,6 +131,8 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(ConditionOptionalY ConditionOptionalY) { visit(); }
     public void visit(PrintOptionalN PrintOptionalN) { visit(); }
     public void visit(PrintOptionalY PrintOptionalY) { visit(); }
+    public void visit(StatementGoto StatementGoto) { visit(); }
+    public void visit(StatementLabel StatementLabel) { visit(); }
     public void visit(StatementForEach StatementForEach) { visit(); }
     public void visit(StatementDoWhile StatementDoWhile) { visit(); }
     public void visit(StatementWhile StatementWhile) { visit(); }

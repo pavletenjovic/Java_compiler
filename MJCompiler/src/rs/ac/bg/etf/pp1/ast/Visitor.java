@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 10/2/2026 2:47:2
+// 10/2/2026 20:33:19
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -15,6 +15,7 @@ public interface Visitor {
     public void visit(Relop Relop);
     public void visit(DeclList DeclList);
     public void visit(CaseList CaseList);
+    public void visit(DefaultOptional DefaultOptional);
     public void visit(MulopFactorList MulopFactorList);
     public void visit(AddopTermList AddopTermList);
     public void visit(VarListNext VarListNext);
@@ -46,6 +47,9 @@ public interface Visitor {
     public void visit(VarDeclList VarDeclList);
     public void visit(CondFact CondFact);
     public void visit(Decl Decl);
+    public void visit(LabelDecl LabelDecl);
+    public void visit(DoCondStart DoCondStart);
+    public void visit(DefaultLabel DefaultLabel);
     public void visit(ForeachBodyStart ForeachBodyStart);
     public void visit(ForeachArrayStart ForeachArrayStart);
     public void visit(DoEnd DoEnd);
@@ -59,6 +63,8 @@ public interface Visitor {
     public void visit(ForUpdateStart ForUpdateStart);
     public void visit(ForCondStart ForCondStart);
     public void visit(ForInit ForInit);
+    public void visit(DefaultOptionalN DefaultOptionalN);
+    public void visit(DefaultOptionalY DefaultOptionalY);
     public void visit(Case Case);
     public void visit(CaseListSingle CaseListSingle);
     public void visit(CaseListMulti CaseListMulti);
@@ -125,6 +131,8 @@ public interface Visitor {
     public void visit(ConditionOptionalY ConditionOptionalY);
     public void visit(PrintOptionalN PrintOptionalN);
     public void visit(PrintOptionalY PrintOptionalY);
+    public void visit(StatementGoto StatementGoto);
+    public void visit(StatementLabel StatementLabel);
     public void visit(StatementForEach StatementForEach);
     public void visit(StatementDoWhile StatementDoWhile);
     public void visit(StatementWhile StatementWhile);

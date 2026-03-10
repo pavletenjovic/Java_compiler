@@ -33,6 +33,8 @@ public class SemanticPass extends VisitorAdaptor {
     int nVars;
     private Struct boolType = new Struct(Struct.Bool);
     private int foreachCounter = 0;
+    private Set<String> labelsDefined = new HashSet<>();
+    private List<StatementGoto> gotoNodes = new ArrayList<>();
 
     Logger log = Logger.getLogger(getClass());
 
@@ -275,7 +277,6 @@ public class SemanticPass extends VisitorAdaptor {
 
     @Override
     public void visit(TypeOptionY methodName) {
-//        Struct returnType;
     	
         String methodNameTemp = methodName.getMethodName();
         if(Tab.currentScope.findSymbol(methodNameTemp) != null) {
@@ -285,7 +286,8 @@ public class SemanticPass extends VisitorAdaptor {
 
         methodName.obj = currentMethod = Tab.insert(Obj.Meth, methodNameTemp, currentType);
         Tab.openScope();
-//        returnFound = false;
+        labelsDefined.clear();
+        gotoNodes.clear();
     }
     
     @Override
@@ -301,12 +303,21 @@ public class SemanticPass extends VisitorAdaptor {
 
         methodName.obj = currentMethod = Tab.insert(Obj.Meth, methodNameTemp, Tab.noType);
         Tab.openScope();
+        labelsDefined.clear();
+        gotoNodes.clear();
     }
     
     @Override
     public void visit(MethodDec methodName) {
-    	Tab.chainLocalSymbols(currentMethod);
-		Tab.closeScope();
+        for (StatementGoto g : gotoNodes) {
+            if (!labelsDefined.contains(g.getLabelName())) {
+                report_error("Labela nije definisana u tekucoj metodi: " + g.getLabelName(), g);
+            }
+        }
+        labelsDefined.clear();
+        gotoNodes.clear();
+        Tab.chainLocalSymbols(currentMethod);
+        Tab.closeScope();
     }
     
     @Override
@@ -889,6 +900,8 @@ public class SemanticPass extends VisitorAdaptor {
         while (current != null) {
             if (current instanceof StatementFor) return true;
             if (current instanceof StatementForEach) return true;
+            if (current instanceof StatementWhile) return true;
+            if (current instanceof StatementDoWhile) return true;
             if (current instanceof MethodDec) break;
             current = current.getParent();
         }
@@ -915,8 +928,6 @@ public class SemanticPass extends VisitorAdaptor {
         // Allocate a hidden counter variable for this foreach loop
         String counterName = "$_fe_" + foreachCounter++;
         Obj counterObj = Tab.insert(Obj.Var, counterName, Tab.intType);
-        // Store it in the shared context so CodeGenerator can retrieve it by index
-        ForEachContext.add(counterObj);
         foreachArrayStart.obj = counterObj;
     }
 
@@ -946,6 +957,24 @@ public class SemanticPass extends VisitorAdaptor {
         if (!elemType.assignableTo(d1Obj.getType())) {
             report_error("Foreach: tip elementa niza nije kompatibilan sa tipom promenljive: " + d1Obj.getName(), statementForeach);
         }
+    }
+    
+    @Override
+    public void visit(LabelDecl labelDecl) {
+        StatementLabel parent = (StatementLabel) labelDecl.getParent();
+        String name = parent.getLabelName();
+        if (labelsDefined.contains(name)) {
+            report_error("Labela vec definisana u tekucoj metodi: " + name, labelDecl);
+        } else {
+            labelsDefined.add(name);
+        }
+    }
+
+
+    @Override
+    public void visit(StatementGoto statementGoto) {
+        // Collect for deferred check at end of method
+        gotoNodes.add(statementGoto);
     }
 
 }

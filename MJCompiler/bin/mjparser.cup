@@ -63,6 +63,8 @@ terminal NEW;
 terminal WHILE;
 terminal DO;
 terminal FOREACH;
+terminal DEFAULT;
+terminal GOTO;
 
 terminal LBRACE, RBRACE;
 terminal LPAREN, RPAREN;
@@ -101,7 +103,7 @@ nonterminal SwitchStart, CaseLabel ;
 // Marker non-terminals za ternarni operator
 nonterminal TernaryCondEnd, TernaryTrueEnd ;
 nonterminal WhileStart, DoStart, DoEnd ;
-nonterminal ForeachBodyStart ;
+nonterminal ForeachBodyStart, DefaultOptional, DefaultLabel, DoCondStart, LabelDecl ;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Program, ProgramName, Designator, MethodDec, TypeOption, DesignatorArrayName, ForeachArrayStart ;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Term, Expr, Factor, VarDeclList, FactorOption, AddopTerm, AddopTermList, MulopFactorList, DesignatorStatement, CondExpr, CondFact ;
@@ -212,7 +214,7 @@ Statement ::= (StatementDesignator) DesignatorStatement SEMI
 			|
 			(StatementPrint) PRINT LPAREN CondExpr PrintOptional RPAREN SEMI
 			|
-			(StatementSwitch) SWITCH LPAREN SwitchStart CondExpr RPAREN LBRACE CaseList RBRACE
+			(StatementSwitch) SWITCH LPAREN SwitchStart CondExpr RPAREN LBRACE CaseList DefaultOptional RBRACE
 			|
 			(StatementFor) FOR LPAREN ForInit DesignatorStatementOptional SEMI ForCondStart ConditionOptional SEMI ForUpdateStart DesignatorStatementOptional ForBodyStart RPAREN Statement
 			|
@@ -220,9 +222,13 @@ Statement ::= (StatementDesignator) DesignatorStatement SEMI
 			|
 			(StatementWhile) WHILE WhileStart LPAREN Condition RPAREN Statement 
 			|
-			(StatementDoWhile) DO DoStart Statement WHILE LPAREN Condition RPAREN DoEnd 
+			(StatementDoWhile) DO DoStart Statement WHILE LPAREN DoCondStart Condition RPAREN DoEnd SEMI
 			|
-			(StatementForEach) FOREACH LPAREN ForeachArrayStart Designator COLON Designator ForeachBodyStart RPAREN Statement ;
+			(StatementForEach) FOREACH LPAREN ForeachArrayStart Designator COLON Designator ForeachBodyStart RPAREN Statement 
+			|
+            (StatementLabel) IDENT:labelName LabelDecl COLON Statement
+            |
+            (StatementGoto) GOTO IDENT:labelName SEMI ;
 
 
 PrintOptional ::= (PrintOptionalY) COMMA NUMBER
@@ -368,6 +374,10 @@ CaseList ::= (CaseListMulti) CaseList Case
 
 Case ::= (Case) CASE NUMBER:caseValue CaseLabel COLON StatementList ;
 
+DefaultOptional ::= (DefaultOptionalY) DEFAULT DefaultLabel COLON StatementList
+				|
+				(DefaultOptionalN) /*epsilon*/ ;
+
 // ---- Epsilon marker produkcije ----
 ForInit      ::= (ForInit)      /* epsilon */ ;
 ForCondStart ::= (ForCondStart) /* epsilon */ ;
@@ -382,6 +392,8 @@ DoStart ::= (DoStart)  /* epsilon */ ;
 DoEnd ::= (DoEnd) /* epsilon */ ;
 ForeachArrayStart ::= (ForeachArrayStart) /* epsilon */ ;
 ForeachBodyStart  ::= (ForeachBodyStart)  /* epsilon */ ;
-
+DefaultLabel ::= (DefaultLabel) /* epsilon */ ;
+DoCondStart ::= (DoCondStart) /* epsilon */ ;
+LabelDecl   ::= (LabelDecl)         /* epsilon */ ;
 
 

@@ -63,6 +63,8 @@ terminal NEW;
 terminal WHILE;
 terminal DO;
 terminal FOREACH;
+terminal DEFAULT;
+terminal GOTO;
 
 terminal LBRACE, RBRACE;
 terminal LPAREN, RPAREN;
@@ -136,7 +138,11 @@ nonterminal TernaryTrueEnd TernaryTrueEnd ;
 nonterminal WhileStart WhileStart;
 nonterminal DoStart DoStart;
 nonterminal DoEnd DoEnd ;
-nonterminal ForeachBodyStart ForeachBodyStart ;
+nonterminal ForeachBodyStart ForeachBodyStart;
+nonterminal DefaultOptional DefaultOptional;
+nonterminal DefaultLabel DefaultLabel;
+nonterminal DoCondStart DoCondStart;
+nonterminal LabelDecl LabelDecl ;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Program, ProgramName, Designator, MethodDec, TypeOption, DesignatorArrayName, ForeachArrayStart ;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Term, Expr, Factor, VarDeclList, FactorOption, AddopTerm, AddopTermList, MulopFactorList, DesignatorStatement, CondExpr, CondFact ;
@@ -247,7 +253,7 @@ Statement ::= (StatementDesignator) DesignatorStatement:D1 SEMI {: RESULT=new St
 			|
 			(StatementPrint) PRINT LPAREN CondExpr:C1 PrintOptional:P2 RPAREN SEMI {: RESULT=new StatementPrint(C1, P2); RESULT.setLine(C1left); :}
 			|
-			(StatementSwitch) SWITCH LPAREN SwitchStart:S1 CondExpr:C2 RPAREN LBRACE CaseList:C3 RBRACE {: RESULT=new StatementSwitch(S1, C2, C3); RESULT.setLine(S1left); :}
+			(StatementSwitch) SWITCH LPAREN SwitchStart:S1 CondExpr:C2 RPAREN LBRACE CaseList:C3 DefaultOptional:D4 RBRACE {: RESULT=new StatementSwitch(S1, C2, C3, D4); RESULT.setLine(S1left); :}
 			|
 			(StatementFor) FOR LPAREN ForInit:F1 DesignatorStatementOptional:D2 SEMI ForCondStart:F3 ConditionOptional:C4 SEMI ForUpdateStart:F5 DesignatorStatementOptional:D6 ForBodyStart:F7 RPAREN Statement:S8 {: RESULT=new StatementFor(F1, D2, F3, C4, F5, D6, F7, S8); RESULT.setLine(F1left); :}
 			|
@@ -255,9 +261,13 @@ Statement ::= (StatementDesignator) DesignatorStatement:D1 SEMI {: RESULT=new St
 			|
 			(StatementWhile) WHILE WhileStart:W1 LPAREN Condition:C2 RPAREN Statement:S3 {: RESULT=new StatementWhile(W1, C2, S3); RESULT.setLine(W1left); :} 
 			|
-			(StatementDoWhile) DO DoStart:D1 Statement:S2 WHILE LPAREN Condition:C3 RPAREN DoEnd:D4 {: RESULT=new StatementDoWhile(D1, S2, C3, D4); RESULT.setLine(D1left); :} 
+			(StatementDoWhile) DO DoStart:D1 Statement:S2 WHILE LPAREN DoCondStart:D3 Condition:C4 RPAREN DoEnd:D5 SEMI {: RESULT=new StatementDoWhile(D1, S2, D3, C4, D5); RESULT.setLine(D1left); :}
 			|
-			(StatementForEach) FOREACH LPAREN ForeachArrayStart:F1 Designator:D2 COLON Designator:D3 ForeachBodyStart:F4 RPAREN Statement:S5 {: RESULT=new StatementForEach(F1, D2, D3, F4, S5); RESULT.setLine(F1left); :} ;
+			(StatementForEach) FOREACH LPAREN ForeachArrayStart:F1 Designator:D2 COLON Designator:D3 ForeachBodyStart:F4 RPAREN Statement:S5 {: RESULT=new StatementForEach(F1, D2, D3, F4, S5); RESULT.setLine(F1left); :} 
+			|
+            (StatementLabel) IDENT:labelName LabelDecl:L1 COLON Statement:S2 {: RESULT=new StatementLabel(labelName, L1, S2); RESULT.setLine(labelNameleft); :}
+            |
+            (StatementGoto) GOTO IDENT:labelName SEMI {: RESULT=new StatementGoto(labelName); RESULT.setLine(labelNameleft); :} ;
 
 
 PrintOptional ::= (PrintOptionalY) COMMA NUMBER:N1 {: RESULT=new PrintOptionalY(N1); RESULT.setLine(N1left); :}
@@ -403,6 +413,10 @@ CaseList ::= (CaseListMulti) CaseList:C1 Case:C2 {: RESULT=new CaseListMulti(C1,
 
 Case ::= (Case) CASE NUMBER:caseValue CaseLabel:C1 COLON StatementList:S2 {: RESULT=new Case(caseValue, C1, S2); RESULT.setLine(caseValueleft); :} ;
 
+DefaultOptional ::= (DefaultOptionalY) DEFAULT DefaultLabel:D1 COLON StatementList:S2 {: RESULT=new DefaultOptionalY(D1, S2); RESULT.setLine(D1left); :}
+				|
+				(DefaultOptionalN) {: RESULT=new DefaultOptionalN(); :} /*epsilon*/ ;
+
 // ---- Epsilon marker produkcije ----
 ForInit      ::= (ForInit) {: RESULT=new ForInit(); :}      /* epsilon */ ;
 ForCondStart ::= (ForCondStart) {: RESULT=new ForCondStart(); :} /* epsilon */ ;
@@ -417,6 +431,8 @@ DoStart ::= (DoStart) {: RESULT=new DoStart(); :}  /* epsilon */ ;
 DoEnd ::= (DoEnd) {: RESULT=new DoEnd(); :} /* epsilon */ ;
 ForeachArrayStart ::= (ForeachArrayStart) {: RESULT=new ForeachArrayStart(); :} /* epsilon */ ;
 ForeachBodyStart  ::= (ForeachBodyStart) {: RESULT=new ForeachBodyStart(); :}  /* epsilon */ ;
-
+DefaultLabel ::= (DefaultLabel) {: RESULT=new DefaultLabel(); :} /* epsilon */ ;
+DoCondStart ::= (DoCondStart) {: RESULT=new DoCondStart(); :} /* epsilon */ ;
+LabelDecl   ::= (LabelDecl) {: RESULT=new LabelDecl(); :}         /* epsilon */ ;
 
 
